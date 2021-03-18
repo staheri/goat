@@ -15,4 +15,4 @@
 # vendor/
 
 
-goat
+bin/*

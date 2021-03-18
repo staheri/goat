@@ -1,10 +1,20 @@
 package main
 
 import "github.com/staheri/goatlib/instrument"
-//import "fmt"
+import "github.com/staheri/goatlib/db"
+import "fmt"
 
 func test1(path string){
-  instrument.Instrument(flagPath)
+  // iapp is the instrumented version of target program
+  iapp := instrument.Instrument(flagPath)
+  // execute
+  events,err := iapp.ExecuteTrace()
+  check(err)
+  // store
+  dbName := db.Store(events, iapp.Name)
+  fmt.Println(dbName)
+
+  //
 }
 
 
