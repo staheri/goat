@@ -6,14 +6,16 @@ import "fmt"
 
 func test1(path string){
   // iapp is the instrumented version of target program
-  iapp := instrument.Instrument(flagPath)
-  // execute
-  events,err := iapp.ExecuteTrace()
-  check(err)
-  // store
-  dbName := db.Store(events, iapp.Name)
-  fmt.Println(dbName)
-
+  for i := 0 ; i < 10 ; i++{
+    iapp := instrument.Instrument(flagPath)
+    // execute
+    events,err := iapp.ExecuteTrace()
+    check(err)
+    // store
+    dbName := db.Store(events, iapp.Name)
+    fmt.Println(dbName)
+    db.Checker(dbName,false)
+  }
   //
 }
 
