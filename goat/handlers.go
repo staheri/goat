@@ -22,7 +22,7 @@ func Start() chan interface{}{
   return ch
 }
 
-func Stop(ch chan interface{}){
+func Watch(ch chan interface{}){
 	fmt.Println("GOAT stop...")
 	to, err := strconv.Atoi(os.Getenv("GOATTO"))
 	if err != nil{
@@ -30,7 +30,6 @@ func Stop(ch chan interface{}){
 	}
   select {
   case <- ch:
-    trace.Stop()
 		fmt.Println("GOAT finished (normal)")
 		ch <- 0
 
@@ -39,4 +38,12 @@ func Stop(ch chan interface{}){
     fmt.Println("GOAT stopped (timeout)")
     os.Exit(0)
   }
+}
+
+
+func Stop(ch chan interface{}){
+	ch <- true
+	<-ch
+	time.Sleep(time.Millisecond)
+	trace.Stop()
 }
