@@ -4,6 +4,7 @@
 *.dll
 *.so
 *.dylib
+bin/*
 
 # Test binary, built with go test -c
 *.test
@@ -15,4 +16,6 @@
 # vendor/
 
 
-bin/*
+# Logs, Outputs
+GOAT_log.txt
+*.csv
