@@ -1,10 +1,13 @@
 package main
 
 import (
-	"github.com/staheri/goatlib/hello"
- 	_"github.com/staheri/goatlib/instrument"
+ 	"github.com/staheri/goatlib/db"
 	"flag"
 	"fmt"
+	"log"
+	"os"
+	"path/filepath"
+	"bufio"
 )
 
 
@@ -21,11 +24,27 @@ var (
 
 func main(){
 	fmt.Println("Initializing GOAT V.0.1 ...")
+
+	// set log
+	file, err := os.OpenFile("GOAT_log.txt", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
+	check(err)
+  log.SetOutput(file)
+
 	parseFlags()
+	//test1(flagPath)
+	paths, err := filepath.Glob("/Users/saeed/gobench/gobench/goker/*/*/*")
+	check(err)
+	db.Clean()
 
-	test1(flagPath)
+	f,err := os.Create("output.csv")
+  check(err)
+  w := bufio.NewWriter(f)
 
-	hello.Hello("Saeed!")
+	for i,p := range(paths){
+		fmt.Println(i,p)
+		experiment(p,1,w)
+		w.Flush()
+	}
 
 
 
