@@ -1,13 +1,13 @@
 package main
 
 import (
- 	"github.com/staheri/goatlib/db"
+  "github.com/staheri/goat/evaluate"
 	"flag"
 	"fmt"
 	"log"
 	"os"
-	"path/filepath"
-	"bufio"
+	//"path/filepath"
+	_"bufio"
 )
 
 
@@ -31,20 +31,42 @@ func main(){
   log.SetOutput(file)
 
 	parseFlags()
+	//paths := []string{flagPath}
 	//test1(flagPath)
-	paths, err := filepath.Glob("/Users/saeed/gobench/gobench/goker/*/*/*")
-	check(err)
-	db.Clean()
+	//paths, err := filepath.Glob("/Users/saeed/gobench/gobench/goker/blocking/kubernetes/*")
+	//check(err)
+	//paths2,err := filepath.Glob("/Users/saeed/gobench/gobench/goker/blocking/moby/*")
+	//check(err)
+	//paths3,err := filepath.Glob("/Users/saeed/gobench/gobench/goker/blocking/serving/*")
+	//check(err)
+	//paths4,err := filepath.Glob("/Users/saeed/gobench/gobench/goker/blocking/syncthing/*")
+	//check(err)
+	//paths = append(paths,paths2...)
+	//paths = append(paths,paths3...)
+	//paths = append(paths,paths4...)
 
-	f,err := os.Create("output.csv")
-  check(err)
-  w := bufio.NewWriter(f)
 
-	for i,p := range(paths){
+	//f,err := os.Create("output-block-kub-mob-serv-sync.csv")
+
+	//f,err := os.Create("out.csv")
+  //check(err)
+  //w := bufio.NewWriter(f)
+
+	/*for i,p := range(paths){
 		fmt.Println(i,p)
-		experiment(p,1,w)
+		experiment(p,40,w)
 		w.Flush()
-	}
+	}*/
+
+  //evaluate.TAB_counts()
+  //evaluate.EvaluateBlocking(flagPath,10)
+  evaluate.EvaluateNonBlocking(flagPath,100)
+  //evaluate.EvaluateOverhead(flagPath,1,[]int{1})
+  //
+
+  //checkVis()
+  //checkChecker()
+  //checkJson()
 
 
 

@@ -15,8 +15,23 @@ func Sched_Handler(){
   // other handlers can come down here
 }
 
-func Start(maxprocs int) chan interface{}{
+func StartRace(maxp int) {
   fmt.Println("GOAT start...")
+	//maxprocs, err := strconv.Atoi(os.Getenv("GOATMAXPROCS"))
+	//if err != nil || maxprocs < 1{
+	//	panic("Invalid GOATMAXPROCS")
+	//}
+  runtime.GOMAXPROCS(maxp)
+}
+
+
+
+func Start() chan interface{}{
+  fmt.Println("GOAT start...")
+	maxprocs, err := strconv.Atoi(os.Getenv("GOATMAXPROCS"))
+	if err != nil || maxprocs < 1{
+		panic("Invalid GOATMAXPROCS")
+	}
   runtime.GOMAXPROCS(maxprocs)
   trace.Start(os.Stderr)
   ch := make(chan interface{})

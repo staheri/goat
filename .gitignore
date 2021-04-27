@@ -19,3 +19,5 @@ bin/*
 # Logs, Outputs
 GOAT_log.txt
 *.csv
+
+old/*
