@@ -137,7 +137,7 @@ func ReadResults(fname string) map[string]Ex{
         }
       }
       ex.Results = results
-      argsList := fields["results"].([]interface{})
+      argsList := fields["args"].([]interface{})
       args := []string{}
       for _,targ := range(argsList){
         arg := targ.(string)
