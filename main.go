@@ -59,9 +59,9 @@ func main(){
 	}*/
 
   //evaluate.TAB_counts()
-  //evaluate.EvaluateBlocking(flagPath,10)
-  evaluate.EvaluateNonBlocking(flagPath,100)
-  //evaluate.EvaluateOverhead(flagPath,1,[]int{1})
+  evaluate.EvaluateBlocking(flagPath,10)
+  //evaluate.EvaluateNonBlocking(flagPath,10)
+  //evaluate.EvaluateOverhead(flagPath,4,[]int{128,256,512,1024})
   //
 
   //checkVis()
@@ -100,4 +100,10 @@ func parseFlags() {
 	flag.Parse()
 
 	flagArgs = flag.Args()
+}
+
+func check(err error){
+	if err != nil{
+		panic(err)
+	}
 }

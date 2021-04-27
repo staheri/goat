@@ -21,3 +21,4 @@ GOAT_log.txt
 *.csv
 
 old/*
+results/*
