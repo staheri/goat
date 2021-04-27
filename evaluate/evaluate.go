@@ -395,7 +395,7 @@ func EvaluateOverhead(configFile string, thresh int, ns []int) {
   }
 
   // change link of GO
-  cmd := exec.Command("ln","-nsf","/usr/local/myGo.1.15.6/","/usr/local/go")
+  cmd := exec.Command("sudo","ln","-nsf","/usr/local/myGo.1.15.6/","/usr/local/go")
   err = cmd.Run()
   check(err)
 }
