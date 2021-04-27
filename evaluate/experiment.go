@@ -12,7 +12,7 @@ import(
 
 )
 
-const RESDIR = "/Users/saeed/gopath/src/github.com/staheri/goat/results"
+const RESDIR = "/Users/saeed/goatws/results"
 const TO = 2 // second
 const CPU = 0
 const MAXPROCS = "4"
