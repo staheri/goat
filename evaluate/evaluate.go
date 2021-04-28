@@ -302,6 +302,10 @@ func EvaluateOverhead(configFile string, thresh int, ns []int) {
       if checkFile(mainExp.ReportJSON){ // if report exist
         // create experiment from json files
         mainExp.Exps = ReadResults(mainExp.ReportJSON)
+        for k,ex:= range(mainExp.Exps){
+          fmt.Printf("checkFile Key Exp: %v\n",k)
+          fmt.Printf("checkFile Result: %v\n",ex.(*ECTExperiment).Results)
+        }
         fmt.Println("File Found")
       } else{
         var exes []Ex
@@ -317,9 +321,9 @@ func EvaluateOverhead(configFile string, thresh int, ns []int) {
           ex.Init(false)  // race = false
           ex.Instrument() // race = false
           ex.Build(false) // race = false
-          IDD := fmt.Sprintf("%v_%v_i%v",ex.Target.BugName,ex.ID,strings.Join(ex.Args,"_"))
+          IDD := fmt.Sprintf("%v_%v_i%v",ex.ID,ex.Target.BugName,strings.Join(ex.Args,"_"))
           for i:=0 ; i < thresh ; i++{
-            fmt.Printf("Test %v on %v (input:%s) (%d/%d)\nIDD:%v\n",ex.Target.BugName,ex.ID,strings.Join(ex.Args,"_"),i+1,thresh,IDD)
+            fmt.Printf("Test %v on %v (input:%s) (%d/%d)\nIDD:%v\n",ex.ID,ex.Target.BugName,strings.Join(ex.Args,"_"),i+1,thresh,IDD)
             //IDD = fmt.Sprintf("%v_%v_input:%s) (%d/%d)\n",ex.Target.BugName,ex.ID,strings.Join(ex.Args,"_"),i+1,thresh)
             res := ex.Execute(i,false)
             fmt.Printf("\tTime: %v\n",res.Time)
@@ -340,46 +344,67 @@ func EvaluateOverhead(configFile string, thresh int, ns []int) {
       // calculate average time of native
       t := table.NewWriter()
     	t.SetOutputMirror(os.Stdout)
-    	t.AppendHeader(table.Row{"Experiment","Input","#GRTN","#CHNL","#EVENTS","OVERHEAD"})
-
-      var totalTimeNative  time.Duration
-      var totalTimeET      time.Duration
-      var totalTimeECT     time.Duration
-      var totalEvET        int
-      var totalEvECT       int
-      var totalGECT        int
-      var totalGET         int
-      var totalChET        int
-      var totalChECT       int
+    	t.AppendHeader(table.Row{"Experiment","Input","#GRTN","#CHNL","#EVENTS","Trace Size(B)","OVERHEAD"})
+      //
+      // var totalTimeNative  time.Duration
+      // var totalTimeET      time.Duration
+      // var totalTimeECT     time.Duration
+      // var totalEvET        int
+      // var totalEvECT       int
+      // var totalTraceET     int
+      // var totalTraceECT    int
+      // var totalGECT        int
+      // var totalGET         int
+      // var totalChET        int
+      // var totalChECT       int
 
       for _,n := range(ns){
-        key := fmt.Sprintf("%v_%v_i%v",target.BugName,"ECT_native",strconv.Itoa(n))
-        fmt.Printf("KEY: %v\n",key)
+        var totalTimeNative  time.Duration
+        var totalTimeET      time.Duration
+        var totalTimeECT     time.Duration
+        var totalEvET        int
+        var totalEvECT       int
+        var totalTraceET     int
+        var totalTraceECT    int
+        var totalGECT        int
+        var totalGET         int
+        var totalChET        int
+        var totalChECT       int
+        key := fmt.Sprintf("%v_%v_i%v","ECT_native",target.BugName,strconv.Itoa(n))
+        fmt.Printf("KEY_Native: %v\n",key)
         for _,r:= range(mainExp.Exps[key].(*ECTExperiment).Results){
           totalTimeNative = totalTimeNative + r.Time
+          fmt.Printf("\tResult: %v\n",r)
         }
-        key = fmt.Sprintf("%v_%v_i%v",target.BugName,"ECT_ET",strconv.Itoa(n))
+        key = fmt.Sprintf("%v_%v_i%v","ECT_ET",target.BugName,strconv.Itoa(n))
+        fmt.Printf("KEY_ET: %v\n",key)
         for _,r:= range(mainExp.Exps[key].(*ECTExperiment).Results){
           totalTimeET = totalTimeET + r.Time
           totalEvET = totalEvET + r.EventsLen
           totalGET = totalGET + r.TotalG
           totalChET = totalChET + r.TotalCh
+          totalTraceET = totalTraceET + r.TraceSize
+          fmt.Printf("\tResult: %v\n",r)
         }
-        key = fmt.Sprintf("%v_%v_i%v",target.BugName,"ECT_ECT",strconv.Itoa(n))
+        fmt.Printf("KEY_ECT: %v\n",key)
+        key = fmt.Sprintf("%v_%v_i%v","ECT_ECT",target.BugName,strconv.Itoa(n))
         for _,r:= range(mainExp.Exps[key].(*ECTExperiment).Results){
           totalTimeECT = totalTimeECT + r.Time
           totalEvECT = totalEvECT + r.EventsLen
           totalGECT = totalGECT + r.TotalG
           totalChECT = totalChECT + r.TotalCh
+          totalTraceECT = totalTraceECT + r.TraceSize
+          fmt.Printf("\tResult: %v\n",r)
         }
         var rowET       []interface{}
         var rowECT       []interface{}
         //key = fmt.Sprintf("%v_%v_i%v)",target.BugName,"ET",strconv.Itoa(n))
         rowET = append(rowET,target.BugName+"_ET")
         rowET = append(rowET,n)
-        rowET = append(rowET,totalGET/thresh)
-  			rowET = append(rowET,totalChET/thresh)
+        rowET = append(rowET,float64(totalGET)/float64(thresh))
+  			rowET = append(rowET,float64(totalChET)/float64(thresh))
   			rowET = append(rowET,totalEvET/thresh)
+        rowET = append(rowET,totalTraceET/thresh)
   			rowET = append(rowET,(float64(totalTimeET.Milliseconds())/float64(thresh))/(float64(totalTimeNative.Milliseconds())/float64(thresh)))
         t.AppendRow(rowET)
         rowECT = append(rowECT,target.BugName+"_ECT")
@@ -387,10 +412,72 @@ func EvaluateOverhead(configFile string, thresh int, ns []int) {
         rowECT = append(rowECT,totalGECT/thresh)
   			rowECT = append(rowECT,totalChECT/thresh)
   			rowECT = append(rowECT,totalEvECT/thresh)
+        rowECT = append(rowECT,totalTraceECT/thresh)
   			rowECT = append(rowECT,(float64(totalTimeECT.Milliseconds())/float64(thresh))/(float64(totalTimeNative.Milliseconds())/float64(thresh)))
         t.AppendRow(rowECT)
       }
       t.Render()
+      t.RenderCSV()
+
+
+
+      // calculate average time of native
+
+      t = table.NewWriter()
+    	t.SetOutputMirror(os.Stdout)
+    	t.AppendHeader(table.Row{"Experiment","Input","i","#GRTN","#CHNL","#EVENTS","Trace Size(B)","Time"})
+
+      for _,n := range(ns){
+        key := fmt.Sprintf("%v_%v_i%v","ECT_native",target.BugName,strconv.Itoa(n))
+        ex := mainExp.Exps[key].(*ECTExperiment)
+        for i,r:= range(ex.Results){
+          var row []interface{}
+          row = append(row,target.BugName+"_native")
+          row = append(row,n)
+          row = append(row,i)
+          row = append(row,"n/a")
+          row = append(row,"n/a")
+          row = append(row,"n/a")
+          row = append(row,"n/a")
+          row = append(row,r.Time)
+          t.AppendRow(row)
+        }
+        key = fmt.Sprintf("%v_%v_i%v","ECT_ET",target.BugName,strconv.Itoa(n))
+        ex = mainExp.Exps[key].(*ECTExperiment)
+        for i,r:= range(ex.Results){
+          var row []interface{}
+          row = append(row,target.BugName+"_ET")
+          row = append(row,n)
+          row = append(row,i)
+          row = append(row,r.TotalG)
+          row = append(row,r.TotalCh)
+          row = append(row,r.EventsLen)
+          row = append(row,r.TraceSize)
+          row = append(row,r.Time)
+          t.AppendRow(row)
+          //fmt.Printf("%v (%v): TOTAL G: %v\n",key,i,r.TotalG)
+          //traceops.ReplayDispGMAP(r.TracePath, filepath.Join(ex.PrefixDir,"bin",ex.BinaryName))
+        }
+
+        key = fmt.Sprintf("%v_%v_i%v","ECT_ECT",target.BugName,strconv.Itoa(n))
+        ex = mainExp.Exps[key].(*ECTExperiment)
+        for i,r:= range(ex.Results){
+          var row []interface{}
+          row = append(row,target.BugName+"_ECT")
+          row = append(row,n)
+          row = append(row,i)
+          row = append(row,r.TotalG)
+          row = append(row,r.TotalCh)
+          row = append(row,r.EventsLen)
+          row = append(row,r.TraceSize)
+          row = append(row,r.Time)
+          t.AppendRow(row)
+          //fmt.Printf("%v (%v): TOTAL G: %v\n",key,i,r.TotalG)
+          //traceops.ReplayDispGMAP(r.TracePath, filepath.Join(ex.PrefixDir,"bin",ex.BinaryName))
+        }
+      }
+      //t.Render()
+
     }
   }
 
