@@ -99,7 +99,7 @@ func ReadResults(fname string) map[string]Ex{
       gex.FirstFailedAfter = int(fields["firstFailedAfter"].(float64))
       ret[k]=gex
 
-    }else if strings.HasPrefix(k,"ECT_"){ // ECTExperiment
+    }else if strings.HasPrefix(k,"prime") || strings.HasPrefix(k,"ECT"){ // ECTExperiment
       ex := &ECTExperiment{}
       fields := v.(map[string]interface{})
       ex.Timeout = int(fields["timeout"].(float64))
@@ -135,6 +135,7 @@ func ReadResults(fname string) map[string]Ex{
         if totalCh,ok := res["totalch"];ok{
           rs.TotalCh = int(totalCh.(float64))
         }
+        results = append(results,rs)
       }
       ex.Results = results
       argsList := fields["args"].([]interface{})
@@ -146,7 +147,7 @@ func ReadResults(fname string) map[string]Ex{
       ex.Args = args
       ex.ID = fields["ID"].(string)
       ex.GoVer = fields["goVer"].(string)
-      ex.TraceDir = fields["traceDir"].(string)
+      //ex.TraceDir = fields["traceDir"].(string)
       ret[k]=ex
     } else{ //ToolExperiment
       tex := &ToolExperiment{}

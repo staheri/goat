@@ -223,12 +223,16 @@ func (tex *ToolExperiment) Execute(i int,race bool) *Result {
 
 // Execute and analyze ECT-experiment
 func (ex *ECTExperiment) Execute(i int, race bool) *Result {
+  // set timeout
+  old_TO := os.Getenv("GOATTO")
+  os.Setenv("GOATTO","120")
+
+  // placeholder for results
+  result := &Result{}
+
   if ex.ID == "ECT_native"{
     // Variables
     var stderr,stdout  bytes.Buffer
-
-    // placeholder for results
-    result := &Result{}
 
     cmd := exec.Command(filepath.Join(ex.PrefixDir,"bin",ex.BinaryName),ex.Args...)
     cmd.Stderr = &stderr
@@ -239,16 +243,7 @@ func (ex *ECTExperiment) Execute(i int, race bool) *Result {
       }
     })
     result.Time = time
-    return result
-
   }else{ // execute and trace
-    // Variables
-    //var trace     []byte
-    //var parseRes  *trace.ParseResult
-
-    // placeholder for results
-    result := &Result{}
-
     // FileName name to store events
     traceName := fmt.Sprintf("%s_%v_%v_I%d",ex.Target.BugName,strings.Join(ex.Args,"_"),ex.ID,i)
 
@@ -256,8 +251,6 @@ func (ex *ECTExperiment) Execute(i int, race bool) *Result {
     // Measure time
     execRes,err := instrument.ExecuteTrace(filepath.Join(ex.PrefixDir,"bin",ex.BinaryName),ex.Args...)
     check(err)
-
-
 
     result.TracePath = filepath.Join(ex.TraceDir,traceName)+".trace"
     traceBytes_n := traceops.WriteTrace(execRes.TraceBuffer.Bytes(),result.TracePath)
@@ -270,12 +263,15 @@ func (ex *ECTExperiment) Execute(i int, race bool) *Result {
     // parseRes holds events and stacktraces of trace
     fmt.Printf("\t# Events: %d\n",len(parseRes.Events))
 
-
     result.EventsLen = len(parseRes.Events)
     result.Time = execRes.ExecTime
-    result.TotalG,result.TotalCh = countGCH(parseRes.Events)
+    cnt := count(parseRes.Events)
+    result.TotalG = cnt.G
+    result.TotalCh = cnt.Ch
     result.StackSize = len(parseRes.Stacks)
-
-    return result
   }
+  // set back timeout
+  os.Setenv("GOATTO",old_TO)
+
+  return result
 }
