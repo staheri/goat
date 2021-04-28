@@ -102,7 +102,7 @@ func (ex *ECTExperiment) Build(race bool) {
 
   // change link of GO
   cmd := exec.Command("sudo","ln","-nsf","/usr/local/"+ex.GoVer+"/","/usr/local/go")
-  err = cmd.Run()
+  err := cmd.Run()
   check(err)
 
   src := filepath.Join(ex.PrefixDir,"src")

@@ -5,12 +5,12 @@ import (
 )
 
 type Count struct{
-  G           float64
-  Ch          float64
-  TotalChOps  float64
+  G           int
+  Ch          int
+  TotalChOps  int
 }
 
-func countGCH(events []*trace.Event) (int,int){
+func count(events []*trace.Event) (cnt Count){
   gs := make(map[int]int)
   cids := make(map[int]int)
   for _,e := range events{
@@ -18,8 +18,11 @@ func countGCH(events []*trace.Event) (int,int){
     if contains(ctgDescriptions[catCHNL].Members, "Ev"+desc.Name){
 			// if channel op, finds ID
 			cids[int(e.Args[0])] = 1
+      cnt.TotalChOps++
 		}
     gs[int(e.G)] = 1
   }
-  return len(gs),len(cids)
+  cnt.G = len(gs)
+  cnt.Ch = len(cids)
+  return cnt
 }
