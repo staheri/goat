@@ -20,3 +20,5 @@ bin/*
 GOAT_log.txt
 
 old/*
+
+.DS_Store
