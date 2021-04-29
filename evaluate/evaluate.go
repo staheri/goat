@@ -27,10 +27,14 @@ type RootExperiment struct{
 func EvaluateBlocking(configFile string, thresh int) {
   identifier := "blocking"
   causes := ReadGoKerConfig(identifier)
+  fmt.Println(causes)
 
   colorReset := "\033[0m"
   colorRed := "\033[31m"
   colorGreen := "\033[32m"
+
+  // a map to hold each RootExperiment
+  allBugs := make(map[string]*RootExperiment)
 
 
   // obtain configName
@@ -54,6 +58,7 @@ func EvaluateBlocking(configFile string, thresh int) {
       }
       mainExp := &RootExperiment{}
       // create bug now
+      fmt.Println("BugName:",bugName,", path: ",p,", fullname: ",bugFullName)
       target := &Bug{bugName,p,identifier,causes[bugName][0],causes[bugName][1]}
       mainExp.Bug = target
       mainExp.Exps = make(map[string]Ex)
@@ -158,10 +163,14 @@ func EvaluateBlocking(configFile string, thresh int) {
         rep.Close()
       }
       // all experiments are either done or read from file
-      SummaryTable(mainExp)
+      TableSummaryPerBug(mainExp)
+      allBugs[bugName] = mainExp
     }
-
   }
+  fmt.Println("Total Bugs: ",len(allBugs))
+  Table_Bug_Tool(allBugs,ORDER_BUG)
+  Table_Bug_Tool(allBugs,ORDER_CAUSE)
+  Table_Bug_Tool(allBugs,ORDER_SUBCAUSE)
 }
 
 
@@ -262,7 +271,7 @@ func EvaluateNonBlocking(configFile string,thresh int) {
         rep.Close()
       }
       // all experiments are either done or read from file
-      SummaryTable(mainExp)
+      TableSummaryPerBug(mainExp)
     }
 
   }

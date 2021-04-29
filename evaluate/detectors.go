@@ -19,6 +19,8 @@ func goleak_detector(out []byte) (bool,string) {
     return true,"PDL"
   } else if strings.Contains(string(out), "asleep"){
     return true, "GDL - from builtin"
+  } else if strings.Contains(string(out), "timed out"){
+    return true,"TO/GDL"
   }
   return false,""
 }

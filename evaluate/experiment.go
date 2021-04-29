@@ -13,7 +13,7 @@ import(
 )
 
 const RESDIR = "/Volumes/DATA/goatws/results"
-const TO = 2 // second
+const TO = 5 // second
 const CPU = 0
 const MAXPROCS = "4"
 const EVENT_BOUND = 20000000

@@ -190,11 +190,12 @@ func (tex *ToolExperiment) Execute(i int,race bool) *Result {
   // placeholder for results
   result := &Result{}
 
+  //if tex.ToolID == "lockDL" || tex.ToolID == "goleak"{
   if tex.ToolID == "lockDL"{
     command = "%v -test.failfast -test.timeout %v"
     commandVals = []interface{}{filepath.Join(tex.PrefixDir,"bin",tex.BinaryName), time.Duration(tex.Timeout)*time.Second}
   } else{
-    command = "%v -test.failfast"
+    command = "%v -test.failfast "
     commandVals = []interface{}{filepath.Join(tex.PrefixDir,"bin",tex.BinaryName)}
   }
   //
