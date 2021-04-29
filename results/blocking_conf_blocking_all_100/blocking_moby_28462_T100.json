@@ -1,0 +1,1858 @@
+{
+    "Bug": {
+        "bugName": "moby_28462",
+        "bugDir": "/Users/saeed/gobench/gobench/goker/blocking/moby/28462",
+        "bugType": "blocking",
+        "bugCause": "Mixed Deadlock",
+        "bugSubcause": "Channel \u0026 Lock"
+    },
+    "exps": {
+        "builtinDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_28462/builtinDL",
+            "binaryName": "846072453builtinDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_28462/builtinDL/out/builtinDL.out",
+            "results": [
+                {
+                    "time": 28410974,
+                    "detected": false
+                },
+                {
+                    "time": 24588407,
+                    "detected": false
+                },
+                {
+                    "time": 24384260,
+                    "detected": false
+                },
+                {
+                    "time": 23156945,
+                    "detected": false
+                },
+                {
+                    "time": 24702473,
+                    "detected": false
+                },
+                {
+                    "time": 25077481,
+                    "detected": false
+                },
+                {
+                    "time": 22868457,
+                    "detected": false
+                },
+                {
+                    "time": 22545346,
+                    "detected": false
+                },
+                {
+                    "time": 22601863,
+                    "detected": false
+                },
+                {
+                    "time": 24018863,
+                    "detected": false
+                },
+                {
+                    "time": 23045425,
+                    "detected": false
+                },
+                {
+                    "time": 23571091,
+                    "detected": false
+                },
+                {
+                    "time": 22606302,
+                    "detected": false
+                },
+                {
+                    "time": 23510410,
+                    "detected": false
+                },
+                {
+                    "time": 22267357,
+                    "detected": false
+                },
+                {
+                    "time": 23308041,
+                    "detected": false
+                },
+                {
+                    "time": 22614472,
+                    "detected": false
+                },
+                {
+                    "time": 25848890,
+                    "detected": false
+                },
+                {
+                    "time": 20874267,
+                    "detected": false
+                },
+                {
+                    "time": 24103367,
+                    "detected": false
+                },
+                {
+                    "time": 21762156,
+                    "detected": false
+                },
+                {
+                    "time": 22853832,
+                    "detected": false
+                },
+                {
+                    "time": 24038900,
+                    "detected": false
+                },
+                {
+                    "time": 24572020,
+                    "detected": false
+                },
+                {
+                    "time": 22798467,
+                    "detected": false
+                },
+                {
+                    "time": 22801149,
+                    "detected": false
+                },
+                {
+                    "time": 22567589,
+                    "detected": false
+                },
+                {
+                    "time": 24259404,
+                    "detected": false
+                },
+                {
+                    "time": 22601041,
+                    "detected": false
+                },
+                {
+                    "time": 23857978,
+                    "detected": false
+                },
+                {
+                    "time": 23030520,
+                    "detected": false
+                },
+                {
+                    "time": 24442447,
+                    "detected": false
+                },
+                {
+                    "time": 21467026,
+                    "detected": false
+                },
+                {
+                    "time": 25401165,
+                    "detected": false
+                },
+                {
+                    "time": 21539367,
+                    "detected": false
+                },
+                {
+                    "time": 23728357,
+                    "detected": false
+                },
+                {
+                    "time": 22589273,
+                    "detected": false
+                },
+                {
+                    "time": 23317641,
+                    "detected": false
+                },
+                {
+                    "time": 22305965,
+                    "detected": false
+                },
+                {
+                    "time": 24440151,
+                    "detected": false
+                },
+                {
+                    "time": 22046507,
+                    "detected": false
+                },
+                {
+                    "time": 24391262,
+                    "detected": false
+                },
+                {
+                    "time": 21167035,
+                    "detected": false
+                },
+                {
+                    "time": 25037051,
+                    "detected": false
+                },
+                {
+                    "time": 21536585,
+                    "detected": false
+                },
+                {
+                    "time": 22978491,
+                    "detected": false
+                },
+                {
+                    "time": 22417271,
+                    "detected": false
+                },
+                {
+                    "time": 23255155,
+                    "detected": false
+                },
+                {
+                    "time": 23088734,
+                    "detected": false
+                },
+                {
+                    "time": 24286831,
+                    "detected": false
+                },
+                {
+                    "time": 23597459,
+                    "detected": false
+                },
+                {
+                    "time": 24293548,
+                    "detected": false
+                },
+                {
+                    "time": 22060080,
+                    "detected": false
+                },
+                {
+                    "time": 23847772,
+                    "detected": false
+                },
+                {
+                    "time": 22514113,
+                    "detected": false
+                },
+                {
+                    "time": 23028790,
+                    "detected": false
+                },
+                {
+                    "time": 21239164,
+                    "detected": false
+                },
+                {
+                    "time": 24232715,
+                    "detected": false
+                },
+                {
+                    "time": 24404785,
+                    "detected": false
+                },
+                {
+                    "time": 27562180,
+                    "detected": false
+                },
+                {
+                    "time": 23775022,
+                    "detected": false
+                },
+                {
+                    "time": 27874274,
+                    "detected": false
+                },
+                {
+                    "time": 23108982,
+                    "detected": false
+                },
+                {
+                    "time": 23161265,
+                    "detected": false
+                },
+                {
+                    "time": 27104666,
+                    "detected": false
+                },
+                {
+                    "time": 23451681,
+                    "detected": false
+                },
+                {
+                    "time": 24574091,
+                    "detected": false
+                },
+                {
+                    "time": 25277149,
+                    "detected": false
+                },
+                {
+                    "time": 22808044,
+                    "detected": false
+                },
+                {
+                    "time": 24086533,
+                    "detected": false
+                },
+                {
+                    "time": 21040632,
+                    "detected": false
+                },
+                {
+                    "time": 23343497,
+                    "detected": false
+                },
+                {
+                    "time": 23522225,
+                    "detected": false
+                },
+                {
+                    "time": 23351149,
+                    "detected": false
+                },
+                {
+                    "time": 22101776,
+                    "detected": false
+                },
+                {
+                    "time": 24094022,
+                    "detected": false
+                },
+                {
+                    "time": 23119606,
+                    "detected": false
+                },
+                {
+                    "time": 23248310,
+                    "detected": false
+                },
+                {
+                    "time": 23875363,
+                    "detected": false
+                },
+                {
+                    "time": 25064993,
+                    "detected": false
+                },
+                {
+                    "time": 21812601,
+                    "detected": false
+                },
+                {
+                    "time": 23629195,
+                    "detected": false
+                },
+                {
+                    "time": 20901111,
+                    "detected": false
+                },
+                {
+                    "time": 24023539,
+                    "detected": false
+                },
+                {
+                    "time": 23159259,
+                    "detected": false
+                },
+                {
+                    "time": 23227241,
+                    "detected": false
+                },
+                {
+                    "time": 22202651,
+                    "detected": false
+                },
+                {
+                    "time": 22772857,
+                    "detected": false
+                },
+                {
+                    "time": 22761896,
+                    "detected": false
+                },
+                {
+                    "time": 22288364,
+                    "detected": false
+                },
+                {
+                    "time": 22182292,
+                    "detected": false
+                },
+                {
+                    "time": 24218593,
+                    "detected": false
+                },
+                {
+                    "time": 23041214,
+                    "detected": false
+                },
+                {
+                    "time": 23613087,
+                    "detected": false
+                },
+                {
+                    "time": 22302849,
+                    "detected": false
+                },
+                {
+                    "time": 23667766,
+                    "detected": false
+                },
+                {
+                    "time": 23780182,
+                    "detected": false
+                },
+                {
+                    "time": 23831895,
+                    "detected": false
+                },
+                {
+                    "time": 21471027,
+                    "detected": false
+                },
+                {
+                    "time": 22680868,
+                    "detected": false
+                }
+            ],
+            "toolid": "builtinDL"
+        },
+        "goat_d1": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_28462/goat_delay",
+            "binaryName": "671948844delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_delay/out/goat_goat_d1.out",
+            "results": [
+                {
+                    "time": 39859655,
+                    "desc": "PDL-2",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_delay/traces/goat_d1/moby_28462_B1_I0.trace",
+                    "traceSize": 20097,
+                    "totalg": 11,
+                    "eventsLen": 2577,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d1",
+            "goatBound": 1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/moby_28462/goat_delay/traces/goat_d1",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/moby_28462/goat_delay/traces/goat_d1/moby_28462_B1_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d2": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_28462/goat_delay",
+            "binaryName": "671948844delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_delay/out/goat_goat_d2.out",
+            "results": [
+                {
+                    "time": 38414176,
+                    "desc": "PDL-2",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_delay/traces/goat_d2/moby_28462_B2_I0.trace",
+                    "traceSize": 20286,
+                    "totalg": 11,
+                    "eventsLen": 2632,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d2",
+            "goatBound": 2,
+            "traceDir": "/Volumes/DATA/goatws/blocking/moby_28462/goat_delay/traces/goat_d2",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/moby_28462/goat_delay/traces/goat_d2/moby_28462_B2_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d3": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_28462/goat_delay",
+            "binaryName": "671948844delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_delay/out/goat_goat_d3.out",
+            "results": [
+                {
+                    "time": 28612209,
+                    "desc": "PDL-2",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_delay/traces/goat_d3/moby_28462_B3_I0.trace",
+                    "traceSize": 7257,
+                    "totalg": 11,
+                    "eventsLen": 113,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d3",
+            "goatBound": 3,
+            "traceDir": "/Volumes/DATA/goatws/blocking/moby_28462/goat_delay/traces/goat_d3",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/moby_28462/goat_delay/traces/goat_d3/moby_28462_B3_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_m": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace",
+            "binaryName": "233056193trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/out/goat_goat_m.out",
+            "results": [
+                {
+                    "time": 30815685,
+                    "desc": "PDL-2",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_m/moby_28462_BT_I0.trace",
+                    "traceSize": 4413,
+                    "totalg": 11,
+                    "eventsLen": 146,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_m",
+            "goatBound": -1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_m",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_m/moby_28462_BT_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_u": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace",
+            "binaryName": "233056193trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/out/goat_goat_u.out",
+            "results": [
+                {
+                    "time": 24352764,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I0.trace",
+                    "traceSize": 3938,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 24489785,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I1.trace",
+                    "traceSize": 3940,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 23657976,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I2.trace",
+                    "traceSize": 3949,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 24179617,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I3.trace",
+                    "traceSize": 3950,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 26105862,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I4.trace",
+                    "traceSize": 3998,
+                    "totalg": 11,
+                    "eventsLen": 69,
+                    "detected": false
+                },
+                {
+                    "time": 25011670,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I5.trace",
+                    "traceSize": 3956,
+                    "totalg": 11,
+                    "eventsLen": 67,
+                    "detected": false
+                },
+                {
+                    "time": 25277821,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I6.trace",
+                    "traceSize": 3952,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 26219945,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I7.trace",
+                    "traceSize": 3936,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 25190090,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I8.trace",
+                    "traceSize": 3953,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 23574394,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I9.trace",
+                    "traceSize": 3945,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 25305900,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I10.trace",
+                    "traceSize": 3951,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 23725395,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I11.trace",
+                    "traceSize": 3971,
+                    "totalg": 11,
+                    "eventsLen": 71,
+                    "detected": false
+                },
+                {
+                    "time": 24751877,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I12.trace",
+                    "traceSize": 3956,
+                    "totalg": 11,
+                    "eventsLen": 67,
+                    "detected": false
+                },
+                {
+                    "time": 26482797,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I13.trace",
+                    "traceSize": 3977,
+                    "totalg": 11,
+                    "eventsLen": 71,
+                    "detected": false
+                },
+                {
+                    "time": 24520975,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I14.trace",
+                    "traceSize": 3937,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 24807891,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I15.trace",
+                    "traceSize": 3937,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 25918177,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I16.trace",
+                    "traceSize": 3948,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 23772896,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I17.trace",
+                    "traceSize": 3936,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 25198700,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I18.trace",
+                    "traceSize": 3935,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 28448197,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I19.trace",
+                    "traceSize": 3938,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 24086815,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I20.trace",
+                    "traceSize": 3951,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 24011048,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I21.trace",
+                    "traceSize": 3951,
+                    "totalg": 11,
+                    "eventsLen": 67,
+                    "detected": false
+                },
+                {
+                    "time": 27121373,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I22.trace",
+                    "traceSize": 3938,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 24494395,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I23.trace",
+                    "traceSize": 3941,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 25723622,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I24.trace",
+                    "traceSize": 3956,
+                    "totalg": 11,
+                    "eventsLen": 67,
+                    "detected": false
+                },
+                {
+                    "time": 24865949,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I25.trace",
+                    "traceSize": 3940,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 26256937,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I26.trace",
+                    "traceSize": 3949,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 24496071,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I27.trace",
+                    "traceSize": 3973,
+                    "totalg": 11,
+                    "eventsLen": 71,
+                    "detected": false
+                },
+                {
+                    "time": 24440088,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I28.trace",
+                    "traceSize": 3949,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 25519630,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I29.trace",
+                    "traceSize": 3940,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 23604071,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I30.trace",
+                    "traceSize": 3940,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 23905039,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I31.trace",
+                    "traceSize": 3973,
+                    "totalg": 11,
+                    "eventsLen": 71,
+                    "detected": false
+                },
+                {
+                    "time": 26336416,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I32.trace",
+                    "traceSize": 3985,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 23015480,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I33.trace",
+                    "traceSize": 3950,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 23117072,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I34.trace",
+                    "traceSize": 3950,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 26351516,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I35.trace",
+                    "traceSize": 3952,
+                    "totalg": 11,
+                    "eventsLen": 67,
+                    "detected": false
+                },
+                {
+                    "time": 25274047,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I36.trace",
+                    "traceSize": 3956,
+                    "totalg": 11,
+                    "eventsLen": 67,
+                    "detected": false
+                },
+                {
+                    "time": 26238454,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I37.trace",
+                    "traceSize": 3975,
+                    "totalg": 11,
+                    "eventsLen": 71,
+                    "detected": false
+                },
+                {
+                    "time": 24890399,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I38.trace",
+                    "traceSize": 3952,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 24644691,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I39.trace",
+                    "traceSize": 3953,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 24651083,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I40.trace",
+                    "traceSize": 3953,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 26299910,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I41.trace",
+                    "traceSize": 3981,
+                    "totalg": 11,
+                    "eventsLen": 72,
+                    "detected": false
+                },
+                {
+                    "time": 23671026,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I42.trace",
+                    "traceSize": 3992,
+                    "totalg": 11,
+                    "eventsLen": 68,
+                    "detected": false
+                },
+                {
+                    "time": 24023416,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I43.trace",
+                    "traceSize": 3955,
+                    "totalg": 11,
+                    "eventsLen": 67,
+                    "detected": false
+                },
+                {
+                    "time": 25791548,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I44.trace",
+                    "traceSize": 3943,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 24714835,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I45.trace",
+                    "traceSize": 3948,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 25383941,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I46.trace",
+                    "traceSize": 3951,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 25746702,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I47.trace",
+                    "traceSize": 3950,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 23430278,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I48.trace",
+                    "traceSize": 3950,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 25245707,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I49.trace",
+                    "traceSize": 3947,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 26396992,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I50.trace",
+                    "traceSize": 3940,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 25448688,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I51.trace",
+                    "traceSize": 3959,
+                    "totalg": 11,
+                    "eventsLen": 67,
+                    "detected": false
+                },
+                {
+                    "time": 23759599,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I52.trace",
+                    "traceSize": 3990,
+                    "totalg": 11,
+                    "eventsLen": 68,
+                    "detected": false
+                },
+                {
+                    "time": 24252252,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I53.trace",
+                    "traceSize": 3949,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 26402255,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I54.trace",
+                    "traceSize": 3938,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 23860920,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I55.trace",
+                    "traceSize": 3950,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 23092384,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I56.trace",
+                    "traceSize": 3975,
+                    "totalg": 11,
+                    "eventsLen": 71,
+                    "detected": false
+                },
+                {
+                    "time": 26096169,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I57.trace",
+                    "traceSize": 3942,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 23561775,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I58.trace",
+                    "traceSize": 3939,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 24361011,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I59.trace",
+                    "traceSize": 3947,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 25612868,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I60.trace",
+                    "traceSize": 3956,
+                    "totalg": 11,
+                    "eventsLen": 67,
+                    "detected": false
+                },
+                {
+                    "time": 24814012,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I61.trace",
+                    "traceSize": 3947,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 24699848,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I62.trace",
+                    "traceSize": 3937,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 25532152,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I63.trace",
+                    "traceSize": 3942,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 24519348,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I64.trace",
+                    "traceSize": 3974,
+                    "totalg": 11,
+                    "eventsLen": 71,
+                    "detected": false
+                },
+                {
+                    "time": 24440993,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I65.trace",
+                    "traceSize": 3940,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 24271227,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I66.trace",
+                    "traceSize": 3958,
+                    "totalg": 11,
+                    "eventsLen": 67,
+                    "detected": false
+                },
+                {
+                    "time": 26081191,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I67.trace",
+                    "traceSize": 3956,
+                    "totalg": 11,
+                    "eventsLen": 67,
+                    "detected": false
+                },
+                {
+                    "time": 24462445,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I68.trace",
+                    "traceSize": 3949,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 30301062,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I69.trace",
+                    "traceSize": 3991,
+                    "totalg": 11,
+                    "eventsLen": 68,
+                    "detected": false
+                },
+                {
+                    "time": 30726644,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I70.trace",
+                    "traceSize": 3974,
+                    "totalg": 11,
+                    "eventsLen": 71,
+                    "detected": false
+                },
+                {
+                    "time": 27121352,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I71.trace",
+                    "traceSize": 3956,
+                    "totalg": 11,
+                    "eventsLen": 67,
+                    "detected": false
+                },
+                {
+                    "time": 26581987,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I72.trace",
+                    "traceSize": 3954,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 23756814,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I73.trace",
+                    "traceSize": 3948,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 26228906,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I74.trace",
+                    "traceSize": 3942,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 24087608,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I75.trace",
+                    "traceSize": 3947,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 24308116,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I76.trace",
+                    "traceSize": 3940,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 25133803,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I77.trace",
+                    "traceSize": 3973,
+                    "totalg": 11,
+                    "eventsLen": 71,
+                    "detected": false
+                },
+                {
+                    "time": 23033894,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I78.trace",
+                    "traceSize": 3948,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 24553007,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I79.trace",
+                    "traceSize": 3975,
+                    "totalg": 11,
+                    "eventsLen": 71,
+                    "detected": false
+                },
+                {
+                    "time": 24199164,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I80.trace",
+                    "traceSize": 3952,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 24930117,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I81.trace",
+                    "traceSize": 3938,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 23852479,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I82.trace",
+                    "traceSize": 3950,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 25279881,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I83.trace",
+                    "traceSize": 3950,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 25357302,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I84.trace",
+                    "traceSize": 3972,
+                    "totalg": 11,
+                    "eventsLen": 71,
+                    "detected": false
+                },
+                {
+                    "time": 25257009,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I85.trace",
+                    "traceSize": 3973,
+                    "totalg": 11,
+                    "eventsLen": 71,
+                    "detected": false
+                },
+                {
+                    "time": 25503458,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I86.trace",
+                    "traceSize": 3952,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 25058234,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I87.trace",
+                    "traceSize": 3991,
+                    "totalg": 11,
+                    "eventsLen": 68,
+                    "detected": false
+                },
+                {
+                    "time": 25135354,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I88.trace",
+                    "traceSize": 3936,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 25539498,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I89.trace",
+                    "traceSize": 3974,
+                    "totalg": 11,
+                    "eventsLen": 71,
+                    "detected": false
+                },
+                {
+                    "time": 24832816,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I90.trace",
+                    "traceSize": 3973,
+                    "totalg": 11,
+                    "eventsLen": 71,
+                    "detected": false
+                },
+                {
+                    "time": 26027949,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I91.trace",
+                    "traceSize": 3950,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 25103054,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I92.trace",
+                    "traceSize": 3941,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 27014099,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I93.trace",
+                    "traceSize": 3949,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 25005847,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I94.trace",
+                    "traceSize": 3939,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 24751780,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I95.trace",
+                    "traceSize": 3951,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 24717410,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I96.trace",
+                    "traceSize": 3950,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 24779893,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I97.trace",
+                    "traceSize": 3952,
+                    "totalg": 11,
+                    "eventsLen": 66,
+                    "detected": false
+                },
+                {
+                    "time": 25716349,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I98.trace",
+                    "traceSize": 3934,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                },
+                {
+                    "time": 25328253,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I99.trace",
+                    "traceSize": 3928,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": false
+                }
+            ],
+            "goatid": "goat_u",
+            "goatBound": 0,
+            "traceDir": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u",
+            "lastFailedTrace": "",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/moby_28462/goat_trace/traces/goat_u/moby_28462_B0_I99.trace",
+            "firstFailedAfter": 0
+        },
+        "goleak": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_28462/goleak",
+            "binaryName": "831482942goleak",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_28462/goleak/out/goleak.out",
+            "results": [
+                {
+                    "time": 485904154,
+                    "desc": "PDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "goleak"
+        },
+        "lockDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_28462/lockDL",
+            "binaryName": "755075483lockDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_28462/lockDL/out/lockDL.out",
+            "results": [
+                {
+                    "time": 27885086,
+                    "detected": false
+                },
+                {
+                    "time": 25144558,
+                    "detected": false
+                },
+                {
+                    "time": 23549271,
+                    "detected": false
+                },
+                {
+                    "time": 24258156,
+                    "detected": false
+                },
+                {
+                    "time": 23688251,
+                    "detected": false
+                },
+                {
+                    "time": 24378347,
+                    "detected": false
+                },
+                {
+                    "time": 23466810,
+                    "detected": false
+                },
+                {
+                    "time": 23692951,
+                    "detected": false
+                },
+                {
+                    "time": 22682548,
+                    "detected": false
+                },
+                {
+                    "time": 23844129,
+                    "detected": false
+                },
+                {
+                    "time": 22924056,
+                    "detected": false
+                },
+                {
+                    "time": 24121690,
+                    "detected": false
+                },
+                {
+                    "time": 22529981,
+                    "detected": false
+                },
+                {
+                    "time": 22855644,
+                    "detected": false
+                },
+                {
+                    "time": 23428787,
+                    "detected": false
+                },
+                {
+                    "time": 23342922,
+                    "detected": false
+                },
+                {
+                    "time": 22812957,
+                    "detected": false
+                },
+                {
+                    "time": 24147603,
+                    "detected": false
+                },
+                {
+                    "time": 24219892,
+                    "detected": false
+                },
+                {
+                    "time": 24291255,
+                    "detected": false
+                },
+                {
+                    "time": 22966775,
+                    "detected": false
+                },
+                {
+                    "time": 24780901,
+                    "detected": false
+                },
+                {
+                    "time": 23653069,
+                    "detected": false
+                },
+                {
+                    "time": 24679749,
+                    "detected": false
+                },
+                {
+                    "time": 23771517,
+                    "detected": false
+                },
+                {
+                    "time": 24276860,
+                    "detected": false
+                },
+                {
+                    "time": 23854596,
+                    "detected": false
+                },
+                {
+                    "time": 24138362,
+                    "detected": false
+                },
+                {
+                    "time": 20983762,
+                    "detected": false
+                },
+                {
+                    "time": 23571184,
+                    "detected": false
+                },
+                {
+                    "time": 23260892,
+                    "detected": false
+                },
+                {
+                    "time": 24248719,
+                    "detected": false
+                },
+                {
+                    "time": 23125965,
+                    "detected": false
+                },
+                {
+                    "time": 23287571,
+                    "detected": false
+                },
+                {
+                    "time": 21435243,
+                    "detected": false
+                },
+                {
+                    "time": 23661120,
+                    "detected": false
+                },
+                {
+                    "time": 21375537,
+                    "detected": false
+                },
+                {
+                    "time": 23712925,
+                    "detected": false
+                },
+                {
+                    "time": 23195103,
+                    "detected": false
+                },
+                {
+                    "time": 24691095,
+                    "detected": false
+                },
+                {
+                    "time": 22557724,
+                    "detected": false
+                },
+                {
+                    "time": 24041902,
+                    "detected": false
+                },
+                {
+                    "time": 22189617,
+                    "detected": false
+                },
+                {
+                    "time": 24137359,
+                    "detected": false
+                },
+                {
+                    "time": 22485309,
+                    "detected": false
+                },
+                {
+                    "time": 23915728,
+                    "detected": false
+                },
+                {
+                    "time": 21759465,
+                    "detected": false
+                },
+                {
+                    "time": 23480752,
+                    "detected": false
+                },
+                {
+                    "time": 23077346,
+                    "detected": false
+                },
+                {
+                    "time": 25265802,
+                    "detected": false
+                },
+                {
+                    "time": 23475737,
+                    "detected": false
+                },
+                {
+                    "time": 24275959,
+                    "detected": false
+                },
+                {
+                    "time": 22807056,
+                    "detected": false
+                },
+                {
+                    "time": 23991193,
+                    "detected": false
+                },
+                {
+                    "time": 22281812,
+                    "detected": false
+                },
+                {
+                    "time": 24049354,
+                    "detected": false
+                },
+                {
+                    "time": 24032571,
+                    "detected": false
+                },
+                {
+                    "time": 23226641,
+                    "detected": false
+                },
+                {
+                    "time": 23036335,
+                    "detected": false
+                },
+                {
+                    "time": 25394492,
+                    "detected": false
+                },
+                {
+                    "time": 22783551,
+                    "detected": false
+                },
+                {
+                    "time": 24757497,
+                    "detected": false
+                },
+                {
+                    "time": 23023514,
+                    "detected": false
+                },
+                {
+                    "time": 24419841,
+                    "detected": false
+                },
+                {
+                    "time": 22888539,
+                    "detected": false
+                },
+                {
+                    "time": 27363520,
+                    "detected": false
+                },
+                {
+                    "time": 26797070,
+                    "detected": false
+                },
+                {
+                    "time": 26269579,
+                    "detected": false
+                },
+                {
+                    "time": 21916513,
+                    "detected": false
+                },
+                {
+                    "time": 26391490,
+                    "detected": false
+                },
+                {
+                    "time": 22633976,
+                    "detected": false
+                },
+                {
+                    "time": 27187350,
+                    "detected": false
+                },
+                {
+                    "time": 23096285,
+                    "detected": false
+                },
+                {
+                    "time": 24602749,
+                    "detected": false
+                },
+                {
+                    "time": 22792326,
+                    "detected": false
+                },
+                {
+                    "time": 25346557,
+                    "detected": false
+                },
+                {
+                    "time": 24229871,
+                    "detected": false
+                },
+                {
+                    "time": 25725291,
+                    "detected": false
+                },
+                {
+                    "time": 22498224,
+                    "detected": false
+                },
+                {
+                    "time": 24400391,
+                    "detected": false
+                },
+                {
+                    "time": 23063191,
+                    "detected": false
+                },
+                {
+                    "time": 23852194,
+                    "detected": false
+                },
+                {
+                    "time": 21742849,
+                    "detected": false
+                },
+                {
+                    "time": 23565699,
+                    "detected": false
+                },
+                {
+                    "time": 21952139,
+                    "detected": false
+                },
+                {
+                    "time": 23973412,
+                    "detected": false
+                },
+                {
+                    "time": 23995892,
+                    "detected": false
+                },
+                {
+                    "time": 24935887,
+                    "detected": false
+                },
+                {
+                    "time": 21166422,
+                    "detected": false
+                },
+                {
+                    "time": 24644750,
+                    "detected": false
+                },
+                {
+                    "time": 21703443,
+                    "detected": false
+                },
+                {
+                    "time": 25070876,
+                    "detected": false
+                },
+                {
+                    "time": 22175738,
+                    "detected": false
+                },
+                {
+                    "time": 24402142,
+                    "detected": false
+                },
+                {
+                    "time": 21031223,
+                    "detected": false
+                },
+                {
+                    "time": 24185522,
+                    "detected": false
+                },
+                {
+                    "time": 22633466,
+                    "detected": false
+                },
+                {
+                    "time": 24137060,
+                    "detected": false
+                },
+                {
+                    "time": 22636111,
+                    "detected": false
+                },
+                {
+                    "time": 23972840,
+                    "detected": false
+                }
+            ],
+            "toolid": "lockDL"
+        }
+    },
+    "reportJSON": "/Volumes/DATA/goatws/results/blocking_conf_blocking_all_100/blocking_moby_28462_T100.json"
+}

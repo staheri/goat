@@ -1,0 +1,4144 @@
+{
+    "Bug": {
+        "bugName": "kubernetes_11298",
+        "bugDir": "/Users/saeed/gobench/gobench/goker/blocking/kubernetes/11298",
+        "bugType": "blocking",
+        "bugCause": "Communication Deadlock",
+        "bugSubcause": "Channel \u0026 Condition Variable"
+    },
+    "exps": {
+        "builtinDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_11298/builtinDL",
+            "binaryName": "523197504builtinDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/builtinDL/out/builtinDL.out",
+            "results": [
+                {
+                    "time": 25277406,
+                    "detected": false
+                },
+                {
+                    "time": 22617228,
+                    "detected": false
+                },
+                {
+                    "time": 24020260,
+                    "detected": false
+                },
+                {
+                    "time": 21208959,
+                    "detected": false
+                },
+                {
+                    "time": 23711613,
+                    "detected": false
+                },
+                {
+                    "time": 26033035,
+                    "desc": "GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "builtinDL"
+        },
+        "goat_d1": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay",
+            "binaryName": "765164859delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/out/goat_goat_d1.out",
+            "results": [
+                {
+                    "time": 31727593,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I0.trace",
+                    "traceSize": 7988,
+                    "totalg": 12,
+                    "eventsLen": 115,
+                    "detected": false
+                },
+                {
+                    "time": 23645997,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I1.trace",
+                    "traceSize": 8177,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 28112675,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I2.trace",
+                    "traceSize": 8349,
+                    "totalg": 12,
+                    "eventsLen": 128,
+                    "detected": false
+                },
+                {
+                    "time": 26063171,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I3.trace",
+                    "traceSize": 7885,
+                    "totalg": 12,
+                    "eventsLen": 116,
+                    "detected": false
+                },
+                {
+                    "time": 43957283,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I4.trace",
+                    "traceSize": 34606,
+                    "totalg": 13,
+                    "eventsLen": 3113,
+                    "detected": false
+                },
+                {
+                    "time": 26966057,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I5.trace",
+                    "traceSize": 8178,
+                    "totalg": 12,
+                    "eventsLen": 129,
+                    "detected": false
+                },
+                {
+                    "time": 26083085,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I6.trace",
+                    "traceSize": 7917,
+                    "totalg": 12,
+                    "eventsLen": 116,
+                    "detected": false
+                },
+                {
+                    "time": 25421083,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I7.trace",
+                    "traceSize": 8147,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 25349979,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I8.trace",
+                    "traceSize": 8254,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 26106963,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I9.trace",
+                    "traceSize": 7976,
+                    "totalg": 12,
+                    "eventsLen": 125,
+                    "detected": false
+                },
+                {
+                    "time": 43121235,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I10.trace",
+                    "traceSize": 34474,
+                    "totalg": 13,
+                    "eventsLen": 3009,
+                    "detected": false
+                },
+                {
+                    "time": 26378439,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I11.trace",
+                    "traceSize": 8236,
+                    "totalg": 12,
+                    "eventsLen": 125,
+                    "detected": false
+                },
+                {
+                    "time": 70103512,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I12.trace",
+                    "traceSize": 55256,
+                    "totalg": 14,
+                    "eventsLen": 5717,
+                    "detected": false
+                },
+                {
+                    "time": 25656730,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I13.trace",
+                    "traceSize": 8011,
+                    "totalg": 12,
+                    "eventsLen": 119,
+                    "detected": false
+                },
+                {
+                    "time": 25631466,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I14.trace",
+                    "traceSize": 8072,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 44131319,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I15.trace",
+                    "traceSize": 33714,
+                    "totalg": 14,
+                    "eventsLen": 2574,
+                    "detected": false
+                },
+                {
+                    "time": 25387988,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I16.trace",
+                    "traceSize": 8122,
+                    "totalg": 12,
+                    "eventsLen": 120,
+                    "detected": false
+                },
+                {
+                    "time": 25483787,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I17.trace",
+                    "traceSize": 8156,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 71297261,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I18.trace",
+                    "traceSize": 65786,
+                    "totalg": 14,
+                    "eventsLen": 7067,
+                    "detected": false
+                },
+                {
+                    "time": 27664139,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I19.trace",
+                    "traceSize": 8091,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 25883116,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I20.trace",
+                    "traceSize": 8112,
+                    "totalg": 12,
+                    "eventsLen": 123,
+                    "detected": false
+                },
+                {
+                    "time": 148490667,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I21.trace",
+                    "traceSize": 169047,
+                    "totalg": 17,
+                    "eventsLen": 23037,
+                    "detected": false
+                },
+                {
+                    "time": 25177332,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I22.trace",
+                    "traceSize": 8346,
+                    "totalg": 12,
+                    "eventsLen": 127,
+                    "detected": false
+                },
+                {
+                    "time": 70579861,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I23.trace",
+                    "traceSize": 65132,
+                    "totalg": 14,
+                    "eventsLen": 6871,
+                    "detected": false
+                },
+                {
+                    "time": 43327434,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I24.trace",
+                    "traceSize": 34382,
+                    "totalg": 13,
+                    "eventsLen": 2779,
+                    "detected": false
+                },
+                {
+                    "time": 41048466,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I25.trace",
+                    "traceSize": 32473,
+                    "totalg": 14,
+                    "eventsLen": 2733,
+                    "detected": false
+                },
+                {
+                    "time": 23968621,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I26.trace",
+                    "traceSize": 7997,
+                    "totalg": 12,
+                    "eventsLen": 117,
+                    "detected": false
+                },
+                {
+                    "time": 72934813,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I27.trace",
+                    "traceSize": 71876,
+                    "totalg": 15,
+                    "eventsLen": 8151,
+                    "detected": false
+                },
+                {
+                    "time": 25879398,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I28.trace",
+                    "traceSize": 8120,
+                    "totalg": 12,
+                    "eventsLen": 120,
+                    "detected": false
+                },
+                {
+                    "time": 26389808,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I29.trace",
+                    "traceSize": 8126,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 28864525,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I30.trace",
+                    "traceSize": 8006,
+                    "totalg": 12,
+                    "eventsLen": 119,
+                    "detected": false
+                },
+                {
+                    "time": 65562805,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I31.trace",
+                    "traceSize": 60247,
+                    "totalg": 14,
+                    "eventsLen": 6234,
+                    "detected": false
+                },
+                {
+                    "time": 25891569,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I32.trace",
+                    "traceSize": 7714,
+                    "totalg": 12,
+                    "eventsLen": 112,
+                    "detected": false
+                },
+                {
+                    "time": 23987613,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I33.trace",
+                    "traceSize": 7915,
+                    "totalg": 12,
+                    "eventsLen": 121,
+                    "detected": false
+                },
+                {
+                    "time": 25285381,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I34.trace",
+                    "traceSize": 8215,
+                    "totalg": 12,
+                    "eventsLen": 121,
+                    "detected": false
+                },
+                {
+                    "time": 28637370,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I35.trace",
+                    "traceSize": 8145,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 43549141,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I36.trace",
+                    "traceSize": 34207,
+                    "totalg": 13,
+                    "eventsLen": 3015,
+                    "detected": false
+                },
+                {
+                    "time": 46489559,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I37.trace",
+                    "traceSize": 32026,
+                    "totalg": 13,
+                    "eventsLen": 2620,
+                    "detected": false
+                },
+                {
+                    "time": 25534603,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I38.trace",
+                    "traceSize": 8036,
+                    "totalg": 12,
+                    "eventsLen": 120,
+                    "detected": false
+                },
+                {
+                    "time": 25007935,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I39.trace",
+                    "traceSize": 8233,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 94578463,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I40.trace",
+                    "traceSize": 103518,
+                    "totalg": 16,
+                    "eventsLen": 13073,
+                    "detected": false
+                },
+                {
+                    "time": 28452525,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I41.trace",
+                    "traceSize": 8436,
+                    "totalg": 12,
+                    "eventsLen": 125,
+                    "detected": false
+                },
+                {
+                    "time": 73724401,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I42.trace",
+                    "traceSize": 74580,
+                    "totalg": 14,
+                    "eventsLen": 8538,
+                    "detected": false
+                },
+                {
+                    "time": 67906484,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I43.trace",
+                    "traceSize": 66277,
+                    "totalg": 14,
+                    "eventsLen": 7063,
+                    "detected": false
+                },
+                {
+                    "time": 44948049,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I44.trace",
+                    "traceSize": 34256,
+                    "totalg": 14,
+                    "eventsLen": 3055,
+                    "detected": false
+                },
+                {
+                    "time": 25431736,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I45.trace",
+                    "traceSize": 8007,
+                    "totalg": 12,
+                    "eventsLen": 119,
+                    "detected": false
+                },
+                {
+                    "time": 25728903,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I46.trace",
+                    "traceSize": 8235,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 29716097,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I47.trace",
+                    "traceSize": 8340,
+                    "totalg": 12,
+                    "eventsLen": 131,
+                    "detected": false
+                },
+                {
+                    "time": 43947263,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I48.trace",
+                    "traceSize": 32198,
+                    "totalg": 14,
+                    "eventsLen": 2668,
+                    "detected": false
+                },
+                {
+                    "time": 29119369,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I49.trace",
+                    "traceSize": 8258,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 41729223,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I50.trace",
+                    "traceSize": 34189,
+                    "totalg": 13,
+                    "eventsLen": 2980,
+                    "detected": false
+                },
+                {
+                    "time": 28114637,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I51.trace",
+                    "traceSize": 7678,
+                    "totalg": 12,
+                    "eventsLen": 112,
+                    "detected": false
+                },
+                {
+                    "time": 69910142,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I52.trace",
+                    "traceSize": 67683,
+                    "totalg": 14,
+                    "eventsLen": 7240,
+                    "detected": false
+                },
+                {
+                    "time": 26388187,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I53.trace",
+                    "traceSize": 8241,
+                    "totalg": 12,
+                    "eventsLen": 127,
+                    "detected": false
+                },
+                {
+                    "time": 67528017,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I54.trace",
+                    "traceSize": 69381,
+                    "totalg": 15,
+                    "eventsLen": 7900,
+                    "detected": false
+                },
+                {
+                    "time": 96775097,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I55.trace",
+                    "traceSize": 109757,
+                    "totalg": 16,
+                    "eventsLen": 14315,
+                    "detected": false
+                },
+                {
+                    "time": 28160416,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I56.trace",
+                    "traceSize": 8047,
+                    "totalg": 12,
+                    "eventsLen": 118,
+                    "detected": false
+                },
+                {
+                    "time": 68360673,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I57.trace",
+                    "traceSize": 62459,
+                    "totalg": 14,
+                    "eventsLen": 6448,
+                    "detected": false
+                },
+                {
+                    "time": 27970752,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I58.trace",
+                    "traceSize": 8054,
+                    "totalg": 12,
+                    "eventsLen": 118,
+                    "detected": false
+                },
+                {
+                    "time": 43516338,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I59.trace",
+                    "traceSize": 31164,
+                    "totalg": 14,
+                    "eventsLen": 2384,
+                    "detected": false
+                },
+                {
+                    "time": 25679964,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I60.trace",
+                    "traceSize": 8207,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 26202404,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I61.trace",
+                    "traceSize": 7915,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 28607013,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I62.trace",
+                    "traceSize": 8198,
+                    "totalg": 12,
+                    "eventsLen": 121,
+                    "detected": false
+                },
+                {
+                    "time": 28859174,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I63.trace",
+                    "traceSize": 8032,
+                    "totalg": 12,
+                    "eventsLen": 117,
+                    "detected": false
+                },
+                {
+                    "time": 26251856,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I64.trace",
+                    "traceSize": 8233,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 41675658,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I65.trace",
+                    "traceSize": 30256,
+                    "totalg": 13,
+                    "eventsLen": 2300,
+                    "detected": false
+                },
+                {
+                    "time": 26984179,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I66.trace",
+                    "traceSize": 8358,
+                    "totalg": 12,
+                    "eventsLen": 132,
+                    "detected": false
+                },
+                {
+                    "time": 67332026,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I67.trace",
+                    "traceSize": 63621,
+                    "totalg": 14,
+                    "eventsLen": 6908,
+                    "detected": false
+                },
+                {
+                    "time": 26952208,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I68.trace",
+                    "traceSize": 7831,
+                    "totalg": 12,
+                    "eventsLen": 115,
+                    "detected": false
+                },
+                {
+                    "time": 27246121,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I69.trace",
+                    "traceSize": 8143,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 24976186,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I70.trace",
+                    "traceSize": 7903,
+                    "totalg": 12,
+                    "eventsLen": 113,
+                    "detected": false
+                },
+                {
+                    "time": 24922253,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I71.trace",
+                    "traceSize": 8249,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 29233167,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I72.trace",
+                    "traceSize": 8334,
+                    "totalg": 12,
+                    "eventsLen": 123,
+                    "detected": false
+                },
+                {
+                    "time": 68218834,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I73.trace",
+                    "traceSize": 61615,
+                    "totalg": 14,
+                    "eventsLen": 6317,
+                    "detected": false
+                },
+                {
+                    "time": 26197772,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I74.trace",
+                    "traceSize": 7924,
+                    "totalg": 12,
+                    "eventsLen": 121,
+                    "detected": false
+                },
+                {
+                    "time": 43143000,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I75.trace",
+                    "traceSize": 33314,
+                    "totalg": 14,
+                    "eventsLen": 2875,
+                    "detected": false
+                },
+                {
+                    "time": 25668084,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I76.trace",
+                    "traceSize": 8445,
+                    "totalg": 12,
+                    "eventsLen": 128,
+                    "detected": false
+                },
+                {
+                    "time": 43973801,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I77.trace",
+                    "traceSize": 32723,
+                    "totalg": 13,
+                    "eventsLen": 2618,
+                    "detected": false
+                },
+                {
+                    "time": 26276011,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I78.trace",
+                    "traceSize": 8324,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 25446420,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I79.trace",
+                    "traceSize": 8057,
+                    "totalg": 12,
+                    "eventsLen": 123,
+                    "detected": false
+                },
+                {
+                    "time": 27133587,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I80.trace",
+                    "traceSize": 7947,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 27150886,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I81.trace",
+                    "traceSize": 8098,
+                    "totalg": 12,
+                    "eventsLen": 123,
+                    "detected": false
+                },
+                {
+                    "time": 93473150,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I82.trace",
+                    "traceSize": 99361,
+                    "totalg": 14,
+                    "eventsLen": 12271,
+                    "detected": false
+                },
+                {
+                    "time": 77371194,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I83.trace",
+                    "traceSize": 66206,
+                    "totalg": 14,
+                    "eventsLen": 7952,
+                    "detected": false
+                },
+                {
+                    "time": 67515436,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I84.trace",
+                    "traceSize": 62918,
+                    "totalg": 15,
+                    "eventsLen": 6510,
+                    "detected": false
+                },
+                {
+                    "time": 30416369,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I85.trace",
+                    "traceSize": 7934,
+                    "totalg": 12,
+                    "eventsLen": 118,
+                    "detected": false
+                },
+                {
+                    "time": 26668193,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I86.trace",
+                    "traceSize": 7937,
+                    "totalg": 12,
+                    "eventsLen": 118,
+                    "detected": false
+                },
+                {
+                    "time": 32866238,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I87.trace",
+                    "traceSize": 8028,
+                    "totalg": 12,
+                    "eventsLen": 117,
+                    "detected": false
+                },
+                {
+                    "time": 30437688,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I88.trace",
+                    "traceSize": 8235,
+                    "totalg": 12,
+                    "eventsLen": 123,
+                    "detected": false
+                },
+                {
+                    "time": 25386221,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I89.trace",
+                    "traceSize": 8208,
+                    "totalg": 12,
+                    "eventsLen": 121,
+                    "detected": false
+                },
+                {
+                    "time": 26279033,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I90.trace",
+                    "traceSize": 8117,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 25660933,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I91.trace",
+                    "traceSize": 8382,
+                    "totalg": 12,
+                    "eventsLen": 131,
+                    "detected": false
+                },
+                {
+                    "time": 42698449,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I92.trace",
+                    "traceSize": 33189,
+                    "totalg": 13,
+                    "eventsLen": 2942,
+                    "detected": false
+                },
+                {
+                    "time": 28302747,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I93.trace",
+                    "traceSize": 7919,
+                    "totalg": 12,
+                    "eventsLen": 116,
+                    "detected": false
+                },
+                {
+                    "time": 26553775,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I94.trace",
+                    "traceSize": 8435,
+                    "totalg": 12,
+                    "eventsLen": 130,
+                    "detected": false
+                },
+                {
+                    "time": 41509366,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I95.trace",
+                    "traceSize": 31478,
+                    "totalg": 13,
+                    "eventsLen": 2613,
+                    "detected": false
+                },
+                {
+                    "time": 26332598,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I96.trace",
+                    "traceSize": 8108,
+                    "totalg": 12,
+                    "eventsLen": 117,
+                    "detected": false
+                },
+                {
+                    "time": 42538604,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I97.trace",
+                    "traceSize": 32412,
+                    "totalg": 13,
+                    "eventsLen": 2555,
+                    "detected": false
+                },
+                {
+                    "time": 25416887,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I98.trace",
+                    "traceSize": 8020,
+                    "totalg": 12,
+                    "eventsLen": 117,
+                    "detected": false
+                },
+                {
+                    "time": 26875830,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I99.trace",
+                    "traceSize": 8136,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                }
+            ],
+            "goatid": "goat_d1",
+            "goatBound": 1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1",
+            "lastFailedTrace": "",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d1/kubernetes_11298_B1_I99.trace",
+            "firstFailedAfter": 0
+        },
+        "goat_d2": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay",
+            "binaryName": "765164859delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/out/goat_goat_d2.out",
+            "results": [
+                {
+                    "time": 66728113,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I0.trace",
+                    "traceSize": 63149,
+                    "totalg": 14,
+                    "eventsLen": 6740,
+                    "detected": false
+                },
+                {
+                    "time": 24188715,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I1.trace",
+                    "traceSize": 8023,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 62985771,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I2.trace",
+                    "traceSize": 55274,
+                    "totalg": 12,
+                    "eventsLen": 6660,
+                    "detected": false
+                },
+                {
+                    "time": 27456501,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I3.trace",
+                    "traceSize": 7962,
+                    "totalg": 12,
+                    "eventsLen": 115,
+                    "detected": false
+                },
+                {
+                    "time": 26381979,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I4.trace",
+                    "traceSize": 8183,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 26725642,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I5.trace",
+                    "traceSize": 8202,
+                    "totalg": 12,
+                    "eventsLen": 125,
+                    "detected": false
+                },
+                {
+                    "time": 69280171,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I6.trace",
+                    "traceSize": 63678,
+                    "totalg": 14,
+                    "eventsLen": 6938,
+                    "detected": false
+                },
+                {
+                    "time": 29121285,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I7.trace",
+                    "traceSize": 8000,
+                    "totalg": 12,
+                    "eventsLen": 120,
+                    "detected": false
+                },
+                {
+                    "time": 27101982,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I8.trace",
+                    "traceSize": 8383,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 24889439,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I9.trace",
+                    "traceSize": 8022,
+                    "totalg": 12,
+                    "eventsLen": 119,
+                    "detected": false
+                },
+                {
+                    "time": 35601641,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I10.trace",
+                    "traceSize": 20656,
+                    "totalg": 12,
+                    "eventsLen": 1739,
+                    "detected": false
+                },
+                {
+                    "time": 95715361,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I11.trace",
+                    "traceSize": 88226,
+                    "totalg": 13,
+                    "eventsLen": 11744,
+                    "detected": false
+                },
+                {
+                    "time": 29342481,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I12.trace",
+                    "traceSize": 18144,
+                    "totalg": 13,
+                    "eventsLen": 259,
+                    "detected": false
+                },
+                {
+                    "time": 70041459,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I13.trace",
+                    "traceSize": 65656,
+                    "totalg": 14,
+                    "eventsLen": 7236,
+                    "detected": false
+                },
+                {
+                    "time": 45677999,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I14.trace",
+                    "traceSize": 35017,
+                    "totalg": 14,
+                    "eventsLen": 3192,
+                    "detected": false
+                },
+                {
+                    "time": 46465962,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I15.trace",
+                    "traceSize": 34687,
+                    "totalg": 13,
+                    "eventsLen": 2998,
+                    "detected": false
+                },
+                {
+                    "time": 26179844,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I16.trace",
+                    "traceSize": 8079,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 26327793,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I17.trace",
+                    "traceSize": 8274,
+                    "totalg": 12,
+                    "eventsLen": 128,
+                    "detected": false
+                },
+                {
+                    "time": 25762912,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I18.trace",
+                    "traceSize": 8284,
+                    "totalg": 12,
+                    "eventsLen": 133,
+                    "detected": false
+                },
+                {
+                    "time": 44051405,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I19.trace",
+                    "traceSize": 35256,
+                    "totalg": 13,
+                    "eventsLen": 3303,
+                    "detected": false
+                },
+                {
+                    "time": 25648943,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I20.trace",
+                    "traceSize": 8080,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 45285526,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I21.trace",
+                    "traceSize": 34053,
+                    "totalg": 14,
+                    "eventsLen": 2925,
+                    "detected": false
+                },
+                {
+                    "time": 44085960,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I22.trace",
+                    "traceSize": 30477,
+                    "totalg": 12,
+                    "eventsLen": 3075,
+                    "detected": false
+                },
+                {
+                    "time": 44202459,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I23.trace",
+                    "traceSize": 33856,
+                    "totalg": 14,
+                    "eventsLen": 2894,
+                    "detected": false
+                },
+                {
+                    "time": 26516385,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I24.trace",
+                    "traceSize": 8260,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 42141713,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I25.trace",
+                    "traceSize": 31618,
+                    "totalg": 13,
+                    "eventsLen": 2507,
+                    "detected": false
+                },
+                {
+                    "time": 25426645,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I26.trace",
+                    "traceSize": 7825,
+                    "totalg": 12,
+                    "eventsLen": 117,
+                    "detected": false
+                },
+                {
+                    "time": 27259282,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I27.trace",
+                    "traceSize": 8270,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 46099072,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I28.trace",
+                    "traceSize": 34436,
+                    "totalg": 14,
+                    "eventsLen": 2940,
+                    "detected": false
+                },
+                {
+                    "time": 46058695,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I29.trace",
+                    "traceSize": 34604,
+                    "totalg": 13,
+                    "eventsLen": 2917,
+                    "detected": false
+                },
+                {
+                    "time": 41989954,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I30.trace",
+                    "traceSize": 33630,
+                    "totalg": 13,
+                    "eventsLen": 3056,
+                    "detected": false
+                },
+                {
+                    "time": 43493864,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I31.trace",
+                    "traceSize": 33597,
+                    "totalg": 14,
+                    "eventsLen": 2846,
+                    "detected": false
+                },
+                {
+                    "time": 25729934,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I32.trace",
+                    "traceSize": 8339,
+                    "totalg": 12,
+                    "eventsLen": 133,
+                    "detected": false
+                },
+                {
+                    "time": 36715164,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I33.trace",
+                    "traceSize": 22489,
+                    "totalg": 12,
+                    "eventsLen": 2239,
+                    "detected": false
+                },
+                {
+                    "time": 45204581,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I34.trace",
+                    "traceSize": 34878,
+                    "totalg": 14,
+                    "eventsLen": 3162,
+                    "detected": false
+                },
+                {
+                    "time": 26575474,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I35.trace",
+                    "traceSize": 8342,
+                    "totalg": 12,
+                    "eventsLen": 129,
+                    "detected": false
+                },
+                {
+                    "time": 43931538,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I36.trace",
+                    "traceSize": 35148,
+                    "totalg": 13,
+                    "eventsLen": 2866,
+                    "detected": false
+                },
+                {
+                    "time": 25337956,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I37.trace",
+                    "traceSize": 8178,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 28170466,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I38.trace",
+                    "traceSize": 8172,
+                    "totalg": 12,
+                    "eventsLen": 119,
+                    "detected": false
+                },
+                {
+                    "time": 46375302,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I39.trace",
+                    "traceSize": 26258,
+                    "totalg": 12,
+                    "eventsLen": 2665,
+                    "detected": false
+                },
+                {
+                    "time": 27850792,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I40.trace",
+                    "traceSize": 8165,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 28260738,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I41.trace",
+                    "traceSize": 7977,
+                    "totalg": 12,
+                    "eventsLen": 118,
+                    "detected": false
+                },
+                {
+                    "time": 46091581,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I42.trace",
+                    "traceSize": 34762,
+                    "totalg": 14,
+                    "eventsLen": 3001,
+                    "detected": false
+                },
+                {
+                    "time": 25717242,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I43.trace",
+                    "traceSize": 8168,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 27815905,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I44.trace",
+                    "traceSize": 8079,
+                    "totalg": 12,
+                    "eventsLen": 119,
+                    "detected": false
+                },
+                {
+                    "time": 69494178,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I45.trace",
+                    "traceSize": 60575,
+                    "totalg": 13,
+                    "eventsLen": 6736,
+                    "detected": false
+                },
+                {
+                    "time": 66779206,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I46.trace",
+                    "traceSize": 64599,
+                    "totalg": 15,
+                    "eventsLen": 6882,
+                    "detected": false
+                },
+                {
+                    "time": 64938223,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I47.trace",
+                    "traceSize": 62328,
+                    "totalg": 13,
+                    "eventsLen": 7308,
+                    "detected": false
+                },
+                {
+                    "time": 28430612,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I48.trace",
+                    "traceSize": 17886,
+                    "totalg": 13,
+                    "eventsLen": 257,
+                    "detected": false
+                },
+                {
+                    "time": 26133320,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I49.trace",
+                    "traceSize": 8175,
+                    "totalg": 12,
+                    "eventsLen": 123,
+                    "detected": false
+                },
+                {
+                    "time": 44086661,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I50.trace",
+                    "traceSize": 34952,
+                    "totalg": 13,
+                    "eventsLen": 3113,
+                    "detected": false
+                },
+                {
+                    "time": 26122203,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I51.trace",
+                    "traceSize": 8050,
+                    "totalg": 12,
+                    "eventsLen": 119,
+                    "detected": false
+                },
+                {
+                    "time": 68893680,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I52.trace",
+                    "traceSize": 67506,
+                    "totalg": 14,
+                    "eventsLen": 7495,
+                    "detected": false
+                },
+                {
+                    "time": 26179331,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I53.trace",
+                    "traceSize": 8237,
+                    "totalg": 12,
+                    "eventsLen": 127,
+                    "detected": false
+                },
+                {
+                    "time": 41639758,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I54.trace",
+                    "traceSize": 34202,
+                    "totalg": 13,
+                    "eventsLen": 3130,
+                    "detected": false
+                },
+                {
+                    "time": 71018451,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I55.trace",
+                    "traceSize": 69807,
+                    "totalg": 15,
+                    "eventsLen": 7893,
+                    "detected": false
+                },
+                {
+                    "time": 24994331,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I56.trace",
+                    "traceSize": 8202,
+                    "totalg": 12,
+                    "eventsLen": 131,
+                    "detected": false
+                },
+                {
+                    "time": 26879342,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I57.trace",
+                    "traceSize": 8295,
+                    "totalg": 12,
+                    "eventsLen": 133,
+                    "detected": false
+                },
+                {
+                    "time": 66103577,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I58.trace",
+                    "traceSize": 57273,
+                    "totalg": 14,
+                    "eventsLen": 6308,
+                    "detected": false
+                },
+                {
+                    "time": 25607147,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I59.trace",
+                    "traceSize": 8228,
+                    "totalg": 12,
+                    "eventsLen": 129,
+                    "detected": false
+                },
+                {
+                    "time": 41386946,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I60.trace",
+                    "traceSize": 31225,
+                    "totalg": 13,
+                    "eventsLen": 2636,
+                    "detected": false
+                },
+                {
+                    "time": 25158221,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I61.trace",
+                    "traceSize": 8181,
+                    "totalg": 12,
+                    "eventsLen": 121,
+                    "detected": false
+                },
+                {
+                    "time": 45831309,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I62.trace",
+                    "traceSize": 32850,
+                    "totalg": 14,
+                    "eventsLen": 2631,
+                    "detected": false
+                },
+                {
+                    "time": 68059985,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I63.trace",
+                    "traceSize": 64662,
+                    "totalg": 14,
+                    "eventsLen": 7462,
+                    "detected": false
+                },
+                {
+                    "time": 44217683,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I64.trace",
+                    "traceSize": 37548,
+                    "totalg": 14,
+                    "eventsLen": 3463,
+                    "detected": false
+                },
+                {
+                    "time": 44469742,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I65.trace",
+                    "traceSize": 34622,
+                    "totalg": 13,
+                    "eventsLen": 3103,
+                    "detected": false
+                },
+                {
+                    "time": 25583184,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I66.trace",
+                    "traceSize": 8045,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 26331482,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I67.trace",
+                    "traceSize": 7965,
+                    "totalg": 12,
+                    "eventsLen": 115,
+                    "detected": false
+                },
+                {
+                    "time": 31230839,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I68.trace",
+                    "traceSize": 7803,
+                    "totalg": 12,
+                    "eventsLen": 116,
+                    "detected": false
+                },
+                {
+                    "time": 42516819,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I69.trace",
+                    "traceSize": 28373,
+                    "totalg": 12,
+                    "eventsLen": 2777,
+                    "detected": false
+                },
+                {
+                    "time": 26566044,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I70.trace",
+                    "traceSize": 8315,
+                    "totalg": 12,
+                    "eventsLen": 127,
+                    "detected": false
+                },
+                {
+                    "time": 39759438,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I71.trace",
+                    "traceSize": 31315,
+                    "totalg": 13,
+                    "eventsLen": 2643,
+                    "detected": false
+                },
+                {
+                    "time": 32443737,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I72.trace",
+                    "traceSize": 8091,
+                    "totalg": 12,
+                    "eventsLen": 123,
+                    "detected": false
+                },
+                {
+                    "time": 43556505,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I73.trace",
+                    "traceSize": 33248,
+                    "totalg": 13,
+                    "eventsLen": 2583,
+                    "detected": false
+                },
+                {
+                    "time": 23940429,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I74.trace",
+                    "traceSize": 8278,
+                    "totalg": 12,
+                    "eventsLen": 123,
+                    "detected": false
+                },
+                {
+                    "time": 42091992,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I75.trace",
+                    "traceSize": 33971,
+                    "totalg": 13,
+                    "eventsLen": 2869,
+                    "detected": false
+                },
+                {
+                    "time": 44902721,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I76.trace",
+                    "traceSize": 26536,
+                    "totalg": 12,
+                    "eventsLen": 2675,
+                    "detected": false
+                },
+                {
+                    "time": 67752645,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I77.trace",
+                    "traceSize": 69292,
+                    "totalg": 14,
+                    "eventsLen": 7865,
+                    "detected": false
+                },
+                {
+                    "time": 77607537,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I78.trace",
+                    "traceSize": 76112,
+                    "totalg": 15,
+                    "eventsLen": 8888,
+                    "detected": false
+                },
+                {
+                    "time": 25868912,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I79.trace",
+                    "traceSize": 8167,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 65618334,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I80.trace",
+                    "traceSize": 63672,
+                    "totalg": 14,
+                    "eventsLen": 6577,
+                    "detected": false
+                },
+                {
+                    "time": 46924168,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I81.trace",
+                    "traceSize": 34373,
+                    "totalg": 14,
+                    "eventsLen": 2854,
+                    "detected": false
+                },
+                {
+                    "time": 71271737,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I82.trace",
+                    "traceSize": 69148,
+                    "totalg": 13,
+                    "eventsLen": 8265,
+                    "detected": false
+                },
+                {
+                    "time": 29877232,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I83.trace",
+                    "traceSize": 8261,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 25546246,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I84.trace",
+                    "traceSize": 8265,
+                    "totalg": 12,
+                    "eventsLen": 128,
+                    "detected": false
+                },
+                {
+                    "time": 25883425,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I85.trace",
+                    "traceSize": 8193,
+                    "totalg": 12,
+                    "eventsLen": 129,
+                    "detected": false
+                },
+                {
+                    "time": 27053675,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I86.trace",
+                    "traceSize": 8070,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 27026548,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I87.trace",
+                    "traceSize": 8172,
+                    "totalg": 12,
+                    "eventsLen": 125,
+                    "detected": false
+                },
+                {
+                    "time": 26035974,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I88.trace",
+                    "traceSize": 8272,
+                    "totalg": 12,
+                    "eventsLen": 123,
+                    "detected": false
+                },
+                {
+                    "time": 68734268,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I89.trace",
+                    "traceSize": 64533,
+                    "totalg": 15,
+                    "eventsLen": 6921,
+                    "detected": false
+                },
+                {
+                    "time": 25742552,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I90.trace",
+                    "traceSize": 8059,
+                    "totalg": 12,
+                    "eventsLen": 119,
+                    "detected": false
+                },
+                {
+                    "time": 42806846,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I91.trace",
+                    "traceSize": 32140,
+                    "totalg": 14,
+                    "eventsLen": 2538,
+                    "detected": false
+                },
+                {
+                    "time": 30066421,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I92.trace",
+                    "traceSize": 18383,
+                    "totalg": 13,
+                    "eventsLen": 261,
+                    "detected": false
+                },
+                {
+                    "time": 28148969,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I93.trace",
+                    "traceSize": 8054,
+                    "totalg": 12,
+                    "eventsLen": 119,
+                    "detected": false
+                },
+                {
+                    "time": 40979878,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I94.trace",
+                    "traceSize": 31300,
+                    "totalg": 13,
+                    "eventsLen": 2498,
+                    "detected": false
+                },
+                {
+                    "time": 65099576,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I95.trace",
+                    "traceSize": 60654,
+                    "totalg": 15,
+                    "eventsLen": 6266,
+                    "detected": false
+                },
+                {
+                    "time": 46994989,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I96.trace",
+                    "traceSize": 34804,
+                    "totalg": 13,
+                    "eventsLen": 2917,
+                    "detected": false
+                },
+                {
+                    "time": 25507641,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I97.trace",
+                    "traceSize": 8076,
+                    "totalg": 12,
+                    "eventsLen": 119,
+                    "detected": false
+                },
+                {
+                    "time": 28112989,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I98.trace",
+                    "traceSize": 8384,
+                    "totalg": 12,
+                    "eventsLen": 128,
+                    "detected": false
+                },
+                {
+                    "time": 64946069,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I99.trace",
+                    "traceSize": 62869,
+                    "totalg": 14,
+                    "eventsLen": 6752,
+                    "detected": false
+                }
+            ],
+            "goatid": "goat_d2",
+            "goatBound": 2,
+            "traceDir": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2",
+            "lastFailedTrace": "",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d2/kubernetes_11298_B2_I99.trace",
+            "firstFailedAfter": 0
+        },
+        "goat_d3": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay",
+            "binaryName": "765164859delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/out/goat_goat_d3.out",
+            "results": [
+                {
+                    "time": 25602494,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I0.trace",
+                    "traceSize": 7970,
+                    "totalg": 12,
+                    "eventsLen": 117,
+                    "detected": false
+                },
+                {
+                    "time": 25447029,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I1.trace",
+                    "traceSize": 8150,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 42916310,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I2.trace",
+                    "traceSize": 28002,
+                    "totalg": 12,
+                    "eventsLen": 2778,
+                    "detected": false
+                },
+                {
+                    "time": 43676688,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I3.trace",
+                    "traceSize": 31876,
+                    "totalg": 13,
+                    "eventsLen": 2224,
+                    "detected": false
+                },
+                {
+                    "time": 28754537,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I4.trace",
+                    "traceSize": 17949,
+                    "totalg": 13,
+                    "eventsLen": 263,
+                    "detected": false
+                },
+                {
+                    "time": 29623567,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I5.trace",
+                    "traceSize": 8329,
+                    "totalg": 12,
+                    "eventsLen": 133,
+                    "detected": false
+                },
+                {
+                    "time": 28899189,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I6.trace",
+                    "traceSize": 18079,
+                    "totalg": 13,
+                    "eventsLen": 257,
+                    "detected": false
+                },
+                {
+                    "time": 27828727,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I7.trace",
+                    "traceSize": 7819,
+                    "totalg": 12,
+                    "eventsLen": 113,
+                    "detected": false
+                },
+                {
+                    "time": 26845156,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I8.trace",
+                    "traceSize": 11529,
+                    "totalg": 12,
+                    "eventsLen": 168,
+                    "detected": false
+                },
+                {
+                    "time": 29058704,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I9.trace",
+                    "traceSize": 7823,
+                    "totalg": 12,
+                    "eventsLen": 116,
+                    "detected": false
+                },
+                {
+                    "time": 31068783,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I10.trace",
+                    "traceSize": 14654,
+                    "totalg": 13,
+                    "eventsLen": 214,
+                    "detected": false
+                },
+                {
+                    "time": 26522698,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I11.trace",
+                    "traceSize": 14404,
+                    "totalg": 13,
+                    "eventsLen": 202,
+                    "detected": false
+                },
+                {
+                    "time": 24786554,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I12.trace",
+                    "traceSize": 8349,
+                    "totalg": 12,
+                    "eventsLen": 130,
+                    "detected": false
+                },
+                {
+                    "time": 26056021,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I13.trace",
+                    "traceSize": 7982,
+                    "totalg": 12,
+                    "eventsLen": 120,
+                    "detected": false
+                },
+                {
+                    "time": 24858484,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I14.trace",
+                    "traceSize": 8221,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 26095119,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I15.trace",
+                    "traceSize": 8288,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 29763801,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I16.trace",
+                    "traceSize": 8211,
+                    "totalg": 12,
+                    "eventsLen": 129,
+                    "detected": false
+                },
+                {
+                    "time": 27247673,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I17.trace",
+                    "traceSize": 8418,
+                    "totalg": 12,
+                    "eventsLen": 127,
+                    "detected": false
+                },
+                {
+                    "time": 25474597,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I18.trace",
+                    "traceSize": 8231,
+                    "totalg": 12,
+                    "eventsLen": 123,
+                    "detected": false
+                },
+                {
+                    "time": 26111295,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I19.trace",
+                    "traceSize": 8341,
+                    "totalg": 12,
+                    "eventsLen": 127,
+                    "detected": false
+                },
+                {
+                    "time": 27326843,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I20.trace",
+                    "traceSize": 8338,
+                    "totalg": 12,
+                    "eventsLen": 125,
+                    "detected": false
+                },
+                {
+                    "time": 77931982,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I21.trace",
+                    "traceSize": 62049,
+                    "totalg": 13,
+                    "eventsLen": 7141,
+                    "detected": false
+                },
+                {
+                    "time": 29873058,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I22.trace",
+                    "traceSize": 8179,
+                    "totalg": 12,
+                    "eventsLen": 127,
+                    "detected": false
+                },
+                {
+                    "time": 25403748,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I23.trace",
+                    "traceSize": 8327,
+                    "totalg": 12,
+                    "eventsLen": 130,
+                    "detected": false
+                },
+                {
+                    "time": 25118998,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I24.trace",
+                    "traceSize": 8470,
+                    "totalg": 12,
+                    "eventsLen": 135,
+                    "detected": false
+                },
+                {
+                    "time": 27099555,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I25.trace",
+                    "traceSize": 8445,
+                    "totalg": 12,
+                    "eventsLen": 130,
+                    "detected": false
+                },
+                {
+                    "time": 25381407,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I26.trace",
+                    "traceSize": 14435,
+                    "totalg": 12,
+                    "eventsLen": 205,
+                    "detected": false
+                },
+                {
+                    "time": 23928886,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I27.trace",
+                    "traceSize": 8125,
+                    "totalg": 12,
+                    "eventsLen": 123,
+                    "detected": false
+                },
+                {
+                    "time": 24912906,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I28.trace",
+                    "traceSize": 8201,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 25839333,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I29.trace",
+                    "traceSize": 8235,
+                    "totalg": 12,
+                    "eventsLen": 128,
+                    "detected": false
+                },
+                {
+                    "time": 24857760,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I30.trace",
+                    "traceSize": 8227,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 30588605,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I31.trace",
+                    "traceSize": 18400,
+                    "totalg": 13,
+                    "eventsLen": 270,
+                    "detected": false
+                },
+                {
+                    "time": 48510059,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I32.trace",
+                    "traceSize": 33620,
+                    "totalg": 13,
+                    "eventsLen": 2801,
+                    "detected": false
+                },
+                {
+                    "time": 44272362,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I33.trace",
+                    "traceSize": 34361,
+                    "totalg": 14,
+                    "eventsLen": 2785,
+                    "detected": false
+                },
+                {
+                    "time": 25706417,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I34.trace",
+                    "traceSize": 8084,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 23978049,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I35.trace",
+                    "traceSize": 8197,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 30177265,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I36.trace",
+                    "traceSize": 8326,
+                    "totalg": 12,
+                    "eventsLen": 128,
+                    "detected": false
+                },
+                {
+                    "time": 27406912,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I37.trace",
+                    "traceSize": 14718,
+                    "totalg": 13,
+                    "eventsLen": 211,
+                    "detected": false
+                },
+                {
+                    "time": 27958989,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I38.trace",
+                    "traceSize": 18124,
+                    "totalg": 13,
+                    "eventsLen": 265,
+                    "detected": false
+                },
+                {
+                    "time": 26024277,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I39.trace",
+                    "traceSize": 8324,
+                    "totalg": 12,
+                    "eventsLen": 131,
+                    "detected": false
+                },
+                {
+                    "time": 44976777,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I40.trace",
+                    "traceSize": 27819,
+                    "totalg": 12,
+                    "eventsLen": 2924,
+                    "detected": false
+                },
+                {
+                    "time": 25187835,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I41.trace",
+                    "traceSize": 8016,
+                    "totalg": 12,
+                    "eventsLen": 125,
+                    "detected": false
+                },
+                {
+                    "time": 26138998,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I42.trace",
+                    "traceSize": 8331,
+                    "totalg": 12,
+                    "eventsLen": 131,
+                    "detected": false
+                },
+                {
+                    "time": 24349474,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I43.trace",
+                    "traceSize": 8009,
+                    "totalg": 12,
+                    "eventsLen": 120,
+                    "detected": false
+                },
+                {
+                    "time": 28602209,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I44.trace",
+                    "traceSize": 14956,
+                    "totalg": 13,
+                    "eventsLen": 213,
+                    "detected": false
+                },
+                {
+                    "time": 25251803,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I45.trace",
+                    "traceSize": 8221,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 66211330,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I46.trace",
+                    "traceSize": 56121,
+                    "totalg": 12,
+                    "eventsLen": 6822,
+                    "detected": false
+                },
+                {
+                    "time": 72690236,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I47.trace",
+                    "traceSize": 65597,
+                    "totalg": 12,
+                    "eventsLen": 8288,
+                    "detected": false
+                },
+                {
+                    "time": 26379024,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I48.trace",
+                    "traceSize": 8416,
+                    "totalg": 12,
+                    "eventsLen": 130,
+                    "detected": false
+                },
+                {
+                    "time": 26334002,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I49.trace",
+                    "traceSize": 8186,
+                    "totalg": 12,
+                    "eventsLen": 131,
+                    "detected": false
+                },
+                {
+                    "time": 29629756,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I50.trace",
+                    "traceSize": 8428,
+                    "totalg": 12,
+                    "eventsLen": 132,
+                    "detected": false
+                },
+                {
+                    "time": 26169436,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I51.trace",
+                    "traceSize": 7958,
+                    "totalg": 12,
+                    "eventsLen": 117,
+                    "detected": false
+                },
+                {
+                    "time": 24030497,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I52.trace",
+                    "traceSize": 8258,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 27206106,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I53.trace",
+                    "traceSize": 8240,
+                    "totalg": 12,
+                    "eventsLen": 127,
+                    "detected": false
+                },
+                {
+                    "time": 36712478,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I54.trace",
+                    "traceSize": 14561,
+                    "totalg": 12,
+                    "eventsLen": 210,
+                    "detected": false
+                },
+                {
+                    "time": 43289451,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I55.trace",
+                    "traceSize": 27187,
+                    "totalg": 12,
+                    "eventsLen": 2802,
+                    "detected": false
+                },
+                {
+                    "time": 26515147,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I56.trace",
+                    "traceSize": 8390,
+                    "totalg": 12,
+                    "eventsLen": 128,
+                    "detected": false
+                },
+                {
+                    "time": 26388867,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I57.trace",
+                    "traceSize": 8193,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 27756681,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I58.trace",
+                    "traceSize": 8526,
+                    "totalg": 12,
+                    "eventsLen": 132,
+                    "detected": false
+                },
+                {
+                    "time": 27836707,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I59.trace",
+                    "traceSize": 15162,
+                    "totalg": 13,
+                    "eventsLen": 215,
+                    "detected": false
+                },
+                {
+                    "time": 25932665,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I60.trace",
+                    "traceSize": 8294,
+                    "totalg": 12,
+                    "eventsLen": 125,
+                    "detected": false
+                },
+                {
+                    "time": 30476042,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I61.trace",
+                    "traceSize": 8197,
+                    "totalg": 12,
+                    "eventsLen": 128,
+                    "detected": false
+                },
+                {
+                    "time": 42264401,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I62.trace",
+                    "traceSize": 26406,
+                    "totalg": 12,
+                    "eventsLen": 2315,
+                    "detected": false
+                },
+                {
+                    "time": 26717975,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I63.trace",
+                    "traceSize": 8226,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 26034631,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I64.trace",
+                    "traceSize": 17876,
+                    "totalg": 13,
+                    "eventsLen": 256,
+                    "detected": false
+                },
+                {
+                    "time": 29219332,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I65.trace",
+                    "traceSize": 8020,
+                    "totalg": 12,
+                    "eventsLen": 120,
+                    "detected": false
+                },
+                {
+                    "time": 26944263,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I66.trace",
+                    "traceSize": 8300,
+                    "totalg": 12,
+                    "eventsLen": 128,
+                    "detected": false
+                },
+                {
+                    "time": 26084177,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I67.trace",
+                    "traceSize": 8203,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 45394433,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I68.trace",
+                    "traceSize": 36834,
+                    "totalg": 13,
+                    "eventsLen": 3149,
+                    "detected": false
+                },
+                {
+                    "time": 26713474,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I69.trace",
+                    "traceSize": 8536,
+                    "totalg": 12,
+                    "eventsLen": 132,
+                    "detected": false
+                },
+                {
+                    "time": 26071001,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I70.trace",
+                    "traceSize": 8296,
+                    "totalg": 12,
+                    "eventsLen": 128,
+                    "detected": false
+                },
+                {
+                    "time": 44318590,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I71.trace",
+                    "traceSize": 34582,
+                    "totalg": 13,
+                    "eventsLen": 2856,
+                    "detected": false
+                },
+                {
+                    "time": 45033957,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I72.trace",
+                    "traceSize": 29930,
+                    "totalg": 12,
+                    "eventsLen": 2846,
+                    "detected": false
+                },
+                {
+                    "time": 42021803,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I73.trace",
+                    "traceSize": 25896,
+                    "totalg": 12,
+                    "eventsLen": 2725,
+                    "detected": false
+                },
+                {
+                    "time": 25312246,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I74.trace",
+                    "traceSize": 8100,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 28414825,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I75.trace",
+                    "traceSize": 7888,
+                    "totalg": 12,
+                    "eventsLen": 119,
+                    "detected": false
+                },
+                {
+                    "time": 67845685,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I76.trace",
+                    "traceSize": 63741,
+                    "totalg": 13,
+                    "eventsLen": 7622,
+                    "detected": false
+                },
+                {
+                    "time": 62856162,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I77.trace",
+                    "traceSize": 58593,
+                    "totalg": 13,
+                    "eventsLen": 6489,
+                    "detected": false
+                },
+                {
+                    "time": 26469147,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I78.trace",
+                    "traceSize": 8088,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 25225354,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I79.trace",
+                    "traceSize": 8438,
+                    "totalg": 12,
+                    "eventsLen": 130,
+                    "detected": false
+                },
+                {
+                    "time": 43571211,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I80.trace",
+                    "traceSize": 29350,
+                    "totalg": 12,
+                    "eventsLen": 3374,
+                    "detected": false
+                },
+                {
+                    "time": 44663291,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I81.trace",
+                    "traceSize": 28578,
+                    "totalg": 12,
+                    "eventsLen": 2591,
+                    "detected": false
+                },
+                {
+                    "time": 43338218,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I82.trace",
+                    "traceSize": 27530,
+                    "totalg": 12,
+                    "eventsLen": 2881,
+                    "detected": false
+                },
+                {
+                    "time": 24984595,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I83.trace",
+                    "traceSize": 8282,
+                    "totalg": 12,
+                    "eventsLen": 133,
+                    "detected": false
+                },
+                {
+                    "time": 25486331,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I84.trace",
+                    "traceSize": 8401,
+                    "totalg": 12,
+                    "eventsLen": 130,
+                    "detected": false
+                },
+                {
+                    "time": 44903066,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I85.trace",
+                    "traceSize": 30212,
+                    "totalg": 12,
+                    "eventsLen": 2936,
+                    "detected": false
+                },
+                {
+                    "time": 24590180,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I86.trace",
+                    "traceSize": 8115,
+                    "totalg": 12,
+                    "eventsLen": 121,
+                    "detected": false
+                },
+                {
+                    "time": 64262496,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I87.trace",
+                    "traceSize": 57968,
+                    "totalg": 13,
+                    "eventsLen": 6455,
+                    "detected": false
+                },
+                {
+                    "time": 25540927,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I88.trace",
+                    "traceSize": 8089,
+                    "totalg": 12,
+                    "eventsLen": 121,
+                    "detected": false
+                },
+                {
+                    "time": 27063015,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I89.trace",
+                    "traceSize": 11340,
+                    "totalg": 12,
+                    "eventsLen": 167,
+                    "detected": false
+                },
+                {
+                    "time": 26329407,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I90.trace",
+                    "traceSize": 8224,
+                    "totalg": 12,
+                    "eventsLen": 126,
+                    "detected": false
+                },
+                {
+                    "time": 25532427,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I91.trace",
+                    "traceSize": 8328,
+                    "totalg": 12,
+                    "eventsLen": 128,
+                    "detected": false
+                },
+                {
+                    "time": 25343464,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I92.trace",
+                    "traceSize": 8103,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 72125102,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I93.trace",
+                    "traceSize": 63894,
+                    "totalg": 13,
+                    "eventsLen": 7408,
+                    "detected": false
+                },
+                {
+                    "time": 45864249,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I94.trace",
+                    "traceSize": 33310,
+                    "totalg": 13,
+                    "eventsLen": 2652,
+                    "detected": false
+                },
+                {
+                    "time": 27023094,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I95.trace",
+                    "traceSize": 16270,
+                    "totalg": 13,
+                    "eventsLen": 233,
+                    "detected": false
+                },
+                {
+                    "time": 36874426,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I96.trace",
+                    "traceSize": 18283,
+                    "totalg": 13,
+                    "eventsLen": 272,
+                    "detected": false
+                },
+                {
+                    "time": 72072208,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I97.trace",
+                    "traceSize": 62470,
+                    "totalg": 13,
+                    "eventsLen": 6962,
+                    "detected": false
+                },
+                {
+                    "time": 26349105,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I98.trace",
+                    "traceSize": 8157,
+                    "totalg": 12,
+                    "eventsLen": 127,
+                    "detected": false
+                },
+                {
+                    "time": 27474338,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I99.trace",
+                    "traceSize": 18335,
+                    "totalg": 13,
+                    "eventsLen": 267,
+                    "detected": false
+                }
+            ],
+            "goatid": "goat_d3",
+            "goatBound": 3,
+            "traceDir": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3",
+            "lastFailedTrace": "",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_delay/traces/goat_d3/kubernetes_11298_B3_I99.trace",
+            "firstFailedAfter": 0
+        },
+        "goat_m": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace",
+            "binaryName": "729912396trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/out/goat_goat_m.out",
+            "results": [
+                {
+                    "time": 25671530,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_m/kubernetes_11298_BT_I0.trace",
+                    "traceSize": 5932,
+                    "totalg": 13,
+                    "eventsLen": 156,
+                    "detected": false
+                },
+                {
+                    "time": 23437621,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_m/kubernetes_11298_BT_I1.trace",
+                    "traceSize": 6369,
+                    "totalg": 13,
+                    "eventsLen": 166,
+                    "detected": false
+                },
+                {
+                    "time": 25447772,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_m/kubernetes_11298_BT_I2.trace",
+                    "traceSize": 6401,
+                    "totalg": 13,
+                    "eventsLen": 175,
+                    "detected": false
+                },
+                {
+                    "time": 25304050,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_m/kubernetes_11298_BT_I3.trace",
+                    "traceSize": 4475,
+                    "totalg": 12,
+                    "eventsLen": 114,
+                    "detected": false
+                },
+                {
+                    "time": 25454017,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_m/kubernetes_11298_BT_I4.trace",
+                    "traceSize": 4484,
+                    "totalg": 12,
+                    "eventsLen": 115,
+                    "detected": false
+                },
+                {
+                    "time": 25404386,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_m/kubernetes_11298_BT_I5.trace",
+                    "traceSize": 4512,
+                    "totalg": 12,
+                    "eventsLen": 114,
+                    "detected": false
+                },
+                {
+                    "time": 23131336,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_m/kubernetes_11298_BT_I6.trace",
+                    "traceSize": 4534,
+                    "totalg": 12,
+                    "eventsLen": 127,
+                    "detected": false
+                },
+                {
+                    "time": 23009639,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_m/kubernetes_11298_BT_I7.trace",
+                    "traceSize": 4519,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 25878410,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_m/kubernetes_11298_BT_I8.trace",
+                    "traceSize": 6024,
+                    "totalg": 13,
+                    "eventsLen": 157,
+                    "detected": false
+                },
+                {
+                    "time": 24849740,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_m/kubernetes_11298_BT_I9.trace",
+                    "traceSize": 6610,
+                    "totalg": 13,
+                    "eventsLen": 177,
+                    "detected": false
+                },
+                {
+                    "time": 25590146,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_m/kubernetes_11298_BT_I10.trace",
+                    "traceSize": 4537,
+                    "totalg": 12,
+                    "eventsLen": 124,
+                    "detected": false
+                },
+                {
+                    "time": 5029893740,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_m/kubernetes_11298_BT_I11.trace",
+                    "traceSize": 4885,
+                    "totalg": 13,
+                    "eventsLen": 102,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_m",
+            "goatBound": -1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_m",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_m/kubernetes_11298_BT_I11.trace",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_m/kubernetes_11298_BT_I10.trace",
+            "firstFailedAfter": 11
+        },
+        "goat_u": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace",
+            "binaryName": "729912396trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/out/goat_goat_u.out",
+            "results": [
+                {
+                    "time": 24739010,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I0.trace",
+                    "traceSize": 4283,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 25226740,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I1.trace",
+                    "traceSize": 4290,
+                    "totalg": 12,
+                    "eventsLen": 77,
+                    "detected": false
+                },
+                {
+                    "time": 28401082,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I2.trace",
+                    "traceSize": 4268,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 27601165,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I3.trace",
+                    "traceSize": 4291,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 25295565,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I4.trace",
+                    "traceSize": 4313,
+                    "totalg": 12,
+                    "eventsLen": 81,
+                    "detected": false
+                },
+                {
+                    "time": 28257178,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I5.trace",
+                    "traceSize": 4270,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 28324459,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I6.trace",
+                    "traceSize": 4310,
+                    "totalg": 12,
+                    "eventsLen": 81,
+                    "detected": false
+                },
+                {
+                    "time": 26520161,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I7.trace",
+                    "traceSize": 4293,
+                    "totalg": 12,
+                    "eventsLen": 77,
+                    "detected": false
+                },
+                {
+                    "time": 25737419,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I8.trace",
+                    "traceSize": 4276,
+                    "totalg": 12,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 25383903,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I9.trace",
+                    "traceSize": 4288,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 26006027,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I10.trace",
+                    "traceSize": 4292,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24576151,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I11.trace",
+                    "traceSize": 4286,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 23846681,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I12.trace",
+                    "traceSize": 4289,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 25594258,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I13.trace",
+                    "traceSize": 4297,
+                    "totalg": 12,
+                    "eventsLen": 77,
+                    "detected": false
+                },
+                {
+                    "time": 28050919,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I14.trace",
+                    "traceSize": 4312,
+                    "totalg": 12,
+                    "eventsLen": 82,
+                    "detected": false
+                },
+                {
+                    "time": 28217751,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I15.trace",
+                    "traceSize": 4273,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 27015535,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I16.trace",
+                    "traceSize": 4292,
+                    "totalg": 12,
+                    "eventsLen": 77,
+                    "detected": false
+                },
+                {
+                    "time": 24909062,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I17.trace",
+                    "traceSize": 4285,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 25329866,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I18.trace",
+                    "traceSize": 4272,
+                    "totalg": 12,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 23858094,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I19.trace",
+                    "traceSize": 4295,
+                    "totalg": 12,
+                    "eventsLen": 77,
+                    "detected": false
+                },
+                {
+                    "time": 25775139,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I20.trace",
+                    "traceSize": 4272,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 23760523,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I21.trace",
+                    "traceSize": 4290,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 23985590,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I22.trace",
+                    "traceSize": 4272,
+                    "totalg": 12,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 25383431,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I23.trace",
+                    "traceSize": 4347,
+                    "totalg": 12,
+                    "eventsLen": 83,
+                    "detected": false
+                },
+                {
+                    "time": 26868024,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I24.trace",
+                    "traceSize": 4333,
+                    "totalg": 12,
+                    "eventsLen": 79,
+                    "detected": false
+                },
+                {
+                    "time": 26452486,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I25.trace",
+                    "traceSize": 4292,
+                    "totalg": 12,
+                    "eventsLen": 77,
+                    "detected": false
+                },
+                {
+                    "time": 27216760,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I26.trace",
+                    "traceSize": 4287,
+                    "totalg": 12,
+                    "eventsLen": 77,
+                    "detected": false
+                },
+                {
+                    "time": 24519556,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I27.trace",
+                    "traceSize": 4270,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 26315158,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I28.trace",
+                    "traceSize": 4289,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24908182,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I29.trace",
+                    "traceSize": 4268,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 25193727,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I30.trace",
+                    "traceSize": 4289,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 25021527,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I31.trace",
+                    "traceSize": 4274,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 24986290,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I32.trace",
+                    "traceSize": 4269,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 23854657,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I33.trace",
+                    "traceSize": 4281,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24718237,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I34.trace",
+                    "traceSize": 4270,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 24941984,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I35.trace",
+                    "traceSize": 4289,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 26071120,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I36.trace",
+                    "traceSize": 4268,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 26405576,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I37.trace",
+                    "traceSize": 4287,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 25282217,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I38.trace",
+                    "traceSize": 4289,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 26883982,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I39.trace",
+                    "traceSize": 4326,
+                    "totalg": 12,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 27205389,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I40.trace",
+                    "traceSize": 4271,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 26002018,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I41.trace",
+                    "traceSize": 4273,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 26208392,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I42.trace",
+                    "traceSize": 4308,
+                    "totalg": 12,
+                    "eventsLen": 81,
+                    "detected": false
+                },
+                {
+                    "time": 30953180,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I43.trace",
+                    "traceSize": 4287,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24765581,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I44.trace",
+                    "traceSize": 4286,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 23485006,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I45.trace",
+                    "traceSize": 4326,
+                    "totalg": 12,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24523014,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I46.trace",
+                    "traceSize": 4280,
+                    "totalg": 12,
+                    "eventsLen": 77,
+                    "detected": false
+                },
+                {
+                    "time": 26298041,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I47.trace",
+                    "traceSize": 4284,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 23793105,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I48.trace",
+                    "traceSize": 4266,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 24877034,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I49.trace",
+                    "traceSize": 4287,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 25966053,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I50.trace",
+                    "traceSize": 4286,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 23867463,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I51.trace",
+                    "traceSize": 4270,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 27478353,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I52.trace",
+                    "traceSize": 4307,
+                    "totalg": 12,
+                    "eventsLen": 81,
+                    "detected": false
+                },
+                {
+                    "time": 26350516,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I53.trace",
+                    "traceSize": 4313,
+                    "totalg": 12,
+                    "eventsLen": 81,
+                    "detected": false
+                },
+                {
+                    "time": 23966448,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I54.trace",
+                    "traceSize": 4331,
+                    "totalg": 12,
+                    "eventsLen": 79,
+                    "detected": false
+                },
+                {
+                    "time": 24530354,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I55.trace",
+                    "traceSize": 4268,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 26803358,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I56.trace",
+                    "traceSize": 4291,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24458818,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I57.trace",
+                    "traceSize": 4282,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24213908,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I58.trace",
+                    "traceSize": 4271,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 25965127,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I59.trace",
+                    "traceSize": 4334,
+                    "totalg": 12,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24640479,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I60.trace",
+                    "traceSize": 4287,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 26651846,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I61.trace",
+                    "traceSize": 4272,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 24312849,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I62.trace",
+                    "traceSize": 4269,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 24732838,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I63.trace",
+                    "traceSize": 4270,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 24676262,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I64.trace",
+                    "traceSize": 4285,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 27371948,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I65.trace",
+                    "traceSize": 4284,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24882847,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I66.trace",
+                    "traceSize": 4283,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24292133,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I67.trace",
+                    "traceSize": 4287,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 25627958,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I68.trace",
+                    "traceSize": 4288,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 25453731,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I69.trace",
+                    "traceSize": 4287,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24444386,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I70.trace",
+                    "traceSize": 4309,
+                    "totalg": 12,
+                    "eventsLen": 81,
+                    "detected": false
+                },
+                {
+                    "time": 25349482,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I71.trace",
+                    "traceSize": 4269,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 27066593,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I72.trace",
+                    "traceSize": 4272,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 26095687,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I73.trace",
+                    "traceSize": 4333,
+                    "totalg": 12,
+                    "eventsLen": 79,
+                    "detected": false
+                },
+                {
+                    "time": 24907475,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I74.trace",
+                    "traceSize": 4275,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 24909626,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I75.trace",
+                    "traceSize": 4287,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 25627726,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I76.trace",
+                    "traceSize": 4308,
+                    "totalg": 12,
+                    "eventsLen": 81,
+                    "detected": false
+                },
+                {
+                    "time": 27351141,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I77.trace",
+                    "traceSize": 4275,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 26903376,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I78.trace",
+                    "traceSize": 4285,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24930942,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I79.trace",
+                    "traceSize": 4270,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 29133325,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I80.trace",
+                    "traceSize": 4284,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24034737,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I81.trace",
+                    "traceSize": 4288,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24482502,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I82.trace",
+                    "traceSize": 4286,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 28891242,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I83.trace",
+                    "traceSize": 4287,
+                    "totalg": 12,
+                    "eventsLen": 77,
+                    "detected": false
+                },
+                {
+                    "time": 25107895,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I84.trace",
+                    "traceSize": 4330,
+                    "totalg": 12,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 25513017,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I85.trace",
+                    "traceSize": 4271,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 25508949,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I86.trace",
+                    "traceSize": 4285,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 26764657,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I87.trace",
+                    "traceSize": 4361,
+                    "totalg": 12,
+                    "eventsLen": 84,
+                    "detected": false
+                },
+                {
+                    "time": 27141283,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I88.trace",
+                    "traceSize": 4289,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24754944,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I89.trace",
+                    "traceSize": 4284,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 27771848,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I90.trace",
+                    "traceSize": 4315,
+                    "totalg": 12,
+                    "eventsLen": 82,
+                    "detected": false
+                },
+                {
+                    "time": 25082372,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I91.trace",
+                    "traceSize": 4273,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 25337300,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I92.trace",
+                    "traceSize": 4293,
+                    "totalg": 12,
+                    "eventsLen": 77,
+                    "detected": false
+                },
+                {
+                    "time": 26072997,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I93.trace",
+                    "traceSize": 4288,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 23903491,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I94.trace",
+                    "traceSize": 4268,
+                    "totalg": 12,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 26066872,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I95.trace",
+                    "traceSize": 4322,
+                    "totalg": 12,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 25839629,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I96.trace",
+                    "traceSize": 4290,
+                    "totalg": 12,
+                    "eventsLen": 77,
+                    "detected": false
+                },
+                {
+                    "time": 28248350,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I97.trace",
+                    "traceSize": 4283,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 25360965,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I98.trace",
+                    "traceSize": 4287,
+                    "totalg": 12,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 25441270,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I99.trace",
+                    "traceSize": 4314,
+                    "totalg": 12,
+                    "eventsLen": 81,
+                    "detected": false
+                }
+            ],
+            "goatid": "goat_u",
+            "goatBound": 0,
+            "traceDir": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u",
+            "lastFailedTrace": "",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goat_trace/traces/goat_u/kubernetes_11298_B0_I99.trace",
+            "firstFailedAfter": 0
+        },
+        "goleak": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goleak",
+            "binaryName": "530998053goleak",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/goleak/out/goleak.out",
+            "results": [
+                {
+                    "time": 5039689140,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "goleak"
+        },
+        "lockDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_11298/lockDL",
+            "binaryName": "693441374lockDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_11298/lockDL/out/lockDL.out",
+            "results": [
+                {
+                    "time": 25262123,
+                    "detected": false
+                },
+                {
+                    "time": 24700234,
+                    "detected": false
+                },
+                {
+                    "time": 23763108,
+                    "detected": false
+                },
+                {
+                    "time": 24491119,
+                    "detected": false
+                },
+                {
+                    "time": 25389023,
+                    "detected": false
+                },
+                {
+                    "time": 24520261,
+                    "detected": false
+                },
+                {
+                    "time": 22370645,
+                    "detected": false
+                },
+                {
+                    "time": 25705269,
+                    "detected": false
+                },
+                {
+                    "time": 24644563,
+                    "detected": false
+                },
+                {
+                    "time": 24574268,
+                    "detected": false
+                },
+                {
+                    "time": 21907533,
+                    "detected": false
+                },
+                {
+                    "time": 23185459,
+                    "detected": false
+                },
+                {
+                    "time": 22251748,
+                    "detected": false
+                },
+                {
+                    "time": 26205552,
+                    "detected": false
+                },
+                {
+                    "time": 23150611,
+                    "detected": false
+                },
+                {
+                    "time": 24631967,
+                    "detected": false
+                },
+                {
+                    "time": 23166153,
+                    "detected": false
+                },
+                {
+                    "time": 24260470,
+                    "detected": false
+                },
+                {
+                    "time": 22574373,
+                    "detected": false
+                },
+                {
+                    "time": 24145179,
+                    "detected": false
+                },
+                {
+                    "time": 22114625,
+                    "detected": false
+                },
+                {
+                    "time": 23586989,
+                    "detected": false
+                },
+                {
+                    "time": 23576082,
+                    "detected": false
+                },
+                {
+                    "time": 24847073,
+                    "detected": false
+                },
+                {
+                    "time": 22995997,
+                    "detected": false
+                },
+                {
+                    "time": 25116634,
+                    "detected": false
+                },
+                {
+                    "time": 29017791,
+                    "detected": false
+                },
+                {
+                    "time": 24026445,
+                    "detected": false
+                },
+                {
+                    "time": 23276407,
+                    "detected": false
+                },
+                {
+                    "time": 25695886,
+                    "detected": false
+                },
+                {
+                    "time": 24186897,
+                    "detected": false
+                },
+                {
+                    "time": 25403709,
+                    "detected": false
+                },
+                {
+                    "time": 23402691,
+                    "detected": false
+                },
+                {
+                    "time": 26605527,
+                    "detected": false
+                },
+                {
+                    "time": 22840407,
+                    "detected": false
+                },
+                {
+                    "time": 28314441,
+                    "detected": false
+                },
+                {
+                    "time": 26088699,
+                    "detected": false
+                },
+                {
+                    "time": 24693823,
+                    "detected": false
+                },
+                {
+                    "time": 22886302,
+                    "detected": false
+                },
+                {
+                    "time": 24744180,
+                    "detected": false
+                },
+                {
+                    "time": 25029463,
+                    "detected": false
+                },
+                {
+                    "time": 26990498,
+                    "detected": false
+                },
+                {
+                    "time": 24476801,
+                    "detected": false
+                },
+                {
+                    "time": 24811934,
+                    "detected": false
+                },
+                {
+                    "time": 22275889,
+                    "detected": false
+                },
+                {
+                    "time": 25797597,
+                    "detected": false
+                },
+                {
+                    "time": 24316999,
+                    "detected": false
+                },
+                {
+                    "time": 23291788,
+                    "detected": false
+                },
+                {
+                    "time": 29993191,
+                    "detected": false
+                },
+                {
+                    "time": 25459189,
+                    "detected": false
+                },
+                {
+                    "time": 33838456,
+                    "detected": false
+                },
+                {
+                    "time": 24182919,
+                    "detected": false
+                },
+                {
+                    "time": 23266231,
+                    "detected": false
+                },
+                {
+                    "time": 23741890,
+                    "detected": false
+                },
+                {
+                    "time": 23871873,
+                    "detected": false
+                },
+                {
+                    "time": 23457998,
+                    "detected": false
+                },
+                {
+                    "time": 25155785,
+                    "detected": false
+                },
+                {
+                    "time": 24273145,
+                    "detected": false
+                },
+                {
+                    "time": 22480938,
+                    "detected": false
+                },
+                {
+                    "time": 23324779,
+                    "detected": false
+                },
+                {
+                    "time": 22379537,
+                    "detected": false
+                },
+                {
+                    "time": 23344416,
+                    "detected": false
+                },
+                {
+                    "time": 22734722,
+                    "detected": false
+                },
+                {
+                    "time": 24194772,
+                    "detected": false
+                },
+                {
+                    "time": 23473148,
+                    "detected": false
+                },
+                {
+                    "time": 24606861,
+                    "detected": false
+                },
+                {
+                    "time": 23181238,
+                    "detected": false
+                },
+                {
+                    "time": 23950688,
+                    "detected": false
+                },
+                {
+                    "time": 23105765,
+                    "detected": false
+                },
+                {
+                    "time": 24532906,
+                    "detected": false
+                },
+                {
+                    "time": 21220607,
+                    "detected": false
+                },
+                {
+                    "time": 5029268300,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "lockDL"
+        }
+    },
+    "reportJSON": "/Volumes/DATA/goatws/results/blocking_conf_blocking_all_100/blocking_kubernetes_11298_T100.json"
+}

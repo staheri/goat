@@ -1,0 +1,967 @@
+{
+    "Bug": {
+        "bugName": "kubernetes_5316",
+        "bugDir": "/Users/saeed/gobench/gobench/goker/blocking/kubernetes/5316",
+        "bugType": "blocking",
+        "bugCause": "Communication Deadlock",
+        "bugSubcause": "Channel"
+    },
+    "exps": {
+        "builtinDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_5316/builtinDL",
+            "binaryName": "040839497builtinDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_5316/builtinDL/out/builtinDL.out",
+            "results": [
+                {
+                    "time": 28095925,
+                    "detected": false
+                },
+                {
+                    "time": 23282037,
+                    "detected": false
+                },
+                {
+                    "time": 25029661,
+                    "detected": false
+                },
+                {
+                    "time": 23183855,
+                    "detected": false
+                },
+                {
+                    "time": 24235415,
+                    "detected": false
+                },
+                {
+                    "time": 23232076,
+                    "detected": false
+                },
+                {
+                    "time": 24603548,
+                    "detected": false
+                },
+                {
+                    "time": 25163215,
+                    "detected": false
+                },
+                {
+                    "time": 24574735,
+                    "detected": false
+                },
+                {
+                    "time": 22459591,
+                    "detected": false
+                },
+                {
+                    "time": 23081665,
+                    "detected": false
+                },
+                {
+                    "time": 22872735,
+                    "detected": false
+                },
+                {
+                    "time": 23772083,
+                    "detected": false
+                },
+                {
+                    "time": 22958221,
+                    "detected": false
+                },
+                {
+                    "time": 23371023,
+                    "detected": false
+                },
+                {
+                    "time": 22992434,
+                    "detected": false
+                },
+                {
+                    "time": 23268426,
+                    "detected": false
+                },
+                {
+                    "time": 23345805,
+                    "detected": false
+                },
+                {
+                    "time": 25090055,
+                    "detected": false
+                },
+                {
+                    "time": 23296391,
+                    "detected": false
+                },
+                {
+                    "time": 26693598,
+                    "detected": false
+                },
+                {
+                    "time": 28149510,
+                    "detected": false
+                },
+                {
+                    "time": 24142573,
+                    "detected": false
+                },
+                {
+                    "time": 27088735,
+                    "detected": false
+                },
+                {
+                    "time": 27028968,
+                    "detected": false
+                },
+                {
+                    "time": 29964338,
+                    "detected": false
+                },
+                {
+                    "time": 26577481,
+                    "detected": false
+                },
+                {
+                    "time": 27326855,
+                    "detected": false
+                },
+                {
+                    "time": 23502684,
+                    "detected": false
+                },
+                {
+                    "time": 25784607,
+                    "detected": false
+                },
+                {
+                    "time": 23870922,
+                    "detected": false
+                },
+                {
+                    "time": 24880773,
+                    "detected": false
+                },
+                {
+                    "time": 23907187,
+                    "detected": false
+                },
+                {
+                    "time": 23358706,
+                    "detected": false
+                },
+                {
+                    "time": 24902459,
+                    "detected": false
+                },
+                {
+                    "time": 24868161,
+                    "detected": false
+                },
+                {
+                    "time": 25044614,
+                    "detected": false
+                },
+                {
+                    "time": 25623519,
+                    "detected": false
+                },
+                {
+                    "time": 24950361,
+                    "detected": false
+                },
+                {
+                    "time": 24671856,
+                    "detected": false
+                },
+                {
+                    "time": 25478295,
+                    "detected": false
+                },
+                {
+                    "time": 24128577,
+                    "detected": false
+                },
+                {
+                    "time": 24000730,
+                    "detected": false
+                },
+                {
+                    "time": 24522751,
+                    "detected": false
+                },
+                {
+                    "time": 25149969,
+                    "detected": false
+                },
+                {
+                    "time": 23894608,
+                    "detected": false
+                },
+                {
+                    "time": 23770572,
+                    "detected": false
+                },
+                {
+                    "time": 21356085,
+                    "detected": false
+                },
+                {
+                    "time": 22282179,
+                    "detected": false
+                },
+                {
+                    "time": 24273939,
+                    "detected": false
+                },
+                {
+                    "time": 22985794,
+                    "detected": false
+                },
+                {
+                    "time": 25074494,
+                    "detected": false
+                },
+                {
+                    "time": 23672878,
+                    "detected": false
+                },
+                {
+                    "time": 23117227,
+                    "detected": false
+                },
+                {
+                    "time": 24659681,
+                    "detected": false
+                },
+                {
+                    "time": 24109719,
+                    "detected": false
+                },
+                {
+                    "time": 23630090,
+                    "detected": false
+                },
+                {
+                    "time": 23710923,
+                    "detected": false
+                },
+                {
+                    "time": 23376308,
+                    "detected": false
+                },
+                {
+                    "time": 23544691,
+                    "detected": false
+                },
+                {
+                    "time": 23010267,
+                    "detected": false
+                },
+                {
+                    "time": 23152531,
+                    "detected": false
+                },
+                {
+                    "time": 22449780,
+                    "detected": false
+                },
+                {
+                    "time": 23014954,
+                    "detected": false
+                },
+                {
+                    "time": 23696817,
+                    "detected": false
+                },
+                {
+                    "time": 24031166,
+                    "detected": false
+                },
+                {
+                    "time": 23809489,
+                    "detected": false
+                },
+                {
+                    "time": 23196378,
+                    "detected": false
+                },
+                {
+                    "time": 24372608,
+                    "detected": false
+                },
+                {
+                    "time": 22009140,
+                    "detected": false
+                },
+                {
+                    "time": 22444466,
+                    "detected": false
+                },
+                {
+                    "time": 25257513,
+                    "detected": false
+                },
+                {
+                    "time": 23984814,
+                    "detected": false
+                },
+                {
+                    "time": 24231134,
+                    "detected": false
+                },
+                {
+                    "time": 23740531,
+                    "detected": false
+                },
+                {
+                    "time": 24542622,
+                    "detected": false
+                },
+                {
+                    "time": 22810181,
+                    "detected": false
+                },
+                {
+                    "time": 24810753,
+                    "detected": false
+                },
+                {
+                    "time": 22870236,
+                    "detected": false
+                },
+                {
+                    "time": 25049259,
+                    "detected": false
+                },
+                {
+                    "time": 22300082,
+                    "detected": false
+                },
+                {
+                    "time": 25077227,
+                    "detected": false
+                },
+                {
+                    "time": 22591068,
+                    "detected": false
+                },
+                {
+                    "time": 23329933,
+                    "detected": false
+                },
+                {
+                    "time": 22644784,
+                    "detected": false
+                },
+                {
+                    "time": 23059103,
+                    "detected": false
+                },
+                {
+                    "time": 23533770,
+                    "detected": false
+                },
+                {
+                    "time": 23182699,
+                    "detected": false
+                },
+                {
+                    "time": 23265319,
+                    "detected": false
+                },
+                {
+                    "time": 24484044,
+                    "detected": false
+                },
+                {
+                    "time": 22403023,
+                    "detected": false
+                },
+                {
+                    "time": 23426452,
+                    "detected": false
+                },
+                {
+                    "time": 23498690,
+                    "detected": false
+                },
+                {
+                    "time": 24024036,
+                    "detected": false
+                },
+                {
+                    "time": 22863945,
+                    "detected": false
+                },
+                {
+                    "time": 24281867,
+                    "detected": false
+                },
+                {
+                    "time": 23182375,
+                    "detected": false
+                },
+                {
+                    "time": 23372029,
+                    "detected": false
+                },
+                {
+                    "time": 23698335,
+                    "detected": false
+                },
+                {
+                    "time": 22567212,
+                    "detected": false
+                }
+            ],
+            "toolid": "builtinDL"
+        },
+        "goat_d1": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_delay",
+            "binaryName": "202600160delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_delay/out/goat_goat_d1.out",
+            "results": [
+                {
+                    "time": 30407290,
+                    "desc": "PDL-1",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_delay/traces/goat_d1/kubernetes_5316_B1_I0.trace",
+                    "traceSize": 5198,
+                    "totalg": 11,
+                    "eventsLen": 85,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d1",
+            "goatBound": 1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_delay/traces/goat_d1",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_delay/traces/goat_d1/kubernetes_5316_B1_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d2": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_delay",
+            "binaryName": "202600160delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_delay/out/goat_goat_d2.out",
+            "results": [
+                {
+                    "time": 24883729,
+                    "desc": "PDL-2",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_delay/traces/goat_d2/kubernetes_5316_B2_I0.trace",
+                    "traceSize": 5123,
+                    "totalg": 11,
+                    "eventsLen": 84,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d2",
+            "goatBound": 2,
+            "traceDir": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_delay/traces/goat_d2",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_delay/traces/goat_d2/kubernetes_5316_B2_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d3": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_delay",
+            "binaryName": "202600160delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_delay/out/goat_goat_d3.out",
+            "results": [
+                {
+                    "time": 26424472,
+                    "desc": "PDL-1",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_delay/traces/goat_d3/kubernetes_5316_B3_I0.trace",
+                    "traceSize": 5257,
+                    "totalg": 11,
+                    "eventsLen": 92,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d3",
+            "goatBound": 3,
+            "traceDir": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_delay/traces/goat_d3",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_delay/traces/goat_d3/kubernetes_5316_B3_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_m": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_trace",
+            "binaryName": "971478597trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_trace/out/goat_goat_m.out",
+            "results": [
+                {
+                    "time": 31258346,
+                    "desc": "PDL-1",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_trace/traces/goat_m/kubernetes_5316_BT_I0.trace",
+                    "traceSize": 3878,
+                    "totalg": 11,
+                    "eventsLen": 103,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_m",
+            "goatBound": -1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_trace/traces/goat_m",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_trace/traces/goat_m/kubernetes_5316_BT_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_u": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_trace",
+            "binaryName": "971478597trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_trace/out/goat_goat_u.out",
+            "results": [
+                {
+                    "time": 24254464,
+                    "desc": "PDL-2",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_trace/traces/goat_u/kubernetes_5316_B0_I0.trace",
+                    "traceSize": 3629,
+                    "totalg": 11,
+                    "eventsLen": 64,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_u",
+            "goatBound": 0,
+            "traceDir": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_trace/traces/goat_u",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goat_trace/traces/goat_u/kubernetes_5316_B0_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goleak": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goleak",
+            "binaryName": "142571794goleak",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_5316/goleak/out/goleak.out",
+            "results": [
+                {
+                    "time": 496413022,
+                    "desc": "PDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "goleak"
+        },
+        "lockDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/kubernetes_5316/lockDL",
+            "binaryName": "551148735lockDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/kubernetes_5316/lockDL/out/lockDL.out",
+            "results": [
+                {
+                    "time": 23983448,
+                    "detected": false
+                },
+                {
+                    "time": 24288003,
+                    "detected": false
+                },
+                {
+                    "time": 24412525,
+                    "detected": false
+                },
+                {
+                    "time": 20826141,
+                    "detected": false
+                },
+                {
+                    "time": 22417801,
+                    "detected": false
+                },
+                {
+                    "time": 22132757,
+                    "detected": false
+                },
+                {
+                    "time": 22350106,
+                    "detected": false
+                },
+                {
+                    "time": 21782714,
+                    "detected": false
+                },
+                {
+                    "time": 24628466,
+                    "detected": false
+                },
+                {
+                    "time": 24415920,
+                    "detected": false
+                },
+                {
+                    "time": 25072596,
+                    "detected": false
+                },
+                {
+                    "time": 22143131,
+                    "detected": false
+                },
+                {
+                    "time": 22543107,
+                    "detected": false
+                },
+                {
+                    "time": 23122512,
+                    "detected": false
+                },
+                {
+                    "time": 23962370,
+                    "detected": false
+                },
+                {
+                    "time": 21718917,
+                    "detected": false
+                },
+                {
+                    "time": 23579532,
+                    "detected": false
+                },
+                {
+                    "time": 22365872,
+                    "detected": false
+                },
+                {
+                    "time": 23816278,
+                    "detected": false
+                },
+                {
+                    "time": 21714297,
+                    "detected": false
+                },
+                {
+                    "time": 23814948,
+                    "detected": false
+                },
+                {
+                    "time": 23265521,
+                    "detected": false
+                },
+                {
+                    "time": 23986784,
+                    "detected": false
+                },
+                {
+                    "time": 23345363,
+                    "detected": false
+                },
+                {
+                    "time": 21579455,
+                    "detected": false
+                },
+                {
+                    "time": 22675880,
+                    "detected": false
+                },
+                {
+                    "time": 23773631,
+                    "detected": false
+                },
+                {
+                    "time": 23619276,
+                    "detected": false
+                },
+                {
+                    "time": 28214160,
+                    "detected": false
+                },
+                {
+                    "time": 22457725,
+                    "detected": false
+                },
+                {
+                    "time": 26028713,
+                    "detected": false
+                },
+                {
+                    "time": 23141339,
+                    "detected": false
+                },
+                {
+                    "time": 24608731,
+                    "detected": false
+                },
+                {
+                    "time": 22036441,
+                    "detected": false
+                },
+                {
+                    "time": 22721257,
+                    "detected": false
+                },
+                {
+                    "time": 22035122,
+                    "detected": false
+                },
+                {
+                    "time": 22836079,
+                    "detected": false
+                },
+                {
+                    "time": 24303724,
+                    "detected": false
+                },
+                {
+                    "time": 25006403,
+                    "detected": false
+                },
+                {
+                    "time": 22860510,
+                    "detected": false
+                },
+                {
+                    "time": 25020067,
+                    "detected": false
+                },
+                {
+                    "time": 24990976,
+                    "detected": false
+                },
+                {
+                    "time": 23436590,
+                    "detected": false
+                },
+                {
+                    "time": 21886477,
+                    "detected": false
+                },
+                {
+                    "time": 21586108,
+                    "detected": false
+                },
+                {
+                    "time": 22369634,
+                    "detected": false
+                },
+                {
+                    "time": 24495937,
+                    "detected": false
+                },
+                {
+                    "time": 23156539,
+                    "detected": false
+                },
+                {
+                    "time": 23328926,
+                    "detected": false
+                },
+                {
+                    "time": 24939428,
+                    "detected": false
+                },
+                {
+                    "time": 23783330,
+                    "detected": false
+                },
+                {
+                    "time": 21931532,
+                    "detected": false
+                },
+                {
+                    "time": 24147720,
+                    "detected": false
+                },
+                {
+                    "time": 22400072,
+                    "detected": false
+                },
+                {
+                    "time": 24048439,
+                    "detected": false
+                },
+                {
+                    "time": 22519698,
+                    "detected": false
+                },
+                {
+                    "time": 23561715,
+                    "detected": false
+                },
+                {
+                    "time": 22022375,
+                    "detected": false
+                },
+                {
+                    "time": 24503666,
+                    "detected": false
+                },
+                {
+                    "time": 21965172,
+                    "detected": false
+                },
+                {
+                    "time": 22099293,
+                    "detected": false
+                },
+                {
+                    "time": 21245722,
+                    "detected": false
+                },
+                {
+                    "time": 23555414,
+                    "detected": false
+                },
+                {
+                    "time": 22424433,
+                    "detected": false
+                },
+                {
+                    "time": 23828868,
+                    "detected": false
+                },
+                {
+                    "time": 26906869,
+                    "detected": false
+                },
+                {
+                    "time": 27594848,
+                    "detected": false
+                },
+                {
+                    "time": 22854054,
+                    "detected": false
+                },
+                {
+                    "time": 22912420,
+                    "detected": false
+                },
+                {
+                    "time": 24797667,
+                    "detected": false
+                },
+                {
+                    "time": 24693176,
+                    "detected": false
+                },
+                {
+                    "time": 22708781,
+                    "detected": false
+                },
+                {
+                    "time": 24266906,
+                    "detected": false
+                },
+                {
+                    "time": 23881668,
+                    "detected": false
+                },
+                {
+                    "time": 23886633,
+                    "detected": false
+                },
+                {
+                    "time": 22887410,
+                    "detected": false
+                },
+                {
+                    "time": 23398809,
+                    "detected": false
+                },
+                {
+                    "time": 20853079,
+                    "detected": false
+                },
+                {
+                    "time": 22382352,
+                    "detected": false
+                },
+                {
+                    "time": 22076203,
+                    "detected": false
+                },
+                {
+                    "time": 23181863,
+                    "detected": false
+                },
+                {
+                    "time": 22772405,
+                    "detected": false
+                },
+                {
+                    "time": 23274265,
+                    "detected": false
+                },
+                {
+                    "time": 22785680,
+                    "detected": false
+                },
+                {
+                    "time": 23358947,
+                    "detected": false
+                },
+                {
+                    "time": 22025067,
+                    "detected": false
+                },
+                {
+                    "time": 22089576,
+                    "detected": false
+                },
+                {
+                    "time": 22810534,
+                    "detected": false
+                },
+                {
+                    "time": 23443391,
+                    "detected": false
+                },
+                {
+                    "time": 21540317,
+                    "detected": false
+                },
+                {
+                    "time": 23410762,
+                    "detected": false
+                },
+                {
+                    "time": 21239407,
+                    "detected": false
+                },
+                {
+                    "time": 23565914,
+                    "detected": false
+                },
+                {
+                    "time": 20842437,
+                    "detected": false
+                },
+                {
+                    "time": 22431698,
+                    "detected": false
+                },
+                {
+                    "time": 22855337,
+                    "detected": false
+                },
+                {
+                    "time": 23824113,
+                    "detected": false
+                },
+                {
+                    "time": 21578021,
+                    "detected": false
+                },
+                {
+                    "time": 23071475,
+                    "detected": false
+                },
+                {
+                    "time": 22827763,
+                    "detected": false
+                }
+            ],
+            "toolid": "lockDL"
+        }
+    },
+    "reportJSON": "/Volumes/DATA/goatws/results/blocking_conf_blocking_all_100/blocking_kubernetes_5316_T100.json"
+}

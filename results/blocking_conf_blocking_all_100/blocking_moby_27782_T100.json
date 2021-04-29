@@ -1,0 +1,2815 @@
+{
+    "Bug": {
+        "bugName": "moby_27782",
+        "bugDir": "/Users/saeed/gobench/gobench/goker/blocking/moby/27782",
+        "bugType": "blocking",
+        "bugCause": "Communication Deadlock",
+        "bugSubcause": "Channel \u0026 Condition Variable"
+    },
+    "exps": {
+        "builtinDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_27782/builtinDL",
+            "binaryName": "585475946builtinDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_27782/builtinDL/out/builtinDL.out",
+            "results": [
+                {
+                    "time": 28925917,
+                    "detected": false
+                },
+                {
+                    "time": 23077926,
+                    "detected": false
+                },
+                {
+                    "time": 28947846,
+                    "detected": false
+                },
+                {
+                    "time": 23843811,
+                    "detected": false
+                },
+                {
+                    "time": 23756856,
+                    "detected": false
+                },
+                {
+                    "time": 23938556,
+                    "detected": false
+                },
+                {
+                    "time": 23784317,
+                    "detected": false
+                },
+                {
+                    "time": 25968005,
+                    "detected": false
+                },
+                {
+                    "time": 24087635,
+                    "detected": false
+                },
+                {
+                    "time": 24448498,
+                    "detected": false
+                },
+                {
+                    "time": 22162447,
+                    "detected": false
+                },
+                {
+                    "time": 25927845,
+                    "detected": false
+                },
+                {
+                    "time": 23274619,
+                    "detected": false
+                },
+                {
+                    "time": 24651430,
+                    "detected": false
+                },
+                {
+                    "time": 22736697,
+                    "detected": false
+                },
+                {
+                    "time": 22877614,
+                    "detected": false
+                },
+                {
+                    "time": 23217373,
+                    "detected": false
+                },
+                {
+                    "time": 24388005,
+                    "detected": false
+                },
+                {
+                    "time": 21231044,
+                    "detected": false
+                },
+                {
+                    "time": 23874122,
+                    "detected": false
+                },
+                {
+                    "time": 23452377,
+                    "detected": false
+                },
+                {
+                    "time": 23585650,
+                    "detected": false
+                },
+                {
+                    "time": 22985671,
+                    "detected": false
+                },
+                {
+                    "time": 23356314,
+                    "detected": false
+                },
+                {
+                    "time": 24480839,
+                    "detected": false
+                },
+                {
+                    "time": 25036068,
+                    "detected": false
+                },
+                {
+                    "time": 22185829,
+                    "detected": false
+                },
+                {
+                    "time": 23320382,
+                    "detected": false
+                },
+                {
+                    "time": 22780281,
+                    "detected": false
+                },
+                {
+                    "time": 24444385,
+                    "detected": false
+                },
+                {
+                    "time": 22572910,
+                    "detected": false
+                },
+                {
+                    "time": 23477950,
+                    "detected": false
+                },
+                {
+                    "time": 26419791,
+                    "detected": false
+                },
+                {
+                    "time": 25991047,
+                    "detected": false
+                },
+                {
+                    "time": 22211432,
+                    "detected": false
+                },
+                {
+                    "time": 24627744,
+                    "detected": false
+                },
+                {
+                    "time": 25396373,
+                    "detected": false
+                },
+                {
+                    "time": 25421922,
+                    "detected": false
+                },
+                {
+                    "time": 24877521,
+                    "detected": false
+                },
+                {
+                    "time": 23688986,
+                    "detected": false
+                },
+                {
+                    "time": 24776701,
+                    "detected": false
+                },
+                {
+                    "time": 25281733,
+                    "detected": false
+                },
+                {
+                    "time": 23632953,
+                    "detected": false
+                },
+                {
+                    "time": 23203321,
+                    "detected": false
+                },
+                {
+                    "time": 22879031,
+                    "detected": false
+                },
+                {
+                    "time": 27051953,
+                    "detected": false
+                },
+                {
+                    "time": 26706352,
+                    "detected": false
+                },
+                {
+                    "time": 22978891,
+                    "detected": false
+                },
+                {
+                    "time": 22653802,
+                    "detected": false
+                },
+                {
+                    "time": 23515753,
+                    "detected": false
+                },
+                {
+                    "time": 24186693,
+                    "detected": false
+                },
+                {
+                    "time": 23067186,
+                    "detected": false
+                },
+                {
+                    "time": 23646244,
+                    "detected": false
+                },
+                {
+                    "time": 23098787,
+                    "detected": false
+                },
+                {
+                    "time": 23125607,
+                    "detected": false
+                },
+                {
+                    "time": 26903816,
+                    "detected": false
+                },
+                {
+                    "time": 22694521,
+                    "detected": false
+                },
+                {
+                    "time": 23955713,
+                    "detected": false
+                },
+                {
+                    "time": 24047244,
+                    "detected": false
+                },
+                {
+                    "time": 25722443,
+                    "detected": false
+                },
+                {
+                    "time": 24047178,
+                    "detected": false
+                },
+                {
+                    "time": 24346107,
+                    "detected": false
+                },
+                {
+                    "time": 23188333,
+                    "detected": false
+                },
+                {
+                    "time": 26915442,
+                    "detected": false
+                },
+                {
+                    "time": 22651948,
+                    "detected": false
+                },
+                {
+                    "time": 25129048,
+                    "detected": false
+                },
+                {
+                    "time": 22987504,
+                    "detected": false
+                },
+                {
+                    "time": 23993622,
+                    "detected": false
+                },
+                {
+                    "time": 23156613,
+                    "detected": false
+                },
+                {
+                    "time": 23333133,
+                    "detected": false
+                },
+                {
+                    "time": 24509808,
+                    "detected": false
+                },
+                {
+                    "time": 25847784,
+                    "detected": false
+                },
+                {
+                    "time": 23350675,
+                    "detected": false
+                },
+                {
+                    "time": 23217100,
+                    "detected": false
+                },
+                {
+                    "time": 21951374,
+                    "detected": false
+                },
+                {
+                    "time": 23615651,
+                    "detected": false
+                },
+                {
+                    "time": 22646525,
+                    "detected": false
+                },
+                {
+                    "time": 23708894,
+                    "detected": false
+                },
+                {
+                    "time": 22728059,
+                    "detected": false
+                },
+                {
+                    "time": 23853099,
+                    "detected": false
+                },
+                {
+                    "time": 26016238,
+                    "detected": false
+                },
+                {
+                    "time": 23391512,
+                    "detected": false
+                },
+                {
+                    "time": 23045974,
+                    "detected": false
+                },
+                {
+                    "time": 23413301,
+                    "detected": false
+                },
+                {
+                    "time": 22904519,
+                    "detected": false
+                },
+                {
+                    "time": 22831862,
+                    "detected": false
+                },
+                {
+                    "time": 23435578,
+                    "detected": false
+                },
+                {
+                    "time": 24723685,
+                    "detected": false
+                },
+                {
+                    "time": 23623972,
+                    "detected": false
+                },
+                {
+                    "time": 24109111,
+                    "detected": false
+                },
+                {
+                    "time": 21520901,
+                    "detected": false
+                },
+                {
+                    "time": 23119280,
+                    "detected": false
+                },
+                {
+                    "time": 21731102,
+                    "detected": false
+                },
+                {
+                    "time": 23953020,
+                    "detected": false
+                },
+                {
+                    "time": 22894901,
+                    "detected": false
+                },
+                {
+                    "time": 23571486,
+                    "detected": false
+                },
+                {
+                    "time": 23268640,
+                    "detected": false
+                },
+                {
+                    "time": 23907383,
+                    "detected": false
+                },
+                {
+                    "time": 23161933,
+                    "detected": false
+                },
+                {
+                    "time": 28468218,
+                    "detected": false
+                }
+            ],
+            "toolid": "builtinDL"
+        },
+        "goat_d1": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay",
+            "binaryName": "296294205delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/out/goat_goat_d1.out",
+            "results": [
+                {
+                    "time": 30369254,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I0.trace",
+                    "traceSize": 10435,
+                    "totalg": 12,
+                    "eventsLen": 152,
+                    "detected": false
+                },
+                {
+                    "time": 25463296,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I1.trace",
+                    "traceSize": 10015,
+                    "totalg": 12,
+                    "eventsLen": 143,
+                    "detected": false
+                },
+                {
+                    "time": 28836164,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I2.trace",
+                    "traceSize": 10424,
+                    "totalg": 12,
+                    "eventsLen": 153,
+                    "detected": false
+                },
+                {
+                    "time": 27801552,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I3.trace",
+                    "traceSize": 10469,
+                    "totalg": 12,
+                    "eventsLen": 159,
+                    "detected": false
+                },
+                {
+                    "time": 23732316,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I4.trace",
+                    "traceSize": 10534,
+                    "totalg": 12,
+                    "eventsLen": 153,
+                    "detected": false
+                },
+                {
+                    "time": 24983505,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I5.trace",
+                    "traceSize": 10544,
+                    "totalg": 12,
+                    "eventsLen": 156,
+                    "detected": false
+                },
+                {
+                    "time": 26122274,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I6.trace",
+                    "traceSize": 10131,
+                    "totalg": 12,
+                    "eventsLen": 146,
+                    "detected": false
+                },
+                {
+                    "time": 25782859,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I7.trace",
+                    "traceSize": 10398,
+                    "totalg": 12,
+                    "eventsLen": 152,
+                    "detected": false
+                },
+                {
+                    "time": 26018321,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I8.trace",
+                    "traceSize": 10529,
+                    "totalg": 12,
+                    "eventsLen": 154,
+                    "detected": false
+                },
+                {
+                    "time": 26769306,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I9.trace",
+                    "traceSize": 10188,
+                    "totalg": 12,
+                    "eventsLen": 155,
+                    "detected": false
+                },
+                {
+                    "time": 24799978,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I10.trace",
+                    "traceSize": 10521,
+                    "totalg": 12,
+                    "eventsLen": 158,
+                    "detected": false
+                },
+                {
+                    "time": 23983716,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I11.trace",
+                    "traceSize": 10509,
+                    "totalg": 12,
+                    "eventsLen": 154,
+                    "detected": false
+                },
+                {
+                    "time": 28637478,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I12.trace",
+                    "traceSize": 10583,
+                    "totalg": 12,
+                    "eventsLen": 161,
+                    "detected": false
+                },
+                {
+                    "time": 25216776,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I13.trace",
+                    "traceSize": 10308,
+                    "totalg": 12,
+                    "eventsLen": 147,
+                    "detected": false
+                },
+                {
+                    "time": 25080258,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I14.trace",
+                    "traceSize": 9946,
+                    "totalg": 12,
+                    "eventsLen": 142,
+                    "detected": false
+                },
+                {
+                    "time": 26982047,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I15.trace",
+                    "traceSize": 10600,
+                    "totalg": 12,
+                    "eventsLen": 159,
+                    "detected": false
+                },
+                {
+                    "time": 26503403,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I16.trace",
+                    "traceSize": 11884,
+                    "totalg": 12,
+                    "eventsLen": 166,
+                    "detected": false
+                },
+                {
+                    "time": 27371985,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I17.trace",
+                    "traceSize": 10426,
+                    "totalg": 12,
+                    "eventsLen": 155,
+                    "detected": false
+                },
+                {
+                    "time": 26697581,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I18.trace",
+                    "traceSize": 10653,
+                    "totalg": 12,
+                    "eventsLen": 156,
+                    "detected": false
+                },
+                {
+                    "time": 26442894,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I19.trace",
+                    "traceSize": 10044,
+                    "totalg": 12,
+                    "eventsLen": 145,
+                    "detected": false
+                },
+                {
+                    "time": 25669514,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I20.trace",
+                    "traceSize": 12091,
+                    "totalg": 12,
+                    "eventsLen": 171,
+                    "detected": false
+                },
+                {
+                    "time": 25362730,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I21.trace",
+                    "traceSize": 10249,
+                    "totalg": 12,
+                    "eventsLen": 148,
+                    "detected": false
+                },
+                {
+                    "time": 25322817,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I22.trace",
+                    "traceSize": 10628,
+                    "totalg": 12,
+                    "eventsLen": 153,
+                    "detected": false
+                },
+                {
+                    "time": 24989658,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I23.trace",
+                    "traceSize": 9877,
+                    "totalg": 12,
+                    "eventsLen": 129,
+                    "detected": false
+                },
+                {
+                    "time": 24870641,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I24.trace",
+                    "traceSize": 10314,
+                    "totalg": 12,
+                    "eventsLen": 147,
+                    "detected": false
+                },
+                {
+                    "time": 30311007,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I25.trace",
+                    "traceSize": 10654,
+                    "totalg": 12,
+                    "eventsLen": 161,
+                    "detected": false
+                },
+                {
+                    "time": 25789689,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I26.trace",
+                    "traceSize": 10451,
+                    "totalg": 12,
+                    "eventsLen": 156,
+                    "detected": false
+                },
+                {
+                    "time": 26817988,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I27.trace",
+                    "traceSize": 10409,
+                    "totalg": 12,
+                    "eventsLen": 155,
+                    "detected": false
+                },
+                {
+                    "time": 23629741,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I28.trace",
+                    "traceSize": 10621,
+                    "totalg": 12,
+                    "eventsLen": 161,
+                    "detected": false
+                },
+                {
+                    "time": 26357802,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I29.trace",
+                    "traceSize": 10527,
+                    "totalg": 12,
+                    "eventsLen": 151,
+                    "detected": false
+                },
+                {
+                    "time": 27073446,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I30.trace",
+                    "traceSize": 10216,
+                    "totalg": 12,
+                    "eventsLen": 151,
+                    "detected": false
+                },
+                {
+                    "time": 25630010,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I31.trace",
+                    "traceSize": 10305,
+                    "totalg": 12,
+                    "eventsLen": 148,
+                    "detected": false
+                },
+                {
+                    "time": 26829725,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I32.trace",
+                    "traceSize": 11651,
+                    "totalg": 12,
+                    "eventsLen": 169,
+                    "detected": false
+                },
+                {
+                    "time": 28603148,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I33.trace",
+                    "traceSize": 10389,
+                    "totalg": 12,
+                    "eventsLen": 151,
+                    "detected": false
+                },
+                {
+                    "time": 26321125,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I34.trace",
+                    "traceSize": 10270,
+                    "totalg": 12,
+                    "eventsLen": 154,
+                    "detected": false
+                },
+                {
+                    "time": 25771930,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I35.trace",
+                    "traceSize": 9980,
+                    "totalg": 12,
+                    "eventsLen": 134,
+                    "detected": false
+                },
+                {
+                    "time": 30643399,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I36.trace",
+                    "traceSize": 10393,
+                    "totalg": 12,
+                    "eventsLen": 149,
+                    "detected": false
+                },
+                {
+                    "time": 26041376,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I37.trace",
+                    "traceSize": 10524,
+                    "totalg": 12,
+                    "eventsLen": 157,
+                    "detected": false
+                },
+                {
+                    "time": 24926454,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I38.trace",
+                    "traceSize": 10276,
+                    "totalg": 12,
+                    "eventsLen": 150,
+                    "detected": false
+                },
+                {
+                    "time": 25768219,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I39.trace",
+                    "traceSize": 10161,
+                    "totalg": 12,
+                    "eventsLen": 148,
+                    "detected": false
+                },
+                {
+                    "time": 27464858,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I40.trace",
+                    "traceSize": 11913,
+                    "totalg": 12,
+                    "eventsLen": 162,
+                    "detected": false
+                },
+                {
+                    "time": 24006563,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I41.trace",
+                    "traceSize": 10278,
+                    "totalg": 12,
+                    "eventsLen": 150,
+                    "detected": false
+                },
+                {
+                    "time": 25656576,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I42.trace",
+                    "traceSize": 10393,
+                    "totalg": 12,
+                    "eventsLen": 152,
+                    "detected": false
+                },
+                {
+                    "time": 27853421,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I43.trace",
+                    "traceSize": 10358,
+                    "totalg": 12,
+                    "eventsLen": 157,
+                    "detected": false
+                },
+                {
+                    "time": 25683429,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I44.trace",
+                    "traceSize": 10648,
+                    "totalg": 12,
+                    "eventsLen": 159,
+                    "detected": false
+                },
+                {
+                    "time": 25361732,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I45.trace",
+                    "traceSize": 10381,
+                    "totalg": 12,
+                    "eventsLen": 152,
+                    "detected": false
+                },
+                {
+                    "time": 26247953,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I46.trace",
+                    "traceSize": 10160,
+                    "totalg": 12,
+                    "eventsLen": 148,
+                    "detected": false
+                },
+                {
+                    "time": 24941925,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I47.trace",
+                    "traceSize": 10462,
+                    "totalg": 12,
+                    "eventsLen": 154,
+                    "detected": false
+                },
+                {
+                    "time": 25235500,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I48.trace",
+                    "traceSize": 10490,
+                    "totalg": 12,
+                    "eventsLen": 157,
+                    "detected": false
+                },
+                {
+                    "time": 26601048,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I49.trace",
+                    "traceSize": 10635,
+                    "totalg": 12,
+                    "eventsLen": 153,
+                    "detected": false
+                },
+                {
+                    "time": 24402503,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I50.trace",
+                    "traceSize": 10198,
+                    "totalg": 12,
+                    "eventsLen": 147,
+                    "detected": false
+                },
+                {
+                    "time": 25393472,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I51.trace",
+                    "traceSize": 10153,
+                    "totalg": 12,
+                    "eventsLen": 145,
+                    "detected": false
+                },
+                {
+                    "time": 30103412,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I52.trace",
+                    "traceSize": 10069,
+                    "totalg": 12,
+                    "eventsLen": 138,
+                    "detected": false
+                },
+                {
+                    "time": 24501142,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I53.trace",
+                    "traceSize": 10667,
+                    "totalg": 12,
+                    "eventsLen": 156,
+                    "detected": false
+                },
+                {
+                    "time": 27795861,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I54.trace",
+                    "traceSize": 10434,
+                    "totalg": 12,
+                    "eventsLen": 153,
+                    "detected": false
+                },
+                {
+                    "time": 26829347,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I55.trace",
+                    "traceSize": 10246,
+                    "totalg": 12,
+                    "eventsLen": 150,
+                    "detected": false
+                },
+                {
+                    "time": 26474576,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I56.trace",
+                    "traceSize": 11697,
+                    "totalg": 12,
+                    "eventsLen": 162,
+                    "detected": false
+                },
+                {
+                    "time": 25622969,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I57.trace",
+                    "traceSize": 9998,
+                    "totalg": 12,
+                    "eventsLen": 131,
+                    "detected": false
+                },
+                {
+                    "time": 26514609,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I58.trace",
+                    "traceSize": 11873,
+                    "totalg": 12,
+                    "eventsLen": 162,
+                    "detected": false
+                },
+                {
+                    "time": 24279953,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I59.trace",
+                    "traceSize": 10163,
+                    "totalg": 12,
+                    "eventsLen": 147,
+                    "detected": false
+                },
+                {
+                    "time": 26163523,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I60.trace",
+                    "traceSize": 10288,
+                    "totalg": 12,
+                    "eventsLen": 152,
+                    "detected": false
+                },
+                {
+                    "time": 26092862,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I61.trace",
+                    "traceSize": 10625,
+                    "totalg": 12,
+                    "eventsLen": 156,
+                    "detected": false
+                },
+                {
+                    "time": 26061593,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I62.trace",
+                    "traceSize": 10399,
+                    "totalg": 12,
+                    "eventsLen": 154,
+                    "detected": false
+                },
+                {
+                    "time": 25940931,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I63.trace",
+                    "traceSize": 10446,
+                    "totalg": 12,
+                    "eventsLen": 152,
+                    "detected": false
+                },
+                {
+                    "time": 29542857,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I64.trace",
+                    "traceSize": 10415,
+                    "totalg": 12,
+                    "eventsLen": 152,
+                    "detected": false
+                },
+                {
+                    "time": 27386436,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I65.trace",
+                    "traceSize": 10464,
+                    "totalg": 12,
+                    "eventsLen": 154,
+                    "detected": false
+                },
+                {
+                    "time": 27203606,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I66.trace",
+                    "traceSize": 10338,
+                    "totalg": 12,
+                    "eventsLen": 149,
+                    "detected": false
+                },
+                {
+                    "time": 26626588,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I67.trace",
+                    "traceSize": 10333,
+                    "totalg": 12,
+                    "eventsLen": 158,
+                    "detected": false
+                },
+                {
+                    "time": 27761941,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I68.trace",
+                    "traceSize": 10807,
+                    "totalg": 12,
+                    "eventsLen": 158,
+                    "detected": false
+                },
+                {
+                    "time": 25254105,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I69.trace",
+                    "traceSize": 10284,
+                    "totalg": 12,
+                    "eventsLen": 147,
+                    "detected": false
+                },
+                {
+                    "time": 25187368,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I70.trace",
+                    "traceSize": 10496,
+                    "totalg": 12,
+                    "eventsLen": 151,
+                    "detected": false
+                },
+                {
+                    "time": 29469352,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I71.trace",
+                    "traceSize": 10510,
+                    "totalg": 12,
+                    "eventsLen": 154,
+                    "detected": false
+                },
+                {
+                    "time": 24153915,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I72.trace",
+                    "traceSize": 10115,
+                    "totalg": 12,
+                    "eventsLen": 149,
+                    "detected": false
+                },
+                {
+                    "time": 25660305,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I73.trace",
+                    "traceSize": 10442,
+                    "totalg": 12,
+                    "eventsLen": 157,
+                    "detected": false
+                },
+                {
+                    "time": 25864035,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I74.trace",
+                    "traceSize": 10176,
+                    "totalg": 12,
+                    "eventsLen": 149,
+                    "detected": false
+                },
+                {
+                    "time": 27173432,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I75.trace",
+                    "traceSize": 10247,
+                    "totalg": 12,
+                    "eventsLen": 155,
+                    "detected": false
+                },
+                {
+                    "time": 25496420,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I76.trace",
+                    "traceSize": 10322,
+                    "totalg": 12,
+                    "eventsLen": 149,
+                    "detected": false
+                },
+                {
+                    "time": 24798508,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I77.trace",
+                    "traceSize": 10050,
+                    "totalg": 12,
+                    "eventsLen": 143,
+                    "detected": false
+                },
+                {
+                    "time": 25554413,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I78.trace",
+                    "traceSize": 10325,
+                    "totalg": 12,
+                    "eventsLen": 153,
+                    "detected": false
+                },
+                {
+                    "time": 24640983,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I79.trace",
+                    "traceSize": 10364,
+                    "totalg": 12,
+                    "eventsLen": 150,
+                    "detected": false
+                },
+                {
+                    "time": 26197915,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I80.trace",
+                    "traceSize": 10685,
+                    "totalg": 12,
+                    "eventsLen": 157,
+                    "detected": false
+                },
+                {
+                    "time": 26385013,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I81.trace",
+                    "traceSize": 10207,
+                    "totalg": 12,
+                    "eventsLen": 151,
+                    "detected": false
+                },
+                {
+                    "time": 25658729,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I82.trace",
+                    "traceSize": 10659,
+                    "totalg": 12,
+                    "eventsLen": 163,
+                    "detected": false
+                },
+                {
+                    "time": 25505706,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I83.trace",
+                    "traceSize": 10369,
+                    "totalg": 12,
+                    "eventsLen": 149,
+                    "detected": false
+                },
+                {
+                    "time": 27225168,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I84.trace",
+                    "traceSize": 10421,
+                    "totalg": 12,
+                    "eventsLen": 154,
+                    "detected": false
+                },
+                {
+                    "time": 24965835,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I85.trace",
+                    "traceSize": 10450,
+                    "totalg": 12,
+                    "eventsLen": 159,
+                    "detected": false
+                },
+                {
+                    "time": 25685141,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I86.trace",
+                    "traceSize": 10428,
+                    "totalg": 12,
+                    "eventsLen": 152,
+                    "detected": false
+                },
+                {
+                    "time": 26526692,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I87.trace",
+                    "traceSize": 10179,
+                    "totalg": 12,
+                    "eventsLen": 150,
+                    "detected": false
+                },
+                {
+                    "time": 25102641,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I88.trace",
+                    "traceSize": 10224,
+                    "totalg": 12,
+                    "eventsLen": 148,
+                    "detected": false
+                },
+                {
+                    "time": 25528611,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I89.trace",
+                    "traceSize": 10363,
+                    "totalg": 12,
+                    "eventsLen": 155,
+                    "detected": false
+                },
+                {
+                    "time": 26489426,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I90.trace",
+                    "traceSize": 10439,
+                    "totalg": 12,
+                    "eventsLen": 154,
+                    "detected": false
+                },
+                {
+                    "time": 26835983,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I91.trace",
+                    "traceSize": 10263,
+                    "totalg": 12,
+                    "eventsLen": 149,
+                    "detected": false
+                },
+                {
+                    "time": 25112084,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I92.trace",
+                    "traceSize": 10213,
+                    "totalg": 12,
+                    "eventsLen": 145,
+                    "detected": false
+                },
+                {
+                    "time": 23785492,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I93.trace",
+                    "traceSize": 12002,
+                    "totalg": 12,
+                    "eventsLen": 166,
+                    "detected": false
+                },
+                {
+                    "time": 25607181,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I94.trace",
+                    "traceSize": 10416,
+                    "totalg": 12,
+                    "eventsLen": 152,
+                    "detected": false
+                },
+                {
+                    "time": 24473840,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I95.trace",
+                    "traceSize": 10272,
+                    "totalg": 12,
+                    "eventsLen": 152,
+                    "detected": false
+                },
+                {
+                    "time": 31551707,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I96.trace",
+                    "traceSize": 10576,
+                    "totalg": 12,
+                    "eventsLen": 162,
+                    "detected": false
+                },
+                {
+                    "time": 25573728,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I97.trace",
+                    "traceSize": 10356,
+                    "totalg": 12,
+                    "eventsLen": 154,
+                    "detected": false
+                },
+                {
+                    "time": 26198031,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I98.trace",
+                    "traceSize": 10447,
+                    "totalg": 12,
+                    "eventsLen": 153,
+                    "detected": false
+                },
+                {
+                    "time": 27648389,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I99.trace",
+                    "traceSize": 10565,
+                    "totalg": 12,
+                    "eventsLen": 151,
+                    "detected": false
+                }
+            ],
+            "goatid": "goat_d1",
+            "goatBound": 1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1",
+            "lastFailedTrace": "",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d1/moby_27782_B1_I99.trace",
+            "firstFailedAfter": 0
+        },
+        "goat_d2": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay",
+            "binaryName": "296294205delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/out/goat_goat_d2.out",
+            "results": [
+                {
+                    "time": 25908111,
+                    "desc": "PDL-2",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d2/moby_27782_B2_I0.trace",
+                    "traceSize": 11034,
+                    "totalg": 12,
+                    "eventsLen": 133,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d2",
+            "goatBound": 2,
+            "traceDir": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d2",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d2/moby_27782_B2_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d3": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay",
+            "binaryName": "296294205delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/out/goat_goat_d3.out",
+            "results": [
+                {
+                    "time": 26539207,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d3/moby_27782_B3_I0.trace",
+                    "traceSize": 10016,
+                    "totalg": 12,
+                    "eventsLen": 140,
+                    "detected": false
+                },
+                {
+                    "time": 25778354,
+                    "desc": "PDL-2",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d3/moby_27782_B3_I1.trace",
+                    "traceSize": 11186,
+                    "totalg": 12,
+                    "eventsLen": 140,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d3",
+            "goatBound": 3,
+            "traceDir": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d3",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d3/moby_27782_B3_I1.trace",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/moby_27782/goat_delay/traces/goat_d3/moby_27782_B3_I0.trace",
+            "firstFailedAfter": 1
+        },
+        "goat_m": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace",
+            "binaryName": "346671062trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/out/goat_goat_m.out",
+            "results": [
+                {
+                    "time": 30981535,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_m/moby_27782_BT_I0.trace",
+                    "traceSize": 5631,
+                    "totalg": 12,
+                    "eventsLen": 152,
+                    "detected": false
+                },
+                {
+                    "time": 25063326,
+                    "desc": "PDL-2",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_m/moby_27782_BT_I1.trace",
+                    "traceSize": 6054,
+                    "totalg": 12,
+                    "eventsLen": 122,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_m",
+            "goatBound": -1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_m",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_m/moby_27782_BT_I1.trace",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_m/moby_27782_BT_I0.trace",
+            "firstFailedAfter": 1
+        },
+        "goat_u": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace",
+            "binaryName": "346671062trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/out/goat_goat_u.out",
+            "results": [
+                {
+                    "time": 26499075,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I0.trace",
+                    "traceSize": 5411,
+                    "totalg": 12,
+                    "eventsLen": 93,
+                    "detected": false
+                },
+                {
+                    "time": 24915985,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I1.trace",
+                    "traceSize": 5361,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 24755936,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I2.trace",
+                    "traceSize": 5369,
+                    "totalg": 12,
+                    "eventsLen": 91,
+                    "detected": false
+                },
+                {
+                    "time": 26277775,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I3.trace",
+                    "traceSize": 5368,
+                    "totalg": 12,
+                    "eventsLen": 91,
+                    "detected": false
+                },
+                {
+                    "time": 25539428,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I4.trace",
+                    "traceSize": 5364,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 25153298,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I5.trace",
+                    "traceSize": 5367,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 25455525,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I6.trace",
+                    "traceSize": 5365,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 24617045,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I7.trace",
+                    "traceSize": 5362,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 25989397,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I8.trace",
+                    "traceSize": 5352,
+                    "totalg": 12,
+                    "eventsLen": 88,
+                    "detected": false
+                },
+                {
+                    "time": 26133181,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I9.trace",
+                    "traceSize": 5390,
+                    "totalg": 12,
+                    "eventsLen": 95,
+                    "detected": false
+                },
+                {
+                    "time": 23932351,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I10.trace",
+                    "traceSize": 5365,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 24823781,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I11.trace",
+                    "traceSize": 5364,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 25605367,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I12.trace",
+                    "traceSize": 5411,
+                    "totalg": 12,
+                    "eventsLen": 92,
+                    "detected": false
+                },
+                {
+                    "time": 24974614,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I13.trace",
+                    "traceSize": 5367,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 23698176,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I14.trace",
+                    "traceSize": 5367,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 24477692,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I15.trace",
+                    "traceSize": 5345,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 25256813,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I16.trace",
+                    "traceSize": 5371,
+                    "totalg": 12,
+                    "eventsLen": 91,
+                    "detected": false
+                },
+                {
+                    "time": 25685619,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I17.trace",
+                    "traceSize": 5363,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 25548039,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I18.trace",
+                    "traceSize": 5358,
+                    "totalg": 12,
+                    "eventsLen": 88,
+                    "detected": false
+                },
+                {
+                    "time": 26941338,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I19.trace",
+                    "traceSize": 5370,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 24681174,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I20.trace",
+                    "traceSize": 5347,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 26056686,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I21.trace",
+                    "traceSize": 5369,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 25181556,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I22.trace",
+                    "traceSize": 5367,
+                    "totalg": 12,
+                    "eventsLen": 91,
+                    "detected": false
+                },
+                {
+                    "time": 23433428,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I23.trace",
+                    "traceSize": 5350,
+                    "totalg": 12,
+                    "eventsLen": 88,
+                    "detected": false
+                },
+                {
+                    "time": 26146806,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I24.trace",
+                    "traceSize": 5367,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 23931416,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I25.trace",
+                    "traceSize": 5351,
+                    "totalg": 12,
+                    "eventsLen": 88,
+                    "detected": false
+                },
+                {
+                    "time": 24827047,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I26.trace",
+                    "traceSize": 5362,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 26333391,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I27.trace",
+                    "traceSize": 5347,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 23239782,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I28.trace",
+                    "traceSize": 5366,
+                    "totalg": 12,
+                    "eventsLen": 91,
+                    "detected": false
+                },
+                {
+                    "time": 24608787,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I29.trace",
+                    "traceSize": 5353,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 26572646,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I30.trace",
+                    "traceSize": 5373,
+                    "totalg": 12,
+                    "eventsLen": 91,
+                    "detected": false
+                },
+                {
+                    "time": 24915146,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I31.trace",
+                    "traceSize": 5347,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 25233156,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I32.trace",
+                    "traceSize": 5345,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 25833226,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I33.trace",
+                    "traceSize": 5431,
+                    "totalg": 12,
+                    "eventsLen": 97,
+                    "detected": false
+                },
+                {
+                    "time": 24263226,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I34.trace",
+                    "traceSize": 5347,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 25221816,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I35.trace",
+                    "traceSize": 5364,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 25165654,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I36.trace",
+                    "traceSize": 5349,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 25071797,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I37.trace",
+                    "traceSize": 5366,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 27486090,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I38.trace",
+                    "traceSize": 5371,
+                    "totalg": 12,
+                    "eventsLen": 91,
+                    "detected": false
+                },
+                {
+                    "time": 26484162,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I39.trace",
+                    "traceSize": 5358,
+                    "totalg": 12,
+                    "eventsLen": 88,
+                    "detected": false
+                },
+                {
+                    "time": 24597246,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I40.trace",
+                    "traceSize": 5362,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 25467512,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I41.trace",
+                    "traceSize": 5363,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 26665517,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I42.trace",
+                    "traceSize": 5349,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 26828342,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I43.trace",
+                    "traceSize": 5374,
+                    "totalg": 12,
+                    "eventsLen": 91,
+                    "detected": false
+                },
+                {
+                    "time": 28313115,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I44.trace",
+                    "traceSize": 5350,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 29419026,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I45.trace",
+                    "traceSize": 5349,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 33068193,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I46.trace",
+                    "traceSize": 5351,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 27985340,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I47.trace",
+                    "traceSize": 5409,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 29294459,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I48.trace",
+                    "traceSize": 5368,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 29782888,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I49.trace",
+                    "traceSize": 5411,
+                    "totalg": 12,
+                    "eventsLen": 93,
+                    "detected": false
+                },
+                {
+                    "time": 28805971,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I50.trace",
+                    "traceSize": 5372,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 27799341,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I51.trace",
+                    "traceSize": 5388,
+                    "totalg": 12,
+                    "eventsLen": 95,
+                    "detected": false
+                },
+                {
+                    "time": 27866400,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I52.trace",
+                    "traceSize": 5348,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 28932731,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I53.trace",
+                    "traceSize": 5412,
+                    "totalg": 12,
+                    "eventsLen": 93,
+                    "detected": false
+                },
+                {
+                    "time": 28654317,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I54.trace",
+                    "traceSize": 5433,
+                    "totalg": 12,
+                    "eventsLen": 97,
+                    "detected": false
+                },
+                {
+                    "time": 27920280,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I55.trace",
+                    "traceSize": 5349,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 27402359,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I56.trace",
+                    "traceSize": 5370,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 30047278,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I57.trace",
+                    "traceSize": 5368,
+                    "totalg": 12,
+                    "eventsLen": 91,
+                    "detected": false
+                },
+                {
+                    "time": 31187175,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I58.trace",
+                    "traceSize": 5350,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 27192354,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I59.trace",
+                    "traceSize": 5348,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 31682067,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I60.trace",
+                    "traceSize": 5411,
+                    "totalg": 12,
+                    "eventsLen": 92,
+                    "detected": false
+                },
+                {
+                    "time": 29976511,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I61.trace",
+                    "traceSize": 5375,
+                    "totalg": 12,
+                    "eventsLen": 91,
+                    "detected": false
+                },
+                {
+                    "time": 28954703,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I62.trace",
+                    "traceSize": 5351,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 29397577,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I63.trace",
+                    "traceSize": 5397,
+                    "totalg": 12,
+                    "eventsLen": 96,
+                    "detected": false
+                },
+                {
+                    "time": 42533336,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I64.trace",
+                    "traceSize": 5366,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 26114946,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I65.trace",
+                    "traceSize": 5354,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 25817851,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I66.trace",
+                    "traceSize": 5366,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 27325585,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I67.trace",
+                    "traceSize": 5351,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 26479073,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I68.trace",
+                    "traceSize": 5367,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 24801904,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I69.trace",
+                    "traceSize": 5365,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 26259464,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I70.trace",
+                    "traceSize": 5395,
+                    "totalg": 12,
+                    "eventsLen": 96,
+                    "detected": false
+                },
+                {
+                    "time": 26702682,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I71.trace",
+                    "traceSize": 5368,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 24325740,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I72.trace",
+                    "traceSize": 5364,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 24877721,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I73.trace",
+                    "traceSize": 5387,
+                    "totalg": 12,
+                    "eventsLen": 96,
+                    "detected": false
+                },
+                {
+                    "time": 25504681,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I74.trace",
+                    "traceSize": 5391,
+                    "totalg": 12,
+                    "eventsLen": 95,
+                    "detected": false
+                },
+                {
+                    "time": 24901349,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I75.trace",
+                    "traceSize": 5341,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 24032782,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I76.trace",
+                    "traceSize": 5348,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 25852114,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I77.trace",
+                    "traceSize": 5369,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 23278176,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I78.trace",
+                    "traceSize": 5346,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 25518414,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I79.trace",
+                    "traceSize": 5353,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 26429331,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I80.trace",
+                    "traceSize": 5348,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 29717897,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I81.trace",
+                    "traceSize": 5394,
+                    "totalg": 12,
+                    "eventsLen": 95,
+                    "detected": false
+                },
+                {
+                    "time": 28817138,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I82.trace",
+                    "traceSize": 5374,
+                    "totalg": 12,
+                    "eventsLen": 91,
+                    "detected": false
+                },
+                {
+                    "time": 30669706,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I83.trace",
+                    "traceSize": 5352,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 30800882,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I84.trace",
+                    "traceSize": 5361,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 30214986,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I85.trace",
+                    "traceSize": 5353,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 26845544,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I86.trace",
+                    "traceSize": 5350,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 32026685,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I87.trace",
+                    "traceSize": 5368,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 29246014,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I88.trace",
+                    "traceSize": 5353,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 31782066,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I89.trace",
+                    "traceSize": 5353,
+                    "totalg": 12,
+                    "eventsLen": 88,
+                    "detected": false
+                },
+                {
+                    "time": 30402103,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I90.trace",
+                    "traceSize": 5367,
+                    "totalg": 12,
+                    "eventsLen": 91,
+                    "detected": false
+                },
+                {
+                    "time": 25545246,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I91.trace",
+                    "traceSize": 5398,
+                    "totalg": 12,
+                    "eventsLen": 96,
+                    "detected": false
+                },
+                {
+                    "time": 25992624,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I92.trace",
+                    "traceSize": 5349,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 24316000,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I93.trace",
+                    "traceSize": 5346,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 27810875,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I94.trace",
+                    "traceSize": 5369,
+                    "totalg": 12,
+                    "eventsLen": 90,
+                    "detected": false
+                },
+                {
+                    "time": 26261795,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I95.trace",
+                    "traceSize": 5350,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 27252427,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I96.trace",
+                    "traceSize": 5384,
+                    "totalg": 12,
+                    "eventsLen": 95,
+                    "detected": false
+                },
+                {
+                    "time": 24963607,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I97.trace",
+                    "traceSize": 5373,
+                    "totalg": 12,
+                    "eventsLen": 91,
+                    "detected": false
+                },
+                {
+                    "time": 25324894,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I98.trace",
+                    "traceSize": 5348,
+                    "totalg": 12,
+                    "eventsLen": 87,
+                    "detected": false
+                },
+                {
+                    "time": 31846139,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I99.trace",
+                    "traceSize": 5374,
+                    "totalg": 12,
+                    "eventsLen": 91,
+                    "detected": false
+                }
+            ],
+            "goatid": "goat_u",
+            "goatBound": 0,
+            "traceDir": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u",
+            "lastFailedTrace": "",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/moby_27782/goat_trace/traces/goat_u/moby_27782_B0_I99.trace",
+            "firstFailedAfter": 0
+        },
+        "goleak": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_27782/goleak",
+            "binaryName": "852425847goleak",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_27782/goleak/out/goleak.out",
+            "results": [
+                {
+                    "time": 28299248,
+                    "detected": false
+                },
+                {
+                    "time": 23252507,
+                    "detected": false
+                },
+                {
+                    "time": 26414512,
+                    "detected": false
+                },
+                {
+                    "time": 22734810,
+                    "detected": false
+                },
+                {
+                    "time": 24988413,
+                    "detected": false
+                },
+                {
+                    "time": 23811521,
+                    "detected": false
+                },
+                {
+                    "time": 22836216,
+                    "detected": false
+                },
+                {
+                    "time": 23922485,
+                    "detected": false
+                },
+                {
+                    "time": 22682527,
+                    "detected": false
+                },
+                {
+                    "time": 24096649,
+                    "detected": false
+                },
+                {
+                    "time": 23666263,
+                    "detected": false
+                },
+                {
+                    "time": 23811386,
+                    "detected": false
+                },
+                {
+                    "time": 472475801,
+                    "desc": "PDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "goleak"
+        },
+        "lockDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_27782/lockDL",
+            "binaryName": "865382776lockDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_27782/lockDL/out/lockDL.out",
+            "results": [
+                {
+                    "time": 27383776,
+                    "detected": false
+                },
+                {
+                    "time": 24779793,
+                    "detected": false
+                },
+                {
+                    "time": 25053023,
+                    "detected": false
+                },
+                {
+                    "time": 24944711,
+                    "detected": false
+                },
+                {
+                    "time": 25235409,
+                    "detected": false
+                },
+                {
+                    "time": 26852220,
+                    "detected": false
+                },
+                {
+                    "time": 23121491,
+                    "detected": false
+                },
+                {
+                    "time": 23876189,
+                    "detected": false
+                },
+                {
+                    "time": 22775651,
+                    "detected": false
+                },
+                {
+                    "time": 26767759,
+                    "detected": false
+                },
+                {
+                    "time": 23470484,
+                    "detected": false
+                },
+                {
+                    "time": 26536914,
+                    "detected": false
+                },
+                {
+                    "time": 22156585,
+                    "detected": false
+                },
+                {
+                    "time": 24505762,
+                    "detected": false
+                },
+                {
+                    "time": 22210024,
+                    "detected": false
+                },
+                {
+                    "time": 24589799,
+                    "detected": false
+                },
+                {
+                    "time": 23330470,
+                    "detected": false
+                },
+                {
+                    "time": 24297518,
+                    "detected": false
+                },
+                {
+                    "time": 23557715,
+                    "detected": false
+                },
+                {
+                    "time": 26159923,
+                    "detected": false
+                },
+                {
+                    "time": 24464029,
+                    "detected": false
+                },
+                {
+                    "time": 23868953,
+                    "detected": false
+                },
+                {
+                    "time": 24843694,
+                    "detected": false
+                },
+                {
+                    "time": 23035076,
+                    "detected": false
+                },
+                {
+                    "time": 21692408,
+                    "detected": false
+                },
+                {
+                    "time": 23531138,
+                    "detected": false
+                },
+                {
+                    "time": 25431300,
+                    "detected": false
+                },
+                {
+                    "time": 24291058,
+                    "detected": false
+                },
+                {
+                    "time": 22754056,
+                    "detected": false
+                },
+                {
+                    "time": 24425658,
+                    "detected": false
+                },
+                {
+                    "time": 23973444,
+                    "detected": false
+                },
+                {
+                    "time": 24749200,
+                    "detected": false
+                },
+                {
+                    "time": 21735348,
+                    "detected": false
+                },
+                {
+                    "time": 24725068,
+                    "detected": false
+                },
+                {
+                    "time": 23701926,
+                    "detected": false
+                },
+                {
+                    "time": 24881430,
+                    "detected": false
+                },
+                {
+                    "time": 23778913,
+                    "detected": false
+                },
+                {
+                    "time": 26387900,
+                    "detected": false
+                },
+                {
+                    "time": 22244962,
+                    "detected": false
+                },
+                {
+                    "time": 24103426,
+                    "detected": false
+                },
+                {
+                    "time": 23378249,
+                    "detected": false
+                },
+                {
+                    "time": 24155488,
+                    "detected": false
+                },
+                {
+                    "time": 21741080,
+                    "detected": false
+                },
+                {
+                    "time": 25089816,
+                    "detected": false
+                },
+                {
+                    "time": 23262934,
+                    "detected": false
+                },
+                {
+                    "time": 26457756,
+                    "detected": false
+                },
+                {
+                    "time": 23885704,
+                    "detected": false
+                },
+                {
+                    "time": 26169200,
+                    "detected": false
+                },
+                {
+                    "time": 22024568,
+                    "detected": false
+                },
+                {
+                    "time": 24139263,
+                    "detected": false
+                },
+                {
+                    "time": 24491097,
+                    "detected": false
+                },
+                {
+                    "time": 24455100,
+                    "detected": false
+                },
+                {
+                    "time": 22254920,
+                    "detected": false
+                },
+                {
+                    "time": 23899221,
+                    "detected": false
+                },
+                {
+                    "time": 22986066,
+                    "detected": false
+                },
+                {
+                    "time": 23371783,
+                    "detected": false
+                },
+                {
+                    "time": 23348173,
+                    "detected": false
+                },
+                {
+                    "time": 24307090,
+                    "detected": false
+                },
+                {
+                    "time": 23420293,
+                    "detected": false
+                },
+                {
+                    "time": 24150669,
+                    "detected": false
+                },
+                {
+                    "time": 29050884,
+                    "detected": false
+                },
+                {
+                    "time": 27021645,
+                    "detected": false
+                },
+                {
+                    "time": 24071457,
+                    "detected": false
+                },
+                {
+                    "time": 31603097,
+                    "detected": false
+                },
+                {
+                    "time": 24506203,
+                    "detected": false
+                },
+                {
+                    "time": 24388478,
+                    "detected": false
+                },
+                {
+                    "time": 23394199,
+                    "detected": false
+                },
+                {
+                    "time": 24314810,
+                    "detected": false
+                },
+                {
+                    "time": 22505718,
+                    "detected": false
+                },
+                {
+                    "time": 24688083,
+                    "detected": false
+                },
+                {
+                    "time": 24423002,
+                    "detected": false
+                },
+                {
+                    "time": 24161545,
+                    "detected": false
+                },
+                {
+                    "time": 22120689,
+                    "detected": false
+                },
+                {
+                    "time": 26968808,
+                    "detected": false
+                },
+                {
+                    "time": 22836370,
+                    "detected": false
+                },
+                {
+                    "time": 24088008,
+                    "detected": false
+                },
+                {
+                    "time": 22407947,
+                    "detected": false
+                },
+                {
+                    "time": 24000527,
+                    "detected": false
+                },
+                {
+                    "time": 23033280,
+                    "detected": false
+                },
+                {
+                    "time": 23982996,
+                    "detected": false
+                },
+                {
+                    "time": 23372635,
+                    "detected": false
+                },
+                {
+                    "time": 23682895,
+                    "detected": false
+                },
+                {
+                    "time": 21561649,
+                    "detected": false
+                },
+                {
+                    "time": 23525664,
+                    "detected": false
+                },
+                {
+                    "time": 23544109,
+                    "detected": false
+                },
+                {
+                    "time": 24084349,
+                    "detected": false
+                },
+                {
+                    "time": 22809471,
+                    "detected": false
+                },
+                {
+                    "time": 26272202,
+                    "detected": false
+                },
+                {
+                    "time": 22928268,
+                    "detected": false
+                },
+                {
+                    "time": 24374519,
+                    "detected": false
+                },
+                {
+                    "time": 20846365,
+                    "detected": false
+                },
+                {
+                    "time": 24631149,
+                    "detected": false
+                },
+                {
+                    "time": 23873935,
+                    "detected": false
+                },
+                {
+                    "time": 27594372,
+                    "detected": false
+                },
+                {
+                    "time": 23649356,
+                    "detected": false
+                },
+                {
+                    "time": 22026099,
+                    "detected": false
+                },
+                {
+                    "time": 22319955,
+                    "detected": false
+                },
+                {
+                    "time": 24444566,
+                    "detected": false
+                },
+                {
+                    "time": 22484400,
+                    "detected": false
+                },
+                {
+                    "time": 28510649,
+                    "detected": false
+                }
+            ],
+            "toolid": "lockDL"
+        }
+    },
+    "reportJSON": "/Volumes/DATA/goatws/results/blocking_conf_blocking_all_100/blocking_moby_27782_T100.json"
+}

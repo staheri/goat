@@ -1,0 +1,2283 @@
+{
+    "Bug": {
+        "bugName": "hugo_3251",
+        "bugDir": "/Users/saeed/gobench/gobench/goker/blocking/hugo/3251",
+        "bugType": "blocking",
+        "bugCause": "Resource Deadlock",
+        "bugSubcause": "AB-BA deadlock"
+    },
+    "exps": {
+        "builtinDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/hugo_3251/builtinDL",
+            "binaryName": "821327503builtinDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/hugo_3251/builtinDL/out/builtinDL.out",
+            "results": [
+                {
+                    "time": 55010399,
+                    "desc": "GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "builtinDL"
+        },
+        "goat_d1": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay",
+            "binaryName": "788377486delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/out/goat_goat_d1.out",
+            "results": [
+                {
+                    "time": 222000481,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I0.trace",
+                    "traceSize": 219661,
+                    "totalg": 109,
+                    "eventsLen": 39036,
+                    "detected": false
+                },
+                {
+                    "time": 226837936,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I1.trace",
+                    "traceSize": 222137,
+                    "totalg": 109,
+                    "eventsLen": 39093,
+                    "detected": false
+                },
+                {
+                    "time": 219318068,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I2.trace",
+                    "traceSize": 220521,
+                    "totalg": 109,
+                    "eventsLen": 39153,
+                    "detected": false
+                },
+                {
+                    "time": 219509567,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I3.trace",
+                    "traceSize": 219575,
+                    "totalg": 109,
+                    "eventsLen": 38864,
+                    "detected": false
+                },
+                {
+                    "time": 223212332,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I4.trace",
+                    "traceSize": 219339,
+                    "totalg": 109,
+                    "eventsLen": 39147,
+                    "detected": false
+                },
+                {
+                    "time": 229443027,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I5.trace",
+                    "traceSize": 220014,
+                    "totalg": 109,
+                    "eventsLen": 39040,
+                    "detected": false
+                },
+                {
+                    "time": 227048873,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I6.trace",
+                    "traceSize": 221618,
+                    "totalg": 109,
+                    "eventsLen": 38954,
+                    "detected": false
+                },
+                {
+                    "time": 220529111,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I7.trace",
+                    "traceSize": 219538,
+                    "totalg": 109,
+                    "eventsLen": 39056,
+                    "detected": false
+                },
+                {
+                    "time": 225248087,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I8.trace",
+                    "traceSize": 221838,
+                    "totalg": 109,
+                    "eventsLen": 39024,
+                    "detected": false
+                },
+                {
+                    "time": 227841710,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I9.trace",
+                    "traceSize": 222116,
+                    "totalg": 109,
+                    "eventsLen": 39057,
+                    "detected": false
+                },
+                {
+                    "time": 224935122,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I10.trace",
+                    "traceSize": 220804,
+                    "totalg": 109,
+                    "eventsLen": 39067,
+                    "detected": false
+                },
+                {
+                    "time": 234863707,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I11.trace",
+                    "traceSize": 224033,
+                    "totalg": 109,
+                    "eventsLen": 38963,
+                    "detected": false
+                },
+                {
+                    "time": 221292700,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I12.trace",
+                    "traceSize": 221122,
+                    "totalg": 109,
+                    "eventsLen": 39211,
+                    "detected": false
+                },
+                {
+                    "time": 228809354,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I13.trace",
+                    "traceSize": 222268,
+                    "totalg": 109,
+                    "eventsLen": 38900,
+                    "detected": false
+                },
+                {
+                    "time": 214937905,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I14.trace",
+                    "traceSize": 219101,
+                    "totalg": 109,
+                    "eventsLen": 39054,
+                    "detected": false
+                },
+                {
+                    "time": 221522338,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I15.trace",
+                    "traceSize": 220163,
+                    "totalg": 109,
+                    "eventsLen": 38918,
+                    "detected": false
+                },
+                {
+                    "time": 229946114,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I16.trace",
+                    "traceSize": 223535,
+                    "totalg": 109,
+                    "eventsLen": 39001,
+                    "detected": false
+                },
+                {
+                    "time": 225493611,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I17.trace",
+                    "traceSize": 222478,
+                    "totalg": 109,
+                    "eventsLen": 39121,
+                    "detected": false
+                },
+                {
+                    "time": 266350400,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I18.trace",
+                    "traceSize": 222804,
+                    "totalg": 109,
+                    "eventsLen": 38811,
+                    "detected": false
+                },
+                {
+                    "time": 211972585,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I19.trace",
+                    "traceSize": 219250,
+                    "totalg": 109,
+                    "eventsLen": 39170,
+                    "detected": false
+                },
+                {
+                    "time": 231540874,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I20.trace",
+                    "traceSize": 221305,
+                    "totalg": 109,
+                    "eventsLen": 38868,
+                    "detected": false
+                },
+                {
+                    "time": 217096836,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I21.trace",
+                    "traceSize": 220248,
+                    "totalg": 109,
+                    "eventsLen": 39159,
+                    "detected": false
+                },
+                {
+                    "time": 225075242,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I22.trace",
+                    "traceSize": 219375,
+                    "totalg": 109,
+                    "eventsLen": 38782,
+                    "detected": false
+                },
+                {
+                    "time": 220221880,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I23.trace",
+                    "traceSize": 219096,
+                    "totalg": 109,
+                    "eventsLen": 39075,
+                    "detected": false
+                },
+                {
+                    "time": 226560945,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I24.trace",
+                    "traceSize": 221792,
+                    "totalg": 109,
+                    "eventsLen": 39088,
+                    "detected": false
+                },
+                {
+                    "time": 252330844,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I25.trace",
+                    "traceSize": 224731,
+                    "totalg": 109,
+                    "eventsLen": 38870,
+                    "detected": false
+                },
+                {
+                    "time": 222748446,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I26.trace",
+                    "traceSize": 221166,
+                    "totalg": 109,
+                    "eventsLen": 39073,
+                    "detected": false
+                },
+                {
+                    "time": 221301914,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I27.trace",
+                    "traceSize": 220869,
+                    "totalg": 109,
+                    "eventsLen": 39097,
+                    "detected": false
+                },
+                {
+                    "time": 219235486,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I28.trace",
+                    "traceSize": 219549,
+                    "totalg": 109,
+                    "eventsLen": 39020,
+                    "detected": false
+                },
+                {
+                    "time": 229341260,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I29.trace",
+                    "traceSize": 223922,
+                    "totalg": 109,
+                    "eventsLen": 39159,
+                    "detected": false
+                },
+                {
+                    "time": 232926620,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I30.trace",
+                    "traceSize": 223955,
+                    "totalg": 109,
+                    "eventsLen": 39042,
+                    "detected": false
+                },
+                {
+                    "time": 215825296,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I31.trace",
+                    "traceSize": 218770,
+                    "totalg": 109,
+                    "eventsLen": 39018,
+                    "detected": false
+                },
+                {
+                    "time": 213727910,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I32.trace",
+                    "traceSize": 218392,
+                    "totalg": 109,
+                    "eventsLen": 39075,
+                    "detected": false
+                },
+                {
+                    "time": 220577201,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I33.trace",
+                    "traceSize": 220324,
+                    "totalg": 109,
+                    "eventsLen": 39029,
+                    "detected": false
+                },
+                {
+                    "time": 222783719,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I34.trace",
+                    "traceSize": 221163,
+                    "totalg": 109,
+                    "eventsLen": 39064,
+                    "detected": false
+                },
+                {
+                    "time": 252549819,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I35.trace",
+                    "traceSize": 226156,
+                    "totalg": 109,
+                    "eventsLen": 39088,
+                    "detected": false
+                },
+                {
+                    "time": 219864891,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I36.trace",
+                    "traceSize": 220382,
+                    "totalg": 109,
+                    "eventsLen": 38977,
+                    "detected": false
+                },
+                {
+                    "time": 219767871,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I37.trace",
+                    "traceSize": 219738,
+                    "totalg": 109,
+                    "eventsLen": 39095,
+                    "detected": false
+                },
+                {
+                    "time": 220930253,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I38.trace",
+                    "traceSize": 219345,
+                    "totalg": 109,
+                    "eventsLen": 39172,
+                    "detected": false
+                },
+                {
+                    "time": 218763467,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I39.trace",
+                    "traceSize": 219337,
+                    "totalg": 109,
+                    "eventsLen": 38944,
+                    "detected": false
+                },
+                {
+                    "time": 220501908,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I40.trace",
+                    "traceSize": 221249,
+                    "totalg": 109,
+                    "eventsLen": 39154,
+                    "detected": false
+                },
+                {
+                    "time": 215108892,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I41.trace",
+                    "traceSize": 219245,
+                    "totalg": 109,
+                    "eventsLen": 39104,
+                    "detected": false
+                },
+                {
+                    "time": 219559274,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I42.trace",
+                    "traceSize": 219326,
+                    "totalg": 109,
+                    "eventsLen": 38951,
+                    "detected": false
+                },
+                {
+                    "time": 222210240,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I43.trace",
+                    "traceSize": 219748,
+                    "totalg": 109,
+                    "eventsLen": 39057,
+                    "detected": false
+                },
+                {
+                    "time": 225557559,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I44.trace",
+                    "traceSize": 219583,
+                    "totalg": 109,
+                    "eventsLen": 39016,
+                    "detected": false
+                },
+                {
+                    "time": 226259039,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I45.trace",
+                    "traceSize": 222479,
+                    "totalg": 109,
+                    "eventsLen": 39074,
+                    "detected": false
+                },
+                {
+                    "time": 222413986,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I46.trace",
+                    "traceSize": 221586,
+                    "totalg": 109,
+                    "eventsLen": 39050,
+                    "detected": false
+                },
+                {
+                    "time": 223189792,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I47.trace",
+                    "traceSize": 218880,
+                    "totalg": 109,
+                    "eventsLen": 39126,
+                    "detected": false
+                },
+                {
+                    "time": 221473205,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I48.trace",
+                    "traceSize": 219814,
+                    "totalg": 109,
+                    "eventsLen": 38980,
+                    "detected": false
+                },
+                {
+                    "time": 224808082,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I49.trace",
+                    "traceSize": 221109,
+                    "totalg": 109,
+                    "eventsLen": 39028,
+                    "detected": false
+                },
+                {
+                    "time": 227614189,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I50.trace",
+                    "traceSize": 221248,
+                    "totalg": 109,
+                    "eventsLen": 39042,
+                    "detected": false
+                },
+                {
+                    "time": 226164598,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I51.trace",
+                    "traceSize": 221689,
+                    "totalg": 109,
+                    "eventsLen": 38916,
+                    "detected": false
+                },
+                {
+                    "time": 222346428,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I52.trace",
+                    "traceSize": 219908,
+                    "totalg": 109,
+                    "eventsLen": 39034,
+                    "detected": false
+                },
+                {
+                    "time": 224332012,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I53.trace",
+                    "traceSize": 221048,
+                    "totalg": 109,
+                    "eventsLen": 39025,
+                    "detected": false
+                },
+                {
+                    "time": 213315153,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I54.trace",
+                    "traceSize": 219448,
+                    "totalg": 109,
+                    "eventsLen": 39141,
+                    "detected": false
+                },
+                {
+                    "time": 215487988,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I55.trace",
+                    "traceSize": 219042,
+                    "totalg": 109,
+                    "eventsLen": 39099,
+                    "detected": false
+                },
+                {
+                    "time": 227278507,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I56.trace",
+                    "traceSize": 221854,
+                    "totalg": 109,
+                    "eventsLen": 38971,
+                    "detected": false
+                },
+                {
+                    "time": 224075686,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I57.trace",
+                    "traceSize": 221023,
+                    "totalg": 109,
+                    "eventsLen": 38985,
+                    "detected": false
+                },
+                {
+                    "time": 224677569,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I58.trace",
+                    "traceSize": 221550,
+                    "totalg": 109,
+                    "eventsLen": 39010,
+                    "detected": false
+                },
+                {
+                    "time": 215448025,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I59.trace",
+                    "traceSize": 220357,
+                    "totalg": 109,
+                    "eventsLen": 39195,
+                    "detected": false
+                },
+                {
+                    "time": 226930400,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I60.trace",
+                    "traceSize": 221754,
+                    "totalg": 109,
+                    "eventsLen": 39074,
+                    "detected": false
+                },
+                {
+                    "time": 231755931,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I61.trace",
+                    "traceSize": 221472,
+                    "totalg": 109,
+                    "eventsLen": 38995,
+                    "detected": false
+                },
+                {
+                    "time": 222161614,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I62.trace",
+                    "traceSize": 219139,
+                    "totalg": 109,
+                    "eventsLen": 38957,
+                    "detected": false
+                },
+                {
+                    "time": 223324887,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I63.trace",
+                    "traceSize": 221018,
+                    "totalg": 109,
+                    "eventsLen": 38993,
+                    "detected": false
+                },
+                {
+                    "time": 221323759,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I64.trace",
+                    "traceSize": 221371,
+                    "totalg": 109,
+                    "eventsLen": 39160,
+                    "detected": false
+                },
+                {
+                    "time": 230308702,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I65.trace",
+                    "traceSize": 220326,
+                    "totalg": 109,
+                    "eventsLen": 38975,
+                    "detected": false
+                },
+                {
+                    "time": 228391239,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I66.trace",
+                    "traceSize": 221168,
+                    "totalg": 109,
+                    "eventsLen": 39094,
+                    "detected": false
+                },
+                {
+                    "time": 264353949,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I67.trace",
+                    "traceSize": 227700,
+                    "totalg": 109,
+                    "eventsLen": 39032,
+                    "detected": false
+                },
+                {
+                    "time": 259465305,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I68.trace",
+                    "traceSize": 227406,
+                    "totalg": 109,
+                    "eventsLen": 39004,
+                    "detected": false
+                },
+                {
+                    "time": 257442835,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I69.trace",
+                    "traceSize": 227926,
+                    "totalg": 109,
+                    "eventsLen": 39114,
+                    "detected": false
+                },
+                {
+                    "time": 260373641,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I70.trace",
+                    "traceSize": 227276,
+                    "totalg": 109,
+                    "eventsLen": 38987,
+                    "detected": false
+                },
+                {
+                    "time": 256088472,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I71.trace",
+                    "traceSize": 227294,
+                    "totalg": 109,
+                    "eventsLen": 38996,
+                    "detected": false
+                },
+                {
+                    "time": 257751089,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I72.trace",
+                    "traceSize": 226530,
+                    "totalg": 109,
+                    "eventsLen": 38793,
+                    "detected": false
+                },
+                {
+                    "time": 276945580,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I73.trace",
+                    "traceSize": 226984,
+                    "totalg": 109,
+                    "eventsLen": 38956,
+                    "detected": false
+                },
+                {
+                    "time": 279770813,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I74.trace",
+                    "traceSize": 227504,
+                    "totalg": 109,
+                    "eventsLen": 39062,
+                    "detected": false
+                },
+                {
+                    "time": 254163243,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I75.trace",
+                    "traceSize": 227250,
+                    "totalg": 109,
+                    "eventsLen": 38994,
+                    "detected": false
+                },
+                {
+                    "time": 256871233,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I76.trace",
+                    "traceSize": 226898,
+                    "totalg": 109,
+                    "eventsLen": 38902,
+                    "detected": false
+                },
+                {
+                    "time": 241522970,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I77.trace",
+                    "traceSize": 223923,
+                    "totalg": 109,
+                    "eventsLen": 39066,
+                    "detected": false
+                },
+                {
+                    "time": 258505057,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I78.trace",
+                    "traceSize": 227698,
+                    "totalg": 109,
+                    "eventsLen": 39040,
+                    "detected": false
+                },
+                {
+                    "time": 260977718,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I79.trace",
+                    "traceSize": 227122,
+                    "totalg": 109,
+                    "eventsLen": 38931,
+                    "detected": false
+                },
+                {
+                    "time": 286196630,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I80.trace",
+                    "traceSize": 226576,
+                    "totalg": 109,
+                    "eventsLen": 38848,
+                    "detected": false
+                },
+                {
+                    "time": 245431478,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I81.trace",
+                    "traceSize": 221818,
+                    "totalg": 109,
+                    "eventsLen": 38996,
+                    "detected": false
+                },
+                {
+                    "time": 214105524,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I82.trace",
+                    "traceSize": 218437,
+                    "totalg": 109,
+                    "eventsLen": 39144,
+                    "detected": false
+                },
+                {
+                    "time": 217076290,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I83.trace",
+                    "traceSize": 218684,
+                    "totalg": 109,
+                    "eventsLen": 39002,
+                    "detected": false
+                },
+                {
+                    "time": 221486361,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I84.trace",
+                    "traceSize": 221545,
+                    "totalg": 109,
+                    "eventsLen": 39158,
+                    "detected": false
+                },
+                {
+                    "time": 232496683,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I85.trace",
+                    "traceSize": 221444,
+                    "totalg": 109,
+                    "eventsLen": 38908,
+                    "detected": false
+                },
+                {
+                    "time": 222223625,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I86.trace",
+                    "traceSize": 220167,
+                    "totalg": 109,
+                    "eventsLen": 39043,
+                    "detected": false
+                },
+                {
+                    "time": 226522746,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I87.trace",
+                    "traceSize": 222566,
+                    "totalg": 109,
+                    "eventsLen": 39040,
+                    "detected": false
+                },
+                {
+                    "time": 227104618,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I88.trace",
+                    "traceSize": 219251,
+                    "totalg": 109,
+                    "eventsLen": 39090,
+                    "detected": false
+                },
+                {
+                    "time": 221524341,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I89.trace",
+                    "traceSize": 221732,
+                    "totalg": 109,
+                    "eventsLen": 39096,
+                    "detected": false
+                },
+                {
+                    "time": 231336500,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I90.trace",
+                    "traceSize": 221456,
+                    "totalg": 109,
+                    "eventsLen": 38940,
+                    "detected": false
+                },
+                {
+                    "time": 219425644,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I91.trace",
+                    "traceSize": 219212,
+                    "totalg": 109,
+                    "eventsLen": 39121,
+                    "detected": false
+                },
+                {
+                    "time": 220133468,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I92.trace",
+                    "traceSize": 219988,
+                    "totalg": 109,
+                    "eventsLen": 39031,
+                    "detected": false
+                },
+                {
+                    "time": 221108332,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I93.trace",
+                    "traceSize": 220570,
+                    "totalg": 109,
+                    "eventsLen": 38918,
+                    "detected": false
+                },
+                {
+                    "time": 220041442,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I94.trace",
+                    "traceSize": 221457,
+                    "totalg": 109,
+                    "eventsLen": 39191,
+                    "detected": false
+                },
+                {
+                    "time": 221620170,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I95.trace",
+                    "traceSize": 221450,
+                    "totalg": 109,
+                    "eventsLen": 39261,
+                    "detected": false
+                },
+                {
+                    "time": 227642481,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I96.trace",
+                    "traceSize": 222405,
+                    "totalg": 109,
+                    "eventsLen": 38991,
+                    "detected": false
+                },
+                {
+                    "time": 211567738,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I97.trace",
+                    "traceSize": 219230,
+                    "totalg": 109,
+                    "eventsLen": 39193,
+                    "detected": false
+                },
+                {
+                    "time": 219166032,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I98.trace",
+                    "traceSize": 219745,
+                    "totalg": 109,
+                    "eventsLen": 39156,
+                    "detected": false
+                },
+                {
+                    "time": 239042780,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I99.trace",
+                    "traceSize": 221786,
+                    "totalg": 109,
+                    "eventsLen": 38835,
+                    "detected": false
+                }
+            ],
+            "goatid": "goat_d1",
+            "goatBound": 1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1",
+            "lastFailedTrace": "",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d1/hugo_3251_B1_I99.trace",
+            "firstFailedAfter": 0
+        },
+        "goat_d2": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay",
+            "binaryName": "788377486delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/out/goat_goat_d2.out",
+            "results": [
+                {
+                    "time": 228461489,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I0.trace",
+                    "traceSize": 222384,
+                    "totalg": 109,
+                    "eventsLen": 38882,
+                    "detected": false
+                },
+                {
+                    "time": 221873377,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I1.trace",
+                    "traceSize": 221309,
+                    "totalg": 109,
+                    "eventsLen": 39107,
+                    "detected": false
+                },
+                {
+                    "time": 223110236,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I2.trace",
+                    "traceSize": 218960,
+                    "totalg": 109,
+                    "eventsLen": 39022,
+                    "detected": false
+                },
+                {
+                    "time": 243597384,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I3.trace",
+                    "traceSize": 220794,
+                    "totalg": 109,
+                    "eventsLen": 38804,
+                    "detected": false
+                },
+                {
+                    "time": 219127924,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I4.trace",
+                    "traceSize": 219328,
+                    "totalg": 109,
+                    "eventsLen": 38954,
+                    "detected": false
+                },
+                {
+                    "time": 212377763,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I5.trace",
+                    "traceSize": 218238,
+                    "totalg": 109,
+                    "eventsLen": 39074,
+                    "detected": false
+                },
+                {
+                    "time": 222870900,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I6.trace",
+                    "traceSize": 220029,
+                    "totalg": 109,
+                    "eventsLen": 38929,
+                    "detected": false
+                },
+                {
+                    "time": 222588454,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I7.trace",
+                    "traceSize": 221040,
+                    "totalg": 109,
+                    "eventsLen": 39178,
+                    "detected": false
+                },
+                {
+                    "time": 228720020,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I8.trace",
+                    "traceSize": 221451,
+                    "totalg": 109,
+                    "eventsLen": 39062,
+                    "detected": false
+                },
+                {
+                    "time": 254308066,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I9.trace",
+                    "traceSize": 226955,
+                    "totalg": 109,
+                    "eventsLen": 39004,
+                    "detected": false
+                },
+                {
+                    "time": 222709992,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I10.trace",
+                    "traceSize": 219983,
+                    "totalg": 109,
+                    "eventsLen": 38875,
+                    "detected": false
+                },
+                {
+                    "time": 218110375,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I11.trace",
+                    "traceSize": 220122,
+                    "totalg": 109,
+                    "eventsLen": 38901,
+                    "detected": false
+                },
+                {
+                    "time": 218334401,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I12.trace",
+                    "traceSize": 219395,
+                    "totalg": 109,
+                    "eventsLen": 39045,
+                    "detected": false
+                },
+                {
+                    "time": 214031201,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I13.trace",
+                    "traceSize": 221883,
+                    "totalg": 109,
+                    "eventsLen": 39609,
+                    "detected": false
+                },
+                {
+                    "time": 211654290,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I14.trace",
+                    "traceSize": 218509,
+                    "totalg": 109,
+                    "eventsLen": 39079,
+                    "detected": false
+                },
+                {
+                    "time": 226927613,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I15.trace",
+                    "traceSize": 221227,
+                    "totalg": 109,
+                    "eventsLen": 39033,
+                    "detected": false
+                },
+                {
+                    "time": 221976416,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I16.trace",
+                    "traceSize": 222324,
+                    "totalg": 109,
+                    "eventsLen": 39593,
+                    "detected": false
+                },
+                {
+                    "time": 213636924,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I17.trace",
+                    "traceSize": 218732,
+                    "totalg": 109,
+                    "eventsLen": 38925,
+                    "detected": false
+                },
+                {
+                    "time": 223270418,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I18.trace",
+                    "traceSize": 218468,
+                    "totalg": 109,
+                    "eventsLen": 38964,
+                    "detected": false
+                },
+                {
+                    "time": 215423033,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I19.trace",
+                    "traceSize": 218834,
+                    "totalg": 109,
+                    "eventsLen": 38967,
+                    "detected": false
+                },
+                {
+                    "time": 224225248,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I20.trace",
+                    "traceSize": 222656,
+                    "totalg": 109,
+                    "eventsLen": 39220,
+                    "detected": false
+                },
+                {
+                    "time": 217160616,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I21.trace",
+                    "traceSize": 218758,
+                    "totalg": 109,
+                    "eventsLen": 39033,
+                    "detected": false
+                },
+                {
+                    "time": 224109682,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I22.trace",
+                    "traceSize": 221150,
+                    "totalg": 109,
+                    "eventsLen": 39096,
+                    "detected": false
+                },
+                {
+                    "time": 214281390,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I23.trace",
+                    "traceSize": 218951,
+                    "totalg": 109,
+                    "eventsLen": 39078,
+                    "detected": false
+                },
+                {
+                    "time": 216657657,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I24.trace",
+                    "traceSize": 218827,
+                    "totalg": 109,
+                    "eventsLen": 39048,
+                    "detected": false
+                },
+                {
+                    "time": 220080263,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I25.trace",
+                    "traceSize": 220649,
+                    "totalg": 109,
+                    "eventsLen": 39072,
+                    "detected": false
+                },
+                {
+                    "time": 214949345,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I26.trace",
+                    "traceSize": 219219,
+                    "totalg": 109,
+                    "eventsLen": 39002,
+                    "detected": false
+                },
+                {
+                    "time": 217292260,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I27.trace",
+                    "traceSize": 219942,
+                    "totalg": 109,
+                    "eventsLen": 39042,
+                    "detected": false
+                },
+                {
+                    "time": 220836886,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I28.trace",
+                    "traceSize": 220726,
+                    "totalg": 109,
+                    "eventsLen": 38998,
+                    "detected": false
+                },
+                {
+                    "time": 236029571,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I29.trace",
+                    "traceSize": 221985,
+                    "totalg": 109,
+                    "eventsLen": 38963,
+                    "detected": false
+                },
+                {
+                    "time": 212544552,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I30.trace",
+                    "traceSize": 217770,
+                    "totalg": 109,
+                    "eventsLen": 39063,
+                    "detected": false
+                },
+                {
+                    "time": 238398335,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I31.trace",
+                    "traceSize": 224584,
+                    "totalg": 109,
+                    "eventsLen": 39079,
+                    "detected": false
+                },
+                {
+                    "time": 224811881,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I32.trace",
+                    "traceSize": 222122,
+                    "totalg": 109,
+                    "eventsLen": 39074,
+                    "detected": false
+                },
+                {
+                    "time": 5028440807,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I33.trace",
+                    "traceSize": 12842,
+                    "totalg": 59,
+                    "eventsLen": 1086,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d2",
+            "goatBound": 2,
+            "traceDir": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I33.trace",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d2/hugo_3251_B2_I32.trace",
+            "firstFailedAfter": 33
+        },
+        "goat_d3": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay",
+            "binaryName": "788377486delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/out/goat_goat_d3.out",
+            "results": [
+                {
+                    "time": 216489488,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d3/hugo_3251_B3_I0.trace",
+                    "traceSize": 217490,
+                    "totalg": 109,
+                    "eventsLen": 38954,
+                    "detected": false
+                },
+                {
+                    "time": 227062528,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d3/hugo_3251_B3_I1.trace",
+                    "traceSize": 221251,
+                    "totalg": 109,
+                    "eventsLen": 38995,
+                    "detected": false
+                },
+                {
+                    "time": 218816038,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d3/hugo_3251_B3_I2.trace",
+                    "traceSize": 220144,
+                    "totalg": 109,
+                    "eventsLen": 39031,
+                    "detected": false
+                },
+                {
+                    "time": 5029901382,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d3/hugo_3251_B3_I3.trace",
+                    "traceSize": 12689,
+                    "totalg": 59,
+                    "eventsLen": 1084,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d3",
+            "goatBound": 3,
+            "traceDir": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d3",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d3/hugo_3251_B3_I3.trace",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_delay/traces/goat_d3/hugo_3251_B3_I2.trace",
+            "firstFailedAfter": 3
+        },
+        "goat_m": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace",
+            "binaryName": "864831531trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/out/goat_goat_m.out",
+            "results": [
+                {
+                    "time": 5028534579,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_m/hugo_3251_BT_I0.trace",
+                    "traceSize": 5189,
+                    "totalg": 59,
+                    "eventsLen": 340,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_m",
+            "goatBound": -1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_m",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_m/hugo_3251_BT_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_u": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace",
+            "binaryName": "864831531trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/out/goat_goat_u.out",
+            "results": [
+                {
+                    "time": 36467231,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I0.trace",
+                    "traceSize": 37377,
+                    "totalg": 109,
+                    "eventsLen": 7567,
+                    "detected": false
+                },
+                {
+                    "time": 34403363,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I1.trace",
+                    "traceSize": 37373,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 37359825,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I2.trace",
+                    "traceSize": 37392,
+                    "totalg": 109,
+                    "eventsLen": 7573,
+                    "detected": false
+                },
+                {
+                    "time": 38346868,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I3.trace",
+                    "traceSize": 37410,
+                    "totalg": 109,
+                    "eventsLen": 7573,
+                    "detected": false
+                },
+                {
+                    "time": 37448285,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I4.trace",
+                    "traceSize": 37366,
+                    "totalg": 109,
+                    "eventsLen": 7564,
+                    "detected": false
+                },
+                {
+                    "time": 37517407,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I5.trace",
+                    "traceSize": 37385,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 34775532,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I6.trace",
+                    "traceSize": 37550,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 37969010,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I7.trace",
+                    "traceSize": 37396,
+                    "totalg": 109,
+                    "eventsLen": 7573,
+                    "detected": false
+                },
+                {
+                    "time": 34693069,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I8.trace",
+                    "traceSize": 37369,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 31876232,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I9.trace",
+                    "traceSize": 37543,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 39132430,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I10.trace",
+                    "traceSize": 37399,
+                    "totalg": 109,
+                    "eventsLen": 7573,
+                    "detected": false
+                },
+                {
+                    "time": 42457471,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I11.trace",
+                    "traceSize": 37403,
+                    "totalg": 109,
+                    "eventsLen": 7572,
+                    "detected": false
+                },
+                {
+                    "time": 35707064,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I12.trace",
+                    "traceSize": 37387,
+                    "totalg": 109,
+                    "eventsLen": 7573,
+                    "detected": false
+                },
+                {
+                    "time": 38248142,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I13.trace",
+                    "traceSize": 37601,
+                    "totalg": 109,
+                    "eventsLen": 7573,
+                    "detected": false
+                },
+                {
+                    "time": 37036052,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I14.trace",
+                    "traceSize": 37575,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 34582296,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I15.trace",
+                    "traceSize": 37349,
+                    "totalg": 109,
+                    "eventsLen": 7566,
+                    "detected": false
+                },
+                {
+                    "time": 35423963,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I16.trace",
+                    "traceSize": 37373,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 39569824,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I17.trace",
+                    "traceSize": 37374,
+                    "totalg": 109,
+                    "eventsLen": 7567,
+                    "detected": false
+                },
+                {
+                    "time": 35922222,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I18.trace",
+                    "traceSize": 37396,
+                    "totalg": 109,
+                    "eventsLen": 7573,
+                    "detected": false
+                },
+                {
+                    "time": 35651121,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I19.trace",
+                    "traceSize": 37357,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 35779742,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I20.trace",
+                    "traceSize": 37368,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 38649600,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I21.trace",
+                    "traceSize": 37405,
+                    "totalg": 109,
+                    "eventsLen": 7567,
+                    "detected": false
+                },
+                {
+                    "time": 46588016,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I22.trace",
+                    "traceSize": 37393,
+                    "totalg": 109,
+                    "eventsLen": 7564,
+                    "detected": false
+                },
+                {
+                    "time": 47397972,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I23.trace",
+                    "traceSize": 37614,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 42152186,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I24.trace",
+                    "traceSize": 37424,
+                    "totalg": 109,
+                    "eventsLen": 7573,
+                    "detected": false
+                },
+                {
+                    "time": 42324001,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I25.trace",
+                    "traceSize": 37627,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 38204965,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I26.trace",
+                    "traceSize": 37418,
+                    "totalg": 109,
+                    "eventsLen": 7573,
+                    "detected": false
+                },
+                {
+                    "time": 38239640,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I27.trace",
+                    "traceSize": 37380,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 38251299,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I28.trace",
+                    "traceSize": 37382,
+                    "totalg": 109,
+                    "eventsLen": 7567,
+                    "detected": false
+                },
+                {
+                    "time": 36102599,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I29.trace",
+                    "traceSize": 37378,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 36060316,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I30.trace",
+                    "traceSize": 37359,
+                    "totalg": 109,
+                    "eventsLen": 7565,
+                    "detected": false
+                },
+                {
+                    "time": 36964301,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I31.trace",
+                    "traceSize": 37367,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 36055227,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I32.trace",
+                    "traceSize": 37346,
+                    "totalg": 109,
+                    "eventsLen": 7564,
+                    "detected": false
+                },
+                {
+                    "time": 37660713,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I33.trace",
+                    "traceSize": 37486,
+                    "totalg": 109,
+                    "eventsLen": 7565,
+                    "detected": false
+                },
+                {
+                    "time": 38516031,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I34.trace",
+                    "traceSize": 37397,
+                    "totalg": 109,
+                    "eventsLen": 7573,
+                    "detected": false
+                },
+                {
+                    "time": 32485386,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I35.trace",
+                    "traceSize": 37368,
+                    "totalg": 109,
+                    "eventsLen": 7565,
+                    "detected": false
+                },
+                {
+                    "time": 36504924,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I36.trace",
+                    "traceSize": 37356,
+                    "totalg": 109,
+                    "eventsLen": 7567,
+                    "detected": false
+                },
+                {
+                    "time": 31721281,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I37.trace",
+                    "traceSize": 37348,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 37059139,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I38.trace",
+                    "traceSize": 37580,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 36949075,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I39.trace",
+                    "traceSize": 37408,
+                    "totalg": 109,
+                    "eventsLen": 7569,
+                    "detected": false
+                },
+                {
+                    "time": 43139294,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I40.trace",
+                    "traceSize": 37381,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 36612923,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I41.trace",
+                    "traceSize": 37369,
+                    "totalg": 109,
+                    "eventsLen": 7566,
+                    "detected": false
+                },
+                {
+                    "time": 34647646,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I42.trace",
+                    "traceSize": 37363,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 34804751,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I43.trace",
+                    "traceSize": 37377,
+                    "totalg": 109,
+                    "eventsLen": 7572,
+                    "detected": false
+                },
+                {
+                    "time": 39818434,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I44.trace",
+                    "traceSize": 37608,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 38367357,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I45.trace",
+                    "traceSize": 37423,
+                    "totalg": 109,
+                    "eventsLen": 7573,
+                    "detected": false
+                },
+                {
+                    "time": 41748632,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I46.trace",
+                    "traceSize": 37591,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 41682663,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I47.trace",
+                    "traceSize": 37383,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 46047906,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I48.trace",
+                    "traceSize": 37442,
+                    "totalg": 109,
+                    "eventsLen": 7573,
+                    "detected": false
+                },
+                {
+                    "time": 43227714,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I49.trace",
+                    "traceSize": 37388,
+                    "totalg": 109,
+                    "eventsLen": 7564,
+                    "detected": false
+                },
+                {
+                    "time": 43112389,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I50.trace",
+                    "traceSize": 37384,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 42003087,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I51.trace",
+                    "traceSize": 37384,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 42786212,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I52.trace",
+                    "traceSize": 37416,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 45197292,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I53.trace",
+                    "traceSize": 37392,
+                    "totalg": 109,
+                    "eventsLen": 7565,
+                    "detected": false
+                },
+                {
+                    "time": 44356748,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I54.trace",
+                    "traceSize": 37409,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 42893280,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I55.trace",
+                    "traceSize": 37401,
+                    "totalg": 109,
+                    "eventsLen": 7567,
+                    "detected": false
+                },
+                {
+                    "time": 44970283,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I56.trace",
+                    "traceSize": 37366,
+                    "totalg": 109,
+                    "eventsLen": 7564,
+                    "detected": false
+                },
+                {
+                    "time": 41393767,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I57.trace",
+                    "traceSize": 37415,
+                    "totalg": 109,
+                    "eventsLen": 7573,
+                    "detected": false
+                },
+                {
+                    "time": 39986366,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I58.trace",
+                    "traceSize": 37376,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 39752854,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I59.trace",
+                    "traceSize": 37571,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 38104538,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I60.trace",
+                    "traceSize": 37365,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 35180453,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I61.trace",
+                    "traceSize": 37353,
+                    "totalg": 109,
+                    "eventsLen": 7565,
+                    "detected": false
+                },
+                {
+                    "time": 41075542,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I62.trace",
+                    "traceSize": 37377,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 36947456,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I63.trace",
+                    "traceSize": 37377,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 41725758,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I64.trace",
+                    "traceSize": 37396,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 45725512,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I65.trace",
+                    "traceSize": 37620,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 42384355,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I66.trace",
+                    "traceSize": 37589,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 38499333,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I67.trace",
+                    "traceSize": 37445,
+                    "totalg": 109,
+                    "eventsLen": 7570,
+                    "detected": false
+                },
+                {
+                    "time": 42668767,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I68.trace",
+                    "traceSize": 37401,
+                    "totalg": 109,
+                    "eventsLen": 7564,
+                    "detected": false
+                },
+                {
+                    "time": 42031188,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I69.trace",
+                    "traceSize": 37385,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 39073644,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I70.trace",
+                    "traceSize": 37369,
+                    "totalg": 109,
+                    "eventsLen": 7564,
+                    "detected": false
+                },
+                {
+                    "time": 46110188,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I71.trace",
+                    "traceSize": 37415,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 36051205,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I72.trace",
+                    "traceSize": 37588,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 38897503,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I73.trace",
+                    "traceSize": 37385,
+                    "totalg": 109,
+                    "eventsLen": 7567,
+                    "detected": false
+                },
+                {
+                    "time": 37716591,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I74.trace",
+                    "traceSize": 37375,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 38633691,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I75.trace",
+                    "traceSize": 37373,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 46916243,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I76.trace",
+                    "traceSize": 37585,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 36272942,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I77.trace",
+                    "traceSize": 37365,
+                    "totalg": 109,
+                    "eventsLen": 7569,
+                    "detected": false
+                },
+                {
+                    "time": 35241327,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I78.trace",
+                    "traceSize": 37346,
+                    "totalg": 109,
+                    "eventsLen": 7565,
+                    "detected": false
+                },
+                {
+                    "time": 36202018,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I79.trace",
+                    "traceSize": 37348,
+                    "totalg": 109,
+                    "eventsLen": 7565,
+                    "detected": false
+                },
+                {
+                    "time": 37528025,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I80.trace",
+                    "traceSize": 37370,
+                    "totalg": 109,
+                    "eventsLen": 7565,
+                    "detected": false
+                },
+                {
+                    "time": 34502421,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I81.trace",
+                    "traceSize": 37364,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 43356850,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I82.trace",
+                    "traceSize": 37408,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 38537678,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I83.trace",
+                    "traceSize": 37412,
+                    "totalg": 109,
+                    "eventsLen": 7573,
+                    "detected": false
+                },
+                {
+                    "time": 39393734,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I84.trace",
+                    "traceSize": 37408,
+                    "totalg": 109,
+                    "eventsLen": 7567,
+                    "detected": false
+                },
+                {
+                    "time": 37177789,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I85.trace",
+                    "traceSize": 37391,
+                    "totalg": 109,
+                    "eventsLen": 7572,
+                    "detected": false
+                },
+                {
+                    "time": 40106272,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I86.trace",
+                    "traceSize": 37381,
+                    "totalg": 109,
+                    "eventsLen": 7572,
+                    "detected": false
+                },
+                {
+                    "time": 35879203,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I87.trace",
+                    "traceSize": 37578,
+                    "totalg": 109,
+                    "eventsLen": 7573,
+                    "detected": false
+                },
+                {
+                    "time": 45717887,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I88.trace",
+                    "traceSize": 37380,
+                    "totalg": 109,
+                    "eventsLen": 7565,
+                    "detected": false
+                },
+                {
+                    "time": 37553906,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I89.trace",
+                    "traceSize": 37611,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 46115210,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I90.trace",
+                    "traceSize": 37591,
+                    "totalg": 109,
+                    "eventsLen": 7566,
+                    "detected": false
+                },
+                {
+                    "time": 46910020,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I91.trace",
+                    "traceSize": 37398,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 39297093,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I92.trace",
+                    "traceSize": 37391,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 43071177,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I93.trace",
+                    "traceSize": 37356,
+                    "totalg": 109,
+                    "eventsLen": 7564,
+                    "detected": false
+                },
+                {
+                    "time": 43286498,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I94.trace",
+                    "traceSize": 37375,
+                    "totalg": 109,
+                    "eventsLen": 7564,
+                    "detected": false
+                },
+                {
+                    "time": 44540475,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I95.trace",
+                    "traceSize": 37396,
+                    "totalg": 109,
+                    "eventsLen": 7565,
+                    "detected": false
+                },
+                {
+                    "time": 43723933,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I96.trace",
+                    "traceSize": 37386,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 38134463,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I97.trace",
+                    "traceSize": 37587,
+                    "totalg": 109,
+                    "eventsLen": 7568,
+                    "detected": false
+                },
+                {
+                    "time": 40948407,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I98.trace",
+                    "traceSize": 37372,
+                    "totalg": 109,
+                    "eventsLen": 7567,
+                    "detected": false
+                },
+                {
+                    "time": 45673281,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I99.trace",
+                    "traceSize": 37607,
+                    "totalg": 109,
+                    "eventsLen": 7572,
+                    "detected": false
+                }
+            ],
+            "goatid": "goat_u",
+            "goatBound": 0,
+            "traceDir": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u",
+            "lastFailedTrace": "",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/hugo_3251/goat_trace/traces/goat_u/hugo_3251_B0_I99.trace",
+            "firstFailedAfter": 0
+        },
+        "goleak": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/hugo_3251/goleak",
+            "binaryName": "101949936goleak",
+            "outPath": "/Volumes/DATA/goatws/blocking/hugo_3251/goleak/out/goleak.out",
+            "results": [
+                {
+                    "time": 5058187609,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "goleak"
+        },
+        "lockDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/hugo_3251/lockDL",
+            "binaryName": "000104341lockDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/hugo_3251/lockDL/out/lockDL.out",
+            "results": [
+                {
+                    "time": 25150942,
+                    "desc": "DL",
+                    "detected": true
+                }
+            ],
+            "toolid": "lockDL"
+        }
+    },
+    "reportJSON": "/Volumes/DATA/goatws/results/blocking_conf_blocking_all_100/blocking_hugo_3251_T100.json"
+}

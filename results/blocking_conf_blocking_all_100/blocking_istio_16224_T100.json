@@ -1,0 +1,177 @@
+{
+    "Bug": {
+        "bugName": "istio_16224",
+        "bugDir": "/Users/saeed/gobench/gobench/goker/blocking/istio/16224",
+        "bugType": "blocking",
+        "bugCause": "Mixed Deadlock",
+        "bugSubcause": "Channel \u0026 Lock"
+    },
+    "exps": {
+        "builtinDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/istio_16224/builtinDL",
+            "binaryName": "582661004builtinDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/istio_16224/builtinDL/out/builtinDL.out",
+            "results": [
+                {
+                    "time": 31355283,
+                    "desc": "GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "builtinDL"
+        },
+        "goat_d1": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/istio_16224/goat_delay",
+            "binaryName": "161503319delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/istio_16224/goat_delay/out/goat_goat_d1.out",
+            "results": [
+                {
+                    "time": 5028570392,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/istio_16224/goat_delay/traces/goat_d1/istio_16224_B1_I0.trace",
+                    "traceSize": 7406,
+                    "totalg": 10,
+                    "eventsLen": 101,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d1",
+            "goatBound": 1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/istio_16224/goat_delay/traces/goat_d1",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/istio_16224/goat_delay/traces/goat_d1/istio_16224_B1_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d2": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/istio_16224/goat_delay",
+            "binaryName": "161503319delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/istio_16224/goat_delay/out/goat_goat_d2.out",
+            "results": [
+                {
+                    "time": 5027754819,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/istio_16224/goat_delay/traces/goat_d2/istio_16224_B2_I0.trace",
+                    "traceSize": 7376,
+                    "totalg": 10,
+                    "eventsLen": 102,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d2",
+            "goatBound": 2,
+            "traceDir": "/Volumes/DATA/goatws/blocking/istio_16224/goat_delay/traces/goat_d2",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/istio_16224/goat_delay/traces/goat_d2/istio_16224_B2_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d3": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/istio_16224/goat_delay",
+            "binaryName": "161503319delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/istio_16224/goat_delay/out/goat_goat_d3.out",
+            "results": [
+                {
+                    "time": 27698059,
+                    "desc": "PDL-1",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/istio_16224/goat_delay/traces/goat_d3/istio_16224_B3_I0.trace",
+                    "traceSize": 10986,
+                    "totalg": 10,
+                    "eventsLen": 155,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d3",
+            "goatBound": 3,
+            "traceDir": "/Volumes/DATA/goatws/blocking/istio_16224/goat_delay/traces/goat_d3",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/istio_16224/goat_delay/traces/goat_d3/istio_16224_B3_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_m": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/istio_16224/goat_trace",
+            "binaryName": "311421656trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/istio_16224/goat_trace/out/goat_goat_m.out",
+            "results": [
+                {
+                    "time": 5034334845,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/istio_16224/goat_trace/traces/goat_m/istio_16224_BT_I0.trace",
+                    "traceSize": 4069,
+                    "totalg": 10,
+                    "eventsLen": 83,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_m",
+            "goatBound": -1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/istio_16224/goat_trace/traces/goat_m",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/istio_16224/goat_trace/traces/goat_m/istio_16224_BT_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_u": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/istio_16224/goat_trace",
+            "binaryName": "311421656trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/istio_16224/goat_trace/out/goat_goat_u.out",
+            "results": [
+                {
+                    "time": 5026002116,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/istio_16224/goat_trace/traces/goat_u/istio_16224_B0_I0.trace",
+                    "traceSize": 3915,
+                    "totalg": 10,
+                    "eventsLen": 56,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_u",
+            "goatBound": 0,
+            "traceDir": "/Volumes/DATA/goatws/blocking/istio_16224/goat_trace/traces/goat_u",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/istio_16224/goat_trace/traces/goat_u/istio_16224_B0_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goleak": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/istio_16224/goleak",
+            "binaryName": "813133473goleak",
+            "outPath": "/Volumes/DATA/goatws/blocking/istio_16224/goleak/out/goleak.out",
+            "results": [
+                {
+                    "time": 5030161510,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "goleak"
+        },
+        "lockDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/istio_16224/lockDL",
+            "binaryName": "236473290lockDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/istio_16224/lockDL/out/lockDL.out",
+            "results": [
+                {
+                    "time": 5030524366,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "lockDL"
+        }
+    },
+    "reportJSON": "/Volumes/DATA/goatws/results/blocking_conf_blocking_all_100/blocking_istio_16224_T100.json"
+}

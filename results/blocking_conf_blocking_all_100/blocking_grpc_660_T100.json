@@ -1,0 +1,967 @@
+{
+    "Bug": {
+        "bugName": "grpc_660",
+        "bugDir": "/Users/saeed/gobench/gobench/goker/blocking/grpc/660",
+        "bugType": "blocking",
+        "bugCause": "Communication Deadlock",
+        "bugSubcause": "Channel"
+    },
+    "exps": {
+        "builtinDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_660/builtinDL",
+            "binaryName": "326748114builtinDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_660/builtinDL/out/builtinDL.out",
+            "results": [
+                {
+                    "time": 28517613,
+                    "detected": false
+                },
+                {
+                    "time": 21567882,
+                    "detected": false
+                },
+                {
+                    "time": 24847800,
+                    "detected": false
+                },
+                {
+                    "time": 23714361,
+                    "detected": false
+                },
+                {
+                    "time": 22536186,
+                    "detected": false
+                },
+                {
+                    "time": 23752008,
+                    "detected": false
+                },
+                {
+                    "time": 21219428,
+                    "detected": false
+                },
+                {
+                    "time": 23259298,
+                    "detected": false
+                },
+                {
+                    "time": 21299678,
+                    "detected": false
+                },
+                {
+                    "time": 22976248,
+                    "detected": false
+                },
+                {
+                    "time": 22458908,
+                    "detected": false
+                },
+                {
+                    "time": 26244739,
+                    "detected": false
+                },
+                {
+                    "time": 21247648,
+                    "detected": false
+                },
+                {
+                    "time": 23375927,
+                    "detected": false
+                },
+                {
+                    "time": 21848308,
+                    "detected": false
+                },
+                {
+                    "time": 23860681,
+                    "detected": false
+                },
+                {
+                    "time": 20640116,
+                    "detected": false
+                },
+                {
+                    "time": 23211896,
+                    "detected": false
+                },
+                {
+                    "time": 22911970,
+                    "detected": false
+                },
+                {
+                    "time": 23572380,
+                    "detected": false
+                },
+                {
+                    "time": 22443312,
+                    "detected": false
+                },
+                {
+                    "time": 22717819,
+                    "detected": false
+                },
+                {
+                    "time": 21695285,
+                    "detected": false
+                },
+                {
+                    "time": 22332568,
+                    "detected": false
+                },
+                {
+                    "time": 21820000,
+                    "detected": false
+                },
+                {
+                    "time": 24194227,
+                    "detected": false
+                },
+                {
+                    "time": 21824770,
+                    "detected": false
+                },
+                {
+                    "time": 23069261,
+                    "detected": false
+                },
+                {
+                    "time": 22168813,
+                    "detected": false
+                },
+                {
+                    "time": 23646821,
+                    "detected": false
+                },
+                {
+                    "time": 20901319,
+                    "detected": false
+                },
+                {
+                    "time": 22094428,
+                    "detected": false
+                },
+                {
+                    "time": 22582915,
+                    "detected": false
+                },
+                {
+                    "time": 24785323,
+                    "detected": false
+                },
+                {
+                    "time": 21632273,
+                    "detected": false
+                },
+                {
+                    "time": 23568263,
+                    "detected": false
+                },
+                {
+                    "time": 25213072,
+                    "detected": false
+                },
+                {
+                    "time": 23338556,
+                    "detected": false
+                },
+                {
+                    "time": 23629109,
+                    "detected": false
+                },
+                {
+                    "time": 23926777,
+                    "detected": false
+                },
+                {
+                    "time": 21567564,
+                    "detected": false
+                },
+                {
+                    "time": 22344956,
+                    "detected": false
+                },
+                {
+                    "time": 22162391,
+                    "detected": false
+                },
+                {
+                    "time": 23377389,
+                    "detected": false
+                },
+                {
+                    "time": 22799593,
+                    "detected": false
+                },
+                {
+                    "time": 24022777,
+                    "detected": false
+                },
+                {
+                    "time": 23909042,
+                    "detected": false
+                },
+                {
+                    "time": 24577795,
+                    "detected": false
+                },
+                {
+                    "time": 23699131,
+                    "detected": false
+                },
+                {
+                    "time": 25432439,
+                    "detected": false
+                },
+                {
+                    "time": 24640266,
+                    "detected": false
+                },
+                {
+                    "time": 24689682,
+                    "detected": false
+                },
+                {
+                    "time": 26313829,
+                    "detected": false
+                },
+                {
+                    "time": 29532986,
+                    "detected": false
+                },
+                {
+                    "time": 22565992,
+                    "detected": false
+                },
+                {
+                    "time": 24198923,
+                    "detected": false
+                },
+                {
+                    "time": 24413389,
+                    "detected": false
+                },
+                {
+                    "time": 27453369,
+                    "detected": false
+                },
+                {
+                    "time": 25226586,
+                    "detected": false
+                },
+                {
+                    "time": 25074370,
+                    "detected": false
+                },
+                {
+                    "time": 23052236,
+                    "detected": false
+                },
+                {
+                    "time": 25403178,
+                    "detected": false
+                },
+                {
+                    "time": 24933812,
+                    "detected": false
+                },
+                {
+                    "time": 24912029,
+                    "detected": false
+                },
+                {
+                    "time": 22819991,
+                    "detected": false
+                },
+                {
+                    "time": 21990976,
+                    "detected": false
+                },
+                {
+                    "time": 23409018,
+                    "detected": false
+                },
+                {
+                    "time": 23490790,
+                    "detected": false
+                },
+                {
+                    "time": 22691597,
+                    "detected": false
+                },
+                {
+                    "time": 22799293,
+                    "detected": false
+                },
+                {
+                    "time": 20984522,
+                    "detected": false
+                },
+                {
+                    "time": 23388466,
+                    "detected": false
+                },
+                {
+                    "time": 22976791,
+                    "detected": false
+                },
+                {
+                    "time": 26501923,
+                    "detected": false
+                },
+                {
+                    "time": 22096462,
+                    "detected": false
+                },
+                {
+                    "time": 24844119,
+                    "detected": false
+                },
+                {
+                    "time": 24726927,
+                    "detected": false
+                },
+                {
+                    "time": 25682016,
+                    "detected": false
+                },
+                {
+                    "time": 22423409,
+                    "detected": false
+                },
+                {
+                    "time": 24178205,
+                    "detected": false
+                },
+                {
+                    "time": 22512067,
+                    "detected": false
+                },
+                {
+                    "time": 26007130,
+                    "detected": false
+                },
+                {
+                    "time": 23677866,
+                    "detected": false
+                },
+                {
+                    "time": 23716674,
+                    "detected": false
+                },
+                {
+                    "time": 21993617,
+                    "detected": false
+                },
+                {
+                    "time": 23251257,
+                    "detected": false
+                },
+                {
+                    "time": 21358085,
+                    "detected": false
+                },
+                {
+                    "time": 23764813,
+                    "detected": false
+                },
+                {
+                    "time": 23380633,
+                    "detected": false
+                },
+                {
+                    "time": 23922557,
+                    "detected": false
+                },
+                {
+                    "time": 22969884,
+                    "detected": false
+                },
+                {
+                    "time": 23489375,
+                    "detected": false
+                },
+                {
+                    "time": 21785691,
+                    "detected": false
+                },
+                {
+                    "time": 23645504,
+                    "detected": false
+                },
+                {
+                    "time": 22996009,
+                    "detected": false
+                },
+                {
+                    "time": 23196697,
+                    "detected": false
+                },
+                {
+                    "time": 22327765,
+                    "detected": false
+                },
+                {
+                    "time": 24054006,
+                    "detected": false
+                },
+                {
+                    "time": 21975084,
+                    "detected": false
+                },
+                {
+                    "time": 24127144,
+                    "detected": false
+                }
+            ],
+            "toolid": "builtinDL"
+        },
+        "goat_d1": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_660/goat_delay",
+            "binaryName": "694537733delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_660/goat_delay/out/goat_goat_d1.out",
+            "results": [
+                {
+                    "time": 45742969,
+                    "desc": "PDL-3",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_660/goat_delay/traces/goat_d1/grpc_660_B1_I0.trace",
+                    "traceSize": 24960,
+                    "totalg": 133,
+                    "eventsLen": 3304,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d1",
+            "goatBound": 1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/grpc_660/goat_delay/traces/goat_d1",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/grpc_660/goat_delay/traces/goat_d1/grpc_660_B1_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d2": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_660/goat_delay",
+            "binaryName": "694537733delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_660/goat_delay/out/goat_goat_d2.out",
+            "results": [
+                {
+                    "time": 25204606,
+                    "desc": "PDL-2",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_660/goat_delay/traces/goat_d2/grpc_660_B2_I0.trace",
+                    "traceSize": 7818,
+                    "totalg": 20,
+                    "eventsLen": 314,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d2",
+            "goatBound": 2,
+            "traceDir": "/Volumes/DATA/goatws/blocking/grpc_660/goat_delay/traces/goat_d2",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/grpc_660/goat_delay/traces/goat_d2/grpc_660_B2_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d3": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_660/goat_delay",
+            "binaryName": "694537733delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_660/goat_delay/out/goat_goat_d3.out",
+            "results": [
+                {
+                    "time": 24723697,
+                    "desc": "PDL-2",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_660/goat_delay/traces/goat_d3/grpc_660_B3_I0.trace",
+                    "traceSize": 7624,
+                    "totalg": 21,
+                    "eventsLen": 342,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d3",
+            "goatBound": 3,
+            "traceDir": "/Volumes/DATA/goatws/blocking/grpc_660/goat_delay/traces/goat_d3",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/grpc_660/goat_delay/traces/goat_d3/grpc_660_B3_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_m": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_660/goat_trace",
+            "binaryName": "037177790trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_660/goat_trace/out/goat_goat_m.out",
+            "results": [
+                {
+                    "time": 28507808,
+                    "desc": "PDL-1",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_660/goat_trace/traces/goat_m/grpc_660_BT_I0.trace",
+                    "traceSize": 4308,
+                    "totalg": 12,
+                    "eventsLen": 108,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_m",
+            "goatBound": -1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/grpc_660/goat_trace/traces/goat_m",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/grpc_660/goat_trace/traces/goat_m/grpc_660_BT_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_u": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_660/goat_trace",
+            "binaryName": "037177790trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_660/goat_trace/out/goat_goat_u.out",
+            "results": [
+                {
+                    "time": 24890363,
+                    "desc": "PDL-1",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_660/goat_trace/traces/goat_u/grpc_660_B0_I0.trace",
+                    "traceSize": 4098,
+                    "totalg": 12,
+                    "eventsLen": 75,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_u",
+            "goatBound": 0,
+            "traceDir": "/Volumes/DATA/goatws/blocking/grpc_660/goat_trace/traces/goat_u",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/grpc_660/goat_trace/traces/goat_u/grpc_660_B0_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goleak": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_660/goleak",
+            "binaryName": "855442559goleak",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_660/goleak/out/goleak.out",
+            "results": [
+                {
+                    "time": 479239413,
+                    "desc": "PDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "goleak"
+        },
+        "lockDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_660/lockDL",
+            "binaryName": "295396256lockDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_660/lockDL/out/lockDL.out",
+            "results": [
+                {
+                    "time": 24924511,
+                    "detected": false
+                },
+                {
+                    "time": 22765486,
+                    "detected": false
+                },
+                {
+                    "time": 24587201,
+                    "detected": false
+                },
+                {
+                    "time": 22741771,
+                    "detected": false
+                },
+                {
+                    "time": 23580219,
+                    "detected": false
+                },
+                {
+                    "time": 23987907,
+                    "detected": false
+                },
+                {
+                    "time": 21797822,
+                    "detected": false
+                },
+                {
+                    "time": 23517268,
+                    "detected": false
+                },
+                {
+                    "time": 24105465,
+                    "detected": false
+                },
+                {
+                    "time": 21573147,
+                    "detected": false
+                },
+                {
+                    "time": 22111292,
+                    "detected": false
+                },
+                {
+                    "time": 22388997,
+                    "detected": false
+                },
+                {
+                    "time": 23423998,
+                    "detected": false
+                },
+                {
+                    "time": 22155766,
+                    "detected": false
+                },
+                {
+                    "time": 23346924,
+                    "detected": false
+                },
+                {
+                    "time": 22604543,
+                    "detected": false
+                },
+                {
+                    "time": 24361689,
+                    "detected": false
+                },
+                {
+                    "time": 22943773,
+                    "detected": false
+                },
+                {
+                    "time": 23246145,
+                    "detected": false
+                },
+                {
+                    "time": 23163932,
+                    "detected": false
+                },
+                {
+                    "time": 24300830,
+                    "detected": false
+                },
+                {
+                    "time": 21618490,
+                    "detected": false
+                },
+                {
+                    "time": 23193038,
+                    "detected": false
+                },
+                {
+                    "time": 21127979,
+                    "detected": false
+                },
+                {
+                    "time": 23505518,
+                    "detected": false
+                },
+                {
+                    "time": 21735770,
+                    "detected": false
+                },
+                {
+                    "time": 22120275,
+                    "detected": false
+                },
+                {
+                    "time": 22696619,
+                    "detected": false
+                },
+                {
+                    "time": 23261398,
+                    "detected": false
+                },
+                {
+                    "time": 22645529,
+                    "detected": false
+                },
+                {
+                    "time": 23227964,
+                    "detected": false
+                },
+                {
+                    "time": 22507705,
+                    "detected": false
+                },
+                {
+                    "time": 23881807,
+                    "detected": false
+                },
+                {
+                    "time": 22562699,
+                    "detected": false
+                },
+                {
+                    "time": 24204065,
+                    "detected": false
+                },
+                {
+                    "time": 22096346,
+                    "detected": false
+                },
+                {
+                    "time": 24135566,
+                    "detected": false
+                },
+                {
+                    "time": 23196132,
+                    "detected": false
+                },
+                {
+                    "time": 25732255,
+                    "detected": false
+                },
+                {
+                    "time": 22373093,
+                    "detected": false
+                },
+                {
+                    "time": 24233645,
+                    "detected": false
+                },
+                {
+                    "time": 23267691,
+                    "detected": false
+                },
+                {
+                    "time": 23597435,
+                    "detected": false
+                },
+                {
+                    "time": 22745745,
+                    "detected": false
+                },
+                {
+                    "time": 22629045,
+                    "detected": false
+                },
+                {
+                    "time": 21266276,
+                    "detected": false
+                },
+                {
+                    "time": 25447790,
+                    "detected": false
+                },
+                {
+                    "time": 23271140,
+                    "detected": false
+                },
+                {
+                    "time": 23972429,
+                    "detected": false
+                },
+                {
+                    "time": 23635280,
+                    "detected": false
+                },
+                {
+                    "time": 24928985,
+                    "detected": false
+                },
+                {
+                    "time": 22734863,
+                    "detected": false
+                },
+                {
+                    "time": 24528408,
+                    "detected": false
+                },
+                {
+                    "time": 24904901,
+                    "detected": false
+                },
+                {
+                    "time": 24395780,
+                    "detected": false
+                },
+                {
+                    "time": 23153647,
+                    "detected": false
+                },
+                {
+                    "time": 24192247,
+                    "detected": false
+                },
+                {
+                    "time": 20587945,
+                    "detected": false
+                },
+                {
+                    "time": 23530126,
+                    "detected": false
+                },
+                {
+                    "time": 22457445,
+                    "detected": false
+                },
+                {
+                    "time": 22650393,
+                    "detected": false
+                },
+                {
+                    "time": 20859943,
+                    "detected": false
+                },
+                {
+                    "time": 22757087,
+                    "detected": false
+                },
+                {
+                    "time": 21460925,
+                    "detected": false
+                },
+                {
+                    "time": 23083913,
+                    "detected": false
+                },
+                {
+                    "time": 22336243,
+                    "detected": false
+                },
+                {
+                    "time": 23148634,
+                    "detected": false
+                },
+                {
+                    "time": 20213391,
+                    "detected": false
+                },
+                {
+                    "time": 23322776,
+                    "detected": false
+                },
+                {
+                    "time": 21990750,
+                    "detected": false
+                },
+                {
+                    "time": 25854857,
+                    "detected": false
+                },
+                {
+                    "time": 20900650,
+                    "detected": false
+                },
+                {
+                    "time": 22664728,
+                    "detected": false
+                },
+                {
+                    "time": 23632171,
+                    "detected": false
+                },
+                {
+                    "time": 24165582,
+                    "detected": false
+                },
+                {
+                    "time": 21649425,
+                    "detected": false
+                },
+                {
+                    "time": 21182983,
+                    "detected": false
+                },
+                {
+                    "time": 23386989,
+                    "detected": false
+                },
+                {
+                    "time": 23816918,
+                    "detected": false
+                },
+                {
+                    "time": 23872243,
+                    "detected": false
+                },
+                {
+                    "time": 24492908,
+                    "detected": false
+                },
+                {
+                    "time": 23124320,
+                    "detected": false
+                },
+                {
+                    "time": 23442290,
+                    "detected": false
+                },
+                {
+                    "time": 23690825,
+                    "detected": false
+                },
+                {
+                    "time": 22402592,
+                    "detected": false
+                },
+                {
+                    "time": 22628832,
+                    "detected": false
+                },
+                {
+                    "time": 23495434,
+                    "detected": false
+                },
+                {
+                    "time": 22486510,
+                    "detected": false
+                },
+                {
+                    "time": 22452362,
+                    "detected": false
+                },
+                {
+                    "time": 22981387,
+                    "detected": false
+                },
+                {
+                    "time": 22856712,
+                    "detected": false
+                },
+                {
+                    "time": 22192476,
+                    "detected": false
+                },
+                {
+                    "time": 23028178,
+                    "detected": false
+                },
+                {
+                    "time": 22341037,
+                    "detected": false
+                },
+                {
+                    "time": 23276522,
+                    "detected": false
+                },
+                {
+                    "time": 22200914,
+                    "detected": false
+                },
+                {
+                    "time": 22856937,
+                    "detected": false
+                },
+                {
+                    "time": 20459279,
+                    "detected": false
+                },
+                {
+                    "time": 23280257,
+                    "detected": false
+                },
+                {
+                    "time": 24570449,
+                    "detected": false
+                }
+            ],
+            "toolid": "lockDL"
+        }
+    },
+    "reportJSON": "/Volumes/DATA/goatws/results/blocking_conf_blocking_all_100/blocking_grpc_660_T100.json"
+}

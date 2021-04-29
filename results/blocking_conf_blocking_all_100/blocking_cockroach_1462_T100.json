@@ -1,0 +1,1791 @@
+{
+    "Bug": {
+        "bugName": "cockroach_1462",
+        "bugDir": "/Users/saeed/gobench/gobench/goker/blocking/cockroach/1462",
+        "bugType": "blocking",
+        "bugCause": "Mixed Deadlock",
+        "bugSubcause": "Channel \u0026 WaitGroup"
+    },
+    "exps": {
+        "builtinDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_1462/builtinDL",
+            "binaryName": "227061198builtinDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_1462/builtinDL/out/builtinDL.out",
+            "results": [
+                {
+                    "time": 25914300,
+                    "detected": false
+                },
+                {
+                    "time": 22511140,
+                    "detected": false
+                },
+                {
+                    "time": 23835170,
+                    "detected": false
+                },
+                {
+                    "time": 21750907,
+                    "detected": false
+                },
+                {
+                    "time": 22476621,
+                    "detected": false
+                },
+                {
+                    "time": 23135463,
+                    "detected": false
+                },
+                {
+                    "time": 22749983,
+                    "detected": false
+                },
+                {
+                    "time": 24115944,
+                    "detected": false
+                },
+                {
+                    "time": 23254328,
+                    "detected": false
+                },
+                {
+                    "time": 23051967,
+                    "detected": false
+                },
+                {
+                    "time": 22729004,
+                    "detected": false
+                },
+                {
+                    "time": 21646057,
+                    "detected": false
+                },
+                {
+                    "time": 23063513,
+                    "detected": false
+                },
+                {
+                    "time": 23316355,
+                    "detected": false
+                },
+                {
+                    "time": 23325057,
+                    "detected": false
+                },
+                {
+                    "time": 22506945,
+                    "detected": false
+                },
+                {
+                    "time": 25160828,
+                    "detected": false
+                },
+                {
+                    "time": 21224317,
+                    "detected": false
+                },
+                {
+                    "time": 23373559,
+                    "detected": false
+                },
+                {
+                    "time": 23965984,
+                    "detected": false
+                },
+                {
+                    "time": 25903978,
+                    "detected": false
+                },
+                {
+                    "time": 22888629,
+                    "detected": false
+                },
+                {
+                    "time": 23272108,
+                    "detected": false
+                },
+                {
+                    "time": 20121726,
+                    "detected": false
+                },
+                {
+                    "time": 23619086,
+                    "detected": false
+                },
+                {
+                    "time": 22189255,
+                    "detected": false
+                },
+                {
+                    "time": 23024995,
+                    "detected": false
+                },
+                {
+                    "time": 22084911,
+                    "detected": false
+                },
+                {
+                    "time": 23337236,
+                    "detected": false
+                },
+                {
+                    "time": 23073090,
+                    "detected": false
+                },
+                {
+                    "time": 23341403,
+                    "detected": false
+                },
+                {
+                    "time": 20880382,
+                    "detected": false
+                },
+                {
+                    "time": 23748352,
+                    "detected": false
+                },
+                {
+                    "time": 22522162,
+                    "detected": false
+                },
+                {
+                    "time": 23829734,
+                    "detected": false
+                },
+                {
+                    "time": 21077172,
+                    "detected": false
+                },
+                {
+                    "time": 23865868,
+                    "detected": false
+                },
+                {
+                    "time": 23415274,
+                    "detected": false
+                },
+                {
+                    "time": 25503322,
+                    "detected": false
+                },
+                {
+                    "time": 21324059,
+                    "detected": false
+                },
+                {
+                    "time": 23503270,
+                    "detected": false
+                },
+                {
+                    "time": 21740484,
+                    "detected": false
+                },
+                {
+                    "time": 23207315,
+                    "detected": false
+                },
+                {
+                    "time": 22468155,
+                    "detected": false
+                },
+                {
+                    "time": 22901338,
+                    "detected": false
+                },
+                {
+                    "time": 23158206,
+                    "detected": false
+                },
+                {
+                    "time": 22035648,
+                    "detected": false
+                },
+                {
+                    "time": 23050278,
+                    "detected": false
+                },
+                {
+                    "time": 26242456,
+                    "detected": false
+                },
+                {
+                    "time": 21538460,
+                    "detected": false
+                },
+                {
+                    "time": 25892383,
+                    "detected": false
+                },
+                {
+                    "time": 22399454,
+                    "detected": false
+                },
+                {
+                    "time": 24251632,
+                    "detected": false
+                },
+                {
+                    "time": 23341055,
+                    "detected": false
+                },
+                {
+                    "time": 23635716,
+                    "detected": false
+                },
+                {
+                    "time": 20579230,
+                    "detected": false
+                },
+                {
+                    "time": 22922299,
+                    "detected": false
+                },
+                {
+                    "time": 22314477,
+                    "detected": false
+                },
+                {
+                    "time": 24498172,
+                    "detected": false
+                },
+                {
+                    "time": 22336285,
+                    "detected": false
+                },
+                {
+                    "time": 24028657,
+                    "detected": false
+                },
+                {
+                    "time": 20745408,
+                    "detected": false
+                },
+                {
+                    "time": 23389842,
+                    "detected": false
+                },
+                {
+                    "time": 22560558,
+                    "detected": false
+                },
+                {
+                    "time": 23708850,
+                    "detected": false
+                },
+                {
+                    "time": 23052696,
+                    "detected": false
+                },
+                {
+                    "time": 23034895,
+                    "detected": false
+                },
+                {
+                    "time": 21474314,
+                    "detected": false
+                },
+                {
+                    "time": 22378711,
+                    "detected": false
+                },
+                {
+                    "time": 22398296,
+                    "detected": false
+                },
+                {
+                    "time": 24533576,
+                    "detected": false
+                },
+                {
+                    "time": 22035489,
+                    "detected": false
+                },
+                {
+                    "time": 23585493,
+                    "detected": false
+                },
+                {
+                    "time": 22602404,
+                    "detected": false
+                },
+                {
+                    "time": 23015747,
+                    "detected": false
+                },
+                {
+                    "time": 22336228,
+                    "detected": false
+                },
+                {
+                    "time": 23753121,
+                    "detected": false
+                },
+                {
+                    "time": 22405062,
+                    "detected": false
+                },
+                {
+                    "time": 23726937,
+                    "detected": false
+                },
+                {
+                    "time": 21815302,
+                    "detected": false
+                },
+                {
+                    "time": 23513922,
+                    "detected": false
+                },
+                {
+                    "time": 21740316,
+                    "detected": false
+                },
+                {
+                    "time": 23067493,
+                    "detected": false
+                },
+                {
+                    "time": 21063264,
+                    "detected": false
+                },
+                {
+                    "time": 23648107,
+                    "detected": false
+                },
+                {
+                    "time": 23160202,
+                    "detected": false
+                },
+                {
+                    "time": 24019531,
+                    "detected": false
+                },
+                {
+                    "time": 22440858,
+                    "detected": false
+                },
+                {
+                    "time": 24259055,
+                    "detected": false
+                },
+                {
+                    "time": 24387509,
+                    "detected": false
+                },
+                {
+                    "time": 23170350,
+                    "detected": false
+                },
+                {
+                    "time": 22367663,
+                    "detected": false
+                },
+                {
+                    "time": 23739126,
+                    "detected": false
+                },
+                {
+                    "time": 23439927,
+                    "detected": false
+                },
+                {
+                    "time": 26240584,
+                    "detected": false
+                },
+                {
+                    "time": 21854116,
+                    "detected": false
+                },
+                {
+                    "time": 22566242,
+                    "detected": false
+                },
+                {
+                    "time": 22188033,
+                    "detected": false
+                },
+                {
+                    "time": 23834026,
+                    "detected": false
+                },
+                {
+                    "time": 22155232,
+                    "detected": false
+                }
+            ],
+            "toolid": "builtinDL"
+        },
+        "goat_d1": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay",
+            "binaryName": "590909201delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/out/goat_goat_d1.out",
+            "results": [
+                {
+                    "time": 35290360,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d1/cockroach_1462_B1_I0.trace",
+                    "traceSize": 11908,
+                    "totalg": 11,
+                    "eventsLen": 152,
+                    "detected": false
+                },
+                {
+                    "time": 42974685,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d1/cockroach_1462_B1_I1.trace",
+                    "traceSize": 29547,
+                    "totalg": 11,
+                    "eventsLen": 3301,
+                    "detected": false
+                },
+                {
+                    "time": 25897306,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d1/cockroach_1462_B1_I2.trace",
+                    "traceSize": 11843,
+                    "totalg": 11,
+                    "eventsLen": 154,
+                    "detected": false
+                },
+                {
+                    "time": 29651425,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d1/cockroach_1462_B1_I3.trace",
+                    "traceSize": 12264,
+                    "totalg": 11,
+                    "eventsLen": 154,
+                    "detected": false
+                },
+                {
+                    "time": 26630592,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d1/cockroach_1462_B1_I4.trace",
+                    "traceSize": 12519,
+                    "totalg": 11,
+                    "eventsLen": 162,
+                    "detected": false
+                },
+                {
+                    "time": 5028584050,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d1/cockroach_1462_B1_I5.trace",
+                    "traceSize": 9912,
+                    "totalg": 11,
+                    "eventsLen": 119,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d1",
+            "goatBound": 1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d1",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d1/cockroach_1462_B1_I5.trace",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d1/cockroach_1462_B1_I4.trace",
+            "firstFailedAfter": 5
+        },
+        "goat_d2": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay",
+            "binaryName": "590909201delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/out/goat_goat_d2.out",
+            "results": [
+                {
+                    "time": 31231294,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d2/cockroach_1462_B2_I0.trace",
+                    "traceSize": 12737,
+                    "totalg": 11,
+                    "eventsLen": 186,
+                    "detected": false
+                },
+                {
+                    "time": 29001013,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d2/cockroach_1462_B2_I1.trace",
+                    "traceSize": 12789,
+                    "totalg": 11,
+                    "eventsLen": 175,
+                    "detected": false
+                },
+                {
+                    "time": 29958939,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d2/cockroach_1462_B2_I2.trace",
+                    "traceSize": 12174,
+                    "totalg": 11,
+                    "eventsLen": 154,
+                    "detected": false
+                },
+                {
+                    "time": 29205597,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d2/cockroach_1462_B2_I3.trace",
+                    "traceSize": 12322,
+                    "totalg": 11,
+                    "eventsLen": 160,
+                    "detected": false
+                },
+                {
+                    "time": 29611104,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d2/cockroach_1462_B2_I4.trace",
+                    "traceSize": 11871,
+                    "totalg": 11,
+                    "eventsLen": 150,
+                    "detected": false
+                },
+                {
+                    "time": 5028030421,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d2/cockroach_1462_B2_I5.trace",
+                    "traceSize": 10448,
+                    "totalg": 11,
+                    "eventsLen": 127,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d2",
+            "goatBound": 2,
+            "traceDir": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d2",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d2/cockroach_1462_B2_I5.trace",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d2/cockroach_1462_B2_I4.trace",
+            "firstFailedAfter": 5
+        },
+        "goat_d3": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay",
+            "binaryName": "590909201delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/out/goat_goat_d3.out",
+            "results": [
+                {
+                    "time": 5027711091,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d3/cockroach_1462_B3_I0.trace",
+                    "traceSize": 10393,
+                    "totalg": 11,
+                    "eventsLen": 125,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d3",
+            "goatBound": 3,
+            "traceDir": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d3",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_delay/traces/goat_d3/cockroach_1462_B3_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_m": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace",
+            "binaryName": "448912890trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/out/goat_goat_m.out",
+            "results": [
+                {
+                    "time": 31099006,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_m/cockroach_1462_BT_I0.trace",
+                    "traceSize": 5358,
+                    "totalg": 11,
+                    "eventsLen": 108,
+                    "detected": false
+                },
+                {
+                    "time": 23603296,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_m/cockroach_1462_BT_I1.trace",
+                    "traceSize": 5606,
+                    "totalg": 11,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 23259476,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_m/cockroach_1462_BT_I2.trace",
+                    "traceSize": 5452,
+                    "totalg": 11,
+                    "eventsLen": 118,
+                    "detected": false
+                },
+                {
+                    "time": 27937526,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_m/cockroach_1462_BT_I3.trace",
+                    "traceSize": 5349,
+                    "totalg": 11,
+                    "eventsLen": 110,
+                    "detected": false
+                },
+                {
+                    "time": 24749832,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_m/cockroach_1462_BT_I4.trace",
+                    "traceSize": 5478,
+                    "totalg": 11,
+                    "eventsLen": 122,
+                    "detected": false
+                },
+                {
+                    "time": 25709268,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_m/cockroach_1462_BT_I5.trace",
+                    "traceSize": 5418,
+                    "totalg": 11,
+                    "eventsLen": 103,
+                    "detected": false
+                },
+                {
+                    "time": 23462502,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_m/cockroach_1462_BT_I6.trace",
+                    "traceSize": 5422,
+                    "totalg": 11,
+                    "eventsLen": 111,
+                    "detected": false
+                },
+                {
+                    "time": 24984113,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_m/cockroach_1462_BT_I7.trace",
+                    "traceSize": 5607,
+                    "totalg": 11,
+                    "eventsLen": 120,
+                    "detected": false
+                },
+                {
+                    "time": 25502746,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_m/cockroach_1462_BT_I8.trace",
+                    "traceSize": 5403,
+                    "totalg": 11,
+                    "eventsLen": 109,
+                    "detected": false
+                },
+                {
+                    "time": 25493641,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_m/cockroach_1462_BT_I9.trace",
+                    "traceSize": 5430,
+                    "totalg": 11,
+                    "eventsLen": 113,
+                    "detected": false
+                },
+                {
+                    "time": 5024867505,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_m/cockroach_1462_BT_I10.trace",
+                    "traceSize": 4704,
+                    "totalg": 11,
+                    "eventsLen": 91,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_m",
+            "goatBound": -1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_m",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_m/cockroach_1462_BT_I10.trace",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_m/cockroach_1462_BT_I9.trace",
+            "firstFailedAfter": 10
+        },
+        "goat_u": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace",
+            "binaryName": "448912890trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/out/goat_goat_u.out",
+            "results": [
+                {
+                    "time": 26875937,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I0.trace",
+                    "traceSize": 5266,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24673577,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I1.trace",
+                    "traceSize": 5246,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 25166721,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I2.trace",
+                    "traceSize": 5266,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 25728227,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I3.trace",
+                    "traceSize": 5250,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 25286986,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I4.trace",
+                    "traceSize": 5246,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 24895342,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I5.trace",
+                    "traceSize": 5269,
+                    "totalg": 11,
+                    "eventsLen": 79,
+                    "detected": false
+                },
+                {
+                    "time": 26355568,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I6.trace",
+                    "traceSize": 5260,
+                    "totalg": 11,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24859549,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I7.trace",
+                    "traceSize": 5245,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 25073088,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I8.trace",
+                    "traceSize": 5266,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 25300493,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I9.trace",
+                    "traceSize": 5264,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24481066,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I10.trace",
+                    "traceSize": 5298,
+                    "totalg": 11,
+                    "eventsLen": 84,
+                    "detected": false
+                },
+                {
+                    "time": 24790247,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I11.trace",
+                    "traceSize": 5286,
+                    "totalg": 11,
+                    "eventsLen": 83,
+                    "detected": false
+                },
+                {
+                    "time": 29822676,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I12.trace",
+                    "traceSize": 5244,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 26329432,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I13.trace",
+                    "traceSize": 5264,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 25986429,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I14.trace",
+                    "traceSize": 5264,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 26459119,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I15.trace",
+                    "traceSize": 5266,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 28343327,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I16.trace",
+                    "traceSize": 5257,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 27241856,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I17.trace",
+                    "traceSize": 5267,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 25087232,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I18.trace",
+                    "traceSize": 5262,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 25383728,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I19.trace",
+                    "traceSize": 5243,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 25831151,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I20.trace",
+                    "traceSize": 5248,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 22614160,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I21.trace",
+                    "traceSize": 5247,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 24436286,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I22.trace",
+                    "traceSize": 5267,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24620892,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I23.trace",
+                    "traceSize": 5246,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 30129990,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I24.trace",
+                    "traceSize": 5269,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 25185715,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I25.trace",
+                    "traceSize": 5288,
+                    "totalg": 11,
+                    "eventsLen": 83,
+                    "detected": false
+                },
+                {
+                    "time": 24884296,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I26.trace",
+                    "traceSize": 5244,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 24610075,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I27.trace",
+                    "traceSize": 5287,
+                    "totalg": 11,
+                    "eventsLen": 83,
+                    "detected": false
+                },
+                {
+                    "time": 23310886,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I28.trace",
+                    "traceSize": 5265,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 30602464,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I29.trace",
+                    "traceSize": 5254,
+                    "totalg": 11,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24422252,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I30.trace",
+                    "traceSize": 5255,
+                    "totalg": 11,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 24998707,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I31.trace",
+                    "traceSize": 5266,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 26949229,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I32.trace",
+                    "traceSize": 5245,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 23932348,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I33.trace",
+                    "traceSize": 5263,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 26587896,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I34.trace",
+                    "traceSize": 5319,
+                    "totalg": 11,
+                    "eventsLen": 81,
+                    "detected": false
+                },
+                {
+                    "time": 26008009,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I35.trace",
+                    "traceSize": 5263,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 26091931,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I36.trace",
+                    "traceSize": 5267,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 28542633,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I37.trace",
+                    "traceSize": 5272,
+                    "totalg": 11,
+                    "eventsLen": 79,
+                    "detected": false
+                },
+                {
+                    "time": 28120793,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I38.trace",
+                    "traceSize": 5246,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 24297573,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I39.trace",
+                    "traceSize": 5290,
+                    "totalg": 11,
+                    "eventsLen": 83,
+                    "detected": false
+                },
+                {
+                    "time": 25047633,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I40.trace",
+                    "traceSize": 5266,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 23533311,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I41.trace",
+                    "traceSize": 5268,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 26267066,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I42.trace",
+                    "traceSize": 5258,
+                    "totalg": 11,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 23399822,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I43.trace",
+                    "traceSize": 5290,
+                    "totalg": 11,
+                    "eventsLen": 83,
+                    "detected": false
+                },
+                {
+                    "time": 29153313,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I44.trace",
+                    "traceSize": 5272,
+                    "totalg": 11,
+                    "eventsLen": 79,
+                    "detected": false
+                },
+                {
+                    "time": 26008037,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I45.trace",
+                    "traceSize": 5274,
+                    "totalg": 11,
+                    "eventsLen": 79,
+                    "detected": false
+                },
+                {
+                    "time": 25356869,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I46.trace",
+                    "traceSize": 5271,
+                    "totalg": 11,
+                    "eventsLen": 79,
+                    "detected": false
+                },
+                {
+                    "time": 24636994,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I47.trace",
+                    "traceSize": 5281,
+                    "totalg": 11,
+                    "eventsLen": 83,
+                    "detected": false
+                },
+                {
+                    "time": 30309647,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I48.trace",
+                    "traceSize": 5272,
+                    "totalg": 11,
+                    "eventsLen": 79,
+                    "detected": false
+                },
+                {
+                    "time": 22633262,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I49.trace",
+                    "traceSize": 5267,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 25397123,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I50.trace",
+                    "traceSize": 5270,
+                    "totalg": 11,
+                    "eventsLen": 79,
+                    "detected": false
+                },
+                {
+                    "time": 26280956,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I51.trace",
+                    "traceSize": 5292,
+                    "totalg": 11,
+                    "eventsLen": 83,
+                    "detected": false
+                },
+                {
+                    "time": 26815153,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I52.trace",
+                    "traceSize": 5292,
+                    "totalg": 11,
+                    "eventsLen": 84,
+                    "detected": false
+                },
+                {
+                    "time": 25686257,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I53.trace",
+                    "traceSize": 5263,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 28926726,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I54.trace",
+                    "traceSize": 5265,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 26641385,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I55.trace",
+                    "traceSize": 5246,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 22972195,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I56.trace",
+                    "traceSize": 5264,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24433624,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I57.trace",
+                    "traceSize": 5267,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 25516838,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I58.trace",
+                    "traceSize": 5249,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 24016269,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I59.trace",
+                    "traceSize": 5266,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24571803,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I60.trace",
+                    "traceSize": 5291,
+                    "totalg": 11,
+                    "eventsLen": 83,
+                    "detected": false
+                },
+                {
+                    "time": 24536058,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I61.trace",
+                    "traceSize": 5266,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24290937,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I62.trace",
+                    "traceSize": 5265,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24640020,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I63.trace",
+                    "traceSize": 5242,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 24858399,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I64.trace",
+                    "traceSize": 5244,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 24190070,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I65.trace",
+                    "traceSize": 5333,
+                    "totalg": 11,
+                    "eventsLen": 85,
+                    "detected": false
+                },
+                {
+                    "time": 24121588,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I66.trace",
+                    "traceSize": 5245,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 30033029,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I67.trace",
+                    "traceSize": 5289,
+                    "totalg": 11,
+                    "eventsLen": 83,
+                    "detected": false
+                },
+                {
+                    "time": 23754400,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I68.trace",
+                    "traceSize": 5264,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 28385214,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I69.trace",
+                    "traceSize": 5266,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 26213349,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I70.trace",
+                    "traceSize": 5274,
+                    "totalg": 11,
+                    "eventsLen": 79,
+                    "detected": false
+                },
+                {
+                    "time": 27703138,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I71.trace",
+                    "traceSize": 5265,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 25143029,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I72.trace",
+                    "traceSize": 5245,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 22848000,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I73.trace",
+                    "traceSize": 5244,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 24688844,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I74.trace",
+                    "traceSize": 5267,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24189337,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I75.trace",
+                    "traceSize": 5263,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24285706,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I76.trace",
+                    "traceSize": 5269,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 23835661,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I77.trace",
+                    "traceSize": 5261,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24992956,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I78.trace",
+                    "traceSize": 5245,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 30760682,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I79.trace",
+                    "traceSize": 5269,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 25486512,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I80.trace",
+                    "traceSize": 5245,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 26014360,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I81.trace",
+                    "traceSize": 5264,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 26787501,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I82.trace",
+                    "traceSize": 5267,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24423986,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I83.trace",
+                    "traceSize": 5262,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 22964129,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I84.trace",
+                    "traceSize": 5311,
+                    "totalg": 11,
+                    "eventsLen": 81,
+                    "detected": false
+                },
+                {
+                    "time": 27658211,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I85.trace",
+                    "traceSize": 5336,
+                    "totalg": 11,
+                    "eventsLen": 86,
+                    "detected": false
+                },
+                {
+                    "time": 25008052,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I86.trace",
+                    "traceSize": 5268,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 31889165,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I87.trace",
+                    "traceSize": 5240,
+                    "totalg": 11,
+                    "eventsLen": 73,
+                    "detected": false
+                },
+                {
+                    "time": 26430483,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I88.trace",
+                    "traceSize": 5316,
+                    "totalg": 11,
+                    "eventsLen": 81,
+                    "detected": false
+                },
+                {
+                    "time": 26561392,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I89.trace",
+                    "traceSize": 5248,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 29175630,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I90.trace",
+                    "traceSize": 5264,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 25707254,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I91.trace",
+                    "traceSize": 5269,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24691032,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I92.trace",
+                    "traceSize": 5263,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24535470,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I93.trace",
+                    "traceSize": 5244,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                },
+                {
+                    "time": 30184170,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I94.trace",
+                    "traceSize": 5258,
+                    "totalg": 11,
+                    "eventsLen": 76,
+                    "detected": false
+                },
+                {
+                    "time": 23847890,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I95.trace",
+                    "traceSize": 5265,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 24262211,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I96.trace",
+                    "traceSize": 5265,
+                    "totalg": 11,
+                    "eventsLen": 78,
+                    "detected": false
+                },
+                {
+                    "time": 25830136,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I97.trace",
+                    "traceSize": 5328,
+                    "totalg": 11,
+                    "eventsLen": 85,
+                    "detected": false
+                },
+                {
+                    "time": 25050836,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I98.trace",
+                    "traceSize": 5288,
+                    "totalg": 11,
+                    "eventsLen": 83,
+                    "detected": false
+                },
+                {
+                    "time": 25036730,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I99.trace",
+                    "traceSize": 5246,
+                    "totalg": 11,
+                    "eventsLen": 74,
+                    "detected": false
+                }
+            ],
+            "goatid": "goat_u",
+            "goatBound": 0,
+            "traceDir": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u",
+            "lastFailedTrace": "",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/cockroach_1462/goat_trace/traces/goat_u/cockroach_1462_B0_I99.trace",
+            "firstFailedAfter": 0
+        },
+        "goleak": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_1462/goleak",
+            "binaryName": "616543083goleak",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_1462/goleak/out/goleak.out",
+            "results": [
+                {
+                    "time": 30407976,
+                    "detected": false
+                },
+                {
+                    "time": 22756089,
+                    "detected": false
+                },
+                {
+                    "time": 24008900,
+                    "detected": false
+                },
+                {
+                    "time": 26133446,
+                    "detected": false
+                },
+                {
+                    "time": 22112024,
+                    "detected": false
+                },
+                {
+                    "time": 23961086,
+                    "detected": false
+                },
+                {
+                    "time": 24320740,
+                    "detected": false
+                },
+                {
+                    "time": 24824697,
+                    "detected": false
+                },
+                {
+                    "time": 23837834,
+                    "detected": false
+                },
+                {
+                    "time": 25550711,
+                    "detected": false
+                },
+                {
+                    "time": 21269275,
+                    "detected": false
+                },
+                {
+                    "time": 24393209,
+                    "detected": false
+                },
+                {
+                    "time": 25143962,
+                    "detected": false
+                },
+                {
+                    "time": 25921134,
+                    "detected": false
+                },
+                {
+                    "time": 22057309,
+                    "detected": false
+                },
+                {
+                    "time": 23060352,
+                    "detected": false
+                },
+                {
+                    "time": 21143041,
+                    "detected": false
+                },
+                {
+                    "time": 23266313,
+                    "detected": false
+                },
+                {
+                    "time": 22716524,
+                    "detected": false
+                },
+                {
+                    "time": 23918419,
+                    "detected": false
+                },
+                {
+                    "time": 21409259,
+                    "detected": false
+                },
+                {
+                    "time": 24770220,
+                    "detected": false
+                },
+                {
+                    "time": 21974877,
+                    "detected": false
+                },
+                {
+                    "time": 23841523,
+                    "detected": false
+                },
+                {
+                    "time": 22619756,
+                    "detected": false
+                },
+                {
+                    "time": 23592127,
+                    "detected": false
+                },
+                {
+                    "time": 23926620,
+                    "detected": false
+                },
+                {
+                    "time": 23286276,
+                    "detected": false
+                },
+                {
+                    "time": 22500216,
+                    "detected": false
+                },
+                {
+                    "time": 23317133,
+                    "detected": false
+                },
+                {
+                    "time": 21554481,
+                    "detected": false
+                },
+                {
+                    "time": 23210481,
+                    "detected": false
+                },
+                {
+                    "time": 23406342,
+                    "detected": false
+                },
+                {
+                    "time": 23478702,
+                    "detected": false
+                },
+                {
+                    "time": 5028998677,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "goleak"
+        },
+        "lockDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_1462/lockDL",
+            "binaryName": "115676988lockDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_1462/lockDL/out/lockDL.out",
+            "results": [
+                {
+                    "time": 28262969,
+                    "detected": false
+                },
+                {
+                    "time": 23993183,
+                    "detected": false
+                },
+                {
+                    "time": 27091154,
+                    "detected": false
+                },
+                {
+                    "time": 5027023228,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "lockDL"
+        }
+    },
+    "reportJSON": "/Volumes/DATA/goatws/results/blocking_conf_blocking_all_100/blocking_cockroach_1462_T100.json"
+}

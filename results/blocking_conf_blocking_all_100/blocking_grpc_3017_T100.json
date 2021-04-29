@@ -1,0 +1,1077 @@
+{
+    "Bug": {
+        "bugName": "grpc_3017",
+        "bugDir": "/Users/saeed/gobench/gobench/goker/blocking/grpc/3017",
+        "bugType": "blocking",
+        "bugCause": "Resource Deadlock",
+        "bugSubcause": "Double locking"
+    },
+    "exps": {
+        "builtinDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_3017/builtinDL",
+            "binaryName": "621325083builtinDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_3017/builtinDL/out/builtinDL.out",
+            "results": [
+                {
+                    "time": 31973448,
+                    "desc": "GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "builtinDL"
+        },
+        "goat_d1": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay",
+            "binaryName": "002769130delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay/out/goat_goat_d1.out",
+            "results": [
+                {
+                    "time": 159442775,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay/traces/goat_d1/grpc_3017_B1_I0.trace",
+                    "traceSize": 140837,
+                    "totalg": 11,
+                    "eventsLen": 24043,
+                    "detected": false
+                },
+                {
+                    "time": 5039879085,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay/traces/goat_d1/grpc_3017_B1_I1.trace",
+                    "traceSize": 52268,
+                    "totalg": 11,
+                    "eventsLen": 7594,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d1",
+            "goatBound": 1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay/traces/goat_d1",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay/traces/goat_d1/grpc_3017_B1_I1.trace",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay/traces/goat_d1/grpc_3017_B1_I0.trace",
+            "firstFailedAfter": 1
+        },
+        "goat_d2": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay",
+            "binaryName": "002769130delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay/out/goat_goat_d2.out",
+            "results": [
+                {
+                    "time": 5026243565,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay/traces/goat_d2/grpc_3017_B2_I0.trace",
+                    "traceSize": 23022,
+                    "totalg": 11,
+                    "eventsLen": 2787,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d2",
+            "goatBound": 2,
+            "traceDir": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay/traces/goat_d2",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay/traces/goat_d2/grpc_3017_B2_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d3": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay",
+            "binaryName": "002769130delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay/out/goat_goat_d3.out",
+            "results": [
+                {
+                    "time": 5028234651,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay/traces/goat_d3/grpc_3017_B3_I0.trace",
+                    "traceSize": 22576,
+                    "totalg": 11,
+                    "eventsLen": 2796,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d3",
+            "goatBound": 3,
+            "traceDir": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay/traces/goat_d3",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_delay/traces/goat_d3/grpc_3017_B3_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_m": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace",
+            "binaryName": "566383095trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/out/goat_goat_m.out",
+            "results": [
+                {
+                    "time": 5033255641,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_m/grpc_3017_BT_I0.trace",
+                    "traceSize": 3868,
+                    "totalg": 13,
+                    "eventsLen": 128,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_m",
+            "goatBound": -1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_m",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_m/grpc_3017_BT_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_u": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace",
+            "binaryName": "566383095trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/out/goat_goat_u.out",
+            "results": [
+                {
+                    "time": 31494564,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I0.trace",
+                    "traceSize": 24096,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 36033779,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I1.trace",
+                    "traceSize": 24044,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 30624421,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I2.trace",
+                    "traceSize": 24053,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 36044041,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I3.trace",
+                    "traceSize": 24124,
+                    "totalg": 10,
+                    "eventsLen": 4108,
+                    "detected": false
+                },
+                {
+                    "time": 36391233,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I4.trace",
+                    "traceSize": 24069,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 33771680,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I5.trace",
+                    "traceSize": 24113,
+                    "totalg": 10,
+                    "eventsLen": 4108,
+                    "detected": false
+                },
+                {
+                    "time": 33097509,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I6.trace",
+                    "traceSize": 24102,
+                    "totalg": 10,
+                    "eventsLen": 4108,
+                    "detected": false
+                },
+                {
+                    "time": 38498801,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I7.trace",
+                    "traceSize": 24078,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 37586119,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I8.trace",
+                    "traceSize": 24172,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 36158851,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I9.trace",
+                    "traceSize": 24067,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 32701219,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I10.trace",
+                    "traceSize": 24047,
+                    "totalg": 10,
+                    "eventsLen": 4105,
+                    "detected": false
+                },
+                {
+                    "time": 34840904,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I11.trace",
+                    "traceSize": 24073,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 33365190,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I12.trace",
+                    "traceSize": 24065,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 35242158,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I13.trace",
+                    "traceSize": 24068,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 36259581,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I14.trace",
+                    "traceSize": 24108,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 34317348,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I15.trace",
+                    "traceSize": 24077,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 33076159,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I16.trace",
+                    "traceSize": 24066,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 36380796,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I17.trace",
+                    "traceSize": 24059,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 36638516,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I18.trace",
+                    "traceSize": 24132,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 31117250,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I19.trace",
+                    "traceSize": 24069,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 34237936,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I20.trace",
+                    "traceSize": 24068,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 38472975,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I21.trace",
+                    "traceSize": 24076,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 36986125,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I22.trace",
+                    "traceSize": 24111,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 34257599,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I23.trace",
+                    "traceSize": 24069,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 31821958,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I24.trace",
+                    "traceSize": 24064,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 42329560,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I25.trace",
+                    "traceSize": 24088,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 34554429,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I26.trace",
+                    "traceSize": 24076,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 37647070,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I27.trace",
+                    "traceSize": 24117,
+                    "totalg": 10,
+                    "eventsLen": 4107,
+                    "detected": false
+                },
+                {
+                    "time": 35891033,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I28.trace",
+                    "traceSize": 24087,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 34499570,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I29.trace",
+                    "traceSize": 24067,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 34406951,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I30.trace",
+                    "traceSize": 24069,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 32775207,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I31.trace",
+                    "traceSize": 24064,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 33877237,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I32.trace",
+                    "traceSize": 24091,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 34567994,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I33.trace",
+                    "traceSize": 24080,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 31773117,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I34.trace",
+                    "traceSize": 24061,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 33686927,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I35.trace",
+                    "traceSize": 24071,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 35871141,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I36.trace",
+                    "traceSize": 24069,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 36647731,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I37.trace",
+                    "traceSize": 24110,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 35316336,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I38.trace",
+                    "traceSize": 24076,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 31180446,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I39.trace",
+                    "traceSize": 24062,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 43081825,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I40.trace",
+                    "traceSize": 24067,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 36332272,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I41.trace",
+                    "traceSize": 24136,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 32655116,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I42.trace",
+                    "traceSize": 24049,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 35117817,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I43.trace",
+                    "traceSize": 24085,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 32099346,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I44.trace",
+                    "traceSize": 24092,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 33124579,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I45.trace",
+                    "traceSize": 24110,
+                    "totalg": 10,
+                    "eventsLen": 4108,
+                    "detected": false
+                },
+                {
+                    "time": 34873832,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I46.trace",
+                    "traceSize": 24065,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 39675772,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I47.trace",
+                    "traceSize": 24099,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 34834559,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I48.trace",
+                    "traceSize": 24078,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 31941303,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I49.trace",
+                    "traceSize": 24055,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 35908569,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I50.trace",
+                    "traceSize": 24075,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 37331080,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I51.trace",
+                    "traceSize": 24062,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 37300232,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I52.trace",
+                    "traceSize": 24106,
+                    "totalg": 10,
+                    "eventsLen": 4108,
+                    "detected": false
+                },
+                {
+                    "time": 31723432,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I53.trace",
+                    "traceSize": 24060,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 33784361,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I54.trace",
+                    "traceSize": 24076,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 40046129,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I55.trace",
+                    "traceSize": 24080,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 37070949,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I56.trace",
+                    "traceSize": 24097,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 35362812,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I57.trace",
+                    "traceSize": 24067,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 32117128,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I58.trace",
+                    "traceSize": 24041,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 31689044,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I59.trace",
+                    "traceSize": 24101,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 33008819,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I60.trace",
+                    "traceSize": 24053,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 30681131,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I61.trace",
+                    "traceSize": 24053,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 30298313,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I62.trace",
+                    "traceSize": 24047,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 35835228,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I63.trace",
+                    "traceSize": 24085,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 39554560,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I64.trace",
+                    "traceSize": 24078,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 36858518,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I65.trace",
+                    "traceSize": 24081,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 32570214,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I66.trace",
+                    "traceSize": 24065,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 31256208,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I67.trace",
+                    "traceSize": 24065,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 29834004,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I68.trace",
+                    "traceSize": 24072,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 31008030,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I69.trace",
+                    "traceSize": 24058,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 31711022,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I70.trace",
+                    "traceSize": 24057,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 32494166,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I71.trace",
+                    "traceSize": 24107,
+                    "totalg": 10,
+                    "eventsLen": 4108,
+                    "detected": false
+                },
+                {
+                    "time": 40070411,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I72.trace",
+                    "traceSize": 24072,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 34146282,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I73.trace",
+                    "traceSize": 24066,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 33916434,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I74.trace",
+                    "traceSize": 24069,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 32962522,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I75.trace",
+                    "traceSize": 24106,
+                    "totalg": 10,
+                    "eventsLen": 4108,
+                    "detected": false
+                },
+                {
+                    "time": 34035112,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I76.trace",
+                    "traceSize": 24068,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 37524613,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I77.trace",
+                    "traceSize": 24120,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 33910474,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I78.trace",
+                    "traceSize": 24049,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 31066463,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I79.trace",
+                    "traceSize": 24041,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 34256997,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I80.trace",
+                    "traceSize": 24076,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 35274022,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I81.trace",
+                    "traceSize": 24067,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 32141759,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I82.trace",
+                    "traceSize": 24060,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 35981511,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I83.trace",
+                    "traceSize": 24056,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 36500357,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I84.trace",
+                    "traceSize": 24108,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 34103662,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I85.trace",
+                    "traceSize": 24066,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 33084477,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I86.trace",
+                    "traceSize": 24067,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 32282650,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I87.trace",
+                    "traceSize": 24068,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 34129178,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I88.trace",
+                    "traceSize": 24076,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 38049870,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I89.trace",
+                    "traceSize": 24076,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 34381892,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I90.trace",
+                    "traceSize": 24076,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 30112431,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I91.trace",
+                    "traceSize": 24054,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 32615946,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I92.trace",
+                    "traceSize": 24053,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 32951081,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I93.trace",
+                    "traceSize": 24068,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 31589426,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I94.trace",
+                    "traceSize": 24035,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 30863298,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I95.trace",
+                    "traceSize": 24056,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 32088496,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I96.trace",
+                    "traceSize": 24072,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                },
+                {
+                    "time": 35327797,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I97.trace",
+                    "traceSize": 24091,
+                    "totalg": 10,
+                    "eventsLen": 4106,
+                    "detected": false
+                },
+                {
+                    "time": 30576820,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I98.trace",
+                    "traceSize": 24049,
+                    "totalg": 10,
+                    "eventsLen": 4104,
+                    "detected": false
+                },
+                {
+                    "time": 34773025,
+                    "desc": "PASS",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I99.trace",
+                    "traceSize": 24081,
+                    "totalg": 10,
+                    "eventsLen": 4103,
+                    "detected": false
+                }
+            ],
+            "goatid": "goat_u",
+            "goatBound": 0,
+            "traceDir": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u",
+            "lastFailedTrace": "",
+            "lastSuccessTrace": "/Volumes/DATA/goatws/blocking/grpc_3017/goat_trace/traces/goat_u/grpc_3017_B0_I99.trace",
+            "firstFailedAfter": 0
+        },
+        "goleak": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_3017/goleak",
+            "binaryName": "118836652goleak",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_3017/goleak/out/goleak.out",
+            "results": [
+                {
+                    "time": 5030779649,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "goleak"
+        },
+        "lockDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_3017/lockDL",
+            "binaryName": "634609473lockDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_3017/lockDL/out/lockDL.out",
+            "results": [
+                {
+                    "time": 5031188871,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "lockDL"
+        }
+    },
+    "reportJSON": "/Volumes/DATA/goatws/results/blocking_conf_blocking_all_100/blocking_grpc_3017_T100.json"
+}

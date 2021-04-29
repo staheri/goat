@@ -1,0 +1,177 @@
+{
+    "Bug": {
+        "bugName": "moby_30408",
+        "bugDir": "/Users/saeed/gobench/gobench/goker/blocking/moby/30408",
+        "bugType": "blocking",
+        "bugCause": "Communication Deadlock",
+        "bugSubcause": "Condition Variable"
+    },
+    "exps": {
+        "builtinDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_30408/builtinDL",
+            "binaryName": "383382663builtinDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_30408/builtinDL/out/builtinDL.out",
+            "results": [
+                {
+                    "time": 30389278,
+                    "desc": "GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "builtinDL"
+        },
+        "goat_d1": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_30408/goat_delay",
+            "binaryName": "769495974delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_30408/goat_delay/out/goat_goat_d1.out",
+            "results": [
+                {
+                    "time": 5034739453,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_30408/goat_delay/traces/goat_d1/moby_30408_B1_I0.trace",
+                    "traceSize": 5313,
+                    "totalg": 10,
+                    "eventsLen": 76,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d1",
+            "goatBound": 1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/moby_30408/goat_delay/traces/goat_d1",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/moby_30408/goat_delay/traces/goat_d1/moby_30408_B1_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d2": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_30408/goat_delay",
+            "binaryName": "769495974delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_30408/goat_delay/out/goat_goat_d2.out",
+            "results": [
+                {
+                    "time": 5028996402,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_30408/goat_delay/traces/goat_d2/moby_30408_B2_I0.trace",
+                    "traceSize": 5178,
+                    "totalg": 10,
+                    "eventsLen": 74,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d2",
+            "goatBound": 2,
+            "traceDir": "/Volumes/DATA/goatws/blocking/moby_30408/goat_delay/traces/goat_d2",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/moby_30408/goat_delay/traces/goat_d2/moby_30408_B2_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d3": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_30408/goat_delay",
+            "binaryName": "769495974delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_30408/goat_delay/out/goat_goat_d3.out",
+            "results": [
+                {
+                    "time": 5027729558,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_30408/goat_delay/traces/goat_d3/moby_30408_B3_I0.trace",
+                    "traceSize": 5311,
+                    "totalg": 10,
+                    "eventsLen": 78,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d3",
+            "goatBound": 3,
+            "traceDir": "/Volumes/DATA/goatws/blocking/moby_30408/goat_delay/traces/goat_d3",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/moby_30408/goat_delay/traces/goat_d3/moby_30408_B3_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_m": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_30408/goat_trace",
+            "binaryName": "424437411trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_30408/goat_trace/out/goat_goat_m.out",
+            "results": [
+                {
+                    "time": 5028007174,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_30408/goat_trace/traces/goat_m/moby_30408_BT_I0.trace",
+                    "traceSize": 3227,
+                    "totalg": 10,
+                    "eventsLen": 66,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_m",
+            "goatBound": -1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/moby_30408/goat_trace/traces/goat_m",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/moby_30408/goat_trace/traces/goat_m/moby_30408_BT_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_u": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_30408/goat_trace",
+            "binaryName": "424437411trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_30408/goat_trace/out/goat_goat_u.out",
+            "results": [
+                {
+                    "time": 5023222823,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/moby_30408/goat_trace/traces/goat_u/moby_30408_B0_I0.trace",
+                    "traceSize": 3144,
+                    "totalg": 10,
+                    "eventsLen": 52,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_u",
+            "goatBound": 0,
+            "traceDir": "/Volumes/DATA/goatws/blocking/moby_30408/goat_trace/traces/goat_u",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/moby_30408/goat_trace/traces/goat_u/moby_30408_B0_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goleak": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_30408/goleak",
+            "binaryName": "411570120goleak",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_30408/goleak/out/goleak.out",
+            "results": [
+                {
+                    "time": 5034240818,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "goleak"
+        },
+        "lockDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/moby_30408/lockDL",
+            "binaryName": "987514061lockDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/moby_30408/lockDL/out/lockDL.out",
+            "results": [
+                {
+                    "time": 5031901367,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "lockDL"
+        }
+    },
+    "reportJSON": "/Volumes/DATA/goatws/results/blocking_conf_blocking_all_100/blocking_moby_30408_T100.json"
+}

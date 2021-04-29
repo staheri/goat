@@ -1,0 +1,177 @@
+{
+    "Bug": {
+        "bugName": "cockroach_35073",
+        "bugDir": "/Users/saeed/gobench/gobench/goker/blocking/cockroach/35073",
+        "bugType": "blocking",
+        "bugCause": "Communication Deadlock",
+        "bugSubcause": "Channel"
+    },
+    "exps": {
+        "builtinDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_35073/builtinDL",
+            "binaryName": "102133724builtinDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_35073/builtinDL/out/builtinDL.out",
+            "results": [
+                {
+                    "time": 33729330,
+                    "desc": "GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "builtinDL"
+        },
+        "goat_d1": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_delay",
+            "binaryName": "272799079delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_delay/out/goat_goat_d1.out",
+            "results": [
+                {
+                    "time": 5031400171,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_delay/traces/goat_d1/cockroach_35073_B1_I0.trace",
+                    "traceSize": 8447,
+                    "totalg": 11,
+                    "eventsLen": 204,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d1",
+            "goatBound": 1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_delay/traces/goat_d1",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_delay/traces/goat_d1/cockroach_35073_B1_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d2": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_delay",
+            "binaryName": "272799079delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_delay/out/goat_goat_d2.out",
+            "results": [
+                {
+                    "time": 5026131434,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_delay/traces/goat_d2/cockroach_35073_B2_I0.trace",
+                    "traceSize": 8490,
+                    "totalg": 11,
+                    "eventsLen": 201,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d2",
+            "goatBound": 2,
+            "traceDir": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_delay/traces/goat_d2",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_delay/traces/goat_d2/cockroach_35073_B2_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d3": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_delay",
+            "binaryName": "272799079delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_delay/out/goat_goat_d3.out",
+            "results": [
+                {
+                    "time": 5024923335,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_delay/traces/goat_d3/cockroach_35073_B3_I0.trace",
+                    "traceSize": 8525,
+                    "totalg": 11,
+                    "eventsLen": 207,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d3",
+            "goatBound": 3,
+            "traceDir": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_delay/traces/goat_d3",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_delay/traces/goat_d3/cockroach_35073_B3_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_m": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_trace",
+            "binaryName": "334748200trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_trace/out/goat_goat_m.out",
+            "results": [
+                {
+                    "time": 5037462278,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_trace/traces/goat_m/cockroach_35073_BT_I0.trace",
+                    "traceSize": 4159,
+                    "totalg": 11,
+                    "eventsLen": 104,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_m",
+            "goatBound": -1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_trace/traces/goat_m",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_trace/traces/goat_m/cockroach_35073_BT_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_u": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_trace",
+            "binaryName": "334748200trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_trace/out/goat_goat_u.out",
+            "results": [
+                {
+                    "time": 5027592766,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_trace/traces/goat_u/cockroach_35073_B0_I0.trace",
+                    "traceSize": 3967,
+                    "totalg": 11,
+                    "eventsLen": 75,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_u",
+            "goatBound": 0,
+            "traceDir": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_trace/traces/goat_u",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/cockroach_35073/goat_trace/traces/goat_u/cockroach_35073_B0_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goleak": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_35073/goleak",
+            "binaryName": "275096113goleak",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_35073/goleak/out/goleak.out",
+            "results": [
+                {
+                    "time": 5037863197,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "goleak"
+        },
+        "lockDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/cockroach_35073/lockDL",
+            "binaryName": "821509530lockDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/cockroach_35073/lockDL/out/lockDL.out",
+            "results": [
+                {
+                    "time": 5033201271,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "lockDL"
+        }
+    },
+    "reportJSON": "/Volumes/DATA/goatws/results/blocking_conf_blocking_all_100/blocking_cockroach_35073_T100.json"
+}

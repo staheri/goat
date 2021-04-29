@@ -1,0 +1,177 @@
+{
+    "Bug": {
+        "bugName": "syncthing_5795",
+        "bugDir": "/Users/saeed/gobench/gobench/goker/blocking/syncthing/5795",
+        "bugType": "blocking",
+        "bugCause": "Communication Deadlock",
+        "bugSubcause": "Channel"
+    },
+    "exps": {
+        "builtinDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/syncthing_5795/builtinDL",
+            "binaryName": "172228960builtinDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/syncthing_5795/builtinDL/out/builtinDL.out",
+            "results": [
+                {
+                    "time": 29418165,
+                    "desc": "GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "builtinDL"
+        },
+        "goat_d1": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_delay",
+            "binaryName": "029946843delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_delay/out/goat_goat_d1.out",
+            "results": [
+                {
+                    "time": 5038205603,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_delay/traces/goat_d1/syncthing_5795_B1_I0.trace",
+                    "traceSize": 8044,
+                    "totalg": 11,
+                    "eventsLen": 98,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d1",
+            "goatBound": 1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_delay/traces/goat_d1",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_delay/traces/goat_d1/syncthing_5795_B1_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d2": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_delay",
+            "binaryName": "029946843delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_delay/out/goat_goat_d2.out",
+            "results": [
+                {
+                    "time": 5025421538,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_delay/traces/goat_d2/syncthing_5795_B2_I0.trace",
+                    "traceSize": 8442,
+                    "totalg": 11,
+                    "eventsLen": 104,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d2",
+            "goatBound": 2,
+            "traceDir": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_delay/traces/goat_d2",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_delay/traces/goat_d2/syncthing_5795_B2_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d3": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_delay",
+            "binaryName": "029946843delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_delay/out/goat_goat_d3.out",
+            "results": [
+                {
+                    "time": 5025356119,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_delay/traces/goat_d3/syncthing_5795_B3_I0.trace",
+                    "traceSize": 8617,
+                    "totalg": 11,
+                    "eventsLen": 112,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d3",
+            "goatBound": 3,
+            "traceDir": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_delay/traces/goat_d3",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_delay/traces/goat_d3/syncthing_5795_B3_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_m": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_trace",
+            "binaryName": "180680556trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_trace/out/goat_goat_m.out",
+            "results": [
+                {
+                    "time": 5037775830,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_trace/traces/goat_m/syncthing_5795_BT_I0.trace",
+                    "traceSize": 4687,
+                    "totalg": 11,
+                    "eventsLen": 102,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_m",
+            "goatBound": -1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_trace/traces/goat_m",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_trace/traces/goat_m/syncthing_5795_BT_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_u": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_trace",
+            "binaryName": "180680556trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_trace/out/goat_goat_u.out",
+            "results": [
+                {
+                    "time": 5032124465,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_trace/traces/goat_u/syncthing_5795_B0_I0.trace",
+                    "traceSize": 4471,
+                    "totalg": 11,
+                    "eventsLen": 60,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_u",
+            "goatBound": 0,
+            "traceDir": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_trace/traces/goat_u",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/syncthing_5795/goat_trace/traces/goat_u/syncthing_5795_B0_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goleak": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/syncthing_5795/goleak",
+            "binaryName": "786032325goleak",
+            "outPath": "/Volumes/DATA/goatws/blocking/syncthing_5795/goleak/out/goleak.out",
+            "results": [
+                {
+                    "time": 5034941304,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "goleak"
+        },
+        "lockDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/syncthing_5795/lockDL",
+            "binaryName": "100845950lockDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/syncthing_5795/lockDL/out/lockDL.out",
+            "results": [
+                {
+                    "time": 5040940192,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "lockDL"
+        }
+    },
+    "reportJSON": "/Volumes/DATA/goatws/results/blocking_conf_blocking_all_100/blocking_syncthing_5795_T100.json"
+}

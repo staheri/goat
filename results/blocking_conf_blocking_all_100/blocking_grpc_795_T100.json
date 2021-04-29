@@ -1,0 +1,177 @@
+{
+    "Bug": {
+        "bugName": "grpc_795",
+        "bugDir": "/Users/saeed/gobench/gobench/goker/blocking/grpc/795",
+        "bugType": "blocking",
+        "bugCause": "Resource Deadlock",
+        "bugSubcause": "Double locking"
+    },
+    "exps": {
+        "builtinDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_795/builtinDL",
+            "binaryName": "662834253builtinDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_795/builtinDL/out/builtinDL.out",
+            "results": [
+                {
+                    "time": 30967624,
+                    "desc": "GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "builtinDL"
+        },
+        "goat_d1": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_795/goat_delay",
+            "binaryName": "054458068delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_795/goat_delay/out/goat_goat_d1.out",
+            "results": [
+                {
+                    "time": 5034782237,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_795/goat_delay/traces/goat_d1/grpc_795_B1_I0.trace",
+                    "traceSize": 4805,
+                    "totalg": 10,
+                    "eventsLen": 69,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d1",
+            "goatBound": 1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/grpc_795/goat_delay/traces/goat_d1",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/grpc_795/goat_delay/traces/goat_d1/grpc_795_B1_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d2": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_795/goat_delay",
+            "binaryName": "054458068delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_795/goat_delay/out/goat_goat_d2.out",
+            "results": [
+                {
+                    "time": 5023967562,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_795/goat_delay/traces/goat_d2/grpc_795_B2_I0.trace",
+                    "traceSize": 5064,
+                    "totalg": 10,
+                    "eventsLen": 81,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d2",
+            "goatBound": 2,
+            "traceDir": "/Volumes/DATA/goatws/blocking/grpc_795/goat_delay/traces/goat_d2",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/grpc_795/goat_delay/traces/goat_d2/grpc_795_B2_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_d3": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_795/goat_delay",
+            "binaryName": "054458068delay",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_795/goat_delay/out/goat_goat_d3.out",
+            "results": [
+                {
+                    "time": 5026626651,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_795/goat_delay/traces/goat_d3/grpc_795_B3_I0.trace",
+                    "traceSize": 5009,
+                    "totalg": 10,
+                    "eventsLen": 75,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_d3",
+            "goatBound": 3,
+            "traceDir": "/Volumes/DATA/goatws/blocking/grpc_795/goat_delay/traces/goat_d3",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/grpc_795/goat_delay/traces/goat_d3/grpc_795_B3_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_m": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_795/goat_trace",
+            "binaryName": "119733001trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_795/goat_trace/out/goat_goat_m.out",
+            "results": [
+                {
+                    "time": 5030279452,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_795/goat_trace/traces/goat_m/grpc_795_BT_I0.trace",
+                    "traceSize": 3188,
+                    "totalg": 10,
+                    "eventsLen": 72,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_m",
+            "goatBound": -1,
+            "traceDir": "/Volumes/DATA/goatws/blocking/grpc_795/goat_trace/traces/goat_m",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/grpc_795/goat_trace/traces/goat_m/grpc_795_BT_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goat_u": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_795/goat_trace",
+            "binaryName": "119733001trace",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_795/goat_trace/out/goat_goat_u.out",
+            "results": [
+                {
+                    "time": 5027465555,
+                    "desc": "GDL",
+                    "tracePath": "/Volumes/DATA/goatws/blocking/grpc_795/goat_trace/traces/goat_u/grpc_795_B0_I0.trace",
+                    "traceSize": 3050,
+                    "totalg": 10,
+                    "eventsLen": 48,
+                    "detected": true
+                }
+            ],
+            "goatid": "goat_u",
+            "goatBound": 0,
+            "traceDir": "/Volumes/DATA/goatws/blocking/grpc_795/goat_trace/traces/goat_u",
+            "lastFailedTrace": "/Volumes/DATA/goatws/blocking/grpc_795/goat_trace/traces/goat_u/grpc_795_B0_I0.trace",
+            "lastSuccessTrace": "",
+            "firstFailedAfter": 0
+        },
+        "goleak": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_795/goleak",
+            "binaryName": "787035430goleak",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_795/goleak/out/goleak.out",
+            "results": [
+                {
+                    "time": 5033326758,
+                    "desc": "TO/GDL",
+                    "detected": true
+                }
+            ],
+            "toolid": "goleak"
+        },
+        "lockDL": {
+            "timeout": 5,
+            "cpu": 0,
+            "prefixDir": "/Volumes/DATA/goatws/blocking/grpc_795/lockDL",
+            "binaryName": "918793763lockDL",
+            "outPath": "/Volumes/DATA/goatws/blocking/grpc_795/lockDL/out/lockDL.out",
+            "results": [
+                {
+                    "time": 29496300,
+                    "desc": "DL",
+                    "detected": true
+                }
+            ],
+            "toolid": "lockDL"
+        }
+    },
+    "reportJSON": "/Volumes/DATA/goatws/results/blocking_conf_blocking_all_100/blocking_grpc_795_T100.json"
+}
