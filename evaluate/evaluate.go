@@ -168,11 +168,10 @@ func EvaluateBlocking(configFile string, thresh int) {
     }
   }
   fmt.Println("Total Bugs: ",len(allBugs))
-  Table_Bug_Tool(allBugs,ORDER_BUG)
-  Table_Bug_Tool(allBugs,ORDER_CAUSE)
-  Table_Bug_Tool(allBugs,ORDER_SUBCAUSE)
+  Table_Bug_Tool(allBugs,ORDER_BUG,identifier)
+  Table_Bug_Tool(allBugs,ORDER_CAUSE,identifier)
+  Table_Bug_Tool(allBugs,ORDER_SUBCAUSE,identifier)
 }
-
 
 func EvaluateNonBlocking(configFile string,thresh int) {
   identifier := "nonblocking"
@@ -182,6 +181,9 @@ func EvaluateNonBlocking(configFile string,thresh int) {
   colorRed := "\033[31m"
   colorGreen := "\033[32m"
 
+  // a map to hold each RootExperiment
+  allBugs := make(map[string]*RootExperiment)
+
   // obtain configName
   configName := strings.Split(filepath.Base(configFile),".")[0]
 
@@ -189,7 +191,6 @@ func EvaluateNonBlocking(configFile string,thresh int) {
   reportDir := filepath.Join(RESDIR,identifier+"_"+configName+"_"+strconv.Itoa(thresh))
   err := os.MkdirAll(reportDir,os.ModePerm)
   check(err)
-
 
   for _,path := range(ReadLines(configFile)){
     paths, err := filepath.Glob(path)
@@ -272,9 +273,13 @@ func EvaluateNonBlocking(configFile string,thresh int) {
       }
       // all experiments are either done or read from file
       TableSummaryPerBug(mainExp)
+      allBugs[bugName] = mainExp
     }
-
   }
+  fmt.Println("Total Bugs: ",len(allBugs))
+  Table_Bug_Tool(allBugs,ORDER_BUG,identifier)
+  Table_Bug_Tool(allBugs,ORDER_CAUSE,identifier)
+  Table_Bug_Tool(allBugs,ORDER_SUBCAUSE,identifier)
 }
 
 func EvaluateOverhead(configFile string, thresh int, ns []int) {

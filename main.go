@@ -59,8 +59,8 @@ func main(){
 	}*/
 
   //evaluate.TAB_counts()
-  evaluate.EvaluateBlocking(flagPath,100)
-  //evaluate.EvaluateNonBlocking(flagPath,10)
+  //evaluate.EvaluateBlocking(flagPath,100)
+  evaluate.EvaluateNonBlocking(flagPath,500)
   //evaluate.EvaluateOverhead(flagPath,100,[]int{1,2,4,16,64,256,512,1024,2048})
   //
 

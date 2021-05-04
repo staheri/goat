@@ -9,7 +9,8 @@ import(
   "sort"
 )
 
-var tools = []string{"builtinDL","goleak","lockDL","goat_m","goat_u","goat_d1","goat_d2","goat_d3"}
+var btools = []string{"builtinDL","goleak","lockDL","goat_m","goat_u","goat_d1","goat_d2","goat_d3"}
+var nbtools = []string{"race","goat_race_d1","goat_race_d2","goat_race_d3","goat_race_d4","goat_race_d5","goat_race_d6","goat_race_d7"}
 
 
 func TableSummaryPerBug(rx *RootExperiment){
@@ -77,12 +78,13 @@ func TableSummaryPerBug(rx *RootExperiment){
 }
 
 
-func Table_Bug_Tool(bugs map[string]*RootExperiment, order int){
+func Table_Bug_Tool(bugs map[string]*RootExperiment, order int, identifier string){
   // Variables
   dat := make(map[string][]*RootExperiment)
   var key string
   keys := []string{}
   totals := make([]int,TOOL_COUNT)
+  var tools []string
 
   // first pass (categorize)
   for bug,mainExp := range(bugs){
@@ -105,6 +107,11 @@ func Table_Bug_Tool(bugs map[string]*RootExperiment, order int){
     }
   }
 
+  if identifier == "blocking"{
+    tools = btools
+  }else{
+    tools = nbtools
+  }
   // create table
   t := table.NewWriter()
   t.SetOutputMirror(os.Stdout)
@@ -160,10 +167,10 @@ func Table_Bug_Tool(bugs map[string]*RootExperiment, order int){
         switch ex.Exps[t].(type){
         case *GoatExperiment:
           exp := ex.Exps[t].(*GoatExperiment)
-          res,detected = resultsToString(exp.Results)
+          res,detected = resultsToStringDescription(exp.Results)
         case *ToolExperiment:
           exp := ex.Exps[t].(*ToolExperiment)
-          res,detected = resultsToString(exp.Results)
+          res,detected = resultsToStringDescription(exp.Results)
         }
         if detected {
           totals[i]++
@@ -188,15 +195,20 @@ func Table_Bug_Tool(bugs map[string]*RootExperiment, order int){
 }
 
 
-func resultsToString(results []*Result) (string, bool) {
+func resultsToStringFailAfter(results []*Result) (string, bool) {
+  failafter := len(results)
+  return fmt.Sprintf("%d",failafter) , results[failafter-1].Detected
+}
+
+func resultsToStringDescription(results []*Result) (string, bool) {
   ret := ""
   failafter := len(results)
   if results[failafter-1].Detected{
     ret = results[failafter-1].Desc
   } else {
-    ret = "-"
+    ret = "X"
   }
-  return ret+fmt.Sprintf(" (%d)",failafter) , results[failafter-1].Detected
+  return fmt.Sprintf("%s (%d)",ret,failafter) , results[failafter-1].Detected
 }
 
 const(
