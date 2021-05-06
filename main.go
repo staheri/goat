@@ -1,7 +1,7 @@
 package main
 
 import (
-  "github.com/staheri/goat/evaluate"
+  _"github.com/staheri/goat/evaluate"
 	"flag"
 	"fmt"
 	"log"
@@ -14,6 +14,7 @@ import (
 
 var (
 	flagPath            string
+  flagTool            string
 	flagArgs            []string
 	flagVerbose         bool
 	validCategories    = []string{"CHNL", "GCMM", "GRTN", "MISC", "MUTX", "PROC", "SYSC", "WGCV", "SCHD", "BLCK"}
@@ -60,13 +61,16 @@ func main(){
 
   //evaluate.TAB_counts()
   //evaluate.EvaluateBlocking(flagPath,100)
-  evaluate.EvaluateNonBlocking(flagPath,500)
+  //evaluate.EvaluateNonBlocking(flagPath,500)
+
   //evaluate.EvaluateOverhead(flagPath,100,[]int{1,2,4,16,64,256,512,1024,2048})
   //
 
   //checkVis()
   //checkChecker()
   //checkJson()
+
+  customVis(flagPath,flagTool,true)
 
 
 
@@ -95,15 +99,10 @@ func parseFlags() {
 	//srcDescription := "native: execute the app and collect from scratch, latest: retrieve data from latest execution, x: retrieve data from specific execution (requires -x option)"
 	// Parse flags
 	flag.StringVar(&flagPath, "path", "", "Target application (*.go)")
+  flag.StringVar(&flagTool, "tool", "goat_m", "tool id")
 	flag.BoolVar(&flagVerbose, "verb", false, "Print verbose info")
 
 	flag.Parse()
 
 	flagArgs = flag.Args()
-}
-
-func check(err error){
-	if err != nil{
-		panic(err)
-	}
 }
