@@ -14,7 +14,7 @@ import (
   "github.com/staheri/goatlib/instrument"
 )
 
-func builtinDL_inst(src,dest string) string{
+func builtinDL_inst(src,dest string) []*instrument.ConcurrencyUsage{
   // copy all files to dest
   files, err := filepath.Glob(src+"/*.go")
   check(err)
@@ -24,10 +24,10 @@ func builtinDL_inst(src,dest string) string{
       panic("builtinDL_inst cp failed")
     }
   }
-  return ""
+  return nil
 }
 
-func lockDL_inst(src,dest string) string{
+func lockDL_inst(src,dest string) []*instrument.ConcurrencyUsage{
   // copy all files to dest && rewrite (sed)
   // copy from source to dest
   files, err := filepath.Glob(src+"/*.go")
@@ -59,10 +59,10 @@ func lockDL_inst(src,dest string) string{
       panic(err)
     }
   }
-  return ""
+  return nil
 }
 
-func goleak_inst(src,dest string) string{
+func goleak_inst(src,dest string) []*instrument.ConcurrencyUsage{
   var conf        loader.Config
   var astfiles    []*ast.File
   // copy all files and inject to its AST
@@ -108,29 +108,20 @@ func goleak_inst(src,dest string) string{
   	err = ioutil.WriteFile(filename, buf.Bytes(), 0644)
     check(err)
   }
-	return ""
+	return nil
 }
 
 
-func goat_trace_inst(src,dest string) string{
-  if instrument.InstrumentTraceOnly(src, dest){
-    return ""
+func goat_trace_inst(src,dest string) []*instrument.ConcurrencyUsage{
+  if !instrument.InstrumentTraceOnly(src, dest){
+    panic("goat trace inst paniced")
   } // bool
-  return "error"
+  return nil
 }
-func goat_critic_inst(src,dest string) string{
-  cus := instrument.InstrumentCriticOnly(src,dest) // critical
-  s := ""
-  for _,cu := range(cus){
-    s = s + cu.String() + "\n"
-  }
-  return s
+func goat_critic_inst(src,dest string) []*instrument.ConcurrencyUsage{
+  return instrument.InstrumentCriticOnly(src,dest) // critical
+
 }
-func goat_delay_inst(src,dest string) string{
-  cus := instrument.InstrumentCriticalPoints(src,dest) // critical
-  s := ""
-  for _,cu := range(cus){
-    s = s + cu.String() + "\n"
-  }
-  return s
+func goat_delay_inst(src,dest string) []*instrument.ConcurrencyUsage{
+  return instrument.InstrumentCriticalPoints(src,dest) // critical
 }

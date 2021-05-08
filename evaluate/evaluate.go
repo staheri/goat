@@ -23,6 +23,89 @@ type RootExperiment struct{
 }
 
 
+func EvaluateCoverage(configFile string, thresh int) {
+  identifier := "blocking"
+  causes := ReadGoKerConfig(identifier)
+  //fmt.Println(causes)
+
+  colorReset := "\033[0m"
+  colorRed := "\033[31m"
+  colorGreen := "\033[32m"
+
+  // a map to hold each RootExperiment
+  //allBugs := make(map[string]*RootExperiment)
+
+
+  // obtain configName
+  configName := strings.Split(filepath.Base(configFile),".")[0]
+
+  // obtain result dir
+  reportDir := filepath.Join(RESDIR,identifier+"_"+configName+"_"+strconv.Itoa(thresh))
+  err := os.MkdirAll(reportDir,os.ModePerm)
+  check(err)
+
+  for _,path := range(ReadLines(configFile)){
+    paths, err := filepath.Glob(path)
+    check(err)
+    // iterate over each bug
+    for _,p := range(paths){
+      // extract bug info
+      bugFullName := instrument.GobenchAppNameFolder(p) // bugType_BugAppName_BugCommitID
+      bugName := strings.Split(bugFullName,identifier+"_")[1]
+      if bugName == ""{
+        panic("wrong bugName")
+      }
+      mainExp := &RootExperiment{}
+      // create bug now
+      fmt.Println("BugName:",bugName,", path: ",p,", fullname: ",bugFullName)
+      target := &Bug{bugName,p,identifier,causes[bugName][0],causes[bugName][1]}
+      mainExp.Bug = target
+      mainExp.Exps = make(map[string]Ex)
+
+      var exes []Ex
+      //exes := []interface{}{}
+      //exes = append(exes,&GoatExperiment{Experiment: Experiment{Target:target},Bound:-1})
+      exes = append(exes,&GoatExperiment{Experiment: Experiment{Target:target},Bound:1})
+
+      for _,ex := range(exes){
+        // pre-set
+        ex.Init(false)
+        ex.Instrument()
+        ex.Build(false)
+        IDD := ""
+        iteration:for i:=0 ; i < thresh ; i++{
+          switch ex.(type){
+          case *GoatExperiment:
+            gex := ex.(*GoatExperiment)
+            IDD = gex.ID
+            fmt.Printf("Test %v on %v (%d/%d)\n",gex.Target.BugName,gex.ID,i+1,thresh)
+            res := gex.Execute(i,false)
+            gex.Results = append(gex.Results,res)
+            // Update Coverage
+            //gex.Coverage.Update(res.CoverageReport)
+
+            if res.Detected{
+            	fmt.Println(string(colorRed),res.Desc,string(colorReset))
+            }
+          case *ToolExperiment:
+            tex := ex.(*ToolExperiment)
+            IDD = tex.ToolID
+            fmt.Printf("Test %v on %v (%d/%d)\n",tex.Target.BugName,tex.ToolID,i+1,thresh)
+            res := tex.Execute(i,false)
+            tex.Results = append(tex.Results,res)
+            if res.Detected{
+            	fmt.Println(string(colorRed),res.Desc,string(colorReset))
+              break iteration
+            }else{
+              fmt.Println(string(colorGreen),"PASS",string(colorReset))
+            }
+          }
+        }
+        mainExp.Exps[IDD] = ex
+      }
+    }
+  }
+}
 
 func EvaluateBlocking(configFile string, thresh int) {
   identifier := "blocking"

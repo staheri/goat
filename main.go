@@ -1,7 +1,7 @@
 package main
 
 import (
-  _"github.com/staheri/goat/evaluate"
+  "github.com/staheri/goat/evaluate"
 	"flag"
 	"fmt"
 	"log"
@@ -70,7 +70,8 @@ func main(){
   //checkChecker()
   //checkJson()
 
-  customVis(flagPath,flagTool,true)
+  //customVis(flagPath,flagTool,true)
+  evaluate.EvaluateCoverage(flagPath,4)
 
 
 
