@@ -91,7 +91,7 @@ func (ex *ECTExperiment) Instrument() {
     return
   }
   destination := filepath.Join(ex.PrefixDir,"src")
-  if ex.Instrumentor(ex.Target.BugDir,destination) != ""{
+  if ex.Instrumentor(ex.Target.BugDir,destination) != nil{
     panic("Error instrumenting ToolExperiment")
   }
 }

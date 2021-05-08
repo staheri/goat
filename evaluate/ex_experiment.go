@@ -21,7 +21,7 @@ const WORKDIR = ""
 const ORIGINAL_GO = "go.1.15.6"
 const NEW_GO = "myGo.1.15.6"
 
-type InstFunc func(string,string) string
+type InstFunc func(string,string) []*instrument.ConcurrencyUsage
 type DetectFunc func([]byte) (bool,string)
 
 // Interface for Experiments
@@ -69,6 +69,7 @@ type GoatExperiment struct{
   LastFailedTrace     string                `json:"lastFailedTrace"`
   LastSuccessTrace    string                `json:"lastSuccessTrace"`
   FirstFailedAfter    int                   `json:"firstFailedAfter"`
+  CoverageTable       CoverageTable         `json:"covTable"`
 }
 
 // Struct for Tool experiments
@@ -88,6 +89,7 @@ type Result struct{
   StackSize     int                `json:"stackSize,omitempty"` // for goat
   EventsLen     int                `json:"eventsLen,omitempty"` // for goat
   Detected      bool                   `json:"detected"`
+  CovReport     CovReport              `json:"covReport"`
 }
 
 ///////////////////////////////////////////////////////
@@ -183,16 +185,14 @@ func (gex *GoatExperiment) Instrument() {
     return
   }
   destination := filepath.Join(gex.PrefixDir,"src")
-  critic := gex.Instrumentor(gex.Target.BugDir,destination)
-  if gex.Bound < 1 && critic != ""{
+  concUsage := gex.Instrumentor(gex.Target.BugDir,destination)
+  if gex.Bound < 1 && concUsage != nil{
     panic("mismatch bound & instrument")
   }
   // write critic to a file
-  if critic != ""{
-    f,err := os.Create(gex.PrefixDir+"/criticalPoints.json")
-    check(err)
-    _,err = f.WriteString(critic)
-    f.Close()
+  // instead store coverage in the GoatExperiment
+  if concUsage != nil{
+    gex.CoverageTable = CoverageTable{ConcUsage:concUsage}
   }
 }
 
@@ -263,7 +263,7 @@ func (tex *ToolExperiment) Init(race bool) {
 func (tex *ToolExperiment) Instrument()  {
   fmt.Printf("%s: Instrument...\n",tex.ToolID)
   destination := filepath.Join(tex.PrefixDir,"src")
-  if tex.Instrumentor(tex.Target.BugDir,destination) != ""{
+  if tex.Instrumentor(tex.Target.BugDir,destination) != nil{
     panic("Error instrumenting ToolExperiment")
   }
 }

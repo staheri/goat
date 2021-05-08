@@ -134,6 +134,7 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
 
     // Check for deadlocks
     deadlock_report := traceops.DeadlockChecker(parseRes,false) // longReport = false
+    traceops.MeasureCoverage(parseRes,gex.CoverageTable.ConcUsage) // longReport = false
 
     // Finalize result and return
     result.TotalG = deadlock_report.TotalG
@@ -177,7 +178,6 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
     return result
   }
 }
-
 
 // Execute and analyze Tool-experiment
 func (tex *ToolExperiment) Execute(i int,race bool) *Result {
