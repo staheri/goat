@@ -134,7 +134,21 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
 
     // Check for deadlocks
     deadlock_report := traceops.DeadlockChecker(parseRes,false) // longReport = false
-    traceops.MeasureCoverage(parseRes,gex.CoverageTable.ConcUsage) // longReport = false
+
+    // coverage
+    // if i = 0 : it is the first run, create goroutine ids, create coverage table
+
+    // get the local stack
+    result.LStack = gex.UpdateGStack(parseRes.Stacks)
+    gex.UpdateConcUsage(parseRes.Stacks,result.LStack)
+    if i == 0{ // it is the first run, create goroutine ids, create coverage table
+      gex.InitGGTree(parseRes,result.LStack)
+    }
+    gex.CheckUpdateGGTree(parseRes,result.LStack)
+    //gex.PrintGlobals()
+    PrintGGTree(gex.GGTree,gex.ConcUsage.ConcUsage)
+
+    //traceops.MeasureCoverage(parseRes,gex.CoverageTable.ConcUsage)
 
     // Finalize result and return
     result.TotalG = deadlock_report.TotalG

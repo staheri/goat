@@ -4,6 +4,7 @@ package evaluate
 import(
   "bufio"
   "github.com/staheri/goatlib/instrument"
+  "github.com/staheri/goatlib/trace"
   "fmt"
   "os"
   "strconv"
@@ -69,7 +70,12 @@ type GoatExperiment struct{
   LastFailedTrace     string                `json:"lastFailedTrace"`
   LastSuccessTrace    string                `json:"lastSuccessTrace"`
   FirstFailedAfter    int                   `json:"firstFailedAfter"`
-  CoverageTable       CoverageTable         `json:"covTable"`
+  GGTree              *GGTree
+  ConcUsage           *ConcUsageStruct
+  // CoverageTable       CoverageTable         `json:"covTable"`
+  GStack              *GlobalStack
+  // GGMap               map[int]*GlobalGInfo
+  // GOverlap            map[string][]int
 }
 
 // Struct for Tool experiments
@@ -89,7 +95,7 @@ type Result struct{
   StackSize     int                `json:"stackSize,omitempty"` // for goat
   EventsLen     int                `json:"eventsLen,omitempty"` // for goat
   Detected      bool                   `json:"detected"`
-  CovReport     CovReport              `json:"covReport"`
+  LStack        map[uint64]string
 }
 
 ///////////////////////////////////////////////////////
@@ -168,6 +174,16 @@ func (gex *GoatExperiment) Init(race bool) {
     gex.Detector = race_detector
   }
 
+  // setup global stack
+  fmap := make(map[int]*trace.Frame)
+  fsmap := make(map[string]int)
+  gstack := &GlobalStack{fmap,fsmap}
+  gex.GStack = gstack
+
+
+  // placeholder for GGTree
+  gex.GGTree = &GGTree{}
+
   // Set environment variables for GOAT experiments
   _b := strconv.Itoa(int(gex.Timeout))
   os.Setenv("GOATTO",_b)
@@ -192,7 +208,8 @@ func (gex *GoatExperiment) Instrument() {
   // write critic to a file
   // instead store coverage in the GoatExperiment
   if concUsage != nil{
-    gex.CoverageTable = CoverageTable{ConcUsage:concUsage}
+    gex.ConcUsage = &ConcUsageStruct{ConcUsage:concUsage}
+    gex.InitConcMap()
   }
 }
 

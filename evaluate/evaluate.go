@@ -65,12 +65,13 @@ func EvaluateCoverage(configFile string, thresh int) {
       var exes []Ex
       //exes := []interface{}{}
       //exes = append(exes,&GoatExperiment{Experiment: Experiment{Target:target},Bound:-1})
-      exes = append(exes,&GoatExperiment{Experiment: Experiment{Target:target},Bound:1})
+      exes = append(exes,&GoatExperiment{Experiment: Experiment{Target:target},Bound:3})
 
       for _,ex := range(exes){
         // pre-set
         ex.Init(false)
         ex.Instrument()
+        // after instrument, we have the concusage and concusageMap
         ex.Build(false)
         IDD := ""
         iteration:for i:=0 ; i < thresh ; i++{
@@ -80,13 +81,17 @@ func EvaluateCoverage(configFile string, thresh int) {
             IDD = gex.ID
             fmt.Printf("Test %v on %v (%d/%d)\n",gex.Target.BugName,gex.ID,i+1,thresh)
             res := gex.Execute(i,false)
+            // after the first execute, we can say
             gex.Results = append(gex.Results,res)
             // Update Coverage
             //gex.Coverage.Update(res.CoverageReport)
 
             if res.Detected{
             	fmt.Println(string(colorRed),res.Desc,string(colorReset))
+            }else{
+              fmt.Println(string(colorGreen),"PASS",string(colorReset))
             }
+            time.Sleep(5*time.Second)
           case *ToolExperiment:
             tex := ex.(*ToolExperiment)
             IDD = tex.ToolID

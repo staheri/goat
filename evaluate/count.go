@@ -2,7 +2,11 @@ package evaluate
 
 import (
   "github.com/staheri/goatlib/trace"
+  "strings"
 )
+
+
+
 
 type Count struct{
   G           int
@@ -14,8 +18,8 @@ func count(events []*trace.Event) (cnt Count){
   gs := make(map[int]int)
   cids := make(map[int]int)
   for _,e := range events{
-		desc := EventDescriptions[e.Type]
-    if contains(ctgDescriptions[catCHNL].Members, "Ev"+desc.Name){
+		desc := trace.EventDescriptions[e.Type]
+    if strings.HasPrefix(desc.Name,"Ch"){
 			// if channel op, finds ID
 			cids[int(e.Args[0])] = 1
       cnt.TotalChOps++
