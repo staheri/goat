@@ -65,7 +65,7 @@ func EvaluateCoverage(configFile string, thresh int) {
       var exes []Ex
       //exes := []interface{}{}
       //exes = append(exes,&GoatExperiment{Experiment: Experiment{Target:target},Bound:-1})
-      exes = append(exes,&GoatExperiment{Experiment: Experiment{Target:target},Bound:3})
+      exes = append(exes,&GoatExperiment{Experiment: Experiment{Target:target},Bound:6})
 
       for _,ex := range(exes){
         // pre-set
@@ -91,7 +91,7 @@ func EvaluateCoverage(configFile string, thresh int) {
             }else{
               fmt.Println(string(colorGreen),"PASS",string(colorReset))
             }
-            time.Sleep(5*time.Second)
+            //time.Sleep(5*time.Second)
           case *ToolExperiment:
             tex := ex.(*ToolExperiment)
             IDD = tex.ToolID

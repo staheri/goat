@@ -71,6 +71,7 @@ type GoatExperiment struct{
   LastSuccessTrace    string                `json:"lastSuccessTrace"`
   FirstFailedAfter    int                   `json:"firstFailedAfter"`
   GGTree              *GGTree
+  TotalGG             int
   ConcUsage           *ConcUsageStruct
   // CoverageTable       CoverageTable         `json:"covTable"`
   GStack              *GlobalStack
@@ -180,9 +181,6 @@ func (gex *GoatExperiment) Init(race bool) {
   gstack := &GlobalStack{fmap,fsmap}
   gex.GStack = gstack
 
-
-  // placeholder for GGTree
-  gex.GGTree = &GGTree{}
 
   // Set environment variables for GOAT experiments
   _b := strconv.Itoa(int(gex.Timeout))

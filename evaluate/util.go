@@ -63,3 +63,12 @@ func contains(s []string, e string) bool {
   }
   return false
 }
+
+func containsInt(l []int, b int) bool{
+	for _, a := range l {
+			if a == b {
+					return true
+			}
+	}
+	return false
+}

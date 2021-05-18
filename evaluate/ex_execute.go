@@ -138,15 +138,21 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
     // coverage
     // if i = 0 : it is the first run, create goroutine ids, create coverage table
 
+    // print events
+    /*for i,e := range(parseRes.Events){
+      fmt.Printf("****\nG%v (idx:%v)\n%v\n",e.G,i,e.String())
+    }*/
+
     // get the local stack
     result.LStack = gex.UpdateGStack(parseRes.Stacks)
     gex.UpdateConcUsage(parseRes.Stacks,result.LStack)
-    if i == 0{ // it is the first run, create goroutine ids, create coverage table
-      gex.InitGGTree(parseRes,result.LStack)
-    }
-    gex.CheckUpdateGGTree(parseRes,result.LStack)
+    //if i == 0{ // it is the first run, create goroutine ids, create coverage table
+    gex.UpdateGGTree(parseRes,result.LStack)
+    //}
+    gex.UpdateCoverageGGTree(parseRes,result.LStack)
     //gex.PrintGlobals()
-    PrintGGTree(gex.GGTree,gex.ConcUsage.ConcUsage)
+    //PrintGGTree(gex.GGTree,gex.ConcUsage.ConcUsage)
+    gex.CoverageGGTree()
 
     //traceops.MeasureCoverage(parseRes,gex.CoverageTable.ConcUsage)
 
