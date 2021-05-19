@@ -139,9 +139,9 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
     // if i = 0 : it is the first run, create goroutine ids, create coverage table
 
     // print events
-    /*for i,e := range(parseRes.Events){
-      fmt.Printf("****\nG%v (idx:%v)\n%v\n",e.G,i,e.String())
-    }*/
+    // for i,e := range(parseRes.Events){
+    //   fmt.Printf("****\nG%v (idx:%v)\n%v\n",e.G,i,e.String())
+    // }
 
     // get the local stack
     result.LStack = gex.UpdateGStack(parseRes.Stacks)

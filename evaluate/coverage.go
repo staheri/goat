@@ -243,7 +243,7 @@ func (gex *GoatExperiment) UpdateCoverageGGTree(parseResult *trace.ParseResult, 
   for ;len(tovisit)!=0;{
 		cur := tovisit[0]
     curg := tovisitg[0]
-    fmt.Printf("Iterating over\n\tG: %v\n\tGG:%v\n\tLen(events):%v\n",cur.Node.Gid,curg.Node.id,len(cur.Node.Events))
+    //fmt.Printf("Iterating over\n\tG: %v\n\tGG:%v\n\tLen(events):%v\n",cur.Node.Gid,curg.Node.id,len(cur.Node.Events))
 
     for idx,e := range(cur.Node.Events){
   		//fmt.Println(e.String())
@@ -287,6 +287,56 @@ func (gex *GoatExperiment) UpdateCoverageGGTree(parseResult *trace.ParseResult, 
                 //fmt.Println(e.String())
                 //fmt.Println(cur.Node.Events[idx+1].String())
                 //fmt.Println("UNLOCK: Unblocking")
+                if cm,ok := curg.Node.CoverageMap[cus_idx];ok{
+                  cm.unblocking++
+                } else{
+                  curg.Node.CoverageMap[cus_idx]=&Coverage{unblocking:1}
+                }
+              }else{
+                //fmt.Println(e.String())
+                //fmt.Println("UNLOCK: None")
+                if cm,ok := curg.Node.CoverageMap[cus_idx];ok{
+                  cm.no_op++
+                } else{
+                  curg.Node.CoverageMap[cus_idx]=&Coverage{no_op:1}
+                }
+              }
+            }
+
+            // RLOCK
+            if gex.ConcUsage.ConcUsage[cus_idx].Type == instrument.RLOCK{
+              // fmt.Println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+              // fmt.Println(e.String())
+              // fmt.Println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+              if e.Args[1] == 0{
+                //fmt.Println(e.String())
+                //fmt.Println("LOCK: Blocked")
+                if cm,ok := curg.Node.CoverageMap[cus_idx];ok{
+                  cm.blocked++
+                }else{
+                  curg.Node.CoverageMap[cus_idx]=&Coverage{blocked:1}
+                }
+              }else{
+                //fmt.Println(e.String())
+                //fmt.Println("LOCK: Blocking")
+                if cm,ok := curg.Node.CoverageMap[cus_idx];ok{
+                  cm.no_op++
+                }else{
+                  curg.Node.CoverageMap[cus_idx]=&Coverage{no_op:1}
+                }
+              }
+            }
+
+            //RUNLOCK
+            if gex.ConcUsage.ConcUsage[cus_idx].Type == instrument.RUNLOCK{
+              // fmt.Println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+              // fmt.Println(e.String())
+              // fmt.Println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+              // check if its next event is unblock
+              if trace.EventDescriptions[cur.Node.Events[idx+1].Type].Name == "GoUnblock"{
+                //fmt.Println(e.String())
+                //fmt.Println(cur.Node.Events[idx+1].String())
+                //fmt.Println("RUNLOCK: Unblocking")
                 if cm,ok := curg.Node.CoverageMap[cus_idx];ok{
                   cm.unblocking++
                 } else{
@@ -504,6 +554,12 @@ func (gex *GoatExperiment) UpdateCoverageGGTree(parseResult *trace.ParseResult, 
                 curg.Node.CoverageMap[cus_idx]=&Coverage{unblocking:1}
               }
             }
+          case instrument.RANGE:
+            if cm,ok := curg.Node.CoverageMap[cus_idx];ok{
+              cm.no_op++
+            }else{
+              curg.Node.CoverageMap[cus_idx]=&Coverage{no_op:1}
+            }
           case instrument.SIGNAL,instrument.BROADCAST:
             if !strings.HasPrefix(ed.Name,"Cv"){
               continue
@@ -597,7 +653,7 @@ func (cov *Coverage)ToString(cu *instrument.ConcurrencyUsage) (string,string){
       total++
     }
     percent = strconv.Itoa(total)+"/3"
-  case instrument.CLOSE,instrument.UNLOCK,instrument.ADD:
+  case instrument.CLOSE,instrument.UNLOCK,instrument.ADD,instrument.RUNLOCK:
     s = s + fmt.Sprintf("unblocking: %v, ",cov.unblocking)
     if cov.unblocking > 0 {
       total++
@@ -657,7 +713,7 @@ func (cov *Coverage)ToString(cu *instrument.ConcurrencyUsage) (string,string){
       total++
     }
     percent = strconv.Itoa(total)+"/2"
-  case instrument.WAIT:
+  case instrument.WAIT, instrument.RLOCK:
     s = s + fmt.Sprintf("blocked: %v, ",cov.blocked)
     s = s + fmt.Sprintf("no_op: %v",cov.no_op)
     if cov.no_op > 0 {
@@ -667,7 +723,7 @@ func (cov *Coverage)ToString(cu *instrument.ConcurrencyUsage) (string,string){
       total++
     }
     percent = strconv.Itoa(total)+"/2"
-  case instrument.SIGNAL,instrument.BROADCAST,instrument.GO:
+  case instrument.SIGNAL,instrument.BROADCAST,instrument.GO,instrument.RANGE:
     s = s + fmt.Sprintf("no_op: %v",cov.no_op)
     if cov.no_op > 0 {
       total++
@@ -758,7 +814,7 @@ func (gi *GGInfo) CovNodePairs(concUsage []*instrument.ConcurrencyUsage) (map[in
   }
 
   s = s + fmt.Sprintf("</GGINFO>\n")
-  fmt.Println(s)
+  //fmt.Println(s)
   return pairs
 }
 
