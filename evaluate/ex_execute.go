@@ -71,14 +71,8 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
 
     // Set environment variables for GOAT experiments
     _b := strconv.Itoa(int(gex.Bound))
-    b := gex.Bound
     os.Setenv("GOATRSBOUND",_b)
-    if b < 0{
-      os.Setenv("GOATMAXPROCS",MAXPROCS)
-      _b = "T"
-    }else{
-      os.Setenv("GOATMAXPROCS","1")
-    }
+    os.Setenv("GOATMAXPROCS",MAXPROCS)
 
     // FileName name to store events
     traceName := fmt.Sprintf("%s_B%v_I%d",gex.Target.BugName,_b,i)
@@ -140,7 +134,7 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
 
     // print events
     // for i,e := range(parseRes.Events){
-    //   fmt.Printf("****\nG%v (idx:%v)\n%v\n",e.G,i,e.String())
+    //  fmt.Printf("****\nG%v (idx:%v)\n%v\n",e.G,i,e.String())
     // }
 
     // get the local stack
@@ -152,7 +146,9 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
     gex.UpdateCoverageGGTree(parseRes,result.LStack)
     //gex.PrintGlobals()
     //PrintGGTree(gex.GGTree,gex.ConcUsage.ConcUsage)
-    gex.CoverageGGTree()
+    gex.UpdateCoverageReport()
+    result.Coverage1 = gex.PrintCoverageReport(true)
+    result.Coverage2 = gex.PrintCoverageReport(false)
 
     //traceops.MeasureCoverage(parseRes,gex.CoverageTable.ConcUsage)
 

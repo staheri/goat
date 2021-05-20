@@ -33,11 +33,17 @@ func EvaluateCoverage(configFile string, thresh int) {
   colorGreen := "\033[32m"
 
   // a map to hold each RootExperiment
-  //allBugs := make(map[string]*RootExperiment)
+  allBugs := make(map[string]*RootExperiment)
 
 
   // obtain configName
   configName := strings.Split(filepath.Base(configFile),".")[0]
+
+
+  // init table
+  tall := table.NewWriter()
+  tall.SetOutputMirror(os.Stdout)
+  tall.AppendHeader(table.Row{"Test","1st Fail","Cov1 Leaps", "Cov2 Leaps","Errors","Cov1 > Cov2","Final Coverage"})
 
   // obtain result dir
   reportDir := filepath.Join(RESDIR,identifier+"_"+configName+"_"+strconv.Itoa(thresh))
@@ -62,10 +68,12 @@ func EvaluateCoverage(configFile string, thresh int) {
       mainExp.Bug = target
       mainExp.Exps = make(map[string]Ex)
 
-      var exes []Ex
+      exes := []Ex{}
       //exes := []interface{}{}
       //exes = append(exes,&GoatExperiment{Experiment: Experiment{Target:target},Bound:-1})
-      exes = append(exes,&GoatExperiment{Experiment: Experiment{Target:target},Bound:6})
+      for d := 1 ; d < 10 ; d++{
+        exes = append(exes,&GoatExperiment{Experiment: Experiment{Target:target},Bound:d})
+      }
 
       for _,ex := range(exes){
         // pre-set
@@ -74,7 +82,7 @@ func EvaluateCoverage(configFile string, thresh int) {
         // after instrument, we have the concusage and concusageMap
         ex.Build(false)
         IDD := ""
-        iteration:for i:=0 ; i < thresh ; i++{
+        for i:=0 ; i < thresh ; i++{
           switch ex.(type){
           case *GoatExperiment:
             gex := ex.(*GoatExperiment)
@@ -91,24 +99,20 @@ func EvaluateCoverage(configFile string, thresh int) {
             }else{
               fmt.Println(string(colorGreen),"PASS",string(colorReset))
             }
-            //time.Sleep(5*time.Second)
-          case *ToolExperiment:
-            tex := ex.(*ToolExperiment)
-            IDD = tex.ToolID
-            fmt.Printf("Test %v on %v (%d/%d)\n",tex.Target.BugName,tex.ToolID,i+1,thresh)
-            res := tex.Execute(i,false)
-            tex.Results = append(tex.Results,res)
-            if res.Detected{
-            	fmt.Println(string(colorRed),res.Desc,string(colorReset))
-              break iteration
-            }else{
-              fmt.Println(string(colorGreen),"PASS",string(colorReset))
-            }
+
           }
         }
         mainExp.Exps[IDD] = ex
+        tall.AppendRow(CoverageSummary(ex))
+        tall.AppendSeparator()
+        tall.Render()
+        tall.RenderCSV()
+        time.Sleep(5*time.Second)
       }
+      allBugs[bugName] = mainExp
     }
+
+
   }
 }
 

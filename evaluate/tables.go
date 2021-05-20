@@ -211,6 +211,102 @@ func resultsToStringDescription(results []*Result) (string, bool) {
   return fmt.Sprintf("%s (%d)",ret,failafter) , results[failafter-1].Detected
 }
 
+func CoverageSummaryPerExp(ex Ex){
+  t := table.NewWriter()
+  t.SetOutputMirror(os.Stdout)
+  t.AppendHeader(table.Row{"Test","Cov1 (%)","Cov2 (%)","Error"})
+
+  switch ex.(type){
+  case *GoatExperiment:
+    gex := ex.(*GoatExperiment)
+    for i,resg := range(gex.Results){
+      var row []interface{}
+      row = append(row,fmt.Sprintf("%v on %v (%d)\n",gex.Target.BugName,gex.ID,i+1))
+      row = append(row,fmt.Sprintf("%.2f",resg.Coverage1*100))
+      row = append(row,fmt.Sprintf("%.2f",resg.Coverage2*100))
+      if resg.Detected{
+      	row = append(row,resg.Desc)
+      }else{
+        row = append(row,"-")
+      }
+      t.AppendRow(row)
+    }
+  }
+  t.Render()
+
+}
+
+func CoverageSummary(ex Ex) ([]interface{}){
+  first_fail := 0
+  errs := []string{}
+  prev_cov1 := 0.0
+  prev_cov2 := 0.0
+  testName := ""
+  coverage1Leaps := []int{}
+  coverage2Leaps := []int{}
+  c1gc2 := false
+  finalCoverage := 0.0
+  t := table.NewWriter()
+  t.SetOutputMirror(os.Stdout)
+  t.AppendHeader(table.Row{"Test","Cov1 (%)","Cov2 (%)","Error"})
+
+  switch ex.(type){
+  case *GoatExperiment:
+    gex := ex.(*GoatExperiment)
+    for i,resg := range(gex.Results){
+      var row []interface{}
+      testName = fmt.Sprintf("%v on %v (%d)\n",gex.Target.BugName,gex.ID,i+1)
+      row = append(row,testName)
+      if resg.Coverage1 != prev_cov1{
+        coverage1Leaps = append(coverage1Leaps,i+1)
+        prev_cov1 = resg.Coverage1
+      }
+
+      if resg.Coverage2 != prev_cov2{
+        coverage2Leaps = append(coverage2Leaps,i+1)
+        prev_cov2 = resg.Coverage2
+      }
+
+      finalCoverage = resg.Coverage2
+      if resg.Coverage1 > resg.Coverage2 {
+        c1gc2=true
+        finalCoverage = resg.Coverage1
+      }
+      row = append(row,fmt.Sprintf("%.2f",resg.Coverage1*100))
+      row = append(row,fmt.Sprintf("%.2f",resg.Coverage2*100))
+      if resg.Detected{
+      	row = append(row,resg.Desc)
+        if !contains(errs,resg.Desc){
+          errs = append(errs,resg.Desc)
+        }
+        if first_fail == 0{
+          first_fail = i+1
+        }
+      }else{
+        row = append(row,"-")
+      }
+      t.AppendRow(row)
+    }
+  }
+  t.Render()
+
+  t1 := table.NewWriter()
+  t1.SetOutputMirror(os.Stdout)
+  t1.AppendHeader(table.Row{"Test","1st Fail","Cov1 Leaps", "Cov2 Leaps","Errors","Cov1 > Cov2","Final Coverage"})
+  var row []interface{}
+  row = append(row,strings.TrimSuffix(testName, "\n"))
+  row = append(row,first_fail)
+  row = append(row,fmt.Sprintf("%v",coverage1Leaps))
+  row = append(row,fmt.Sprintf("%v",coverage2Leaps))
+  row = append(row,fmt.Sprintf("%v",errs))
+  row = append(row,fmt.Sprintf("%v",c1gc2))
+  row = append(row,fmt.Sprintf("%.2f",finalCoverage))
+  t1.AppendRow(row)
+  t1.Render()
+  return row
+}
+
+
 const(
   BUILTINDL      =iota
   GOLEAK

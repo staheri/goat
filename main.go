@@ -71,7 +71,7 @@ func main(){
   //checkJson()
 
   //customVis(flagPath,flagTool,true)
-  evaluate.EvaluateCoverage(flagPath,20)
+  evaluate.EvaluateCoverage(flagPath,100)
 
 
 

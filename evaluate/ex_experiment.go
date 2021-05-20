@@ -10,6 +10,7 @@ import(
   "strconv"
   "path/filepath"
   "time"
+  "encoding/json"
 
 )
 
@@ -97,6 +98,8 @@ type Result struct{
   EventsLen     int                `json:"eventsLen,omitempty"` // for goat
   Detected      bool                   `json:"detected"`
   LStack        map[uint64]string
+  Coverage1     float64
+  Coverage2     float64
 }
 
 ///////////////////////////////////////////////////////
@@ -120,18 +123,16 @@ func (gex *GoatExperiment) Init(race bool) {
   if ws == "" {
     panic("GOATWS is not set!")
   }
+
+  if gex.Bound < 0 {
+    panic("invalid bound")
+  }
   switch gex.Bound {
-  case -1:
-    if race{
-      panic("Goat_m and Goat_n are not compatible with race")
-    }
-    gex.ID = "goat_m"
-    gex.Instrumentor = goat_trace_inst
   case 0:
     if race{
-      panic("Goat_m and Goat_n are not compatible with race")
+      panic("Goat_m and Goat_u are not compatible with race")
     }
-    gex.ID = "goat_u"
+    gex.ID = "goat_d0"
     gex.Instrumentor = goat_trace_inst
 
   default:
@@ -196,6 +197,13 @@ func (gex *GoatExperiment) Instrument() {
   check(err)
   if len(files) > 0{
     // this experiment has already been instrumented, so no need
+    // read from file
+
+    concUsage := ReadConcUsage(gex.PrefixDir+"/concUsage.json")
+    if concUsage != nil{
+      gex.ConcUsage = &ConcUsageStruct{ConcUsage:concUsage}
+      gex.InitConcMap()
+    }
     return
   }
   destination := filepath.Join(gex.PrefixDir,"src")
@@ -208,6 +216,14 @@ func (gex *GoatExperiment) Instrument() {
   if concUsage != nil{
     gex.ConcUsage = &ConcUsageStruct{ConcUsage:concUsage}
     gex.InitConcMap()
+    // write to json file
+    rep,err := os.Create(gex.PrefixDir+"/concUsage.json")
+    check(err)
+    newdat ,err := json.MarshalIndent(concUsage,"","    ")
+    check(err)
+    _,err = rep.WriteString(string(newdat))
+    check(err)
+    rep.Close()
   }
 }
 

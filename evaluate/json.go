@@ -6,7 +6,7 @@ import(
   "os"
   "path/filepath"
   "encoding/json"
-  _"github.com/staheri/goatlib/instrument"
+  "github.com/staheri/goatlib/instrument"
   "strings"
   "io/ioutil"
   "time"
@@ -174,6 +174,37 @@ func ReadResults(fname string) map[string]Ex{
       tex.ToolID = fields["toolid"].(string)
       ret[k]=tex
     }
+  }
+  return ret
+}
+
+// Read concUsage
+func ReadConcUsage(fname string) (ret []*instrument.ConcurrencyUsage){
+  fmt.Println("Reading ",fname)
+  var dat []interface{}
+  if !checkFile(fname){
+    panic("Error reading JSON file: "+fname)
+  }
+  bf ,_ := ioutil.ReadFile(fname)
+  err := json.Unmarshal([]byte(bf),&dat)
+  check(err)
+  // load from json
+  //dat[Bug]
+  // we want to read dat[exps]
+  if len(dat) == 0 {
+    panic("ConcUsage JSON length is zero")
+  }
+  fmt.Println("Len Dat: ", len(dat))
+  for _,cu_raw := range(dat){
+    cui := cu_raw.(map[string]interface{})
+    CU := &instrument.ConcurrencyUsage{}
+    CU.Type = int(cui["type"].(float64))
+    cuu := cui["location"].(map[string]interface{})
+    CU_Loc := &instrument.CodeLocation{}
+    CU_Loc.FileName = cuu["fileName"].(string)
+    CU_Loc.Line = int(cuu["line"].(float64))
+    CU.Location = CU_Loc
+    ret = append(ret,CU)
   }
   return ret
 }

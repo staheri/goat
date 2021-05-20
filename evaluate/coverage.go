@@ -23,6 +23,8 @@ type ConcUsageStruct struct{
   ConcUsageMap         map[string]int      // key: cu.string, val:  cu index
   ConcUsageStackMap    map[string][]int      // key: fkey for cu, val: []cu index (there might be multiple concurrent usage that shares a common stack frame)
   ConcUsageStackFekys  []string            // list of all fkeys
+  ConcUsageReport      map[int]map[string]int    // how each concusage is covered (post-execution)
+
 }
 
 // map concurrency usage index to its respective string representation
@@ -32,6 +34,7 @@ func (gex *GoatExperiment) InitConcMap(){
   for i,cu := range(gex.ConcUsage.ConcUsage){
     gex.ConcUsage.ConcUsageMap[cu.String()]=i
   }
+  gex.ConcUsage.ConcUsageReport = make(map[int]map[string]int)
 }
 
 // after creating lstack (updating gstack), update concUsage with their respective fkeys
@@ -41,19 +44,19 @@ func (gex *GoatExperiment) UpdateConcUsage(stacks map[uint64][]*trace.Frame, lst
     //fmt.Printf("ConcUsage[%d]: %v\n",idx,cu.String())
     stackConc[idx]=0
   }
-  //for cu,idx := range(gex.ConcUsage.ConcUsageMap){
-  //  fmt.Printf("ConcUsageMap[%v]: %d\n",cu,idx)
-  //}
+  // for cu,idx := range(gex.ConcUsage.ConcUsageMap){
+  //   fmt.Printf("ConcUsageMap[%v]: %d\n",cu,idx)
+  // }
   for stack_id,frms := range(stacks){
 		// iterate over frames
 		for _,frm := range(frms){
 			// iterate concUsage
 			for idx,cu := range(gex.ConcUsage.ConcUsage){
 				// check file and line
-				//fmt.Printf("CHECK OK\nCU File:%s\nStack file:%s\n",cu.OrigLoc.Filename,frm.File)
-				if cu.OrigLoc.Filename == frm.File {
+				//fmt.Printf("CHECK OK\nCU File:%s\nStack file:%s\n",cu.Location.FileName,frm.File)
+				if cu.Location.FileName == frm.File {
 					//fmt.Println("\tfile ok")
-					if cu.OrigLoc.Line == frm.Line{
+					if cu.Location.Line == frm.Line{
 						//fmt.Println("\t\tline ok")
 						if _,ok := lstack[stack_id] ; !ok{
               panic("coverage frame is not in the lstack")
@@ -61,11 +64,12 @@ func (gex *GoatExperiment) UpdateConcUsage(stacks map[uint64][]*trace.Frame, lst
             if idxs,ok := gex.ConcUsage.ConcUsageStackMap[lstack[stack_id]];ok{
               if !containsInt(idxs,idx){
                 idxs = append(idxs,idx)
-                fmt.Printf("Update ConcUsage:CU:%s\nStack:%s\n",cu.String(),traceops.ToString(frm))
+                //fmt.Printf("Update ConcUsage:CU:%s\nStack:%s\n",cu.String(),traceops.ToString(frm))
+                gex.ConcUsage.ConcUsageStackMap[lstack[stack_id]] = idxs
               }
               //gex.ConcUsage.ConcUsageStackMap[lstack[stack_id]] = idxs
             } else{
-              fmt.Printf("Update ConcUsage:CU:%s\nStack:%s\n",cu.String(),traceops.ToString(frm))
+              //fmt.Printf(">>>>>>>> Update ConcUsage:CU:%s\n>>>>>>>> Stack:%s\n",cu.String(),traceops.ToString(frm))
               gex.ConcUsage.ConcUsageStackMap[lstack[stack_id]] = []int{idx}
             }
             //gex.ConcUsage.ConcUsageStackMap[lstack[stack_id]] = idx
@@ -76,10 +80,12 @@ func (gex *GoatExperiment) UpdateConcUsage(stacks map[uint64][]*trace.Frame, lst
 			}
 		}
 	}
-
-  //for idx,val:=range(stackConc){
-  //  fmt.Printf("covered[%d]: %d\n",idx,val)
-  //}
+  // for cu,idx := range(gex.ConcUsage.ConcUsageStackMap){
+  //   fmt.Printf("ConcUsageStackMap[%v]: %v\n",cu,idx)
+  // }
+  // for idx,val:=range(stackConc){
+  //   fmt.Printf("covered[%d]: %d\n",idx,val)
+  // }
 }
 
 
@@ -116,7 +122,8 @@ func (gex *GoatExperiment) UpdateGStack(stack map[uint64][]*trace.Frame) map[uin
 type GGInfo struct{
   id              int    // unique id
   createFkey      string // frame key of create stack
-  CoverageMap     map[int]*Coverage // global structure to store general coverages. key: cuIndex, val: coverage instance
+  CoverageMap     map[int]*Coverage // global structure to store general coverages. key: cuIndex, val: coverage instance per each node
+  nbselect        int
 
 }
 
@@ -491,7 +498,11 @@ func (gex *GoatExperiment) UpdateCoverageGGTree(parseResult *trace.ParseResult, 
                   panic("select is encountered before selecti")
                   //curg.Node.CoverageMap[cus_idx]=&Coverage{blocked:1}
                 }
-              } else{ // pos == 0, select is blocked
+              } else if pos == 3 {
+                //blocking
+                //fmt.Println(e.String())
+                fmt.Println("Select: Blocked Then Unblocked")
+              }else{ // pos == 0, select is blocked
                 if cm,ok := curg.Node.CoverageMap[cus_idx]; ok{
                   cm.blocked++
                 } else{
@@ -580,7 +591,16 @@ func (gex *GoatExperiment) UpdateCoverageGGTree(parseResult *trace.ParseResult, 
             }
           }
         } // end switch concUsage type
-  		} // end mapping concusage and local stack (if contains(cuStackKeys,lstack[e.StkID]))
+  		}else{// checking traceSelect3
+        if ed.Name == "Select" && e.Args[0] == 3{
+          // fmt.Printf("****\nG%v \n%v\n",cur.Node.Events[idx-2].G,cur.Node.Events[idx-2].String())
+          // fmt.Printf("****\nG%v \n%v\n",cur.Node.Events[idx-1].G,cur.Node.Events[idx-1].String())
+          fmt.Printf("****\nG%v \n%v\n",e.G,e.String())
+          curg.Node.nbselect++
+          // fmt.Printf("****\nG%v \n%v\n",cur.Node.Events[idx+1].G,cur.Node.Events[idx+1].String())
+          // fmt.Printf("****\nG%v \n%v\n",cur.Node.Events[idx+2].G,cur.Node.Events[idx+2].String())
+        }
+      } // end mapping concusage and local stack (if contains(cuStackKeys,lstack[e.StkID]))
   	}
 
 
@@ -734,6 +754,93 @@ func (cov *Coverage)ToString(cu *instrument.ConcurrencyUsage) (string,string){
   return s,percent
 }
 
+
+func (cov *Coverage)ToMap(cu *instrument.ConcurrencyUsage, gid int) (ret map[string]int){
+  ret = make(map[string]int)
+  gids := strconv.Itoa(gid)
+  //t.AppendHeader(table.Row{"Conc Usage","Blocked","Blocking","Unblocking","No-Op"})
+  switch cu.Type{
+  case instrument.SEND,instrument.RECV:
+    ret["blocked (G"+gids+")"]=0
+    ret["unblocking (G"+gids+")"]=0
+    ret["no_op (G"+gids+")"]=0
+    if cov.blocked > 0 {
+      ret["blocked (G"+gids+")"]++
+    }
+    if cov.unblocking > 0 {
+      ret["unblocking (G"+gids+")"]++
+    }
+    if cov.no_op > 0 {
+      ret["no_op (G"+gids+")"]++
+    }
+  case instrument.CLOSE,instrument.UNLOCK,instrument.ADD,instrument.RUNLOCK:
+    ret["unblocking (G"+gids+")"]=0
+    ret["no_op (G"+gids+")"]=0
+    if cov.unblocking > 0 {
+      ret["unblocking (G"+gids+")"]++
+    }
+    if cov.no_op > 0 {
+      ret["no_op (G"+gids+")"]++
+    }
+  case instrument.SELECT:
+    if cov.selecti != nil{
+      // blocking or non-blocking
+      blocking := true
+      for casei,_ := range(cov.selecti){
+        csi := cov.selecti[uint64(casei)]
+        if csi.kindi == 3 {// default case
+          blocking = false
+        }
+      }
+      // we want to list all cases
+      for casei,csi := range(cov.selecti){
+        ci := int(casei)
+        ret["unblocking_"+strconv.Itoa(ci)+ " (G"+gids+")"]=0
+        ret["no_op_"+strconv.Itoa(ci)+" (G"+gids+")"]=0
+        if blocking{
+          ret["blocked_"+strconv.Itoa(ci) + " (G"+gids+")"]=0
+          if csi.blocked > 0 {
+            ret["blocked_"+strconv.Itoa(ci)+" (G"+gids+")"]++
+          }
+        }
+        if csi.unblocking > 0 {
+          ret["unblocking_"+strconv.Itoa(ci)+" (G"+gids+")"]++
+        }
+        if csi.no_op > 0 {
+          ret["no_op_"+strconv.Itoa(ci)+" (G"+gids+")"]++
+        }
+      }
+    } else{
+      panic("select has no selecti")
+    }
+  case instrument.LOCK:
+    ret["blocked (G"+gids+")"]=0
+    ret["blocking (G"+gids+")"]=0
+    if cov.blocked > 0 {
+      ret["blocked (G"+gids+")"]++
+    }
+    if cov.blocking > 0 {
+      ret["blocking (G"+gids+")"]++
+    }
+  case instrument.WAIT, instrument.RLOCK:
+    ret["blocked (G"+gids+")"]=0
+    ret["no_op (G"+gids+")"]=0
+    if cov.blocked > 0 {
+      ret["blocked (G"+gids+")"]++
+    }
+    if cov.no_op > 0 {
+      ret["no_op (G"+gids+")"]++
+    }
+  case instrument.SIGNAL,instrument.BROADCAST,instrument.GO,instrument.RANGE:
+    ret["covered (G"+gids+")"]=0
+    if cov.no_op > 0 {
+      ret["covered (G"+gids+")"]++
+    }
+  }
+
+  return ret
+}
+
 func (gi *GGInfo) ToString(concUsage []*instrument.ConcurrencyUsage) (string,string){
   covReq := 0
   covCov := 0
@@ -792,11 +899,11 @@ func PrintGGTree(root *GGTree,concUsage []*instrument.ConcurrencyUsage){
 }
 
 
-func (gi *GGInfo) CovNodePairs(concUsage []*instrument.ConcurrencyUsage) (map[int]*Pair){
-  pairs := make(map[int]*Pair)
+func (gi *GGInfo) CovNodeMap(concUsage []*instrument.ConcurrencyUsage) (ret map[int]map[string]int){
+  ret = make(map[int]map[string]int)
   s := fmt.Sprintf("<GGINFO: %d>\n",gi.id)
   s = s + fmt.Sprintf("\tcreateFkey: %v\n",gi.createFkey)
-  s = s + fmt.Sprintf("\tCoverageMap:\n")
+  //s = s + fmt.Sprintf("\tCoverageMap:\n")
   // sort map
   concUsageIndex  := []int{}
   for i,_ := range(gi.CoverageMap){
@@ -804,35 +911,37 @@ func (gi *GGInfo) CovNodePairs(concUsage []*instrument.ConcurrencyUsage) (map[in
   }
   sort.Ints(concUsageIndex)
   for _,i := range(concUsageIndex){
-    st,pcnt := gi.CoverageMap[i].ToString(concUsage[i])
-    covCov,err := strconv.Atoi(strings.Split(pcnt,"/")[0])
-    check(err)
-    covReq,err := strconv.Atoi(strings.Split(pcnt,"/")[1])
-    check(err)
-    pairs[i] = &Pair{covCov,covReq}
-    s = s + fmt.Sprintf("\t\t[%v]: %v (%v)\n",concUsage[i].String(),st,pcnt)
+    ret[i]=gi.CoverageMap[i].ToMap(concUsage[i],gi.id)
+    //s = s + fmt.Sprintf("\t\t[%v]: %v (%v)\n",concUsage[i].String(),st,pcnt)
   }
-
   s = s + fmt.Sprintf("</GGINFO>\n")
   //fmt.Println(s)
-  return pairs
+  return ret
 }
 
 
-func (gex *GoatExperiment) CoverageGGTree(){
-  pairs := make(map[int]*Pair)
+func (gex *GoatExperiment) UpdateCoverageReport(){
+  covmap := make(map[int]map[string]int)
   tovisit := []*GGTree{gex.GGTree}
   for ;len(tovisit)!=0;{
 		cur := tovisit[0]
     //st,pcnt = cur.ToString(concUsage)
     //fmt.Println(st)
-    covNodePairs := cur.Node.CovNodePairs(gex.ConcUsage.ConcUsage)
-    for i,covPair := range(covNodePairs){
-      if pr,ok := pairs[i];ok{
-        pr.CovCov = pr.CovCov + covPair.CovCov
-        pr.CovReq = pr.CovReq + covPair.CovReq
-      } else{
-        pairs[i] = &Pair{covPair.CovCov,covPair.CovReq}
+    cnms := cur.Node.CovNodeMap(gex.ConcUsage.ConcUsage)
+
+    for i,cnm := range(cnms){ // iterate over current node coverage to update global coverage (covmap)
+      if cm,ok := covmap[i];ok{
+        // cm := covmap[i]
+        for nodeReq,nodeCov := range(cnm){
+          if treeCov,ok2 := cm[nodeReq]; ok2{
+            cm[nodeReq] = treeCov + nodeCov
+          } else{
+            cm[nodeReq] = nodeCov
+            //panic(fmt.Sprintf("nodeReq (%v) is not in Tree for cu(%v):%v",nodeReq,i,gex.ConcUsage.ConcUsage[i].String()))
+          }
+        }
+      } else{ // first time cu[i] is adding
+        covmap[i] = cnm
       }
     }
     for _,child := range(cur.Children){ // iterate over local gtree childs to create global ggtree nodes based on them
@@ -841,10 +950,15 @@ func (gex *GoatExperiment) CoverageGGTree(){
     tovisit = tovisit[1:]
   }
 
+  gex.ConcUsage.ConcUsageReport = covmap
+}
+
+func (gex *GoatExperiment) PrintCoverageReport(countNoop bool) float64{
+  covmap  := gex.ConcUsage.ConcUsageReport
 
   t := table.NewWriter()
   t.SetOutputMirror(os.Stdout)
-  t.AppendHeader(table.Row{"Conc Usage","CovCov","CovReq","%"})
+  t.AppendHeader(table.Row{"Conc Usage","CovReq","CovCov","%"})
   totCovCov := 0
   totCovReq := 0
 
@@ -853,19 +967,54 @@ func (gex *GoatExperiment) CoverageGGTree(){
     cuTruncs := strings.Split(cu.String(),"/")
     cuTrunc := cuTruncs[len(cuTruncs)-1]
     row = append(row,cuTrunc)
-    if pair,ok := pairs[i] ; ok{
-      row = append(row,pair.CovCov)
-      totCovCov = totCovCov + pair.CovCov
-      row = append(row,pair.CovReq)
-      totCovReq = totCovReq + pair.CovReq
-      row = append(row,float64(pair.CovCov)/float64(pair.CovReq))
+
+
+    if _,ok := covmap[i]; ok{
+      // sort requirements
+      reqs := []string{}
+      for req,_ := range(covmap[i]){
+          reqs = append(reqs,req)
+      }
+      sort.Strings(reqs)
+
+      reqst := ""
+      covst := ""
+      for _,req := range(reqs){
+        if cu.Type == instrument.SEND || cu.Type == instrument.RECV || cu.Type ==instrument.SELECT{
+          if !countNoop && strings.HasPrefix(req,"no_op"){
+            continue
+          }
+        }
+        reqst = reqst + req + "\n"
+        totCovReq++
+        if covmap[i][req] > 0 {
+          covst = covst + "*\n"
+          totCovCov++
+        }else{
+          covst = covst + "\n"
+        }
+      }
+      row = append(row,strings.TrimSuffix(reqst, "\n"))
+      row = append(row,strings.TrimSuffix(covst, "\n"))
+      row = append(row,"")
     } else{
-      row = append(row,0)
-      row = append(row,1)
-      row = append(row,float64(0))
+      row = append(row,"covered")
+      totCovReq++
+      row = append(row,"")
+      if _,ok := covmap[-1] ; ok{
+        row = append(row,"nb")
+      } else{
+        row = append(row,"")
+      }
+
     }
+
     t.AppendRow(row)
+    t.AppendSeparator()
   }
+
+  t.AppendSeparator()
+
   var row []interface{}
   row = append(row,"Total")
   row = append(row,totCovCov)
@@ -873,14 +1022,9 @@ func (gex *GoatExperiment) CoverageGGTree(){
   row = append(row,float64(totCovCov)/float64(totCovReq))
   t.AppendRow(row)
   t.Render()
+
+  return float64(totCovCov)/float64(totCovReq)
 }
-
-type Pair struct{
-  CovCov         int
-  CovReq         int
-}
-
-
 
 
 

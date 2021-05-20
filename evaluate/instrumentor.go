@@ -113,15 +113,13 @@ func goleak_inst(src,dest string) []*instrument.ConcurrencyUsage{
 
 
 func goat_trace_inst(src,dest string) []*instrument.ConcurrencyUsage{
-  if !instrument.InstrumentTraceOnly(src, dest){
-    panic("goat trace inst paniced")
-  } // bool
-  return nil
+  return instrument.InstrumentTraceOnly(src, dest)
 }
+
 func goat_critic_inst(src,dest string) []*instrument.ConcurrencyUsage{
   return instrument.InstrumentCriticOnly(src,dest) // critical
-
 }
+
 func goat_delay_inst(src,dest string) []*instrument.ConcurrencyUsage{
   return instrument.InstrumentCriticalPoints(src,dest) // critical
 }
