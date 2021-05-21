@@ -71,26 +71,8 @@ func main(){
   //checkJson()
 
   //customVis(flagPath,flagTool,true)
-  evaluate.EvaluateCoverage(flagPath,100)
-
-
-
-	// SingleSource
-	//      instrument
-	//            concurrency usage
-	//            tracing
-	//            sched
-	//            covearge guiding
-	//      execute
-	//            build
-	//            run
-	//            collect trace
-	//            store
-	//      measuring the coverage
-	//      other reports
-	//
-	// Benchmark
-	//   iterate over benchmark
+  //evaluate.EvaluateCoverage(flagPath,500)
+  evaluate.EvaluateComparison(flagPath,500)
 
 }
 

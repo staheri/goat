@@ -9,8 +9,8 @@ import(
   "sort"
 )
 
-var btools = []string{"builtinDL","goleak","lockDL","goat_m","goat_u","goat_d1","goat_d2","goat_d3"}
-var nbtools = []string{"race","goat_race_d1","goat_race_d2","goat_race_d3","goat_race_d4","goat_race_d5","goat_race_d6","goat_race_d7"}
+var btools = []string{"builtinDL","goleak","lockDL","goat_d0","goat_d1","goat_d2","goat_d3"}
+var nbtools = []string{"race","goat_race_d0","goat_race_d1","goat_race_d2","goat_race_d3","goat_race_d4","goat_race_d5","goat_race_d6","goat_race_d7"}
 
 
 func TableSummaryPerBug(rx *RootExperiment){
@@ -242,21 +242,24 @@ func CoverageSummary(ex Ex) ([]interface{}){
   prev_cov1 := 0.0
   prev_cov2 := 0.0
   testName := ""
+  delayBound := 0
   coverage1Leaps := []int{}
   coverage2Leaps := []int{}
   c1gc2 := false
   finalCoverage := 0.0
   t := table.NewWriter()
   t.SetOutputMirror(os.Stdout)
-  t.AppendHeader(table.Row{"Test","Cov1 (%)","Cov2 (%)","Error"})
+  t.AppendHeader(table.Row{"Bug","Delay Bound","Cov1 (%)","Cov2 (%)","Error"})
 
   switch ex.(type){
   case *GoatExperiment:
     gex := ex.(*GoatExperiment)
     for i,resg := range(gex.Results){
       var row []interface{}
-      testName = fmt.Sprintf("%v on %v (%d)\n",gex.Target.BugName,gex.ID,i+1)
+      testName = fmt.Sprintf("%v_%v",gex.Target.BugType,gex.Target.BugName)
+      delayBound = gex.Bound
       row = append(row,testName)
+      row = append(row,gex.Bound)
       if resg.Coverage1 != prev_cov1{
         coverage1Leaps = append(coverage1Leaps,i+1)
         prev_cov1 = resg.Coverage1
@@ -292,9 +295,10 @@ func CoverageSummary(ex Ex) ([]interface{}){
 
   t1 := table.NewWriter()
   t1.SetOutputMirror(os.Stdout)
-  t1.AppendHeader(table.Row{"Test","1st Fail","Cov1 Leaps", "Cov2 Leaps","Errors","Cov1 > Cov2","Final Coverage"})
+  t1.AppendHeader(table.Row{"Bug","Delay Bound","1st Fail","Cov1 Leaps", "Cov2 Leaps","Errors","Cov1 > Cov2","Final Coverage"})
   var row []interface{}
-  row = append(row,strings.TrimSuffix(testName, "\n"))
+  row = append(row,testName)
+  row = append(row,delayBound)
   row = append(row,first_fail)
   row = append(row,fmt.Sprintf("%v",coverage1Leaps))
   row = append(row,fmt.Sprintf("%v",coverage2Leaps))

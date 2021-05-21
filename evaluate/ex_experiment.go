@@ -14,15 +14,17 @@ import(
 
 )
 
-const RESDIR = "/Volumes/DATA/goatws/results"
-const TO = 5 // second
+const RESDIR = "/home/saeed/goatws/results"
+const TO = 10 // second
 const CPU = 0
 const MAXPROCS = "4"
 const EVENT_BOUND = 20000000
 const WORKDIR = ""
-const ORIGINAL_GO = "go.1.15.6"
-const NEW_GO = "myGo.1.15.6"
-
+const GOVER_ORIG = "/home/saeed/go-builds/go-orig-1.15.6"
+const GOVER_GOAT = "/home/saeed/go-builds/go-goat-1.15.6"
+const TERMINATION = "hitBug"
+// const TERMINATION = "ignoreGDL"
+// const TERMINATION = "thresh"
 type InstFunc func(string,string) []*instrument.ConcurrencyUsage
 type DetectFunc func([]byte) (bool,string)
 
@@ -71,13 +73,10 @@ type GoatExperiment struct{
   LastFailedTrace     string                `json:"lastFailedTrace"`
   LastSuccessTrace    string                `json:"lastSuccessTrace"`
   FirstFailedAfter    int                   `json:"firstFailedAfter"`
-  GGTree              *GGTree
-  TotalGG             int
-  ConcUsage           *ConcUsageStruct
-  // CoverageTable       CoverageTable         `json:"covTable"`
-  GStack              *GlobalStack
-  // GGMap               map[int]*GlobalGInfo
-  // GOverlap            map[string][]int
+  GGTree              *GGTree               `json:"-"` // (will be reconstructed from replay)
+  TotalGG             int                   `json:"-"` // (will be reconstructed from replay)
+  ConcUsage           *ConcUsageStruct      `json:"-"` // (will be reconstructed from replay)
+  GStack              *GlobalStack          `json:"-"` // (will be reconstructed from replay)
 }
 
 // Struct for Tool experiments
@@ -92,14 +91,14 @@ type Result struct{
   Desc          string                 `json:"desc,omitempty"`
   TracePath     string                 `json:"tracePath,omitempty"` // for goat
   TraceSize     int                    `json:"traceSize,omitempty"` // for goat
-  TotalG        int                `json:"totalg,omitempty"` // for goat
-  TotalCh       int                `json:"totalch,omitempty"` // for goat
-  StackSize     int                `json:"stackSize,omitempty"` // for goat
-  EventsLen     int                `json:"eventsLen,omitempty"` // for goat
-  Detected      bool                   `json:"detected"`
-  LStack        map[uint64]string
-  Coverage1     float64
-  Coverage2     float64
+  TotalG        int                    `json:"totalg,omitempty"` // for goat
+  TotalCh       int                    `json:"totalch,omitempty"` // for goat
+  StackSize     int                    `json:"stackSize,omitempty"` // for goat
+  EventsLen     int                    `json:"eventsLen,omitempty"` // for goat
+  Detected      bool                   `json:"detected"` // for goat
+  LStack        map[uint64]string      `json:"lstack,omitempty"` // for goat (will be reconstructed from replay)
+  Coverage1     float64                `json:"coverage1,omitempty"` // for goat (will be reconstructed from replay)
+  Coverage2     float64                `json:"coverage1,omitempty"` // for goat (will be reconstructed from replay)
 }
 
 ///////////////////////////////////////////////////////
@@ -147,9 +146,9 @@ func (gex *GoatExperiment) Init(race bool) {
 
   fmt.Printf("%s: Init...\n",gex.ID)
   if race{
-    predir = filepath.Join(ws,gex.Target.BugType,gex.Target.BugName,"goat_race")
+    predir = filepath.Join(ws,"p"+MAXPROCS,gex.Target.BugType+"_"+gex.Target.BugName,"goat_race")
   }else{
-    predir = filepath.Join(ws,gex.Target.BugType,gex.Target.BugName,"goat_"+gex.GetMode())
+    predir = filepath.Join(ws,"p"+MAXPROCS,gex.Target.BugType+"_"+gex.Target.BugName,"goat_"+gex.GetMode())
   }
 
   err := os.MkdirAll(predir,os.ModePerm)
@@ -162,6 +161,10 @@ func (gex *GoatExperiment) Init(race bool) {
   err = os.MkdirAll(filepath.Join(predir,"bin"),os.ModePerm)
   check(err)
   err = os.MkdirAll(filepath.Join(predir,"out"),os.ModePerm)
+  check(err)
+  err = os.MkdirAll(filepath.Join(predir,"results"),os.ModePerm)
+  check(err)
+  err = os.MkdirAll(filepath.Join(predir,"traceTimes"),os.ModePerm)
   check(err)
   gex.TraceDir = filepath.Join(predir,"traces",gex.ID)
   err = os.MkdirAll(gex.TraceDir,os.ModePerm)
@@ -208,9 +211,6 @@ func (gex *GoatExperiment) Instrument() {
   }
   destination := filepath.Join(gex.PrefixDir,"src")
   concUsage := gex.Instrumentor(gex.Target.BugDir,destination)
-  if gex.Bound < 1 && concUsage != nil{
-    panic("mismatch bound & instrument")
-  }
   // write critic to a file
   // instead store coverage in the GoatExperiment
   if concUsage != nil{
@@ -270,7 +270,7 @@ func (tex *ToolExperiment) Init(race bool) {
       tex.Detector = builtinDL_detector
     }
   }
-  predir := filepath.Join(ws,tex.Target.BugType,tex.Target.BugName,tex.ToolID)
+  predir := filepath.Join(ws,"p"+MAXPROCS,tex.Target.BugType+"_"+tex.Target.BugName,tex.ToolID)
   err := os.MkdirAll(predir,os.ModePerm)
   check(err)
   tex.PrefixDir = predir
@@ -280,6 +280,8 @@ func (tex *ToolExperiment) Init(race bool) {
   err = os.MkdirAll(filepath.Join(predir,"bin"),os.ModePerm)
   check(err)
   err = os.MkdirAll(filepath.Join(predir,"out"),os.ModePerm)
+  check(err)
+  err = os.MkdirAll(filepath.Join(predir,"results"),os.ModePerm)
   check(err)
 
   tex.OutPath = predir+"/out/"+tex.ToolID+".out"

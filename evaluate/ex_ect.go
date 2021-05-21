@@ -34,18 +34,18 @@ func (ex *ECTExperiment) Init(race bool){
   switch ex.ID {
   case "ECT_native":
     ex.Instrumentor = builtinDL_inst
-    ex.GoVer = ORIGINAL_GO
+    ex.GoVer = GOVER_ORIG
     predir = filepath.Join(ws,ex.Target.BugType,ex.Target.BugName,"native")
   case "ECT_ET":
     ex.Instrumentor = goat_trace_inst
-    ex.GoVer = ORIGINAL_GO
+    ex.GoVer = GOVER_ORIG
     predir = filepath.Join(ws,ex.Target.BugType,ex.Target.BugName,"tracing")
     ex.TraceDir = filepath.Join(predir,"traces",ex.ID)
     err := os.MkdirAll(ex.TraceDir,os.ModePerm)
     check(err)
   case "ECT_ECT":
     ex.Instrumentor = goat_trace_inst
-    ex.GoVer = NEW_GO
+    ex.GoVer = GOVER_GOAT
     predir = filepath.Join(ws,ex.Target.BugType,ex.Target.BugName,"tracing")
     ex.TraceDir = filepath.Join(predir,"traces",ex.ID)
     err := os.MkdirAll(ex.TraceDir,os.ModePerm)
@@ -101,7 +101,7 @@ func (ex *ECTExperiment) Build(race bool) {
   fmt.Printf("%s: Build...\n",ex.ID)
 
   // change link of GO
-  cmd := exec.Command("sudo","ln","-nsf","/usr/local/"+ex.GoVer+"/","/usr/local/go")
+  cmd := exec.Command("ln","-nsf",ex.GoVer,os.Getenv("GOROOT"))
   err := cmd.Run()
   check(err)
 

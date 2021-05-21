@@ -30,6 +30,105 @@ func ReadGoKerConfig(bugtype string) (map[string][]string) {
   return ret
 }
 
+
+func ReadExperimentResults_tool(fname string) (tex *ToolExperiment){
+  fmt.Println("Reading ",fname)
+  var fields map[string]interface{}
+  if !checkFile(fname){
+    panic("Error reading JSON file: "+fname)
+  }
+  bf ,_ := ioutil.ReadFile(fname)
+  err := json.Unmarshal([]byte(bf),&fields)
+  check(err)
+
+  tex = &ToolExperiment{}
+  tex.Timeout = int(fields["timeout"].(float64))
+  tex.Cpu = int(fields["cpu"].(float64))
+  tex.PrefixDir = fields["prefixDir"].(string)
+  tex.BinaryName = fields["binaryName"].(string)
+  tex.OutPath = fields["outPath"].(string)
+
+  resultsList := fields["results"].([]interface{})
+  results := []*Result{}
+  for _,tres := range(resultsList){
+    rs := &Result{}
+    res := tres.(map[string]interface{})
+    rs.Time = time.Duration(res["time"].(float64))*time.Nanosecond
+    if _,ok := res["desc"];ok{
+      rs.Desc = res["desc"].(string)
+    }
+    rs.Detected = res["detected"].(bool)
+    results = append(results,rs)
+  }
+  tex.Results = results
+  tex.ToolID = fields["toolid"].(string)
+  return tex
+}
+
+func ReadExperimentResults_goat(fname string) (exp *GoatExperiment){
+  fmt.Println("Reading ",fname)
+  var fields map[string]interface{}
+  if !checkFile(fname){
+    panic("Error reading JSON file: "+fname)
+  }
+  bf ,_ := ioutil.ReadFile(fname)
+  err := json.Unmarshal([]byte(bf),&fields)
+  check(err)
+  gex := &GoatExperiment{}
+  gex.Timeout = int(fields["timeout"].(float64))
+  gex.Cpu = int(fields["cpu"].(float64))
+  gex.PrefixDir = fields["prefixDir"].(string)
+  gex.BinaryName = fields["binaryName"].(string)
+  gex.OutPath = fields["outPath"].(string)
+
+  resultsList := fields["results"].([]interface{})
+  results := []*Result{}
+  for _,tres := range(resultsList){
+    rs := &Result{}
+    res := tres.(map[string]interface{})
+    rs.Time = time.Duration(res["time"].(float64))*time.Nanosecond
+    if _,ok := res["desc"];ok{
+      rs.Desc = res["desc"].(string)
+    }
+    if tracepath,ok := res["tracePath"];ok{
+      rs.TracePath = tracepath.(string)
+    }
+    if tracesize,ok := res["traceSize"];ok{
+      rs.TraceSize = int(tracesize.(float64))
+    }
+    if stacksize,ok := res["stackSize"];ok{
+      rs.StackSize = int(stacksize.(float64))
+    }
+    if eventslen,ok := res["eventsLen"];ok{
+      rs.EventsLen = int(eventslen.(float64))
+    }
+    if totalG,ok := res["totalg"];ok{
+      rs.TotalG = int(totalG.(float64))
+    }
+    if totalCh,ok := res["totalch"];ok{
+      rs.TotalCh =int(totalCh.(float64))
+    }
+    rs.Detected = res["detected"].(bool)
+    results = append(results,rs)
+  }
+  gex.Results = results
+  gex.ID = fields["goatid"].(string)
+  gex.Bound = int(fields["goatBound"].(float64))
+  gex.TraceDir = fields["traceDir"].(string)
+  gex.LastFailedTrace = fields["lastFailedTrace"].(string)
+  gex.LastSuccessTrace = fields["lastSuccessTrace"].(string)
+  gex.FirstFailedAfter = int(fields["firstFailedAfter"].(float64))
+  return gex
+}
+
+
+//
+// GGTree              *GGTree               `json:"ggtree"`
+// TotalGG             int                   `json:"totalgg"`
+// ConcUsage           *ConcUsageStruct      `json:"concusage"`
+// GStack              *GlobalStack          `json:"gstack"`
+
+
 // Read experiment results JSON file
 func ReadResults(fname string) map[string]Ex{
   fmt.Println("Reading ",fname)
@@ -194,7 +293,7 @@ func ReadConcUsage(fname string) (ret []*instrument.ConcurrencyUsage){
   if len(dat) == 0 {
     panic("ConcUsage JSON length is zero")
   }
-  fmt.Println("Len Dat: ", len(dat))
+  //fmt.Println("Len Dat: ", len(dat))
   for _,cu_raw := range(dat){
     cui := cu_raw.(map[string]interface{})
     CU := &instrument.ConcurrencyUsage{}

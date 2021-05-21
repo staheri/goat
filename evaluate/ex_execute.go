@@ -68,6 +68,7 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
   }else{ // Deadlock detection
     // placeholder for results
     result := &Result{}
+    var parseRes *trace.ParseResult
 
     // Set environment variables for GOAT experiments
     _b := strconv.Itoa(int(gex.Bound))
@@ -76,48 +77,62 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
 
     // FileName name to store events
     traceName := fmt.Sprintf("%s_B%v_I%d",gex.Target.BugName,_b,i)
-
+    result.TracePath = filepath.Join(gex.TraceDir,traceName)+".trace"
     ///////////////////////////////////////////////////
-    // Execute the (instrumented & built) application
+    // check if trace exist first
+    // if not, Execute the (instrumented & built) application
     // Measure time
     ///////////////////////////////////////////////////
-    execRes,err := instrument.ExecuteTrace(filepath.Join(gex.PrefixDir,"bin",gex.BinaryName))
+    if checkFile(result.TracePath){ // if trace exist
+      // read trace
+      // obtain trace
+    	trc,size,err := traceops.ReadTrace(result.TracePath)
+    	check(err)
+      result.TraceSize = size
+      parseRes,err = trace.ParseTrace(trc,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName))
+    	check(err)
+      // read trace time
+      result.Time,_ = time.ParseDuration(traceops.ReadTime(filepath.Join(gex.PrefixDir,"traceTimes",traceName)+".time"))
 
-    result.Time = execRes.ExecTime
+    } else{ // trace does not exist, now execute trace
 
-    // Handle runtime errors & empty trace
-    if err != nil{
-      if execRes != nil{
-        // CRASH - Runtime error
-        _,err1 := fmt.Fprintf(gex.OutBuf,"-----\nRun # %d\n----\n%v\n%v\n",i,"Runtime error: ",execRes.TraceBuffer.String())
-        check(err1)
-        gex.OutBuf.Flush()
-        result.Detected = true
-        result.Desc = "CRASH"
-        return result
-      } else{
-        // Empty Trace
-        _,err1 := fmt.Fprintf(gex.OutBuf,"-----\nRun # %d\n----\n%v\n",i,"Empty Trace")
-        check(err1)
-        gex.OutBuf.Flush()
-        result.Detected = false
-        result.Desc = "NONE"
-        return result
+      execRes,err := instrument.ExecuteTrace(filepath.Join(gex.PrefixDir,"bin",gex.BinaryName))
+      result.Time = execRes.ExecTime
+      // write trace time
+      traceops.WriteTime(fmt.Sprintf("%v",result.Time),filepath.Join(gex.PrefixDir,"traceTimes",traceName)+".time")
+      // Handle runtime errors & empty trace
+      if err != nil{
+        if execRes != nil{
+          // CRASH - Runtime error
+          _,err1 := fmt.Fprintf(gex.OutBuf,"-----\nRun # %d\n----\n%v\n%v\n",i,"Runtime error: ",execRes.TraceBuffer.String())
+          check(err1)
+          gex.OutBuf.Flush()
+          result.Detected = true
+          result.Desc = "CRASH"
+          return result
+        } else{
+          // Empty Trace
+          _,err1 := fmt.Fprintf(gex.OutBuf,"-----\nRun # %d\n----\n%v\n",i,"Empty Trace")
+          check(err1)
+          gex.OutBuf.Flush()
+          result.Detected = false
+          result.Desc = "NONE"
+          return result
+        }
       }
-    }
-    ////////////////////////
-    // Process Traces
-    ///////////////////////
-    // Write to file
-    result.TracePath = filepath.Join(gex.TraceDir,traceName)+".trace"
-    traceBytes_n := traceops.WriteTrace(execRes.TraceBuffer.Bytes(),result.TracePath)
-    result.TraceSize = traceBytes_n
-    fmt.Printf("\tTrace File: %s \n\tSize: %d bytes\n",traceName,traceBytes_n)
-    // Parse trace
-    parseRes, err := trace.ParseTrace(execRes.TraceBuffer, filepath.Join(gex.PrefixDir,"bin",gex.BinaryName))
-    check(err)
-    fmt.Printf("\t# Events: %d\n",len(parseRes.Events))
+      ////////////////////////
+      // Process Traces
+      ///////////////////////
+      // Write to file
+      traceBytes_n := traceops.WriteTrace(execRes.TraceBuffer.Bytes(),result.TracePath)
+      result.TraceSize = traceBytes_n
+      fmt.Printf("\tWrite to Trace File: %s \n\tSize: %d bytes\n",traceName,traceBytes_n)
+      // Parse trace
+      parseRes, err = trace.ParseTrace(execRes.TraceBuffer, filepath.Join(gex.PrefixDir,"bin",gex.BinaryName))
+      check(err)
+    } // parseRes is either obtained from execution or pre execution
 
+    fmt.Printf("\t# Events: %d\n",len(parseRes.Events))
     // Check length of events
     result.EventsLen = len(parseRes.Events)
     if len(parseRes.Events) > EVENT_BOUND {
@@ -129,9 +144,6 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
     // Check for deadlocks
     deadlock_report := traceops.DeadlockChecker(parseRes,false) // longReport = false
 
-    // coverage
-    // if i = 0 : it is the first run, create goroutine ids, create coverage table
-
     // print events
     // for i,e := range(parseRes.Events){
     //  fmt.Printf("****\nG%v (idx:%v)\n%v\n",e.G,i,e.String())
@@ -140,22 +152,16 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
     // get the local stack
     result.LStack = gex.UpdateGStack(parseRes.Stacks)
     gex.UpdateConcUsage(parseRes.Stacks,result.LStack)
-    //if i == 0{ // it is the first run, create goroutine ids, create coverage table
     gex.UpdateGGTree(parseRes,result.LStack)
-    //}
     gex.UpdateCoverageGGTree(parseRes,result.LStack)
-    //gex.PrintGlobals()
-    //PrintGGTree(gex.GGTree,gex.ConcUsage.ConcUsage)
     gex.UpdateCoverageReport()
     result.Coverage1 = gex.PrintCoverageReport(true)
     result.Coverage2 = gex.PrintCoverageReport(false)
 
-    //traceops.MeasureCoverage(parseRes,gex.CoverageTable.ConcUsage)
-
     // Finalize result and return
     result.TotalG = deadlock_report.TotalG
     if deadlock_report.GlobalDL {
-      _,err = fmt.Fprintf(gex.OutBuf,"-----\nRun # %d\n----\n%v\n%v\n",i,"GOAT: Global Deadlock",deadlock_report.Message)
+      _,err := fmt.Fprintf(gex.OutBuf,"-----\nRun # %d\n----\n%v\n%v\n",i,"GOAT: Global Deadlock",deadlock_report.Message)
       check(err)
 
       gex.OutBuf.Flush()
@@ -169,7 +175,7 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
       return result
 
     } else if deadlock_report.Leaked != 0{
-      _,err = fmt.Fprintf(gex.OutBuf,"-----\nRun # %d\n----\n%v\n%v\n",i,"GOAT: Partial Deadlock, Leaked Goroutines:"+strconv.Itoa(deadlock_report.Leaked),deadlock_report.Message)
+      _,err := fmt.Fprintf(gex.OutBuf,"-----\nRun # %d\n----\n%v\n%v\n",i,"GOAT: Partial Deadlock, Leaked Goroutines:"+strconv.Itoa(deadlock_report.Leaked),deadlock_report.Message)
       check(err)
 
       gex.OutBuf.Flush()
@@ -183,7 +189,7 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
 
     }
      // No Deadlock detected -> PASS
-    _,err = fmt.Fprintf(gex.OutBuf,"-----\nRun # %d\n----\n%v\n",i,"PASS")
+    _,err := fmt.Fprintf(gex.OutBuf,"-----\nRun # %d\n----\n%v\n",i,"PASS")
     check(err)
 
     gex.OutBuf.Flush()

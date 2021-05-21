@@ -8,7 +8,8 @@ import(
   "path/filepath"
   "encoding/json"
   "github.com/staheri/goatlib/instrument"
-  _"github.com/staheri/goatlib/traceops"
+  "github.com/staheri/goatlib/trace"
+  "github.com/staheri/goatlib/traceops"
   "strings"
   "strconv"
   "github.com/jedib0t/go-pretty/table"
@@ -22,33 +23,34 @@ type RootExperiment struct{
   ReportJSON  string             `json:"reportJSON"`
 }
 
+var(
+  coverage_d2 = []string{"goat_d0","goat_d1"}
+  coverage_d3 = []string{"goat_d0","goat_d1","goat_d2"}
+  coverage_d5 = []string{"goat_d0","goat_d1","goat_d2","goat_d3","goat_d4"}
+  coverage_d10 = []string{"goat_d0","goat_d1","goat_d2","goat_d3","goat_d4","goat_d5","goat_d6","goat_d7","goat_d8","goat_d9"}
+
+  comparison = []string{"goat_d0","goat_d1","goat_d2","goat_d3","builtinDL","goleak","lockDL"}
+)
 
 func EvaluateCoverage(configFile string, thresh int) {
-  identifier := "blocking"
-  causes := ReadGoKerConfig(identifier)
-  //fmt.Println(causes)
-
   colorReset := "\033[0m"
   colorRed := "\033[31m"
   colorGreen := "\033[32m"
 
+  dx := coverage_d5
+
   // a map to hold each RootExperiment
   allBugs := make(map[string]*RootExperiment)
 
-
-  // obtain configName
-  configName := strings.Split(filepath.Base(configFile),".")[0]
-
+  // read causes
+  causes := make(map[string]map[string][]string)
+  causes["blocking"] = ReadGoKerConfig("blocking")
+  causes["nonblocking"] = ReadGoKerConfig("nonblocking")
 
   // init table
   tall := table.NewWriter()
   tall.SetOutputMirror(os.Stdout)
-  tall.AppendHeader(table.Row{"Test","1st Fail","Cov1 Leaps", "Cov2 Leaps","Errors","Cov1 > Cov2","Final Coverage"})
-
-  // obtain result dir
-  reportDir := filepath.Join(RESDIR,identifier+"_"+configName+"_"+strconv.Itoa(thresh))
-  err := os.MkdirAll(reportDir,os.ModePerm)
-  check(err)
+  tall.AppendHeader(table.Row{"Bug","Delay Bound","1st Fail","Cov1 Leaps", "Cov2 Leaps","Errors","Cov1 > Cov2","Final Coverage"})
 
   for _,path := range(ReadLines(configFile)){
     paths, err := filepath.Glob(path)
@@ -56,67 +58,352 @@ func EvaluateCoverage(configFile string, thresh int) {
     // iterate over each bug
     for _,p := range(paths){
       // extract bug info
-      bugFullName := instrument.GobenchAppNameFolder(p) // bugType_BugAppName_BugCommitID
-      bugName := strings.Split(bugFullName,identifier+"_")[1]
+      fmt.Println("p: ",p)
+      bugInfo := strings.Split(instrument.GobenchAppNameFolder(p),"_") // bugType_BugAppName_BugCommitID
+      bugType := bugInfo[0]
+      bugName := bugInfo[1] + "_" + bugInfo[2]
+      bugFullName := bugInfo[0] + "_" + bugInfo[1] + "_" + bugInfo[2]
+
       if bugName == ""{
         panic("wrong bugName")
       }
       mainExp := &RootExperiment{}
       // create bug now
       fmt.Println("BugName:",bugName,", path: ",p,", fullname: ",bugFullName)
-      target := &Bug{bugName,p,identifier,causes[bugName][0],causes[bugName][1]}
+
+      target := &Bug{bugName,p,bugType,causes[bugType][bugName][0],causes[bugType][bugName][1]}
       mainExp.Bug = target
       mainExp.Exps = make(map[string]Ex)
 
-      exes := []Ex{}
-      //exes := []interface{}{}
-      //exes = append(exes,&GoatExperiment{Experiment: Experiment{Target:target},Bound:-1})
-      for d := 1 ; d < 10 ; d++{
-        exes = append(exes,&GoatExperiment{Experiment: Experiment{Target:target},Bound:d})
-      }
+      for d,exp := range(dx){
+        // figure exp report file
+        ws := os.Getenv("GOATWS")
+        if ws == "" {
+          panic("GOATWS is not set!")
+        }
+        // we have to re-discover gex prefixdir to see if we have ready results
+        //predir = filepath.Join(ws,gex.Target.BugType,gex.Target.BugName,"goat_"+gex.GetMode())
+        expReport := ws + "/"
+        expReport = expReport + "p"+MAXPROCS+"/"
+        expReport = expReport + bugFullName + "/"
+        if d < 1 {
+          expReport = expReport + "goat_trace/"
+        } else{
+          expReport = expReport + "goat_delay/"
+        }
+        expReport = expReport + "results/"
+        expReport = expReport + "p"+MAXPROCS+"_"+bugFullName+"_"+exp+"_T"+strconv.Itoa(thresh)+"_"+TERMINATION+".json"
 
-      for _,ex := range(exes){
-        // pre-set
-        ex.Init(false)
-        ex.Instrument()
-        // after instrument, we have the concusage and concusageMap
-        ex.Build(false)
-        IDD := ""
-        for i:=0 ; i < thresh ; i++{
-          switch ex.(type){
-          case *GoatExperiment:
-            gex := ex.(*GoatExperiment)
-            IDD = gex.ID
+        gex := &GoatExperiment{}
+        if checkFile(expReport){ // if report exist
+          gex = ReadExperimentResults_goat(expReport)
+          gex.Target = target
+          // gex lacks coverage data (lstack, gstack, concurrency usage,...)
+
+          // missing init stuff
+          // setup global stack
+          fmap := make(map[int]*trace.Frame)
+          fsmap := make(map[string]int)
+          gstack := &GlobalStack{fmap,fsmap}
+          gex.GStack = gstack
+
+          // missing instrument stuff
+          concUsage := ReadConcUsage(gex.PrefixDir+"/concUsage.json")
+          if concUsage != nil{
+            gex.ConcUsage = &ConcUsageStruct{ConcUsage:concUsage}
+            gex.InitConcMap()
+          }
+
+          // missing build stuff
+          dest := filepath.Join(gex.PrefixDir,"bin")
+          files, err := filepath.Glob(dest+"/*"+gex.GetMode())
+          check(err)
+          if len(files) != 0{ // check if binary exist
+            gex.BinaryName = filepath.Base(files[0]) // assign the first found binary to current gex binaryPath
+          }
+
+          // missing execute stuff (from results)
+          newResults := []*Result{}
+          // iterate over results
+          for _,res := range(gex.Results){
+            result := res
+            // get the local stack
+            if res.Desc == "CRASH"|| res.Desc == "NONE"{
+              // it does not have any trace
+              newResults = append(newResults,result)
+              continue
+            }
+            parseRes := traceops.ReadParseTrace(result.TracePath, filepath.Join(gex.PrefixDir,"bin",gex.BinaryName))
+
+            result.LStack = gex.UpdateGStack(parseRes.Stacks)
+            gex.UpdateConcUsage(parseRes.Stacks,result.LStack)
+            gex.UpdateGGTree(parseRes,result.LStack)
+            gex.UpdateCoverageGGTree(parseRes,result.LStack)
+            gex.UpdateCoverageReport()
+            result.Coverage1 = gex.PrintCoverageReport(true)
+            result.Coverage2 = gex.PrintCoverageReport(false)
+            newResults = append(newResults,result)
+          }
+          gex.Results = newResults
+        } else{
+          gex = &GoatExperiment{Experiment: Experiment{Target:target},Bound: d}
+          gex.Init(false)
+          gex.Instrument()
+          gex.Build(false)
+
+iteration:for i:=0 ; i < thresh ; i++{
             fmt.Printf("Test %v on %v (%d/%d)\n",gex.Target.BugName,gex.ID,i+1,thresh)
             res := gex.Execute(i,false)
-            // after the first execute, we can say
             gex.Results = append(gex.Results,res)
-            // Update Coverage
-            //gex.Coverage.Update(res.CoverageReport)
-
             if res.Detected{
             	fmt.Println(string(colorRed),res.Desc,string(colorReset))
+              switch TERMINATION {
+              case "hitBug":
+                break iteration
+              case "ignoreGDL":
+                if res.Desc == "GDL"{
+                  break iteration
+                }
+              default:
+              }
             }else{
               fmt.Println(string(colorGreen),"PASS",string(colorReset))
             }
-
           }
+
+          // store gex into json
+          // check if expReport path matches gex.PrefixDir
+          if filepath.Dir(expReport) != gex.PrefixDir+"/results" {
+            panic(fmt.Sprintf("mismatch expReport dir\n%v\n%v\n)",filepath.Dir(expReport),gex.PrefixDir+"/results"))
+          }
+          // write to json file
+          rep,err := os.Create(expReport)
+          check(err)
+          newdat ,err := json.MarshalIndent(gex,"","    ")
+          check(err)
+          _,err = rep.WriteString(string(newdat))
+          check(err)
+          rep.Close()
         }
-        mainExp.Exps[IDD] = ex
-        tall.AppendRow(CoverageSummary(ex))
+        mainExp.Exps[gex.ID] = gex
+        tall.AppendRow(CoverageSummary(gex))
         tall.AppendSeparator()
         tall.Render()
         tall.RenderCSV()
-        time.Sleep(5*time.Second)
       }
-      allBugs[bugName] = mainExp
-    }
-
-
-  }
+      allBugs[bugFullName] = mainExp
+    } // end of inner paths
+  }// end of config file
 }
 
-func EvaluateBlocking(configFile string, thresh int) {
+func EvaluateComparison(configFile string, thresh int, isRace bool) {
+  var ex Ex
+  colorReset := "\033[0m"
+  colorRed := "\033[31m"
+  colorGreen := "\033[32m"
+
+  dx := comparison
+
+  // a map to hold each RootExperiment
+  allBugs := make(map[string]*RootExperiment)
+
+  // read causes
+  causes := make(map[string]map[string][]string)
+  causes["blocking"] = ReadGoKerConfig("blocking")
+  causes["nonblocking"] = ReadGoKerConfig("nonblocking")
+
+  for _,path := range(ReadLines(configFile)){
+    paths, err := filepath.Glob(path)
+    check(err)
+    // iterate over each bug
+    for _,p := range(paths){
+      // extract bug info
+      fmt.Println("p: ",p)
+      bugInfo := strings.Split(instrument.GobenchAppNameFolder(p),"_") // bugType_BugAppName_BugCommitID
+      bugType := bugInfo[0]
+      bugName := bugInfo[1] + "_" + bugInfo[2]
+      bugFullName := bugInfo[0] + "_" + bugInfo[1] + "_" + bugInfo[2]
+
+      if bugName == ""{
+        panic("wrong bugName")
+      }
+      mainExp := &RootExperiment{}
+      // create bug now
+      fmt.Println("BugName:",bugName,", path: ",p,", fullname: ",bugFullName)
+
+      target := &Bug{bugName,p,bugType,causes[bugType][bugName][0],causes[bugType][bugName][1]}
+      mainExp.Bug = target
+      mainExp.Exps = make(map[string]Ex)
+
+      for _,exp := range(dx){
+        // figure exp report file
+        ws := os.Getenv("GOATWS")
+        if ws == "" {
+          panic("GOATWS is not set!")
+        }
+        // we have to re-discover ex prefixdir to see if we have ready results
+        expReport := ws + "/"
+        expReport = expReport + "p"+MAXPROCS+"/"
+        expReport = expReport + bugFullName + "/"
+        if strings.HasPrefix(exp,"goat_d"){
+          d,err := strconv.Atoi(strings.Split(exp,"_d")[1])
+          check(err)
+          if d < 1 {
+            expReport = expReport + "goat_trace/"
+          } else{
+            expReport = expReport + "goat_delay/"
+          }
+          ex = &GoatExperiment{Experiment: Experiment{Target:target},Bound:d}
+        } else if strings.HasPrefix(exp,"goat_race"){{
+
+          }else{
+          ex = &ToolExperiment{Experiment: Experiment{Target:target},ToolID:exp}
+          expReport = expReport + exp + "/"
+        }
+
+        expReport = expReport + "results/"
+        expReport = expReport + "p"+MAXPROCS+"_"+bugFullName+"_"+exp+"_T"+strconv.Itoa(thresh)+"_"+TERMINATION+".json"
+
+        if checkFile(expReport){ // if report exist
+          switch ex.(type){
+          case *GoatExperiment:
+            gex := ex.(*GoatExperiment)
+            gex = ReadExperimentResults_goat(expReport)
+            gex.Target = target
+
+            // missing init stuff
+            // setup global stack
+            fmap := make(map[int]*trace.Frame)
+            fsmap := make(map[string]int)
+            gstack := &GlobalStack{fmap,fsmap}
+            gex.GStack = gstack
+
+            // missing instrument stuff
+            concUsage := ReadConcUsage(gex.PrefixDir+"/concUsage.json")
+            if concUsage != nil{
+              gex.ConcUsage = &ConcUsageStruct{ConcUsage:concUsage}
+              gex.InitConcMap()
+            }
+
+            // missing build stuff
+            dest := filepath.Join(gex.PrefixDir,"bin")
+            files, err := filepath.Glob(dest+"/*"+gex.GetMode())
+            check(err)
+            if len(files) != 0{ // check if binary exist
+              gex.BinaryName = filepath.Base(files[0]) // assign the first found binary to current gex binaryPath
+            }
+
+            // missing execute stuff (from results)
+            newResults := []*Result{}
+            // iterate over results
+            for _,res := range(gex.Results){
+              result := res
+              // get the local stack
+              if res.Desc == "CRASH"|| res.Desc == "NONE"{
+                // it does not have any trace
+                newResults = append(newResults,result)
+                continue
+              }
+              parseRes := traceops.ReadParseTrace(result.TracePath, filepath.Join(gex.PrefixDir,"bin",gex.BinaryName))
+
+              result.LStack = gex.UpdateGStack(parseRes.Stacks)
+              gex.UpdateConcUsage(parseRes.Stacks,result.LStack)
+              gex.UpdateGGTree(parseRes,result.LStack)
+              gex.UpdateCoverageGGTree(parseRes,result.LStack)
+              gex.UpdateCoverageReport()
+              result.Coverage1 = gex.PrintCoverageReport(true)
+              result.Coverage2 = gex.PrintCoverageReport(false)
+              newResults = append(newResults,result)
+            }
+            gex.Results = newResults
+            mainExp.Exps[gex.ID] = gex
+          case *ToolExperiment:
+            tex := ex.(*ToolExperiment)
+            tex = ReadExperimentResults_tool(expReport)
+            mainExp.Exps[tex.ToolID] = tex
+          }
+        } else{
+          ex.Init(false)
+          ex.Instrument()
+          ex.Build(false)
+          switch ex.(type){
+          case *GoatExperiment:
+            gex := ex.(*GoatExperiment)
+            iteration:for i:=0 ; i < thresh ; i++{
+              fmt.Printf("Test %v on %v (%d/%d)\n",gex.Target.BugName,gex.ID,i+1,thresh)
+              res := gex.Execute(i,false)
+              gex.Results = append(gex.Results,res)
+              if res.Detected{
+              	fmt.Println(string(colorRed),res.Desc,string(colorReset))
+                switch TERMINATION {
+                case "hitBug":
+                  break iteration
+                default:
+                }
+              }else{
+                fmt.Println(string(colorGreen),"PASS",string(colorReset))
+              }
+            }
+            mainExp.Exps[gex.ID] = gex
+            // store gex into json
+            // check if expReport path matches gex.PrefixDir
+            if filepath.Dir(expReport) != gex.PrefixDir+"/results" {
+              panic(fmt.Sprintf("mismatch expReport dir\n%v\n%v\n)",filepath.Dir(expReport),gex.PrefixDir+"/results"))
+            }
+            // write to json file
+            rep,err := os.Create(expReport)
+            check(err)
+            newdat ,err := json.MarshalIndent(gex,"","    ")
+            check(err)
+            _,err = rep.WriteString(string(newdat))
+            check(err)
+            rep.Close()
+
+          case *ToolExperiment:
+            tex := ex.(*ToolExperiment)
+            iteration2:for i:=0 ; i < thresh ; i++{
+              fmt.Printf("Test %v on %v (%d/%d)\n",tex.Target.BugName,tex.ToolID,i+1,thresh)
+              res := tex.Execute(i,false)
+              tex.Results = append(tex.Results,res)
+              if res.Detected{
+              	fmt.Println(string(colorRed),res.Desc,string(colorReset))
+                switch TERMINATION {
+                case "hitBug":
+                  break iteration2
+                default:
+                }
+              }else{
+                fmt.Println(string(colorGreen),"PASS",string(colorReset))
+              }
+            }
+            mainExp.Exps[tex.ToolID] = tex
+            // store tex into json
+            // check if expReport path matches tex.PrefixDir
+            if filepath.Dir(expReport) != tex.PrefixDir+"/results" {
+              panic(fmt.Sprintf("mismatch expReport dir\n%v\n%v\n)",filepath.Dir(expReport),tex.PrefixDir+"/results"))
+            }
+            // write to json file
+            rep,err := os.Create(expReport)
+            check(err)
+            newdat ,err := json.MarshalIndent(tex,"","    ")
+            check(err)
+            _,err = rep.WriteString(string(newdat))
+            check(err)
+            rep.Close()
+          }
+        } // gex/tex either executed or read results from json file - mainExp.Exps[tool] assigned
+      } // end of loop over tools
+      TableSummaryPerBug(mainExp)
+      allBugs[bugFullName] = mainExp
+    } // end of inner paths
+  }// end of config file
+  fmt.Println("Total Bugs: ",len(allBugs))
+  Table_Bug_Tool(allBugs,ORDER_BUG,"blocking")
+  Table_Bug_Tool(allBugs,ORDER_CAUSE,"blocking")
+  Table_Bug_Tool(allBugs,ORDER_SUBCAUSE,"blocking")
+}
+
+/*func EvaluateBlocking(configFile string, thresh int) {
   identifier := "blocking"
   causes := ReadGoKerConfig(identifier)
   fmt.Println(causes)
@@ -161,44 +448,6 @@ func EvaluateBlocking(configFile string, thresh int) {
         // create experiment from json files
         mainExp.Exps = ReadResults(mainExp.ReportJSON)
         fmt.Println("File Found")
-        // we want to replay what has happened below
-        // iterate over exps
-        // obtain results
-        /*for _,ex := range(mainExp.Exps){
-          iteration_replay:for i:=0 ; i < thresh ; i++{
-            switch ex.(type){
-            case *GoatExperiment:
-              gex := ex.(*GoatExperiment)
-              // assert i <= len gex.Results
-              if len(gex.Results) <= i{
-                panic("inconsistent replay")
-              }
-              res := gex.Results[i]
-              // lets not rely on previous experiment
-              // double check the trace
-              traceops.ReplayDeadlockChecker(res.TracePath, filepath.Join(gex.PrefixDir,"bin",gex.BinaryName))
-              if res.Detected{
-              	fmt.Println(string(colorRed),res.Desc,string(colorReset))
-                break iteration_replay
-              }else{
-                fmt.Println(string(colorGreen),"PASS",string(colorReset))
-              }
-            case *ToolExperiment:
-              tex := ex.(*ToolExperiment)
-              // assert i <= len gex.Results
-              if len(tex.Results) <= i{
-                panic("inconsistent replay")
-              }
-              res := tex.Results[i]
-              if res.Detected{
-              	fmt.Println(string(colorRed),res.Desc,string(colorReset))
-                break iteration_replay
-              }else{
-                fmt.Println(string(colorGreen),"PASS",string(colorReset))
-              }
-            }
-          }
-        }*/
       } else{
         var exes []Ex
         //exes := []interface{}{}
@@ -263,7 +512,7 @@ func EvaluateBlocking(configFile string, thresh int) {
   Table_Bug_Tool(allBugs,ORDER_BUG,identifier)
   Table_Bug_Tool(allBugs,ORDER_CAUSE,identifier)
   Table_Bug_Tool(allBugs,ORDER_SUBCAUSE,identifier)
-}
+}*/
 
 func EvaluateNonBlocking(configFile string,thresh int) {
   identifier := "nonblocking"
@@ -588,7 +837,7 @@ func EvaluateOverhead(configFile string, thresh int, ns []int) {
   }
 
   // change link of GO
-  cmd := exec.Command("sudo","ln","-nsf","/usr/local/myGo.1.15.6/","/usr/local/go")
+  cmd := exec.Command("ln","-nsf",GOVER_GOAT,os.Getenv("GOROOT"))
   err = cmd.Run()
   check(err)
 }
