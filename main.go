@@ -71,8 +71,9 @@ func main(){
   //checkJson()
 
   //customVis(flagPath,flagTool,true)
-  //evaluate.EvaluateCoverage(flagPath,500)
-  evaluate.EvaluateComparison(flagPath,500)
+  evaluate.EvaluateCoverage(flagPath,100,false)
+  //evaluate.EvaluateComparison(flagPath,1000) // race = false
+  //evaluate.EvaluateComparison(flagPath,2,true) // race = true
 
 }
 
