@@ -15,13 +15,13 @@ func Sched_Handler(){
   // other handlers can come down here
 }
 
-func StartRace(maxp int) {
+func StartRace() {
   fmt.Println("GOAT start...")
-	//maxprocs, err := strconv.Atoi(os.Getenv("GOATMAXPROCS"))
-	//if err != nil || maxprocs < 1{
-	//	panic("Invalid GOATMAXPROCS")
-	//}
-  runtime.GOMAXPROCS(maxp)
+	maxprocs, err := strconv.Atoi(os.Getenv("GOATMAXPROCS"))
+	if err != nil || maxprocs < 1{
+		panic("Invalid GOATMAXPROCS")
+	}
+  runtime.GOMAXPROCS(maxprocs)
 }
 
 
