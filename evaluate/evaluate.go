@@ -27,17 +27,28 @@ var(
   coverage_d2 = []string{"goat_d0","goat_d1"}
   coverage_d3 = []string{"goat_d0","goat_d1","goat_d2"}
   coverage_d5 = []string{"goat_d0","goat_d1","goat_d2","goat_d3","goat_d4"}
+
+  coverage_race_d1 = []string{"goat_race_d0"}
+  coverage_race_d2 = []string{"goat_race_d0","goat_race_d1"}
+  coverage_race_d3 = []string{"goat_race_d0","goat_race_d1","goat_race_d2"}
+  coverage_race_d5 = []string{"goat_race_d0","goat_race_d1","goat_race_d2","goat_race_d3","goat_race_d4"}
+
   coverage_d10 = []string{"goat_d0","goat_d1","goat_d2","goat_d3","goat_d4","goat_d5","goat_d6","goat_d7","goat_d8","goat_d9"}
 
-  comparison = []string{"goat_d0","goat_d1","goat_d2","goat_d3","builtinDL","goleak","lockDL"}
+  comparison = []string{"goat_d0","goat_d1","goat_d2","goat_d3","goat_d4","builtinDL","goleak","lockDL"}
 )
 
-func EvaluateCoverage(configFile string, thresh int) {
+func EvaluateCoverage(configFile string, thresh int, isRace bool) {
   colorReset := "\033[0m"
   colorRed := "\033[31m"
   colorGreen := "\033[32m"
 
-  dx := coverage_d5
+  dx := []string{}
+  if isRace{
+    dx = coverage_race_d1
+  } else{
+    dx = coverage_d5
+  }
 
   // a map to hold each RootExperiment
   allBugs := make(map[string]*RootExperiment)
@@ -82,14 +93,30 @@ func EvaluateCoverage(configFile string, thresh int) {
           panic("GOATWS is not set!")
         }
         // we have to re-discover gex prefixdir to see if we have ready results
-        //predir = filepath.Join(ws,gex.Target.BugType,gex.Target.BugName,"goat_"+gex.GetMode())
         expReport := ws + "/"
         expReport = expReport + "p"+MAXPROCS+"/"
         expReport = expReport + bugFullName + "/"
-        if d < 1 {
-          expReport = expReport + "goat_trace/"
+
+        if strings.HasPrefix(exp,"goat_d"){
+          d,err := strconv.Atoi(strings.Split(exp,"_d")[1])
+          check(err)
+          if d < 1 {
+            expReport = expReport + "goat_trace/"
+          } else{
+            expReport = expReport + "goat_delay/"
+          }
+          //ex = &GoatExperiment{Experiment: Experiment{Target:target},Bound:d}
+        } else if strings.HasPrefix(exp,"goat_race"){
+          d,err := strconv.Atoi(strings.Split(exp,"_d")[1])
+          check(err)
+          if d < 1 {
+            expReport = expReport + "goat_race_trace/"
+          } else{
+            expReport = expReport + "goat_race_delay/"
+          }
+          //ex = &GoatExperiment{Experiment: Experiment{Target:target},Bound:d}
         } else{
-          expReport = expReport + "goat_delay/"
+          panic("wrong exp")
         }
         expReport = expReport + "results/"
         expReport = expReport + "p"+MAXPROCS+"_"+bugFullName+"_"+exp+"_T"+strconv.Itoa(thresh)+"_"+TERMINATION+".json"
@@ -128,12 +155,19 @@ func EvaluateCoverage(configFile string, thresh int) {
           for _,res := range(gex.Results){
             result := res
             // get the local stack
-            if res.Desc == "CRASH"|| res.Desc == "NONE"{
+            if res.Desc == "CRASH"|| res.Desc == "NONE" || strings.HasPrefix(res.Desc,"PANIC"){
               // it does not have any trace
               newResults = append(newResults,result)
               continue
             }
+            fmt.Println("Reading trace ",result.TracePath)
+            fmt.Println("\tRES: ",res.Desc)
             parseRes := traceops.ReadParseTrace(result.TracePath, filepath.Join(gex.PrefixDir,"bin",gex.BinaryName))
+
+            // print events
+            // for i,e := range(parseRes.Events){
+            //   fmt.Printf("****\nG%v (idx:%v)\n%v\n",e.G,i,e.String())
+            // }
 
             result.LStack = gex.UpdateGStack(parseRes.Stacks)
             gex.UpdateConcUsage(parseRes.Stacks,result.LStack)
@@ -147,18 +181,19 @@ func EvaluateCoverage(configFile string, thresh int) {
           gex.Results = newResults
         } else{
           gex = &GoatExperiment{Experiment: Experiment{Target:target},Bound: d}
-          gex.Init(false)
+          gex.Init(isRace)
           gex.Instrument()
-          gex.Build(false)
+          gex.Build(isRace)
 
 iteration:for i:=0 ; i < thresh ; i++{
             fmt.Printf("Test %v on %v (%d/%d)\n",gex.Target.BugName,gex.ID,i+1,thresh)
-            res := gex.Execute(i,false)
-            gex.Results = append(gex.Results,res)
+            res := gex.Execute(i,isRace)
             if res.Detected{
             	fmt.Println(string(colorRed),res.Desc,string(colorReset))
+              gex.Results = append(gex.Results,res)
               switch TERMINATION {
               case "hitBug":
+
                 break iteration
               case "ignoreGDL":
                 if res.Desc == "GDL"{
@@ -167,7 +202,16 @@ iteration:for i:=0 ; i < thresh ; i++{
               default:
               }
             }else{
+              if res.Desc == "CRPT_TRACE"{
+                // we want to re-run
+                i = i - 1
+                continue
+              }
               fmt.Println(string(colorGreen),"PASS",string(colorReset))
+              gex.Results = append(gex.Results,res)
+              if MAXPROCS == "1" && i > 200 && res.EventsLen > 3000000 {
+                break iteration
+              }
             }
           }
 
@@ -188,15 +232,27 @@ iteration:for i:=0 ; i < thresh ; i++{
         mainExp.Exps[gex.ID] = gex
         tall.AppendRow(CoverageSummary(gex))
         tall.AppendSeparator()
-        tall.Render()
         tall.RenderCSV()
+        tall.Render()
+
       }
       allBugs[bugFullName] = mainExp
     } // end of inner paths
   }// end of config file
+
+  // for _,td := range(dx){
+  //   fmt.Printf("*******\nTool: %v (cov1)\n*******",td)
+  //   Table_Bug_Coverage(allBugs,td,thresh,true)
+  // }
+  //
+  // for _,td := range(dx){
+  //   fmt.Printf("*******\nTool: %v (cov2)\n*******",td)
+  //   Table_Bug_Coverage(allBugs,td,thresh,false)
+  // }
+
 }
 
-func EvaluateComparison(configFile string, thresh int, isRace bool) {
+func EvaluateComparison(configFile string, thresh int) {
   var ex Ex
   colorReset := "\033[0m"
   colorRed := "\033[31m"
@@ -254,9 +310,16 @@ func EvaluateComparison(configFile string, thresh int, isRace bool) {
             expReport = expReport + "goat_delay/"
           }
           ex = &GoatExperiment{Experiment: Experiment{Target:target},Bound:d}
-        } else if strings.HasPrefix(exp,"goat_race"){{
-
-          }else{
+        } else if strings.HasPrefix(exp,"goat_race"){
+          d,err := strconv.Atoi(strings.Split(exp,"_d")[1])
+          check(err)
+          if d < 1 {
+            expReport = expReport + "goat_race_trace/"
+          } else{
+            expReport = expReport + "goat_race_delay/"
+          }
+          ex = &GoatExperiment{Experiment: Experiment{Target:target},Bound:d}
+        }else{
           ex = &ToolExperiment{Experiment: Experiment{Target:target},ToolID:exp}
           expReport = expReport + exp + "/"
         }
@@ -304,6 +367,8 @@ func EvaluateComparison(configFile string, thresh int, isRace bool) {
                 newResults = append(newResults,result)
                 continue
               }
+              fmt.Println("Reading Trace ",result.TracePath)
+              fmt.Println("Result Desc ",result.Desc)
               parseRes := traceops.ReadParseTrace(result.TracePath, filepath.Join(gex.PrefixDir,"bin",gex.BinaryName))
 
               result.LStack = gex.UpdateGStack(parseRes.Stacks)
@@ -362,6 +427,12 @@ func EvaluateComparison(configFile string, thresh int, isRace bool) {
           case *ToolExperiment:
             tex := ex.(*ToolExperiment)
             iteration2:for i:=0 ; i < thresh ; i++{
+              if tex.Target.BugName == "etcd_7492" && (tex.ToolID == "builtinDL" || tex.ToolID == "goleak"){
+                res := &Result{Detected:true,Desc:"HANG"}
+                tex.Results = append(tex.Results,res)
+                fmt.Println(string(colorRed),res.Desc,string(colorReset))
+                break iteration2
+              }
               fmt.Printf("Test %v on %v (%d/%d)\n",tex.Target.BugName,tex.ToolID,i+1,thresh)
               res := tex.Execute(i,false)
               tex.Results = append(tex.Results,res)
@@ -398,9 +469,17 @@ func EvaluateComparison(configFile string, thresh int, isRace bool) {
     } // end of inner paths
   }// end of config file
   fmt.Println("Total Bugs: ",len(allBugs))
+
   Table_Bug_Tool(allBugs,ORDER_BUG,"blocking")
   Table_Bug_Tool(allBugs,ORDER_CAUSE,"blocking")
   Table_Bug_Tool(allBugs,ORDER_SUBCAUSE,"blocking")
+
+  // if isRace {
+  //   Table_Bug_Tool(allBugs,ORDER_BUG,"nonblocking")
+  //   Table_Bug_Tool(allBugs,ORDER_CAUSE,"nonblocking")
+  //   Table_Bug_Tool(allBugs,ORDER_SUBCAUSE,"nonblocking")
+  // }
+
 }
 
 /*func EvaluateBlocking(configFile string, thresh int) {

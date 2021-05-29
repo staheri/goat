@@ -9,8 +9,9 @@ import(
   "sort"
 )
 
-var btools = []string{"builtinDL","goleak","lockDL","goat_d0","goat_d1","goat_d2","goat_d3"}
+var btools = []string{"builtinDL","goleak","lockDL","goat_d0","goat_d1","goat_d2","goat_d3","goat_d4"}
 var nbtools = []string{"race","goat_race_d0","goat_race_d1","goat_race_d2","goat_race_d3","goat_race_d4","goat_race_d5","goat_race_d6","goat_race_d7"}
+var sums = []string{"total","x","pdl","gdl","to/gdl","builtin","hang","dl","crash","1","2-10","10-100","100-1000"}
 
 
 func TableSummaryPerBug(rx *RootExperiment){
@@ -83,7 +84,21 @@ func Table_Bug_Tool(bugs map[string]*RootExperiment, order int, identifier strin
   dat := make(map[string][]*RootExperiment)
   var key string
   keys := []string{}
-  totals := make([]int,TOOL_COUNT)
+  sum := make(map[string][]int)
+  sum["total"] = make([]int,TOOL_COUNT)
+  sum["x"] = make([]int,TOOL_COUNT)
+  sum["pdl"] = make([]int,TOOL_COUNT)
+  sum["gdl"] = make([]int,TOOL_COUNT)
+  sum["to/gdl"] = make([]int,TOOL_COUNT)
+  sum["builtin"] = make([]int,TOOL_COUNT)
+  sum["hang"] = make([]int,TOOL_COUNT)
+  sum["dl"] = make([]int,TOOL_COUNT)
+  sum["crash"] = make([]int,TOOL_COUNT)
+  sum["1"] = make([]int,TOOL_COUNT)
+  sum["2-10"] = make([]int,TOOL_COUNT)
+  sum["10-100"] = make([]int,TOOL_COUNT)
+  sum["100-1000"] = make([]int,TOOL_COUNT)
+
   var tools []string
 
   // first pass (categorize)
@@ -168,13 +183,53 @@ func Table_Bug_Tool(bugs map[string]*RootExperiment, order int, identifier strin
         case *GoatExperiment:
           exp := ex.Exps[t].(*GoatExperiment)
           res,detected = resultsToStringDescription(exp.Results)
+          if len(exp.Results) == 1{
+            sum["1"][i]++
+          } else if len(exp.Results) > 1 && len(exp.Results) < 10{
+            sum["2-10"][i]++
+          } else if len(exp.Results) >= 10 && len(exp.Results) < 100{
+            sum["10-100"][i]++
+          }else if len(exp.Results) >= 100{
+            sum["100-1000"][i]++
+          }
         case *ToolExperiment:
           exp := ex.Exps[t].(*ToolExperiment)
           res,detected = resultsToStringDescription(exp.Results)
+          if len(exp.Results) == 1{
+            sum["1"][i]++
+          } else if len(exp.Results) > 1 && len(exp.Results) < 10{
+            sum["2-10"][i]++
+          } else if len(exp.Results) >= 10 && len(exp.Results) < 100{
+            sum["10-100"][i]++
+          }else if len(exp.Results) >= 100{
+            sum["100-1000"][i]++
+          }
         }
+
+        // sums
         if detected {
-          totals[i]++
+          sum["total"][i]++
         }
+
+        if strings.Contains(res,"X"){
+          sum["x"][i]++
+        } else if strings.Contains(res,"PDL"){
+          sum["pdl"][i]++
+        } else if strings.Contains(res,"TO/GDL"){
+          sum["to/gdl"][i]++
+        }else if strings.Contains(res,"builtin"){
+          sum["builtin"][i]++
+        }else if strings.Contains(res,"GDL"){
+          sum["gdl"][i]++
+        }else if strings.Contains(res,"DL"){
+          sum["dl"][i]++
+        }else if strings.Contains(res,"CRASH"){
+          sum["crash"][i]++
+        }else if strings.Contains(res,"HANG"){
+          sum["hang"][i]++
+        }
+
+
         row = append(row,res)
       }
       t.AppendRow(row)
@@ -182,15 +237,53 @@ func Table_Bug_Tool(bugs map[string]*RootExperiment, order int, identifier strin
     t.AppendSeparator()
   }
   // total row
-  var row []interface{}
-  row = append(row,"-")
-  row = append(row,"-")
-  row = append(row,"-")
-  for _,tot := range(totals){
-    row = append(row,tot)
+  for _,su:=range(sums){
+    var row []interface{}
+    row = append(row,"-")
+    row = append(row,"-")
+    row = append(row,su)
+    for _,tot := range(sum[su]){
+      row = append(row,tot)
+    }
+    t.AppendRow(row)
   }
-  t.AppendRow(row)
   t.Render()
+  t.RenderCSV()
+}
+
+func Table_Bug_Coverage(bugs map[string]*RootExperiment,tool string, thresh int,coverage1 bool){
+  t := table.NewWriter()
+  t.SetOutputMirror(os.Stdout)
+
+  var headerRow []interface{}
+  headerRow = append(headerRow,"Bug")
+  for i:=1 ; i<=thresh ; i++{
+    headerRow = append(headerRow,i)
+  }
+  // first pass (categorize)
+  for bug,mainExp := range(bugs){
+    var row []interface{}
+    row = append(row,bug)
+    switch mainExp.Exps[tool].(type){
+    case *GoatExperiment:
+      exp := mainExp.Exps[tool].(*GoatExperiment)
+      c:=0
+      for _,res := range(exp.Results){
+        if coverage1{
+          row=append(row,fmt.Sprintf("%.2f",res.Coverage1*100))
+        }else{
+          row=append(row,fmt.Sprintf("%.2f",res.Coverage2*100))
+        }
+        c++
+      }
+      for ;c<thresh;{
+        row=append(row,0)
+        c++
+      }
+    }
+    t.AppendRow(row)
+  }
+  //t.Render()
   t.RenderCSV()
 }
 

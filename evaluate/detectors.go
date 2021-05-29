@@ -3,6 +3,7 @@ package evaluate
 
 import(
   "strings"
+  _"fmt"
 )
 
 // Detector function for BuiltinDL
@@ -38,6 +39,8 @@ func lockDL_detector(out []byte) (bool,string) {
 
 // Detector function for Race
 func race_detector(out []byte) (bool,string) {
+
+  //fmt.Printf("************ OUT *************\n%v\n******************************\n",string(out))
   msg := ""
   if strings.Contains(string(out), "panic:"){
     msg = msg + "PANIC("
@@ -50,12 +53,18 @@ func race_detector(out []byte) (bool,string) {
     }else{
       msg = msg + "X)"
     }
+  } else if strings.Contains(string(out), "send on closed channel"){
+    msg = "PANIC(S.O.C)"
   }
   if strings.Contains(string(out), "WARNING: DATA RACE"){
     if msg != ""{
       return true,msg+"/RACE"
     }
     return true,"RACE"
+  } else{
+    if msg != ""{
+      return true,msg
+    }
   }
-  return false,msg
+  return false,""
 }

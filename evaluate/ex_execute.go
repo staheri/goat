@@ -15,58 +15,14 @@ import(
   "bytes"
   "path/filepath"
   "time"
+  _"io"
 )
 
 
 // Execute and analyze Goat-experiment
 func (gex *GoatExperiment) Execute(i int, race bool) *Result {
-  if race{ // Race detection
-    // Variables
-    var out []byte
-    var err error
-    var command string
-    var commandVals []interface{}
-
-    // placeholder for results
-    result := &Result{}
-
-    // Set environment variables for GOAT experiments
-    _b := strconv.Itoa(int(gex.Bound))
-    os.Setenv("GOATRSBOUND",_b)
-    fmt.Println("set GOATRSBOUND",_b)
-
-    ///////////////////////////////////////////////////
-    // Execute the (instrumented & built) application
-    // Measure time
-    ///////////////////////////////////////////////////
-    // Prepare commands
-    command = "%v -test.failfast"
-    commandVals = []interface{}{filepath.Join(gex.PrefixDir,"bin",gex.BinaryName)}
-    if gex.Cpu != 0 {
-      command += " -test.cpu %v"
-      commandVals = append(commandVals, gex.Cpu)
-    }
-
-    // Format the command
-    args := strings.Split(fmt.Sprintf(command, commandVals...), " ")
-
-    // Execute and Measure time
-    result.Time = MeasureTime(func() {
-      out,err = exec.Command(args[0], args[1:]...).CombinedOutput()
-      fmt.Println("OUT",string(out))
-      if  err != nil {
-    		log.Println("modified program failed:", err," OUT ", string(out))
-    	}
-    })
-    _,err = fmt.Fprintf(gex.OutBuf,"-----\nRun # %d\n----\n%v\n",i,string(out))
-    check(err)
-    gex.OutBuf.Flush()
-
-    result.Detected,result.Desc = gex.Detector(out)
-    return result
-
-  }else{ // Deadlock detection
-    // placeholder for results
+  // Deadlock detection
+  // placeholder for results
     result := &Result{}
     var parseRes *trace.ParseResult
 
@@ -94,9 +50,13 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
       // read trace time
       result.Time,_ = time.ParseDuration(traceops.ReadTime(filepath.Join(gex.PrefixDir,"traceTimes",traceName)+".time"))
 
+      if race { // results are already out there
+        return result
+      }
     } else{ // trace does not exist, now execute trace
 
       execRes,err := instrument.ExecuteTrace(filepath.Join(gex.PrefixDir,"bin",gex.BinaryName))
+      //fmt.Printf("\tAfter ExecuteTrace:\n\t\trace: %v\n\t\tlen(trace): %v\n",execRes.RaceMessage,execRes.TraceBuffer.Len(),)
       result.Time = execRes.ExecTime
       // write trace time
       traceops.WriteTime(fmt.Sprintf("%v",result.Time),filepath.Join(gex.PrefixDir,"traceTimes",traceName)+".time")
@@ -104,11 +64,17 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
       if err != nil{
         if execRes != nil{
           // CRASH - Runtime error
+          //fmt.Printf("\tProbably Crash (before):\n\t\trace: %v\n\t\tlen(trace): %v\n",execRes.RaceMessage,execRes.TraceBuffer.Len())
           _,err1 := fmt.Fprintf(gex.OutBuf,"-----\nRun # %d\n----\n%v\n%v\n",i,"Runtime error: ",execRes.TraceBuffer.String())
           check(err1)
           gex.OutBuf.Flush()
-          result.Detected = true
-          result.Desc = "CRASH"
+          if race {
+            fmt.Printf("\tProbably Crash (after):\n\t\trace: %v\n\t\tlen(trace): %v\n",execRes.RaceMessage,execRes.TraceBuffer.Len())
+            result.Detected,result.Desc = gex.Detector(append([]byte(execRes.RaceMessage),execRes.TraceBuffer.Bytes()...))
+          } else{
+            result.Detected = true
+            result.Desc = "CRASH"
+          }
           return result
         } else{
           // Empty Trace
@@ -124,30 +90,77 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
       // Process Traces
       ///////////////////////
       // Write to file
+      if race{
+        // trace is not there so results are not there either
+        bytesOfTrace := execRes.TraceBuffer.Bytes()
+        fmt.Printf("\tAfter Parse:\n\t\tlen(trace): %v\n\t\tlen(trace_back): %v\n",execRes.TraceBuffer.Len(),len(bytesOfTrace))
+        parseRes, err = trace.ParseTrace(execRes.TraceBuffer, filepath.Join(gex.PrefixDir,"bin",gex.BinaryName))
+        if err!= nil{
+          // problem with parsing the trace, re-runt
+          // there is a runtime error (panic) w/ or w/o race within the trace buffer
+          fmt.Println("ERROR in parsing trace")
+          result.Detected,result.Desc = gex.Detector(append([]byte(execRes.RaceMessage),bytesOfTrace...))
+          return result
+        }
+        check(err)
+        //fmt.Printf("\tAfter Parse:\n\t\tlen(trace): %v\n\t\tlen(trace_back): %v\n",execRes.TraceBuffer.Len(),len(bytesOfTrace))
+        result.LStack = gex.UpdateGStack(parseRes.Stacks)
+        gex.UpdateConcUsage(parseRes.Stacks,result.LStack)
+        gex.UpdateGGTree(parseRes,result.LStack)
+        gex.UpdateCoverageGGTree(parseRes,result.LStack)
+        gex.UpdateCoverageReport()
+        result.Coverage1 = gex.PrintCoverageReport(true)
+        result.Coverage2 = gex.PrintCoverageReport(false)
+
+        // analysis trace
+        // measure coverage
+        // detect result
+        // return result
+        //if execRes.RaceMessage != ""{
+          //fmt.Println("Out race:",execRes.RaceMessage)
+          //fmt.Println("Len trace_back:",len(bytesOfTrace))
+          //result.Detected,result.Desc = gex.Detector(append([]byte(execRes.RaceMessage),bytesOfTrace...))
+        //} else{
+          //fmt.Println("Len trace_back:",len(bytesOfTrace))
+        //result.Detected,result.Desc = gex.Detector(bytesOfTrace)
+        result.Detected,result.Desc = gex.Detector(append([]byte(execRes.RaceMessage),bytesOfTrace...))
+        //}
+
+        //fmt.Println("Len trace_back:",len(bytesOfTrace))
+        traceBytes_n := traceops.WriteTrace(bytesOfTrace,result.TracePath)
+        //traceops.TraceToJSON(parseRes,filepath.Join(gex.TraceDir,traceName)+".json")
+        result.TraceSize = traceBytes_n
+        fmt.Printf("\tWrite to Trace File: %s \n\tSize: %d bytes\n",traceName,traceBytes_n)
+        return result
+      }
+
       traceBytes_n := traceops.WriteTrace(execRes.TraceBuffer.Bytes(),result.TracePath)
       result.TraceSize = traceBytes_n
       fmt.Printf("\tWrite to Trace File: %s \n\tSize: %d bytes\n",traceName,traceBytes_n)
       // Parse trace
       parseRes, err = trace.ParseTrace(execRes.TraceBuffer, filepath.Join(gex.PrefixDir,"bin",gex.BinaryName))
       check(err)
+      //traceops.TraceToJSON(parseRes,filepath.Join(gex.TraceDir,traceName)+".json")
+
+
     } // parseRes is either obtained from execution or pre execution
 
     fmt.Printf("\t# Events: %d\n",len(parseRes.Events))
     // Check length of events
     result.EventsLen = len(parseRes.Events)
-    if len(parseRes.Events) > EVENT_BOUND {
+    /*if len(parseRes.Events) > EVENT_BOUND && !race{
       result.Detected = false
       result.Desc = "ABORT"
       return result
-    }
+    }*/
 
     // Check for deadlocks
     deadlock_report := traceops.DeadlockChecker(parseRes,false) // longReport = false
 
     // print events
-    // for i,e := range(parseRes.Events){
-    //  fmt.Printf("****\nG%v (idx:%v)\n%v\n",e.G,i,e.String())
-    // }
+    for i,e := range(parseRes.Events){
+      fmt.Printf("****\nG%v (idx:%v)\n%v\n",e.G,i,e.String())
+    }
 
     // get the local stack
     result.LStack = gex.UpdateGStack(parseRes.Stacks)
@@ -160,6 +173,7 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
 
     // Finalize result and return
     result.TotalG = deadlock_report.TotalG
+
     if deadlock_report.GlobalDL {
       _,err := fmt.Fprintf(gex.OutBuf,"-----\nRun # %d\n----\n%v\n%v\n",i,"GOAT: Global Deadlock",deadlock_report.Message)
       check(err)
@@ -198,7 +212,6 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
     result.Detected = false
     result.Desc = "PASS"
     return result
-  }
 }
 
 // Execute and analyze Tool-experiment

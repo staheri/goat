@@ -15,10 +15,10 @@ import(
 )
 
 const RESDIR = "/home/saeed/goatws/results"
-const TO = 10 // second
+const TO = 30 // second
 const CPU = 0
-const MAXPROCS = "4"
-const EVENT_BOUND = 20000000
+const MAXPROCS = "12"
+const EVENT_BOUND = 200000000
 const WORKDIR = ""
 const GOVER_ORIG = "/home/saeed/go-builds/go-orig-1.15.6"
 const GOVER_GOAT = "/home/saeed/go-builds/go-goat-1.15.6"
@@ -117,6 +117,7 @@ func (gex *GoatExperiment) GetMode() string{
 func (gex *GoatExperiment) Init(race bool) {
   // Variables
   var predir string
+  var preToolName string
 
   ws := os.Getenv("GOATWS")
   if ws == "" {
@@ -126,30 +127,23 @@ func (gex *GoatExperiment) Init(race bool) {
   if gex.Bound < 0 {
     panic("invalid bound")
   }
-  switch gex.Bound {
-  case 0:
-    if race{
-      panic("Goat_m and Goat_u are not compatible with race")
-    }
-    gex.ID = "goat_d0"
-    gex.Instrumentor = goat_trace_inst
 
-  default:
-    if race{
-      gex.ID = "goat_race_d"+strconv.Itoa(int(gex.Bound))
-      gex.Instrumentor = goat_critic_inst
-    }else{
-      gex.ID = "goat_d"+strconv.Itoa(int(gex.Bound))
-      gex.Instrumentor = goat_delay_inst
-    }
+  if race{
+    preToolName = "goat_race"
+  } else{
+    preToolName = "goat"
+  }
+
+  gex.ID = preToolName+"_d"+strconv.Itoa(int(gex.Bound))
+
+  if gex.Bound == 0{
+    gex.Instrumentor = goat_trace_inst
+  } else{
+    gex.Instrumentor = goat_delay_inst
   }
 
   fmt.Printf("%s: Init...\n",gex.ID)
-  if race{
-    predir = filepath.Join(ws,"p"+MAXPROCS,gex.Target.BugType+"_"+gex.Target.BugName,"goat_race")
-  }else{
-    predir = filepath.Join(ws,"p"+MAXPROCS,gex.Target.BugType+"_"+gex.Target.BugName,"goat_"+gex.GetMode())
-  }
+  predir = filepath.Join(ws,"p"+MAXPROCS,gex.Target.BugType+"_"+gex.Target.BugName,preToolName+"_"+gex.GetMode())
 
   err := os.MkdirAll(predir,os.ModePerm)
   check(err)
@@ -206,6 +200,8 @@ func (gex *GoatExperiment) Instrument() {
     if concUsage != nil{
       gex.ConcUsage = &ConcUsageStruct{ConcUsage:concUsage}
       gex.InitConcMap()
+    } else{
+      panic("no concusage")
     }
     return
   }

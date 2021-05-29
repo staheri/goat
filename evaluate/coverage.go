@@ -12,7 +12,7 @@ import(
   "strconv"
   "strings"
   // "path/filepath"
-  // _"time"
+  _"time"
   // "os/exec"
   "sort"
 
@@ -124,6 +124,8 @@ type GGInfo struct{
   createFkey      string // frame key of create stack
   CoverageMap     map[int]*Coverage // global structure to store general coverages. key: cuIndex, val: coverage instance per each node
   nbselect        int
+  deferwg         int
+
 
 }
 
@@ -425,16 +427,15 @@ func (gex *GoatExperiment) UpdateCoverageGGTree(parseResult *trace.ParseResult, 
                 if cm.selecti == nil{
                   panic("a selecti is encountered before init")
                 }
-                if _,ok2:=cm.selecti[e.Args[0]];ok2{
-                  fmt.Printf("the casei %v is already added",e.Args[0])
+                if _,ok2:=cm.selecti[e.Args[0]];!ok2{
+                  //fmt.Printf("the casei %v is already added",e.Args[0])
                   //fmt.Printf("(old_casei: %v, old_kindi: %v\n",si.casei,si.kindi)
                   //fmt.Printf("(new_casei: %v, new_kindi: %v\n",e.Args[0],e.Args[2])
-                }else{
                   selecti := &Selecti{casei:e.Args[0],cidi:e.Args[1],kindi:e.Args[2]}
                   cm.selecti[e.Args[0]]=selecti
                 }
               } else{
-                fmt.Println("\tNewly added")
+                //fmt.Println("\tNewly added")
                 newSelectCoverage := &Coverage{}
                 newSelectCoverage.selecti= make(map[uint64]*Selecti)
                 selecti := &Selecti{casei:e.Args[0],cidi:e.Args[1],kindi:e.Args[2]}
@@ -467,7 +468,7 @@ func (gex *GoatExperiment) UpdateCoverageGGTree(parseResult *trace.ParseResult, 
                     //curg.Node.CoverageMap[cus_idx]=&Coverage{unblocking:1}
                   }
                 }else{
-                  fmt.Println("SELECT: No-op")
+                  //fmt.Println("SELECT: No-op")
                   if cm,ok := curg.Node.CoverageMap[cus_idx];ok{
                     cm.no_op++
                     // which case is selected?
@@ -595,8 +596,18 @@ func (gex *GoatExperiment) UpdateCoverageGGTree(parseResult *trace.ParseResult, 
         if ed.Name == "Select" && e.Args[0] == 3{
           // fmt.Printf("****\nG%v \n%v\n",cur.Node.Events[idx-2].G,cur.Node.Events[idx-2].String())
           // fmt.Printf("****\nG%v \n%v\n",cur.Node.Events[idx-1].G,cur.Node.Events[idx-1].String())
-          fmt.Printf("****\nG%v \n%v\n",e.G,e.String())
+          //fmt.Printf("****\nG%v \n%v\n",e.G,e.String())
           curg.Node.nbselect++
+          // fmt.Printf("****\nG%v \n%v\n",cur.Node.Events[idx+1].G,cur.Node.Events[idx+1].String())
+          // fmt.Printf("****\nG%v \n%v\n",cur.Node.Events[idx+2].G,cur.Node.Events[idx+2].String())
+          //time.Sleep(10*time.Second)
+        }
+        if ed.Name == "WgAdd" || ed.Name == "WgDone" || ed.Name == "WgWait"{
+          // fmt.Printf("****\nG%v \n%v\n",cur.Node.Events[idx-2].G,cur.Node.Events[idx-2].String())
+          // fmt.Printf("****\nG%v \n%v\n",cur.Node.Events[idx-1].G,cur.Node.Events[idx-1].String())
+          //fmt.Printf("****\nG%v \n%v\n",e.G,e.String())
+          curg.Node.deferwg++
+          //time.Sleep(10*time.Second)
           // fmt.Printf("****\nG%v \n%v\n",cur.Node.Events[idx+1].G,cur.Node.Events[idx+1].String())
           // fmt.Printf("****\nG%v \n%v\n",cur.Node.Events[idx+2].G,cur.Node.Events[idx+2].String())
         }
@@ -903,7 +914,7 @@ func (gi *GGInfo) CovNodeMap(concUsage []*instrument.ConcurrencyUsage) (ret map[
   ret = make(map[int]map[string]int)
   s := fmt.Sprintf("<GGINFO: %d>\n",gi.id)
   s = s + fmt.Sprintf("\tcreateFkey: %v\n",gi.createFkey)
-  //s = s + fmt.Sprintf("\tCoverageMap:\n")
+  s = s + fmt.Sprintf("\tCoverageMap:\n")
   // sort map
   concUsageIndex  := []int{}
   for i,_ := range(gi.CoverageMap){
@@ -913,6 +924,10 @@ func (gi *GGInfo) CovNodeMap(concUsage []*instrument.ConcurrencyUsage) (ret map[
   for _,i := range(concUsageIndex){
     ret[i]=gi.CoverageMap[i].ToMap(concUsage[i],gi.id)
     //s = s + fmt.Sprintf("\t\t[%v]: %v (%v)\n",concUsage[i].String(),st,pcnt)
+    for k,v := range(ret[i]){
+      s = s + fmt.Sprintf("\t\t[%v]: %v - %v\n",concUsage[i].String(),k,v)
+    }
+
   }
   s = s + fmt.Sprintf("</GGINFO>\n")
   //fmt.Println(s)
