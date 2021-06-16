@@ -1,9 +1,0 @@
-/Users/saeed/gobench/gobench/goker/blocking/cockroach/*
-/Users/saeed/gobench/gobench/goker/blocking/grpc/*
-/Users/saeed/gobench/gobench/goker/blocking/hugo/*
-/Users/saeed/gobench/gobench/goker/blocking/kubernetes/*
-/Users/saeed/gobench/gobench/goker/blocking/istio/*
-/Users/saeed/gobench/gobench/goker/blocking/moby/*
-/Users/saeed/gobench/gobench/goker/blocking/serving/*
-/Users/saeed/gobench/gobench/goker/blocking/syncthing/*
-/Users/saeed/gobench/gobench/goker/blocking/etcd/*
