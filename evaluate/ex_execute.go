@@ -157,10 +157,14 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
     // Check for deadlocks
     deadlock_report := traceops.DeadlockChecker(parseRes,false) // longReport = false
 
-    // print events
-    for i,e := range(parseRes.Events){
-      fmt.Printf("****\nG%v (idx:%v)\n%v\n",e.G,i,e.String())
-    }
+    // // print events
+    // for i,e := range(parseRes.Events){
+    //   // ignore GOAT events
+    //   if traceops.IsGoatFunction(e.Stk){
+    //     continue
+    //   }
+    //   fmt.Printf("****\nG%v (idx:%v)\n%v\n",e.G,i,e.String())
+    // }
 
     // get the local stack
     result.LStack = gex.UpdateGStack(parseRes.Stacks)

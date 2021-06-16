@@ -24,6 +24,7 @@ type RootExperiment struct{
 }
 
 var(
+  coverage_d1 = []string{"goat_d0"}
   coverage_d2 = []string{"goat_d0","goat_d1"}
   coverage_d3 = []string{"goat_d0","goat_d1","goat_d2"}
   coverage_d5 = []string{"goat_d0","goat_d1","goat_d2","goat_d3","goat_d4"}

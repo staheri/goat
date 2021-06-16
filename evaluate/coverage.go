@@ -511,6 +511,56 @@ func (gex *GoatExperiment) UpdateCoverageGGTree(parseResult *trace.ParseResult, 
                 }
               }
             }
+          case instrument.NBCASE:
+            if !strings.HasPrefix(ed.Name,"Select"){
+              continue
+            }
+            if e.Args[0] != 3{
+              continue
+            }
+
+            // first add two selecti (nbcase [case 1] and default [case 0])
+            if cm,ok := curg.Node.CoverageMap[cus_idx];ok{
+              if cm.selecti == nil{
+                panic("a selecti is encountered before init")
+              }
+              if e.Args[1] == 1{
+                cm.selecti[1].selected++
+                if trace.EventDescriptions[cur.Node.Events[idx+1].Type].Name == "GoUnblock" || trace.EventDescriptions[cur.Node.Events[idx+2].Type].Name == "GoUnblock"{
+                  cm.selecti[1].unblocking++
+                } else{
+                  cm.selecti[1].no_op++
+                }
+              } else{ // default is selected
+                cm.selecti[0].selected++
+                cm.selecti[0].no_op++
+              }
+            } else{
+              newSelectCoverage := &Coverage{}
+              newSelectCoverage.selecti = make(map[uint64]*Selecti)
+              selecti_def := &Selecti{casei:0}
+              selecti_nb :=  &Selecti{casei:1}
+
+              if e.Args[1] == 1{
+                // nbcase is selected - it is non-blocking, we need to check if it is unblocking
+                selecti_nb.cidi = e.Args[2]
+                selecti_nb.kindi = e.Args[3]
+                selecti_nb.selected++
+                if trace.EventDescriptions[cur.Node.Events[idx+1].Type].Name == "GoUnblock" || trace.EventDescriptions[cur.Node.Events[idx+2].Type].Name == "GoUnblock"{
+                  selecti_nb.unblocking++
+                } else{
+                  selecti_nb.no_op++
+                }
+              } else{ // default is selected
+                selecti_def.selected++
+                selecti_def.no_op++
+              }
+
+              newSelectCoverage.selecti[0] = selecti_def
+              newSelectCoverage.selecti[1] = selecti_nb
+              curg.Node.CoverageMap[cus_idx]=newSelectCoverage
+            }
+
           case instrument.WAIT:
             if !strings.HasPrefix(ed.Name,"Wg") && !strings.HasPrefix(ed.Name,"CvWait"){
               continue
@@ -541,7 +591,6 @@ func (gex *GoatExperiment) UpdateCoverageGGTree(parseResult *trace.ParseResult, 
                 curg.Node.CoverageMap[cus_idx]=&Coverage{no_op:1}
               }
             }
-
           case instrument.DONE:
             if !strings.HasPrefix(ed.Name,"WgAdd"){
               continue
@@ -824,6 +873,23 @@ func (cov *Coverage)ToMap(cu *instrument.ConcurrencyUsage, gid int) (ret map[str
     } else{
       panic("select has no selecti")
     }
+  case instrument.NBCASE:
+    if cov.selecti != nil{
+      ret["unblocking_1 (G"+gids+")"]=0
+      ret["no_op_1 (G"+gids+")"]=0
+      ret["no_op_0 (G"+gids+")"]=0
+      if cov.selecti[0].no_op > 0{
+        ret["no_op_0 (G"+gids+")"]++
+      }
+      if cov.selecti[1].no_op > 0{
+        ret["no_op_1 (G"+gids+")"]++
+      }
+      if cov.selecti[1].unblocking > 0{
+        ret["unblocking_1 (G"+gids+")"]++
+      }
+    } else{
+      panic("select has no selecti")
+    }
   case instrument.LOCK:
     ret["blocked (G"+gids+")"]=0
     ret["blocking (G"+gids+")"]=0
@@ -978,6 +1044,9 @@ func (gex *GoatExperiment) PrintCoverageReport(countNoop bool) float64{
   totCovReq := 0
 
   for i,cu := range(gex.ConcUsage.ConcUsage){
+    if cu.Type == instrument.NBSELECT{
+      continue
+    }
     var row []interface{}
     cuTruncs := strings.Split(cu.String(),"/")
     cuTrunc := cuTruncs[len(cuTruncs)-1]
