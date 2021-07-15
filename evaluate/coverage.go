@@ -526,10 +526,29 @@ func (gex *GoatExperiment) UpdateCoverageGGTree(parseResult *trace.ParseResult, 
               }
               if e.Args[1] == 1{
                 cm.selecti[1].selected++
-                if trace.EventDescriptions[cur.Node.Events[idx+1].Type].Name == "GoUnblock" || trace.EventDescriptions[cur.Node.Events[idx+2].Type].Name == "GoUnblock"{
-                  cm.selecti[1].unblocking++
-                } else{
+                flg := false
+                if idx+1 < len(cur.Node.Events){
+                  if trace.EventDescriptions[cur.Node.Events[idx+1].Type].Name == "GoUnblock"{
+                    cm.selecti[1].unblocking++
+                    flg = true
+                  } else{
+                    //cm.selecti[1].no_op++
+                    flg = false
+                  }
+                }else{
                   cm.selecti[1].no_op++
+                  flg = true
+                }
+                if !flg {
+                  if idx+2 < len(cur.Node.Events){
+                    if trace.EventDescriptions[cur.Node.Events[idx+2].Type].Name == "GoUnblock"{
+                      cm.unblocking++
+                    }else{
+                      cm.no_op++
+                    }
+                  } else{
+                    cm.no_op++
+                  }
                 }
               } else{ // default is selected
                 cm.selecti[0].selected++
@@ -546,16 +565,33 @@ func (gex *GoatExperiment) UpdateCoverageGGTree(parseResult *trace.ParseResult, 
                 selecti_nb.cidi = e.Args[2]
                 selecti_nb.kindi = e.Args[3]
                 selecti_nb.selected++
-                if trace.EventDescriptions[cur.Node.Events[idx+1].Type].Name == "GoUnblock" || trace.EventDescriptions[cur.Node.Events[idx+2].Type].Name == "GoUnblock"{
-                  selecti_nb.unblocking++
+                flg := false
+                if idx+1 < len(cur.Node.Events){
+                  if trace.EventDescriptions[cur.Node.Events[idx+1].Type].Name == "GoUnblock"{
+                    selecti_nb.unblocking++
+                    flg = true
+                  }else{
+                    flg = false
+                  }
                 } else{
                   selecti_nb.no_op++
+                  flg = true
+                }
+                if !flg{
+                  if idx+2 < len(cur.Node.Events){
+                    if trace.EventDescriptions[cur.Node.Events[idx+2].Type].Name == "GoUnblock"{
+                      selecti_nb.unblocking++
+                    }else{
+                      selecti_nb.no_op++
+                    }
+                  } else{
+                    selecti_nb.no_op++
+                  }
                 }
               } else{ // default is selected
                 selecti_def.selected++
                 selecti_def.no_op++
               }
-
               newSelectCoverage.selecti[0] = selecti_def
               newSelectCoverage.selecti[1] = selecti_nb
               curg.Node.CoverageMap[cus_idx]=newSelectCoverage

@@ -32,6 +32,7 @@ func Start() chan interface{}{
 	if err != nil || maxprocs < 1{
 		panic("Invalid GOATMAXPROCS")
 	}
+	fmt.Println("GOAT_MAXPROCS = ", maxprocs)
   runtime.GOMAXPROCS(maxprocs)
   trace.Start(os.Stderr)
   ch := make(chan interface{})

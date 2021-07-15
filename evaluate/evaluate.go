@@ -241,15 +241,15 @@ iteration:for i:=0 ; i < thresh ; i++{
     } // end of inner paths
   }// end of config file
 
-  // for _,td := range(dx){
-  //   fmt.Printf("*******\nTool: %v (cov1)\n*******",td)
-  //   Table_Bug_Coverage(allBugs,td,thresh,true)
-  // }
+   for _,td := range(dx){
+     fmt.Printf("*******\nTool: %v (cov1)\n*******",td)
+     Table_Bug_Coverage(allBugs,td,thresh,true)
+   }
   //
-  // for _,td := range(dx){
-  //   fmt.Printf("*******\nTool: %v (cov2)\n*******",td)
-  //   Table_Bug_Coverage(allBugs,td,thresh,false)
-  // }
+   for _,td := range(dx){
+     fmt.Printf("*******\nTool: %v (cov2)\n*******",td)
+     Table_Bug_Coverage(allBugs,td,thresh,false)
+   }
 
 }
 

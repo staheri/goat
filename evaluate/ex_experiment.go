@@ -17,7 +17,7 @@ import(
 const RESDIR = "/home/saeed/goatws/results"
 const TO = 30 // second
 const CPU = 0
-const MAXPROCS = "12"
+const MAXPROCS = "4"
 const EVENT_BOUND = 200000000
 const WORKDIR = ""
 const GOVER_ORIG = "/home/saeed/go-builds/go-orig-1.15.6"
@@ -185,6 +185,9 @@ func (gex *GoatExperiment) Init(race bool) {
   os.Setenv("GOATTO",_b)
   fmt.Println("set GOATTO",_b)
 
+  os.Setenv("GOATMAXPROCS",MAXPROCS)
+  fmt.Println("set GOATMAXPROCS",MAXPROCS)
+
 }
 
 // Instrument Goat-experiment
@@ -286,6 +289,9 @@ func (tex *ToolExperiment) Init(race bool) {
   tex.OutBuf = bufio.NewWriter(f)
   tex.Timeout = TO
   tex.Cpu = CPU
+
+  os.Setenv("GOATMAXPROCS",MAXPROCS)
+  fmt.Println("set GOATMAXPROCS",MAXPROCS)
 }
 
 // Instrument ToolExperiment
