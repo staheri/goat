@@ -15,16 +15,52 @@ import (
 )
 
 func builtinDL_inst(src,dest string) []*instrument.ConcurrencyUsage{
-  // copy all files to dest
-  files, err := filepath.Glob(src+"/*.go")
-  check(err)
-  for _,file:= range(files){
-    cmd := exec.Command("cp", file, dest)
-    if err1 := cmd.Run(); err1 != nil {
-      panic("builtinDL_inst cp failed")
-    }
-  }
-  return nil
+	var conf        loader.Config
+	var astfiles    []*ast.File
+	// copy all files and inject to its AST
+	paths,err := filepath.Glob(src+"/*.go")
+	check(err)
+	if _, err := conf.FromArgs(paths, false); err != nil {
+		panic(err)
+	}
+	prog, err := conf.Load()
+	check(err)
+	for _,crt := range(prog.Created){
+		for _,ast := range(crt.Files){
+			astfiles = append(astfiles,ast)
+		}
+	}
+	for _,astF := range(astfiles){
+		var entryFunc *ast.FuncDecl
+		astutil.Apply(astF, func(cur *astutil.Cursor) bool {
+			if node, ok := cur.Node().(*ast.FuncDecl); ok {
+				if strings.HasPrefix(node.Name.Name, "Test") {
+					entryFunc = node
+					return false
+				}
+			}
+			return true
+		}, nil)
+
+		entryFunc.Body.List = append([]ast.Stmt{&ast.ExprStmt{
+			X: &ast.CallExpr{
+				Fun: &ast.SelectorExpr{
+					X:   &ast.Ident{Name: "runtime"},
+					Sel: &ast.Ident{Name: "GOMAXPROCS"},
+				},
+				Args: []ast.Expr{
+					&ast.BasicLit{Value: MAXPROCS},
+				},
+			}}}, entryFunc.Body.List...)
+
+		var buf bytes.Buffer
+		astutil.AddImport(prog.Fset, astF, "runtime")
+		printer.Fprint(&buf, prog.Fset, astF)
+		filename := filepath.Join(dest, strings.Split(filepath.Base(prog.Fset.Position(astF.Pos()).Filename),".")[0]+".go")
+		err = ioutil.WriteFile(filename, buf.Bytes(), 0644)
+		check(err)
+	}
+	return nil
 }
 
 func lockDL_inst(src,dest string) []*instrument.ConcurrencyUsage{
@@ -38,6 +74,54 @@ func lockDL_inst(src,dest string) []*instrument.ConcurrencyUsage{
       panic("lockDL_inst cp failed")
     }
   }
+
+	var conf        loader.Config
+	var astfiles    []*ast.File
+	// copy all files and inject to its AST
+	paths,err := filepath.Glob(src+"/*.go")
+	check(err)
+	if _, err := conf.FromArgs(paths, false); err != nil {
+		panic(err)
+	}
+	prog, err := conf.Load()
+	check(err)
+	for _,crt := range(prog.Created){
+		for _,ast := range(crt.Files){
+			astfiles = append(astfiles,ast)
+		}
+	}
+	for _,astF := range(astfiles){
+		var entryFunc *ast.FuncDecl
+		astutil.Apply(astF, func(cur *astutil.Cursor) bool {
+			if node, ok := cur.Node().(*ast.FuncDecl); ok {
+				if strings.HasPrefix(node.Name.Name, "Test") {
+					entryFunc = node
+					return false
+				}
+			}
+			return true
+		}, nil)
+
+		entryFunc.Body.List = append([]ast.Stmt{&ast.ExprStmt{
+			X: &ast.CallExpr{
+				Fun: &ast.SelectorExpr{
+					X:   &ast.Ident{Name: "runtime"},
+					Sel: &ast.Ident{Name: "GOMAXPROCS"},
+				},
+				Args: []ast.Expr{
+					&ast.BasicLit{Value: MAXPROCS},
+				},
+			}}}, entryFunc.Body.List...)
+
+		var buf bytes.Buffer
+		astutil.AddImport(prog.Fset, astF, "runtime")
+		printer.Fprint(&buf, prog.Fset, astF)
+		filename := filepath.Join(dest, strings.Split(filepath.Base(prog.Fset.Position(astF.Pos()).Filename),".")[0]+".go")
+		err = ioutil.WriteFile(filename, buf.Bytes(), 0644)
+		check(err)
+	}
+
+
   files, err = filepath.Glob(dest+"/*.go")
   check(err)
   for _,file:= range(files){
@@ -100,9 +184,20 @@ func goleak_inst(src,dest string) []*instrument.ConcurrencyUsage{
   				&ast.BasicLit{Value: "t"},
   			},
   		}}}, entryFunc.Body.List...)
+		entryFunc.Body.List = append([]ast.Stmt{&ast.ExprStmt{
+  		X: &ast.CallExpr{
+  			Fun: &ast.SelectorExpr{
+  				X:   &ast.Ident{Name: "runtime"},
+  				Sel: &ast.Ident{Name: "GOMAXPROCS"},
+  			},
+  			Args: []ast.Expr{
+  				&ast.BasicLit{Value: MAXPROCS},
+  			},
+  		}}}, entryFunc.Body.List...)
 
   	var buf bytes.Buffer
   	astutil.AddImport(prog.Fset, astF, "go.uber.org/goleak")
+		astutil.AddImport(prog.Fset, astF, "runtime")
   	printer.Fprint(&buf, prog.Fset, astF)
     filename := filepath.Join(dest, strings.Split(filepath.Base(prog.Fset.Position(astF.Pos()).Filename),".")[0]+".go")
   	err = ioutil.WriteFile(filename, buf.Bytes(), 0644)
