@@ -1,0 +1,717 @@
+digraph G{
+	rankdir=TB
+	subgraph{
+		node [margin=0 fontsize=11 width=5 height=2 shape=box style=dashed fixedsize=true]
+		rank=same;
+		rankdir=LR
+		"-1,0" [label="G0\nROOT"]
+		"-1,1" [label="G18\nMAIN"]
+		"-1,2" [label="G6\ntesting.tRunner @ testing.go:1123 
+src.TestMoby28462 @ moby28462_test.go:99 
+"]
+		"-1,3" [label="G7\ntesting.tRunner @ testing.go:1123 
+src.TestMoby28462 @ moby28462_test.go:102 
+"]
+		"-1,4" [label="G8\ntesting.tRunner @ testing.go:1123 
+src.TestMoby28462 @ moby28462_test.go:103 
+"]
+
+		edge [dir=none, style=invis]
+		"-1,0" -> "-1,1"
+		"-1,1" -> "-1,2"
+		"-1,2" -> "-1,3"
+		"-1,3" -> "-1,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"0,0" 
+		"0,1" [label="GoStart\ntesting.callerName @ .:-1 
+",style=filled]
+		"0,2" 
+		"0,3" 
+		"0,4" 
+
+		edge [dir=none, style=invis]
+		"0,0" -> "0,1"
+		"0,1" -> "0,2"
+		"0,2" -> "0,3"
+		"0,3" -> "0,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"1,0" 
+		"1,1" [label="GoCreate\ntesting.tRunner @ testing.go:1123 
+src.TestMoby28462 @ moby28462_test.go:99 
+",style=filled]
+		"1,2" 
+		"1,3" 
+		"1,4" 
+
+		edge [dir=none, style=invis]
+		"1,0" -> "1,1"
+		"1,1" -> "1,2"
+		"1,2" -> "1,3"
+		"1,3" -> "1,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"2,0" 
+		"2,1" [label="Ch(11).ChMake\ntesting.tRunner @ testing.go:1123 
+src.TestMoby28462 @ moby28462_test.go:100 
+src.TestMoby28462 @ moby28462_test.go:91 
+runtime.makechan @ chan.go:122 
+",style=filled]
+		"2,2" 
+		"2,3" 
+		"2,4" 
+
+		edge [dir=none, style=invis]
+		"2,0" -> "2,1"
+		"2,1" -> "2,2"
+		"2,2" -> "2,3"
+		"2,3" -> "2,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"3,0" 
+		"3,1" [label="GoCreate\ntesting.tRunner @ testing.go:1123 
+src.TestMoby28462 @ moby28462_test.go:102 
+",style=filled]
+		"3,2" 
+		"3,3" 
+		"3,4" 
+
+		edge [dir=none, style=invis]
+		"3,0" -> "3,1"
+		"3,1" -> "3,2"
+		"3,2" -> "3,3"
+		"3,3" -> "3,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"4,0" 
+		"4,1" [label="GoCreate\ntesting.tRunner @ testing.go:1123 
+src.TestMoby28462 @ moby28462_test.go:103 
+",style=filled]
+		"4,2" 
+		"4,3" 
+		"4,4" 
+
+		edge [dir=none, style=invis]
+		"4,0" -> "4,1"
+		"4,1" -> "4,2"
+		"4,2" -> "4,3"
+		"4,3" -> "4,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"5,0" 
+		"5,1" 
+		"5,2" 
+		"5,3" 
+		"5,4" [label="Mu(8)[free].MuLock\nsrc.(*Daemon).StateChanged @ moby28462_test.go:39 
+sync.(*Mutex).Lock @ mutex.go:86 
+",style="filled", fillcolor=green2]
+
+		edge [dir=none, style=invis]
+		"5,0" -> "5,1"
+		"5,1" -> "5,2"
+		"5,2" -> "5,3"
+		"5,3" -> "5,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"6,0" 
+		"6,1" 
+		"6,2" 
+		"6,3" 
+		"6,4" [label="Ch(11)[blocked].(pre)ChSend\nsrc.(*Daemon).StateChanged @ moby28462_test.go:53 
+src.(*Daemon).StateChanged @ moby28462_test.go:40 
+src.(*Daemon).StateChanged @ moby28462_test.go:67 
+runtime.chansend1 @ chan.go:154 
+runtime.chansend @ chan.go:262 
+",style="dotted,filled", fillcolor=gold]
+
+		edge [dir=none, style=invis]
+		"6,0" -> "6,1"
+		"6,1" -> "6,2"
+		"6,2" -> "6,3"
+		"6,3" -> "6,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"7,0" 
+		"7,1" 
+		"7,2" 
+		"7,3" 
+		"7,4" [label="GoBlockSend\nsrc.(*Daemon).StateChanged @ moby28462_test.go:53 
+src.(*Daemon).StateChanged @ moby28462_test.go:40 
+src.(*Daemon).StateChanged @ moby28462_test.go:67 
+runtime.chansend1 @ chan.go:154 
+",style="bold,filled", fillcolor=firebrick1]
+
+		edge [dir=none, style=invis]
+		"7,0" -> "7,1"
+		"7,1" -> "7,2"
+		"7,2" -> "7,3"
+		"7,3" -> "7,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"8,0" 
+		"8,1" [label="GoStart\n",style=filled]
+		"8,2" 
+		"8,3" 
+		"8,4" 
+
+		edge [dir=none, style=invis]
+		"8,0" -> "8,1"
+		"8,1" -> "8,2"
+		"8,2" -> "8,3"
+		"8,3" -> "8,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"9,0" 
+		"9,1" 
+		"9,2" [label="GoStart\n",style=filled]
+		"9,3" 
+		"9,4" 
+
+		edge [dir=none, style=invis]
+		"9,0" -> "9,1"
+		"9,1" -> "9,2"
+		"9,2" -> "9,3"
+		"9,3" -> "9,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"10,0" 
+		"10,1" 
+		"10,2" [label="GoEnd\n",style=filled]
+		"10,3" 
+		"10,4" 
+
+		edge [dir=none, style=invis]
+		"10,0" -> "10,1"
+		"10,1" -> "10,2"
+		"10,2" -> "10,3"
+		"10,3" -> "10,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"11,0" 
+		"11,1" 
+		"11,2" 
+		"11,3" [label="GoStart\nsrc.(*Health).OpenMonitorChannel @ .:-1 
+",style=filled]
+		"11,4" 
+
+		edge [dir=none, style=invis]
+		"11,0" -> "11,1"
+		"11,1" -> "11,2"
+		"11,2" -> "11,3"
+		"11,3" -> "11,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"12,0" 
+		"12,1" 
+		"12,2" 
+		"12,3" [label="Ch(11)[blocked].(pre)ChRecv\nsrc.monitor @ moby28462_test.go:74 
+runtime.selectnbrecv @ chan.go:741 
+runtime.chanrecv @ chan.go:541 
+",style="dotted,filled", fillcolor=gold]
+		"12,4" 
+
+		edge [dir=none, style=invis]
+		"12,0" -> "12,1"
+		"12,1" -> "12,2"
+		"12,2" -> "12,3"
+		"12,3" -> "12,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"13,0" 
+		"13,1" 
+		"13,2" 
+		"13,3" [label="GoUnblock\nsrc.monitor @ moby28462_test.go:74 
+runtime.selectnbrecv @ chan.go:741 
+",style=filled]
+		"13,4" 
+
+		edge [dir=none, style=invis]
+		"13,0" -> "13,1"
+		"13,1" -> "13,2"
+		"13,2" -> "13,3"
+		"13,3" -> "13,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"14,0" 
+		"14,1" 
+		"14,2" 
+		"14,3" [label="SS(3)[nb].Select\nsrc.monitor @ moby28462_test.go:74 
+runtime.selectnbrecv @ chan.go:743 
+",style=filled]
+		"14,4" 
+
+		edge [dir=none, style=invis]
+		"14,0" -> "14,1"
+		"14,1" -> "14,2"
+		"14,2" -> "14,3"
+		"14,3" -> "14,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"15,0" 
+		"15,1" 
+		"15,2" 
+		"15,3" [label="GoEnd\n",style=filled]
+		"15,4" 
+
+		edge [dir=none, style=invis]
+		"15,0" -> "15,1"
+		"15,1" -> "15,2"
+		"15,2" -> "15,3"
+		"15,3" -> "15,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"16,0" 
+		"16,1" 
+		"16,2" 
+		"16,3" 
+		"16,4" [label="GoStart\n",style=filled]
+
+		edge [dir=none, style=invis]
+		"16,0" -> "16,1"
+		"16,1" -> "16,2"
+		"16,2" -> "16,3"
+		"16,3" -> "16,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"17,0" 
+		"17,1" 
+		"17,2" 
+		"17,3" 
+		"17,4" [label="Ch(11)[blocked].(pre)ChSend\nsrc.(*Daemon).StateChanged @ moby28462_test.go:53 
+src.(*Daemon).StateChanged @ moby28462_test.go:40 
+src.(*Daemon).StateChanged @ moby28462_test.go:67 
+runtime.chansend1 @ chan.go:154 
+runtime.chansend @ chan.go:275 
+",style="dotted,filled", fillcolor=gold]
+
+		edge [dir=none, style=invis]
+		"17,0" -> "17,1"
+		"17,1" -> "17,2"
+		"17,2" -> "17,3"
+		"17,3" -> "17,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"18,0" 
+		"18,1" 
+		"18,2" 
+		"18,3" 
+		"18,4" [label="Mu(8).MuUnlock\nsrc.(*Daemon).StateChanged @ moby28462_test.go:44 
+src.(*Daemon).StateChanged.func1 @ moby28462_test.go:42 
+sync.(*Mutex).Unlock @ mutex.go:209 
+",style="filled", fillcolor=green2]
+
+		edge [dir=none, style=invis]
+		"18,0" -> "18,1"
+		"18,1" -> "18,2"
+		"18,2" -> "18,3"
+		"18,3" -> "18,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"19,0" 
+		"19,1" 
+		"19,2" 
+		"19,3" 
+		"19,4" [label="GoEnd\n",style=filled]
+
+		edge [dir=none, style=invis]
+		"19,0" -> "19,1"
+		"19,1" -> "19,2"
+		"19,2" -> "19,3"
+		"19,3" -> "19,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"20,0" [label="GoUnblock\n",style=filled]
+		"20,1" 
+		"20,2" 
+		"20,3" 
+		"20,4" 
+
+		edge [dir=none, style=invis]
+		"20,0" -> "20,1"
+		"20,1" -> "20,2"
+		"20,2" -> "20,3"
+		"20,3" -> "20,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"21,0" 
+		"21,1" [label="GoStart\n",style=filled]
+		"21,2" 
+		"21,3" 
+		"21,4" 
+
+		edge [dir=none, style=invis]
+		"21,0" -> "21,1"
+		"21,1" -> "21,2"
+		"21,2" -> "21,3"
+		"21,3" -> "21,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"22,0" 
+		"22,1" [label="GoSched\ntesting.tRunner @ testing.go:1123 
+src.TestMoby28462 @ moby28462_test.go:104 
+goat.Stop @ handlers.go:71 
+trace.Stop @ trace.go:147 
+runtime.StopTrace @ trace.go:1099 
+runtime.StopTrace @ trace.go:1100 
+",style=filled]
+		"22,2" 
+		"22,3" 
+		"22,4" 
+
+		edge [dir=none, style=invis]
+		"22,0" -> "22,1"
+		"22,1" -> "22,2"
+		"22,2" -> "22,3"
+		"22,3" -> "22,4"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+		"x,0"
+		"x,1"
+		"x,2"
+		"x,3"
+		"x,4"
+
+		edge [dir=none, style=invis]
+		"x,0" -> "x,1"
+		"x,1" -> "x,2"
+		"x,2" -> "x,3"
+		"x,3" -> "x,4"	}
+
+	edge [dir=none, color=gray88]
+	"-1,0" -> "0,0"
+
+	"0,0" -> "1,0"
+
+	"1,0" -> "2,0"
+
+	"2,0" -> "3,0"
+
+	"3,0" -> "4,0"
+
+	"4,0" -> "5,0"
+
+	"5,0" -> "6,0"
+
+	"6,0" -> "7,0"
+
+	"7,0" -> "8,0"
+
+	"8,0" -> "9,0"
+
+	"9,0" -> "10,0"
+
+	"10,0" -> "11,0"
+
+	"11,0" -> "12,0"
+
+	"12,0" -> "13,0"
+
+	"13,0" -> "14,0"
+
+	"14,0" -> "15,0"
+
+	"15,0" -> "16,0"
+
+	"16,0" -> "17,0"
+
+	"17,0" -> "18,0"
+
+	"18,0" -> "19,0"
+
+	"19,0" -> "20,0"
+
+	"20,0" -> "21,0"
+
+	"21,0" -> "22,0"
+
+	"22,0" -> "x,0"
+
+	"-1,1" -> "0,1"
+
+	"0,1" -> "1,1"
+
+	"1,1" -> "2,1"
+
+	"2,1" -> "3,1"
+
+	"3,1" -> "4,1"
+
+	"4,1" -> "5,1"
+
+	"5,1" -> "6,1"
+
+	"6,1" -> "7,1"
+
+	"7,1" -> "8,1"
+
+	"8,1" -> "9,1"
+
+	"9,1" -> "10,1"
+
+	"10,1" -> "11,1"
+
+	"11,1" -> "12,1"
+
+	"12,1" -> "13,1"
+
+	"13,1" -> "14,1"
+
+	"14,1" -> "15,1"
+
+	"15,1" -> "16,1"
+
+	"16,1" -> "17,1"
+
+	"17,1" -> "18,1"
+
+	"18,1" -> "19,1"
+
+	"19,1" -> "20,1"
+
+	"20,1" -> "21,1"
+
+	"21,1" -> "22,1"
+
+	"22,1" -> "x,1"
+
+	"-1,2" -> "0,2"
+
+	"0,2" -> "1,2"
+
+	"1,2" -> "2,2"
+
+	"2,2" -> "3,2"
+
+	"3,2" -> "4,2"
+
+	"4,2" -> "5,2"
+
+	"5,2" -> "6,2"
+
+	"6,2" -> "7,2"
+
+	"7,2" -> "8,2"
+
+	"8,2" -> "9,2"
+
+	"9,2" -> "10,2"
+
+	"10,2" -> "11,2"
+
+	"11,2" -> "12,2"
+
+	"12,2" -> "13,2"
+
+	"13,2" -> "14,2"
+
+	"14,2" -> "15,2"
+
+	"15,2" -> "16,2"
+
+	"16,2" -> "17,2"
+
+	"17,2" -> "18,2"
+
+	"18,2" -> "19,2"
+
+	"19,2" -> "20,2"
+
+	"20,2" -> "21,2"
+
+	"21,2" -> "22,2"
+
+	"22,2" -> "x,2"
+
+	"-1,3" -> "0,3"
+
+	"0,3" -> "1,3"
+
+	"1,3" -> "2,3"
+
+	"2,3" -> "3,3"
+
+	"3,3" -> "4,3"
+
+	"4,3" -> "5,3"
+
+	"5,3" -> "6,3"
+
+	"6,3" -> "7,3"
+
+	"7,3" -> "8,3"
+
+	"8,3" -> "9,3"
+
+	"9,3" -> "10,3"
+
+	"10,3" -> "11,3"
+
+	"11,3" -> "12,3"
+
+	"12,3" -> "13,3"
+
+	"13,3" -> "14,3"
+
+	"14,3" -> "15,3"
+
+	"15,3" -> "16,3"
+
+	"16,3" -> "17,3"
+
+	"17,3" -> "18,3"
+
+	"18,3" -> "19,3"
+
+	"19,3" -> "20,3"
+
+	"20,3" -> "21,3"
+
+	"21,3" -> "22,3"
+
+	"22,3" -> "x,3"
+
+	"-1,4" -> "0,4"
+
+	"0,4" -> "1,4"
+
+	"1,4" -> "2,4"
+
+	"2,4" -> "3,4"
+
+	"3,4" -> "4,4"
+
+	"4,4" -> "5,4"
+
+	"5,4" -> "6,4"
+
+	"6,4" -> "7,4"
+
+	"7,4" -> "8,4"
+
+	"8,4" -> "9,4"
+
+	"9,4" -> "10,4"
+
+	"10,4" -> "11,4"
+
+	"11,4" -> "12,4"
+
+	"12,4" -> "13,4"
+
+	"13,4" -> "14,4"
+
+	"14,4" -> "15,4"
+
+	"15,4" -> "16,4"
+
+	"16,4" -> "17,4"
+
+	"17,4" -> "18,4"
+
+	"18,4" -> "19,4"
+
+	"19,4" -> "20,4"
+
+	"20,4" -> "21,4"
+
+	"21,4" -> "22,4"
+
+	"22,4" -> "x,4"
+
+}

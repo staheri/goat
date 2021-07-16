@@ -254,6 +254,7 @@ iteration:for i:=0 ; i < thresh ; i++{
 }
 
 func EvaluateComparison(configFile string, thresh int) {
+  visualFolder := "/home/saeed/gopath/src/github.com/staheri/goat/results/visuals/"
   var ex Ex
   colorReset := "\033[0m"
   colorRed := "\033[31m"
@@ -356,6 +357,20 @@ func EvaluateComparison(configFile string, thresh int) {
             if len(files) != 0{ // check if binary exist
               gex.BinaryName = filepath.Base(files[0]) // assign the first found binary to current gex binaryPath
             }
+            // generate execViz and gtree
+            // outp := ""
+            // if gex.LastFailedTrace != ""{
+            //   outp = fmt.Sprintf("%v/FAIL_%v",visualFolder,strings.Split(filepath.Base(gex.LastFailedTrace),".trace")[0])
+            //   traceops.ExecVis(gex.LastFailedTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,false)
+            //   traceops.ExecVis(gex.LastFailedTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,true)
+            //   traceops.ExecGtree(gex.LastFailedTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp)
+            // }
+            // if gex.LastSuccessTrace != "" {
+            //   outp = fmt.Sprintf("%v/SUCC_%v",visualFolder,strings.Split(filepath.Base(gex.LastSuccessTrace),".trace")[0])
+            //   traceops.ExecVis(gex.LastSuccessTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,false)
+            //   traceops.ExecVis(gex.LastSuccessTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,true)
+            //   traceops.ExecGtree(gex.LastSuccessTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp)
+            // }
 
             // missing execute stuff (from results)
             newResults := []*Result{}

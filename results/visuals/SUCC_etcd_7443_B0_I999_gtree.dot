@@ -1,0 +1,35 @@
+digraph{
+	node[shape=record,style=filled,fillcolor=gray95]
+
+	6 [ label = "{ GID: 6\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:208 
+goat.Start @ handlers.go:37 
+\lLast Event: GoSched\l }" style=bold]
+	8 [ label = "{ GID: 8\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:209 
+\lLast Event: GoEnd\l }" style=bold]
+	10 [ label = "{ GID: 10\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:217 
+\lLast Event: GoEnd\l }" style=bold]
+	11 [ label = "{ GID: 11\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:223 
+\lLast Event: GoEnd\l }" style=bold]
+	9 [ label = "{ GID: 9\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:211 
+src.TestEtcd7443 @ etcd7443_test.go:117 
+src.DialContext @ etcd7443_test.go:127 
+\lLast Event: GoEnd\l }" style=bold]
+	
+
+	0 -> 1
+	0 -> 2
+	0 -> 3
+	0 -> 4
+	0 -> 5
+	0 -> 6
+	6 -> 7
+	6 -> 8
+	6 -> 9
+	6 -> 10
+	6 -> 11
+	}

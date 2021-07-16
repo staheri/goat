@@ -1,0 +1,46 @@
+digraph{
+	node[shape=record,style=filled,fillcolor=gray95]
+
+	6 [ label = "{ GID: 6\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestKubernetes11298 @ kubernetes11298_test.go:110 
+goat.Start @ handlers.go:37 
+\lLast Event: GoSched\l }" style=bold]
+	10 [ label = "{ GID: 10\l | Create Site: src.After.func1 @ kubernetes11298_test.go:21 
+src.TestKubernetes11298.func1 @ kubernetes11298_test.go:114 
+src.Notify @ kubernetes11298_test.go:85 
+src.After @ kubernetes11298_test.go:15 
+\lLast Event: GoEnd\l }" style=bold]
+	11 [ label = "{ GID: 11\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestKubernetes11298 @ kubernetes11298_test.go:116 
+\lLast Event: GoEnd\l }" style=bold]
+	8 [ label = "{ GID: 8\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestKubernetes11298 @ kubernetes11298_test.go:111 
+\lLast Event: GoEnd\l }" style=bold]
+	9 [ label = "{ GID: 9\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestKubernetes11298 @ kubernetes11298_test.go:114 
+src.After @ kubernetes11298_test.go:15 
+\lLast Event: GoEnd\l }" style=bold]
+	12 [ label = "{ GID: 12\l | Create Site: src.After.func1 @ kubernetes11298_test.go:21 
+src.TestKubernetes11298.func1 @ kubernetes11298_test.go:114 
+src.Notify @ kubernetes11298_test.go:107 
+src.Until @ kubernetes11298_test.go:34 
+src.Until @ kubernetes11298_test.go:39 
+src.Notify.func2 @ kubernetes11298_test.go:107 
+src.(*notifier).serviceLoop @ kubernetes11298_test.go:68 
+src.After @ kubernetes11298_test.go:15 
+\lLast Event: GoEnd\l }" style=bold]
+	
+
+	0 -> 1
+	0 -> 2
+	0 -> 3
+	0 -> 4
+	0 -> 5
+	0 -> 6
+	6 -> 7
+	6 -> 8
+	6 -> 9
+	9 -> 10
+	6 -> 11
+	9 -> 12
+	}

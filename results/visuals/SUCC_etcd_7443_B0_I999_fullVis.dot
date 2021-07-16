@@ -1,0 +1,1602 @@
+digraph G{
+	rankdir=TB
+	subgraph{
+		node [margin=0 fontsize=11 width=5 height=2 shape=box style=dashed fixedsize=true]
+		rank=same;
+		rankdir=LR
+		"-1,0" [label="G0\nROOT"]
+		"-1,1" [label="G6\nMAIN"]
+		"-1,2" [label="G10\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:217 
+"]
+		"-1,3" [label="G9\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:211 
+src.TestEtcd7443 @ etcd7443_test.go:117 
+src.DialContext @ etcd7443_test.go:127 
+"]
+		"-1,4" [label="G11\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:223 
+"]
+		"-1,5" [label="G8\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:209 
+"]
+
+		edge [dir=none, style=invis]
+		"-1,0" -> "-1,1"
+		"-1,1" -> "-1,2"
+		"-1,2" -> "-1,3"
+		"-1,3" -> "-1,4"
+		"-1,4" -> "-1,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"0,0" 
+		"0,1" [label="GoStart\ntesting.callerName @ .:-1 
+",style=filled]
+		"0,2" 
+		"0,3" 
+		"0,4" 
+		"0,5" 
+
+		edge [dir=none, style=invis]
+		"0,0" -> "0,1"
+		"0,1" -> "0,2"
+		"0,2" -> "0,3"
+		"0,3" -> "0,4"
+		"0,4" -> "0,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"1,0" 
+		"1,1" [label="GoCreate\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:209 
+",style=filled]
+		"1,2" 
+		"1,3" 
+		"1,4" 
+		"1,5" 
+
+		edge [dir=none, style=invis]
+		"1,0" -> "1,1"
+		"1,1" -> "1,2"
+		"1,2" -> "1,3"
+		"1,3" -> "1,4"
+		"1,4" -> "1,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"2,0" 
+		"2,1" [label="Ch(11).ChMake\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:211 
+src.newSimpleBalancer @ etcd7443_test.go:190 
+runtime.makechan @ chan.go:122 
+",style=filled]
+		"2,2" 
+		"2,3" 
+		"2,4" 
+		"2,5" 
+
+		edge [dir=none, style=invis]
+		"2,0" -> "2,1"
+		"2,1" -> "2,2"
+		"2,2" -> "2,3"
+		"2,3" -> "2,4"
+		"2,4" -> "2,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"3,0" 
+		"3,1" [label="Ch(11)[blocked].(pre)ChSend\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:211 
+src.newSimpleBalancer @ etcd7443_test.go:195 
+runtime.chansend1 @ chan.go:154 
+runtime.chansend @ chan.go:238 
+",style="dotted,filled", fillcolor=gold]
+		"3,2" 
+		"3,3" 
+		"3,4" 
+		"3,5" 
+
+		edge [dir=none, style=invis]
+		"3,0" -> "3,1"
+		"3,1" -> "3,2"
+		"3,2" -> "3,3"
+		"3,3" -> "3,4"
+		"3,4" -> "3,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"4,0" 
+		"4,1" [label="GoCreate\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:211 
+src.TestEtcd7443 @ etcd7443_test.go:117 
+src.DialContext @ etcd7443_test.go:127 
+",style=filled]
+		"4,2" 
+		"4,3" 
+		"4,4" 
+		"4,5" 
+
+		edge [dir=none, style=invis]
+		"4,0" -> "4,1"
+		"4,1" -> "4,2"
+		"4,2" -> "4,3"
+		"4,3" -> "4,4"
+		"4,4" -> "4,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"5,0" 
+		"5,1" [label="GoSleep\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:214 
+time.Sleep @ time.go:188 
+",style=filled]
+		"5,2" 
+		"5,3" 
+		"5,4" 
+		"5,5" 
+
+		edge [dir=none, style=invis]
+		"5,0" -> "5,1"
+		"5,1" -> "5,2"
+		"5,2" -> "5,3"
+		"5,3" -> "5,4"
+		"5,4" -> "5,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"6,0" [label="GoUnblock\n",style=filled]
+		"6,1" 
+		"6,2" 
+		"6,3" 
+		"6,4" 
+		"6,5" 
+
+		edge [dir=none, style=invis]
+		"6,0" -> "6,1"
+		"6,1" -> "6,2"
+		"6,2" -> "6,3"
+		"6,3" -> "6,4"
+		"6,4" -> "6,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"7,0" 
+		"7,1" [label="GoStart\n",style=filled]
+		"7,2" 
+		"7,3" 
+		"7,4" 
+		"7,5" 
+
+		edge [dir=none, style=invis]
+		"7,0" -> "7,1"
+		"7,1" -> "7,2"
+		"7,2" -> "7,3"
+		"7,3" -> "7,4"
+		"7,4" -> "7,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"8,0" 
+		"8,1" [label="Ch(12).ChMake\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:216 
+runtime.makechan @ chan.go:122 
+",style=filled]
+		"8,2" 
+		"8,3" 
+		"8,4" 
+		"8,5" 
+
+		edge [dir=none, style=invis]
+		"8,0" -> "8,1"
+		"8,1" -> "8,2"
+		"8,2" -> "8,3"
+		"8,3" -> "8,4"
+		"8,4" -> "8,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"9,0" 
+		"9,1" [label="GoCreate\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:217 
+",style=filled]
+		"9,2" 
+		"9,3" 
+		"9,4" 
+		"9,5" 
+
+		edge [dir=none, style=invis]
+		"9,0" -> "9,1"
+		"9,1" -> "9,2"
+		"9,2" -> "9,3"
+		"9,3" -> "9,4"
+		"9,4" -> "9,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"10,0" 
+		"10,1" [label="GoCreate\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:223 
+",style=filled]
+		"10,2" 
+		"10,3" 
+		"10,4" 
+		"10,5" 
+
+		edge [dir=none, style=invis]
+		"10,0" -> "10,1"
+		"10,1" -> "10,2"
+		"10,2" -> "10,3"
+		"10,3" -> "10,4"
+		"10,4" -> "10,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"11,0" 
+		"11,1" [label="Ch(12)[blocked].(pre)ChRecv\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:224 
+runtime.chanrecv1 @ chan.go:458 
+runtime.chanrecv @ chan.go:830 
+",style="dotted,filled", fillcolor=gold]
+		"11,2" 
+		"11,3" 
+		"11,4" 
+		"11,5" 
+
+		edge [dir=none, style=invis]
+		"11,0" -> "11,1"
+		"11,1" -> "11,2"
+		"11,2" -> "11,3"
+		"11,3" -> "11,4"
+		"11,4" -> "11,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"12,0" 
+		"12,1" [label="GoBlockRecv\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:224 
+runtime.chanrecv1 @ chan.go:458 
+",style="bold,filled", fillcolor=firebrick1]
+		"12,2" 
+		"12,3" 
+		"12,4" 
+		"12,5" 
+
+		edge [dir=none, style=invis]
+		"12,0" -> "12,1"
+		"12,1" -> "12,2"
+		"12,2" -> "12,3"
+		"12,3" -> "12,4"
+		"12,4" -> "12,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"13,0" 
+		"13,1" 
+		"13,2" 
+		"13,3" 
+		"13,4" [label="GoStart\nsrc.(*ClientConn).resetAddrConn @ .:-1 
+",style=filled]
+		"13,5" 
+
+		edge [dir=none, style=invis]
+		"13,0" -> "13,1"
+		"13,1" -> "13,2"
+		"13,2" -> "13,3"
+		"13,3" -> "13,4"
+		"13,4" -> "13,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"14,0" 
+		"14,1" 
+		"14,2" 
+		"14,3" 
+		"14,4" [label="Mu(8)[free].MuLock\nsrc.(*ClientConn).Close @ etcd7443_test.go:99 
+sync.(*RWMutex).Lock @ rwmutex.go:115 
+sync.(*Mutex).Lock @ mutex.go:86 
+",style="filled", fillcolor=green2]
+		"14,5" 
+
+		edge [dir=none, style=invis]
+		"14,0" -> "14,1"
+		"14,1" -> "14,2"
+		"14,2" -> "14,3"
+		"14,3" -> "14,4"
+		"14,4" -> "14,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"15,0" 
+		"15,1" 
+		"15,2" 
+		"15,3" 
+		"15,4" [label="Mu(8).MuUnlock\nsrc.(*ClientConn).Close @ etcd7443_test.go:102 
+sync.(*RWMutex).Unlock @ rwmutex.go:153 
+sync.(*Mutex).Unlock @ mutex.go:209 
+",style="filled", fillcolor=green2]
+		"15,5" 
+
+		edge [dir=none, style=invis]
+		"15,0" -> "15,1"
+		"15,1" -> "15,2"
+		"15,2" -> "15,3"
+		"15,3" -> "15,4"
+		"15,4" -> "15,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"16,0" 
+		"16,1" 
+		"16,2" 
+		"16,3" 
+		"16,4" [label="Mu(9)[free].MuLock\nsrc.(*ClientConn).Close @ etcd7443_test.go:104 
+src.(*simpleBalancer).Close @ etcd7443_test.go:177 
+sync.(*RWMutex).Lock @ rwmutex.go:115 
+sync.(*Mutex).Lock @ mutex.go:86 
+",style="filled", fillcolor=green2]
+		"16,5" 
+
+		edge [dir=none, style=invis]
+		"16,0" -> "16,1"
+		"16,1" -> "16,2"
+		"16,2" -> "16,3"
+		"16,3" -> "16,4"
+		"16,4" -> "16,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"17,0" 
+		"17,1" 
+		"17,2" 
+		"17,3" 
+		"17,4" [label="Ch(11).ChClose\nsrc.(*ClientConn).Close @ etcd7443_test.go:104 
+src.(*simpleBalancer).Close @ etcd7443_test.go:185 
+runtime.closechan @ chan.go:392 
+",style=filled]
+		"17,5" 
+
+		edge [dir=none, style=invis]
+		"17,0" -> "17,1"
+		"17,1" -> "17,2"
+		"17,2" -> "17,3"
+		"17,3" -> "17,4"
+		"17,4" -> "17,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"18,0" 
+		"18,1" 
+		"18,2" 
+		"18,3" 
+		"18,4" [label="Mu(9).MuUnlock\nsrc.(*ClientConn).Close @ etcd7443_test.go:104 
+src.(*simpleBalancer).Close @ etcd7443_test.go:187 
+src.(*simpleBalancer).Close.func1 @ etcd7443_test.go:179 
+sync.(*RWMutex).Unlock @ rwmutex.go:153 
+sync.(*Mutex).Unlock @ mutex.go:209 
+",style="filled", fillcolor=green2]
+		"18,5" 
+
+		edge [dir=none, style=invis]
+		"18,0" -> "18,1"
+		"18,1" -> "18,2"
+		"18,2" -> "18,3"
+		"18,3" -> "18,4"
+		"18,4" -> "18,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"19,0" 
+		"19,1" 
+		"19,2" 
+		"19,3" 
+		"19,4" [label="GoEnd\n",style=filled]
+		"19,5" 
+
+		edge [dir=none, style=invis]
+		"19,0" -> "19,1"
+		"19,1" -> "19,2"
+		"19,2" -> "19,3"
+		"19,3" -> "19,4"
+		"19,4" -> "19,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"20,0" 
+		"20,1" 
+		"20,2" 
+		"20,3" [label="GoStart\nsrc.(*addrConn).resetTransport @ .:-1 
+",style=filled]
+		"20,4" 
+		"20,5" 
+
+		edge [dir=none, style=invis]
+		"20,0" -> "20,1"
+		"20,1" -> "20,2"
+		"20,2" -> "20,3"
+		"20,3" -> "20,4"
+		"20,4" -> "20,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"21,0" 
+		"21,1" 
+		"21,2" 
+		"21,3" [label="Ch(11)[blocked].(pre)ChRecv\nsrc.(*ClientConn).lbWatcher @ etcd7443_test.go:45 
+runtime.chanrecv2 @ chan.go:463 
+runtime.chanrecv @ chan.go:566 
+",style="dotted,filled", fillcolor=gold]
+		"21,4" 
+		"21,5" 
+
+		edge [dir=none, style=invis]
+		"21,0" -> "21,1"
+		"21,1" -> "21,2"
+		"21,2" -> "21,3"
+		"21,3" -> "21,4"
+		"21,4" -> "21,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"22,0" 
+		"22,1" 
+		"22,2" 
+		"22,3" [label="Mu(8)[free].MuLock\nsrc.(*ClientConn).lbWatcher @ etcd7443_test.go:50 
+sync.(*RWMutex).Lock @ rwmutex.go:115 
+sync.(*Mutex).Lock @ mutex.go:86 
+",style="filled", fillcolor=green2]
+		"22,4" 
+		"22,5" 
+
+		edge [dir=none, style=invis]
+		"22,0" -> "22,1"
+		"22,1" -> "22,2"
+		"22,2" -> "22,3"
+		"22,3" -> "22,4"
+		"22,4" -> "22,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"23,0" 
+		"23,1" 
+		"23,2" 
+		"23,3" [label="Mu(8).MuUnlock\nsrc.(*ClientConn).lbWatcher @ etcd7443_test.go:70 
+sync.(*RWMutex).Unlock @ rwmutex.go:153 
+sync.(*Mutex).Unlock @ mutex.go:209 
+",style="filled", fillcolor=green2]
+		"23,4" 
+		"23,5" 
+
+		edge [dir=none, style=invis]
+		"23,0" -> "23,1"
+		"23,1" -> "23,2"
+		"23,2" -> "23,3"
+		"23,3" -> "23,4"
+		"23,4" -> "23,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"24,0" 
+		"24,1" 
+		"24,2" 
+		"24,3" [label="Mu(8)[free].MuLock\nsrc.(*ClientConn).lbWatcher @ etcd7443_test.go:72 
+src.(*ClientConn).resetAddrConn @ etcd7443_test.go:86 
+sync.(*RWMutex).Lock @ rwmutex.go:115 
+sync.(*Mutex).Lock @ mutex.go:86 
+",style="filled", fillcolor=green2]
+		"24,4" 
+		"24,5" 
+
+		edge [dir=none, style=invis]
+		"24,0" -> "24,1"
+		"24,1" -> "24,2"
+		"24,2" -> "24,3"
+		"24,3" -> "24,4"
+		"24,4" -> "24,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"25,0" 
+		"25,1" 
+		"25,2" 
+		"25,3" [label="Mu(8).MuUnlock\nsrc.(*ClientConn).lbWatcher @ etcd7443_test.go:72 
+src.(*ClientConn).resetAddrConn @ etcd7443_test.go:88 
+sync.(*RWMutex).Unlock @ rwmutex.go:153 
+sync.(*Mutex).Unlock @ mutex.go:209 
+",style="filled", fillcolor=green2]
+		"25,4" 
+		"25,5" 
+
+		edge [dir=none, style=invis]
+		"25,0" -> "25,1"
+		"25,1" -> "25,2"
+		"25,2" -> "25,3"
+		"25,3" -> "25,4"
+		"25,4" -> "25,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"26,0" 
+		"26,1" 
+		"26,2" 
+		"26,3" [label="Mu(8)[free].MuLock\nsrc.(*ClientConn).lbWatcher @ etcd7443_test.go:72 
+src.(*ClientConn).resetAddrConn @ etcd7443_test.go:86 
+sync.(*RWMutex).Lock @ rwmutex.go:115 
+sync.(*Mutex).Lock @ mutex.go:86 
+",style="filled", fillcolor=green2]
+		"26,4" 
+		"26,5" 
+
+		edge [dir=none, style=invis]
+		"26,0" -> "26,1"
+		"26,1" -> "26,2"
+		"26,2" -> "26,3"
+		"26,3" -> "26,4"
+		"26,4" -> "26,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"27,0" 
+		"27,1" 
+		"27,2" 
+		"27,3" [label="Mu(8).MuUnlock\nsrc.(*ClientConn).lbWatcher @ etcd7443_test.go:72 
+src.(*ClientConn).resetAddrConn @ etcd7443_test.go:88 
+sync.(*RWMutex).Unlock @ rwmutex.go:153 
+sync.(*Mutex).Unlock @ mutex.go:209 
+",style="filled", fillcolor=green2]
+		"27,4" 
+		"27,5" 
+
+		edge [dir=none, style=invis]
+		"27,0" -> "27,1"
+		"27,1" -> "27,2"
+		"27,2" -> "27,3"
+		"27,3" -> "27,4"
+		"27,4" -> "27,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"28,0" 
+		"28,1" 
+		"28,2" 
+		"28,3" [label="Mu(8)[free].MuLock\nsrc.(*ClientConn).lbWatcher @ etcd7443_test.go:72 
+src.(*ClientConn).resetAddrConn @ etcd7443_test.go:86 
+sync.(*RWMutex).Lock @ rwmutex.go:115 
+sync.(*Mutex).Lock @ mutex.go:86 
+",style="filled", fillcolor=green2]
+		"28,4" 
+		"28,5" 
+
+		edge [dir=none, style=invis]
+		"28,0" -> "28,1"
+		"28,1" -> "28,2"
+		"28,2" -> "28,3"
+		"28,3" -> "28,4"
+		"28,4" -> "28,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"29,0" 
+		"29,1" 
+		"29,2" 
+		"29,3" [label="Mu(8).MuUnlock\nsrc.(*ClientConn).lbWatcher @ etcd7443_test.go:72 
+src.(*ClientConn).resetAddrConn @ etcd7443_test.go:88 
+sync.(*RWMutex).Unlock @ rwmutex.go:153 
+sync.(*Mutex).Unlock @ mutex.go:209 
+",style="filled", fillcolor=green2]
+		"29,4" 
+		"29,5" 
+
+		edge [dir=none, style=invis]
+		"29,0" -> "29,1"
+		"29,1" -> "29,2"
+		"29,2" -> "29,3"
+		"29,3" -> "29,4"
+		"29,4" -> "29,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"30,0" 
+		"30,1" 
+		"30,2" 
+		"30,3" [label="Ch(11)[blocked].(pre)ChRecv\nsrc.(*ClientConn).lbWatcher @ etcd7443_test.go:45 
+runtime.chanrecv2 @ chan.go:463 
+runtime.chanrecv @ chan.go:548 
+",style="dotted,filled", fillcolor=gold]
+		"30,4" 
+		"30,5" 
+
+		edge [dir=none, style=invis]
+		"30,0" -> "30,1"
+		"30,1" -> "30,2"
+		"30,2" -> "30,3"
+		"30,3" -> "30,4"
+		"30,4" -> "30,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"31,0" 
+		"31,1" 
+		"31,2" 
+		"31,3" [label="GoEnd\n",style=filled]
+		"31,4" 
+		"31,5" 
+
+		edge [dir=none, style=invis]
+		"31,0" -> "31,1"
+		"31,1" -> "31,2"
+		"31,2" -> "31,3"
+		"31,3" -> "31,4"
+		"31,4" -> "31,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"32,0" 
+		"32,1" 
+		"32,2" [label="GoStart\nsrc.TestEtcd7443.func1.1 @ .:-1 
+",style=filled]
+		"32,3" 
+		"32,4" 
+		"32,5" 
+
+		edge [dir=none, style=invis]
+		"32,0" -> "32,1"
+		"32,1" -> "32,2"
+		"32,2" -> "32,3"
+		"32,3" -> "32,4"
+		"32,4" -> "32,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"33,0" 
+		"33,1" 
+		"33,2" [label="Mu(9)[free].MuLock\nsrc.TestEtcd7443.func1 @ etcd7443_test.go:221 
+src.(*simpleBalancer).Close @ etcd7443_test.go:177 
+sync.(*RWMutex).Lock @ rwmutex.go:115 
+sync.(*Mutex).Lock @ mutex.go:86 
+",style="filled", fillcolor=green2]
+		"33,3" 
+		"33,4" 
+		"33,5" 
+
+		edge [dir=none, style=invis]
+		"33,0" -> "33,1"
+		"33,1" -> "33,2"
+		"33,2" -> "33,3"
+		"33,3" -> "33,4"
+		"33,4" -> "33,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"34,0" 
+		"34,1" 
+		"34,2" [label="Mu(9).MuUnlock\nsrc.TestEtcd7443.func1 @ etcd7443_test.go:221 
+src.(*simpleBalancer).Close @ etcd7443_test.go:182 
+src.(*simpleBalancer).Close.func1 @ etcd7443_test.go:179 
+sync.(*RWMutex).Unlock @ rwmutex.go:153 
+sync.(*Mutex).Unlock @ mutex.go:209 
+",style="filled", fillcolor=green2]
+		"34,3" 
+		"34,4" 
+		"34,5" 
+
+		edge [dir=none, style=invis]
+		"34,0" -> "34,1"
+		"34,1" -> "34,2"
+		"34,2" -> "34,3"
+		"34,3" -> "34,4"
+		"34,4" -> "34,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"35,0" 
+		"35,1" 
+		"35,2" [label="Ch(12).ChClose\nsrc.TestEtcd7443.func1 @ etcd7443_test.go:222 
+src.TestEtcd7443.func1.1 @ etcd7443_test.go:219 
+runtime.closechan @ chan.go:392 
+",style=filled]
+		"35,3" 
+		"35,4" 
+		"35,5" 
+
+		edge [dir=none, style=invis]
+		"35,0" -> "35,1"
+		"35,1" -> "35,2"
+		"35,2" -> "35,3"
+		"35,3" -> "35,4"
+		"35,4" -> "35,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"36,0" 
+		"36,1" 
+		"36,2" [label="GoUnblock\nsrc.TestEtcd7443.func1 @ etcd7443_test.go:222 
+src.TestEtcd7443.func1.1 @ etcd7443_test.go:219 
+",style=filled]
+		"36,3" 
+		"36,4" 
+		"36,5" 
+
+		edge [dir=none, style=invis]
+		"36,0" -> "36,1"
+		"36,1" -> "36,2"
+		"36,2" -> "36,3"
+		"36,3" -> "36,4"
+		"36,4" -> "36,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"37,0" 
+		"37,1" 
+		"37,2" [label="GoEnd\n",style=filled]
+		"37,3" 
+		"37,4" 
+		"37,5" 
+
+		edge [dir=none, style=invis]
+		"37,0" -> "37,1"
+		"37,1" -> "37,2"
+		"37,2" -> "37,3"
+		"37,3" -> "37,4"
+		"37,4" -> "37,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"38,0" 
+		"38,1" [label="GoStart\n",style=filled]
+		"38,2" 
+		"38,3" 
+		"38,4" 
+		"38,5" 
+
+		edge [dir=none, style=invis]
+		"38,0" -> "38,1"
+		"38,1" -> "38,2"
+		"38,2" -> "38,3"
+		"38,3" -> "38,4"
+		"38,4" -> "38,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"39,0" 
+		"39,1" [label="Ch(12)[blocked].(pre)ChRecv\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:224 
+runtime.chanrecv1 @ chan.go:458 
+runtime.chanrecv @ chan.go:600 
+",style="dotted,filled", fillcolor=gold]
+		"39,2" 
+		"39,3" 
+		"39,4" 
+		"39,5" 
+
+		edge [dir=none, style=invis]
+		"39,0" -> "39,1"
+		"39,1" -> "39,2"
+		"39,2" -> "39,3"
+		"39,3" -> "39,4"
+		"39,4" -> "39,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"40,0" 
+		"40,1" 
+		"40,2" 
+		"40,3" 
+		"40,4" 
+		"40,5" [label="GoStart\n",style=filled]
+
+		edge [dir=none, style=invis]
+		"40,0" -> "40,1"
+		"40,1" -> "40,2"
+		"40,2" -> "40,3"
+		"40,3" -> "40,4"
+		"40,4" -> "40,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"41,0" 
+		"41,1" 
+		"41,2" 
+		"41,3" 
+		"41,4" 
+		"41,5" [label="GoEnd\n",style=filled]
+
+		edge [dir=none, style=invis]
+		"41,0" -> "41,1"
+		"41,1" -> "41,2"
+		"41,2" -> "41,3"
+		"41,3" -> "41,4"
+		"41,4" -> "41,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"42,0" 
+		"42,1" [label="GoStart\n",style=filled]
+		"42,2" 
+		"42,3" 
+		"42,4" 
+		"42,5" 
+
+		edge [dir=none, style=invis]
+		"42,0" -> "42,1"
+		"42,1" -> "42,2"
+		"42,2" -> "42,3"
+		"42,3" -> "42,4"
+		"42,4" -> "42,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"43,0" [label="GoUnblock\n",style=filled]
+		"43,1" 
+		"43,2" 
+		"43,3" 
+		"43,4" 
+		"43,5" 
+
+		edge [dir=none, style=invis]
+		"43,0" -> "43,1"
+		"43,1" -> "43,2"
+		"43,2" -> "43,3"
+		"43,3" -> "43,4"
+		"43,4" -> "43,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"44,0" 
+		"44,1" [label="GoStart\n",style=filled]
+		"44,2" 
+		"44,3" 
+		"44,4" 
+		"44,5" 
+
+		edge [dir=none, style=invis]
+		"44,0" -> "44,1"
+		"44,1" -> "44,2"
+		"44,2" -> "44,3"
+		"44,3" -> "44,4"
+		"44,4" -> "44,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+
+		"45,0" 
+		"45,1" [label="GoSched\ntesting.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:225 
+goat.Stop @ handlers.go:71 
+trace.Stop @ trace.go:147 
+runtime.StopTrace @ trace.go:1099 
+runtime.StopTrace @ trace.go:1100 
+",style=filled]
+		"45,2" 
+		"45,3" 
+		"45,4" 
+		"45,5" 
+
+		edge [dir=none, style=invis]
+		"45,0" -> "45,1"
+		"45,1" -> "45,2"
+		"45,2" -> "45,3"
+		"45,3" -> "45,4"
+		"45,4" -> "45,5"	}
+
+	subgraph{
+		node [margin=0 fontsize=11 width=5 shape=box style=invis]
+		rank=same;
+		rankdir=LR
+		"x,0"
+		"x,1"
+		"x,2"
+		"x,3"
+		"x,4"
+		"x,5"
+
+		edge [dir=none, style=invis]
+		"x,0" -> "x,1"
+		"x,1" -> "x,2"
+		"x,2" -> "x,3"
+		"x,3" -> "x,4"
+		"x,4" -> "x,5"	}
+
+	edge [dir=none, color=gray88]
+	"-1,0" -> "0,0"
+
+	"0,0" -> "1,0"
+
+	"1,0" -> "2,0"
+
+	"2,0" -> "3,0"
+
+	"3,0" -> "4,0"
+
+	"4,0" -> "5,0"
+
+	"5,0" -> "6,0"
+
+	"6,0" -> "7,0"
+
+	"7,0" -> "8,0"
+
+	"8,0" -> "9,0"
+
+	"9,0" -> "10,0"
+
+	"10,0" -> "11,0"
+
+	"11,0" -> "12,0"
+
+	"12,0" -> "13,0"
+
+	"13,0" -> "14,0"
+
+	"14,0" -> "15,0"
+
+	"15,0" -> "16,0"
+
+	"16,0" -> "17,0"
+
+	"17,0" -> "18,0"
+
+	"18,0" -> "19,0"
+
+	"19,0" -> "20,0"
+
+	"20,0" -> "21,0"
+
+	"21,0" -> "22,0"
+
+	"22,0" -> "23,0"
+
+	"23,0" -> "24,0"
+
+	"24,0" -> "25,0"
+
+	"25,0" -> "26,0"
+
+	"26,0" -> "27,0"
+
+	"27,0" -> "28,0"
+
+	"28,0" -> "29,0"
+
+	"29,0" -> "30,0"
+
+	"30,0" -> "31,0"
+
+	"31,0" -> "32,0"
+
+	"32,0" -> "33,0"
+
+	"33,0" -> "34,0"
+
+	"34,0" -> "35,0"
+
+	"35,0" -> "36,0"
+
+	"36,0" -> "37,0"
+
+	"37,0" -> "38,0"
+
+	"38,0" -> "39,0"
+
+	"39,0" -> "40,0"
+
+	"40,0" -> "41,0"
+
+	"41,0" -> "42,0"
+
+	"42,0" -> "43,0"
+
+	"43,0" -> "44,0"
+
+	"44,0" -> "45,0"
+
+	"45,0" -> "x,0"
+
+	"-1,1" -> "0,1"
+
+	"0,1" -> "1,1"
+
+	"1,1" -> "2,1"
+
+	"2,1" -> "3,1"
+
+	"3,1" -> "4,1"
+
+	"4,1" -> "5,1"
+
+	"5,1" -> "6,1"
+
+	"6,1" -> "7,1"
+
+	"7,1" -> "8,1"
+
+	"8,1" -> "9,1"
+
+	"9,1" -> "10,1"
+
+	"10,1" -> "11,1"
+
+	"11,1" -> "12,1"
+
+	"12,1" -> "13,1"
+
+	"13,1" -> "14,1"
+
+	"14,1" -> "15,1"
+
+	"15,1" -> "16,1"
+
+	"16,1" -> "17,1"
+
+	"17,1" -> "18,1"
+
+	"18,1" -> "19,1"
+
+	"19,1" -> "20,1"
+
+	"20,1" -> "21,1"
+
+	"21,1" -> "22,1"
+
+	"22,1" -> "23,1"
+
+	"23,1" -> "24,1"
+
+	"24,1" -> "25,1"
+
+	"25,1" -> "26,1"
+
+	"26,1" -> "27,1"
+
+	"27,1" -> "28,1"
+
+	"28,1" -> "29,1"
+
+	"29,1" -> "30,1"
+
+	"30,1" -> "31,1"
+
+	"31,1" -> "32,1"
+
+	"32,1" -> "33,1"
+
+	"33,1" -> "34,1"
+
+	"34,1" -> "35,1"
+
+	"35,1" -> "36,1"
+
+	"36,1" -> "37,1"
+
+	"37,1" -> "38,1"
+
+	"38,1" -> "39,1"
+
+	"39,1" -> "40,1"
+
+	"40,1" -> "41,1"
+
+	"41,1" -> "42,1"
+
+	"42,1" -> "43,1"
+
+	"43,1" -> "44,1"
+
+	"44,1" -> "45,1"
+
+	"45,1" -> "x,1"
+
+	"-1,2" -> "0,2"
+
+	"0,2" -> "1,2"
+
+	"1,2" -> "2,2"
+
+	"2,2" -> "3,2"
+
+	"3,2" -> "4,2"
+
+	"4,2" -> "5,2"
+
+	"5,2" -> "6,2"
+
+	"6,2" -> "7,2"
+
+	"7,2" -> "8,2"
+
+	"8,2" -> "9,2"
+
+	"9,2" -> "10,2"
+
+	"10,2" -> "11,2"
+
+	"11,2" -> "12,2"
+
+	"12,2" -> "13,2"
+
+	"13,2" -> "14,2"
+
+	"14,2" -> "15,2"
+
+	"15,2" -> "16,2"
+
+	"16,2" -> "17,2"
+
+	"17,2" -> "18,2"
+
+	"18,2" -> "19,2"
+
+	"19,2" -> "20,2"
+
+	"20,2" -> "21,2"
+
+	"21,2" -> "22,2"
+
+	"22,2" -> "23,2"
+
+	"23,2" -> "24,2"
+
+	"24,2" -> "25,2"
+
+	"25,2" -> "26,2"
+
+	"26,2" -> "27,2"
+
+	"27,2" -> "28,2"
+
+	"28,2" -> "29,2"
+
+	"29,2" -> "30,2"
+
+	"30,2" -> "31,2"
+
+	"31,2" -> "32,2"
+
+	"32,2" -> "33,2"
+
+	"33,2" -> "34,2"
+
+	"34,2" -> "35,2"
+
+	"35,2" -> "36,2"
+
+	"36,2" -> "37,2"
+
+	"37,2" -> "38,2"
+
+	"38,2" -> "39,2"
+
+	"39,2" -> "40,2"
+
+	"40,2" -> "41,2"
+
+	"41,2" -> "42,2"
+
+	"42,2" -> "43,2"
+
+	"43,2" -> "44,2"
+
+	"44,2" -> "45,2"
+
+	"45,2" -> "x,2"
+
+	"-1,3" -> "0,3"
+
+	"0,3" -> "1,3"
+
+	"1,3" -> "2,3"
+
+	"2,3" -> "3,3"
+
+	"3,3" -> "4,3"
+
+	"4,3" -> "5,3"
+
+	"5,3" -> "6,3"
+
+	"6,3" -> "7,3"
+
+	"7,3" -> "8,3"
+
+	"8,3" -> "9,3"
+
+	"9,3" -> "10,3"
+
+	"10,3" -> "11,3"
+
+	"11,3" -> "12,3"
+
+	"12,3" -> "13,3"
+
+	"13,3" -> "14,3"
+
+	"14,3" -> "15,3"
+
+	"15,3" -> "16,3"
+
+	"16,3" -> "17,3"
+
+	"17,3" -> "18,3"
+
+	"18,3" -> "19,3"
+
+	"19,3" -> "20,3"
+
+	"20,3" -> "21,3"
+
+	"21,3" -> "22,3"
+
+	"22,3" -> "23,3"
+
+	"23,3" -> "24,3"
+
+	"24,3" -> "25,3"
+
+	"25,3" -> "26,3"
+
+	"26,3" -> "27,3"
+
+	"27,3" -> "28,3"
+
+	"28,3" -> "29,3"
+
+	"29,3" -> "30,3"
+
+	"30,3" -> "31,3"
+
+	"31,3" -> "32,3"
+
+	"32,3" -> "33,3"
+
+	"33,3" -> "34,3"
+
+	"34,3" -> "35,3"
+
+	"35,3" -> "36,3"
+
+	"36,3" -> "37,3"
+
+	"37,3" -> "38,3"
+
+	"38,3" -> "39,3"
+
+	"39,3" -> "40,3"
+
+	"40,3" -> "41,3"
+
+	"41,3" -> "42,3"
+
+	"42,3" -> "43,3"
+
+	"43,3" -> "44,3"
+
+	"44,3" -> "45,3"
+
+	"45,3" -> "x,3"
+
+	"-1,4" -> "0,4"
+
+	"0,4" -> "1,4"
+
+	"1,4" -> "2,4"
+
+	"2,4" -> "3,4"
+
+	"3,4" -> "4,4"
+
+	"4,4" -> "5,4"
+
+	"5,4" -> "6,4"
+
+	"6,4" -> "7,4"
+
+	"7,4" -> "8,4"
+
+	"8,4" -> "9,4"
+
+	"9,4" -> "10,4"
+
+	"10,4" -> "11,4"
+
+	"11,4" -> "12,4"
+
+	"12,4" -> "13,4"
+
+	"13,4" -> "14,4"
+
+	"14,4" -> "15,4"
+
+	"15,4" -> "16,4"
+
+	"16,4" -> "17,4"
+
+	"17,4" -> "18,4"
+
+	"18,4" -> "19,4"
+
+	"19,4" -> "20,4"
+
+	"20,4" -> "21,4"
+
+	"21,4" -> "22,4"
+
+	"22,4" -> "23,4"
+
+	"23,4" -> "24,4"
+
+	"24,4" -> "25,4"
+
+	"25,4" -> "26,4"
+
+	"26,4" -> "27,4"
+
+	"27,4" -> "28,4"
+
+	"28,4" -> "29,4"
+
+	"29,4" -> "30,4"
+
+	"30,4" -> "31,4"
+
+	"31,4" -> "32,4"
+
+	"32,4" -> "33,4"
+
+	"33,4" -> "34,4"
+
+	"34,4" -> "35,4"
+
+	"35,4" -> "36,4"
+
+	"36,4" -> "37,4"
+
+	"37,4" -> "38,4"
+
+	"38,4" -> "39,4"
+
+	"39,4" -> "40,4"
+
+	"40,4" -> "41,4"
+
+	"41,4" -> "42,4"
+
+	"42,4" -> "43,4"
+
+	"43,4" -> "44,4"
+
+	"44,4" -> "45,4"
+
+	"45,4" -> "x,4"
+
+	"-1,5" -> "0,5"
+
+	"0,5" -> "1,5"
+
+	"1,5" -> "2,5"
+
+	"2,5" -> "3,5"
+
+	"3,5" -> "4,5"
+
+	"4,5" -> "5,5"
+
+	"5,5" -> "6,5"
+
+	"6,5" -> "7,5"
+
+	"7,5" -> "8,5"
+
+	"8,5" -> "9,5"
+
+	"9,5" -> "10,5"
+
+	"10,5" -> "11,5"
+
+	"11,5" -> "12,5"
+
+	"12,5" -> "13,5"
+
+	"13,5" -> "14,5"
+
+	"14,5" -> "15,5"
+
+	"15,5" -> "16,5"
+
+	"16,5" -> "17,5"
+
+	"17,5" -> "18,5"
+
+	"18,5" -> "19,5"
+
+	"19,5" -> "20,5"
+
+	"20,5" -> "21,5"
+
+	"21,5" -> "22,5"
+
+	"22,5" -> "23,5"
+
+	"23,5" -> "24,5"
+
+	"24,5" -> "25,5"
+
+	"25,5" -> "26,5"
+
+	"26,5" -> "27,5"
+
+	"27,5" -> "28,5"
+
+	"28,5" -> "29,5"
+
+	"29,5" -> "30,5"
+
+	"30,5" -> "31,5"
+
+	"31,5" -> "32,5"
+
+	"32,5" -> "33,5"
+
+	"33,5" -> "34,5"
+
+	"34,5" -> "35,5"
+
+	"35,5" -> "36,5"
+
+	"36,5" -> "37,5"
+
+	"37,5" -> "38,5"
+
+	"38,5" -> "39,5"
+
+	"39,5" -> "40,5"
+
+	"40,5" -> "41,5"
+
+	"41,5" -> "42,5"
+
+	"42,5" -> "43,5"
+
+	"43,5" -> "44,5"
+
+	"44,5" -> "45,5"
+
+	"45,5" -> "x,5"
+
+}

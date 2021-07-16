@@ -1,0 +1,29 @@
+digraph{
+	node[shape=record,style=filled,fillcolor=gray95]
+
+	6 [ label = "{ GID: 6\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestMoby28462 @ moby28462_test.go:106 
+goat.Start @ handlers.go:37 
+\lLast Event: GoSched\l }" style=bold]
+	10 [ label = "{ GID: 10\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestMoby28462 @ moby28462_test.go:113 
+\lLast Event: -\l }" style=bold]
+	8 [ label = "{ GID: 8\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestMoby28462 @ moby28462_test.go:107 
+\lLast Event: GoEnd\l }" style=bold]
+	9 [ label = "{ GID: 9\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestMoby28462 @ moby28462_test.go:111 
+\lLast Event: GoPreempt\l }" style=bold]
+	
+
+	0 -> 1
+	0 -> 2
+	0 -> 3
+	0 -> 4
+	0 -> 5
+	0 -> 6
+	6 -> 7
+	6 -> 8
+	6 -> 9
+	6 -> 10
+	}

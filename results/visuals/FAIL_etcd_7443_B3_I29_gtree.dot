@@ -1,0 +1,47 @@
+digraph{
+	node[shape=record,style=filled,fillcolor=gray95]
+
+	5 [ label = "{ GID: 5\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:247 
+goat.Start @ handlers.go:37 
+\lLast Event: GoSched\l }" style=bold]
+	13 [ label = "{ GID: 13\l | Create Site: src.(*ClientConn).lbWatcher @ etcd7443_test.go:86 
+src.(*ClientConn).resetAddrConn @ etcd7443_test.go:115 
+\lLast Event: GoEnd\l }" style=bold]
+	10 [ label = "{ GID: 10\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:265 
+\lLast Event: GoEnd\l }" style=bold]
+	11 [ label = "{ GID: 11\l | Create Site: src.(*ClientConn).lbWatcher @ etcd7443_test.go:86 
+src.(*ClientConn).resetAddrConn @ etcd7443_test.go:115 
+\lLast Event: -\l }" style=bold]
+	7 [ label = "{ GID: 7\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:248 
+\lLast Event: GoEnd\l }" style=bold]
+	8 [ label = "{ GID: 8\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:250 
+src.TestEtcd7443 @ etcd7443_test.go:143 
+src.DialContext @ etcd7443_test.go:156 
+\lLast Event: GoEnd\l }" style=bold]
+	9 [ label = "{ GID: 9\l | Create Site: testing.tRunner @ testing.go:1123 
+src.TestEtcd7443 @ etcd7443_test.go:257 
+\lLast Event: GoEnd\l }" style=bold]
+	12 [ label = "{ GID: 12\l | Create Site: src.(*ClientConn).lbWatcher @ etcd7443_test.go:86 
+src.(*ClientConn).resetAddrConn @ etcd7443_test.go:115 
+\lLast Event: -\l }" style=bold]
+	
+
+	0 -> 1
+	0 -> 2
+	0 -> 3
+	0 -> 4
+	0 -> 17
+	0 -> 5
+	5 -> 6
+	5 -> 7
+	5 -> 8
+	5 -> 9
+	5 -> 10
+	8 -> 11
+	8 -> 12
+	8 -> 13
+	}
