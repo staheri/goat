@@ -21,4 +21,7 @@ GOAT_log.txt
 
 old/*
 
+*.pdf
+*.dot
+
 .DS_Store
