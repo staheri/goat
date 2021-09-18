@@ -17,7 +17,7 @@ import(
 const RESDIR = "/home/saeed/goatws/results"
 const TO = 30 // second
 const CPU = 0
-const MAXPROCS = "1"
+const MAXPROCS = "8"
 const EVENT_BOUND = 200000000
 const WORKDIR = ""
 const GOVER_ORIG = "/home/saeed/go-builds/go-orig-1.15.6"

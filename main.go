@@ -72,8 +72,9 @@ func main(){
 
   //customVis(flagPath,flagTool,true)
   //evaluate.EvaluateCoverage(flagPath,1000,false)
-  evaluate.EvaluateComparison(flagPath,1000) // race = false
+  evaluate.EvaluateComparison(flagPath,1) // race = false
   //evaluate.EvaluateComparison(flagPath,2,true) // race = true
+  //evaluate.TraceSnippet(flagPath)
 
 }
 

@@ -146,6 +146,11 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
     } // parseRes is either obtained from execution or pre execution
 
     fmt.Printf("\t# Events: %d\n",len(parseRes.Events))
+    // print events
+    for _,e := range(parseRes.Events){
+      fmt.Println(e)
+      fmt.Println("-----------------------------------------------------------")
+    }
     // Check length of events
     result.EventsLen = len(parseRes.Events)
     /*if len(parseRes.Events) > EVENT_BOUND && !race{

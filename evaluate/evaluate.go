@@ -254,7 +254,7 @@ iteration:for i:=0 ; i < thresh ; i++{
 }
 
 func EvaluateComparison(configFile string, thresh int) {
-  visualFolder := "/home/saeed/gopath/src/github.com/staheri/goat/results/visuals/"
+  //visualFolder := "/home/saeed/gopath/src/github.com/staheri/goat/results/visuals/"
   var ex Ex
   colorReset := "\033[0m"
   colorRed := "\033[31m"
@@ -386,6 +386,12 @@ func EvaluateComparison(configFile string, thresh int) {
               fmt.Println("Reading Trace ",result.TracePath)
               fmt.Println("Result Desc ",result.Desc)
               parseRes := traceops.ReadParseTrace(result.TracePath, filepath.Join(gex.PrefixDir,"bin",gex.BinaryName))
+
+              // print events
+              for _,e := range(parseRes.Events){
+                fmt.Println(e)
+                fmt.Println("-----------------------------------------------------------")
+              }
 
               result.LStack = gex.UpdateGStack(parseRes.Stacks)
               gex.UpdateConcUsage(parseRes.Stacks,result.LStack)
