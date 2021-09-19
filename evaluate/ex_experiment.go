@@ -17,7 +17,6 @@ import(
 const RESDIR = "/home/saeed/goatws/results"
 const TO = 30 // second
 const CPU = 0
-const MAXPROCS = "8"
 const EVENT_BOUND = 200000000
 const WORKDIR = ""
 const GOVER_ORIG = "/home/saeed/go-builds/go-orig-1.15.6"
@@ -122,6 +121,17 @@ func (gex *GoatExperiment) Init(race bool) {
   ws := os.Getenv("GOATWS")
   if ws == "" {
     panic("GOATWS is not set!")
+  }
+
+  MAXPROCS := os.Getenv("GOATMAXPROCS")
+  if MAXPROCS == "" {
+    panic("GOATMAXPROCS is not set!")
+  } else{
+    mp,err := strconv.Atoi(MAXPROCS)
+    check(err)
+    if mp < 1 || mp > 64 {
+      panic("GOATMAXPROCS out of range!")
+    }
   }
 
   if gex.Bound < 0 {
@@ -251,6 +261,18 @@ func (tex *ToolExperiment) Init(race bool) {
   if ws == "" {
     panic("GOATWS is not set!")
   }
+
+  MAXPROCS := os.Getenv("GOATMAXPROCS")
+  if MAXPROCS == "" {
+    panic("GOATMAXPROCS is not set!")
+  } else{
+    mp,err := strconv.Atoi(MAXPROCS)
+    check(err)
+    if mp < 1 || mp > 64 {
+      panic("GOATMAXPROCS out of range!")
+    }
+  }
+
   tex.Detector = race_detector
   switch tex.ToolID{
   case "lockDL":

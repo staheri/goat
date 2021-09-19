@@ -11,13 +11,26 @@ import (
 )
 
 
+var (
+  flagCmd     string
+  flagOut     string
+  flagSrc     string
+  flagX       string
+  flagN       int
+  flagBase    string
+  flagTO      int
+  flagApp     string
+  flagArgs    []string
+  dbName      string
+  validCategories = []string{"CHNL", "GCMM", "GRTN", "MISC", "MUTX", "PROC", "SYSC", "WGRP"}
+)
+
+
 
 var (
 	flagPath            string
   flagTool            string
-	flagArgs            []string
 	flagVerbose         bool
-	validCategories    = []string{"CHNL", "GCMM", "GRTN", "MISC", "MUTX", "PROC", "SYSC", "WGCV", "SCHD", "BLCK"}
 	validPrimeCmds     = []string{"word", "hac", "rr", "diff", "dineData", "cleanDB", "dev", "hb", "gtree", "cgraph", "resg","leakChecker"}
 	validTestSchedCmds = []string{"test","execVis"}
 	validSrc           = []string{"native", "x", "latest", "schedTest"}
@@ -61,7 +74,7 @@ func main(){
 
   //evaluate.TAB_counts()
   //evaluate.EvaluateBlocking(flagPath,100)
-  //evaluate.EvaluateNonBlocking(flagPath,500)
+  evaluate.EvaluateNonBlocking(flagPath,500) // path to config , frequence,
 
   //evaluate.EvaluateOverhead(flagPath,100,[]int{1,2,4,16,64,256,512,1024,2048})
   //

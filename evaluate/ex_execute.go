@@ -29,7 +29,6 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
     // Set environment variables for GOAT experiments
     _b := strconv.Itoa(int(gex.Bound))
     os.Setenv("GOATRSBOUND",_b)
-    os.Setenv("GOATMAXPROCS",MAXPROCS)
 
     // FileName name to store events
     traceName := fmt.Sprintf("%s_B%v_I%d",gex.Target.BugName,_b,i)

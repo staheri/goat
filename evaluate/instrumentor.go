@@ -8,15 +8,30 @@ import (
 	"io/ioutil"
 	"log"
 	"os/exec"
+	"os"
 	"path/filepath"
 	"strings"
   "golang.org/x/tools/go/loader"
   "github.com/staheri/goatlib/instrument"
+	"strconv"
 )
 
 func builtinDL_inst(src,dest string) []*instrument.ConcurrencyUsage{
 	var conf        loader.Config
 	var astfiles    []*ast.File
+
+	// obtain MAXPROCS
+  MAXPROCS := os.Getenv("GOATMAXPROCS")
+  if MAXPROCS == "" {
+    panic("GOATMAXPROCS is not set!")
+  } else{
+    mp,err := strconv.Atoi(MAXPROCS)
+    check(err)
+    if mp < 1 || mp > 64 {
+      panic("GOATMAXPROCS out of range!")
+    }
+  }
+
 	// copy all files and inject to its AST
 	paths,err := filepath.Glob(src+"/*.go")
 	check(err)
@@ -64,6 +79,19 @@ func builtinDL_inst(src,dest string) []*instrument.ConcurrencyUsage{
 }
 
 func lockDL_inst(src,dest string) []*instrument.ConcurrencyUsage{
+
+	// obtain MAXPROCS
+  MAXPROCS := os.Getenv("GOATMAXPROCS")
+  if MAXPROCS == "" {
+    panic("GOATMAXPROCS is not set!")
+  } else{
+    mp,err := strconv.Atoi(MAXPROCS)
+    check(err)
+    if mp < 1 || mp > 64 {
+      panic("GOATMAXPROCS out of range!")
+    }
+  }
+
   // copy all files to dest && rewrite (sed)
   // copy from source to dest
   files, err := filepath.Glob(src+"/*.go")
@@ -149,6 +177,19 @@ func lockDL_inst(src,dest string) []*instrument.ConcurrencyUsage{
 func goleak_inst(src,dest string) []*instrument.ConcurrencyUsage{
   var conf        loader.Config
   var astfiles    []*ast.File
+
+	// obtain MAXPROCS
+  MAXPROCS := os.Getenv("GOATMAXPROCS")
+  if MAXPROCS == "" {
+    panic("GOATMAXPROCS is not set!")
+  } else{
+    mp,err := strconv.Atoi(MAXPROCS)
+    check(err)
+    if mp < 1 || mp > 64 {
+      panic("GOATMAXPROCS out of range!")
+    }
+  }
+
   // copy all files and inject to its AST
   paths,err := filepath.Glob(src+"/*.go")
 	check(err)
