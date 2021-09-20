@@ -380,19 +380,19 @@ func EvaluateComparison(configFile string, thresh int){
               gex.BinaryName = filepath.Base(files[0]) // assign the first found binary to current gex binaryPath
             }
             // generate execViz and gtree
-            // outp := ""
-            // if gex.LastFailedTrace != ""{
-            //   outp = fmt.Sprintf("%v/FAIL_%v",visualFolder,strings.Split(filepath.Base(gex.LastFailedTrace),".trace")[0])
-            //   traceops.ExecVis(gex.LastFailedTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,false)
-            //   traceops.ExecVis(gex.LastFailedTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,true)
-            //   traceops.ExecGtree(gex.LastFailedTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp)
-            // }
-            // if gex.LastSuccessTrace != "" {
-            //   outp = fmt.Sprintf("%v/SUCC_%v",visualFolder,strings.Split(filepath.Base(gex.LastSuccessTrace),".trace")[0])
-            //   traceops.ExecVis(gex.LastSuccessTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,false)
-            //   traceops.ExecVis(gex.LastSuccessTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,true)
-            //   traceops.ExecGtree(gex.LastSuccessTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp)
-            // }
+            outp := ""
+            if gex.LastFailedTrace != ""{
+              outp = fmt.Sprintf("%v/FAIL_%v",gex.PrefixDir+"/visual",strings.Split(filepath.Base(gex.LastFailedTrace),".trace")[0])
+              traceops.ExecVis(gex.LastFailedTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,false)
+              traceops.ExecVis(gex.LastFailedTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,true)
+              traceops.ExecGtree(gex.LastFailedTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp)
+            }
+            if gex.LastSuccessTrace != "" {
+              outp = fmt.Sprintf("%v/SUCC_%v",gex.PrefixDir+"/visual",strings.Split(filepath.Base(gex.LastSuccessTrace),".trace")[0])
+              traceops.ExecVis(gex.LastSuccessTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,false)
+              traceops.ExecVis(gex.LastSuccessTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,true)
+              traceops.ExecGtree(gex.LastSuccessTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp)
+            }
 
             // missing execute stuff (from results)
             newResults := []*Result{}
@@ -453,6 +453,23 @@ func EvaluateComparison(configFile string, thresh int){
                 fmt.Println(string(colorGreen),"PASS",string(colorReset))
               }
             }
+
+            // generate execViz and gtree
+            outp := ""
+            if gex.LastFailedTrace != ""{
+              outp = fmt.Sprintf("%v/FAIL_%v",gex.PrefixDir+"/visual",strings.Split(filepath.Base(gex.LastFailedTrace),".trace")[0])
+              traceops.ExecVis(gex.LastFailedTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,false)
+              traceops.ExecVis(gex.LastFailedTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,true)
+              traceops.ExecGtree(gex.LastFailedTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp)
+            }
+            if gex.LastSuccessTrace != "" {
+              outp = fmt.Sprintf("%v/SUCC_%v",gex.PrefixDir+"/visual",strings.Split(filepath.Base(gex.LastSuccessTrace),".trace")[0])
+              traceops.ExecVis(gex.LastSuccessTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,false)
+              traceops.ExecVis(gex.LastSuccessTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,true)
+              traceops.ExecGtree(gex.LastSuccessTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp)
+            }
+
+            
             mainExp.Exps[gex.ID] = gex
             // store gex into json
             // check if expReport path matches gex.PrefixDir

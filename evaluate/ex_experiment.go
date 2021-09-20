@@ -168,6 +168,8 @@ func (gex *GoatExperiment) Init(race bool) {
   check(err)
   err = os.MkdirAll(filepath.Join(predir,"results"),os.ModePerm)
   check(err)
+  err = os.MkdirAll(filepath.Join(predir,"visual"),os.ModePerm)
+  check(err)
   err = os.MkdirAll(filepath.Join(predir,"traceTimes"),os.ModePerm)
   check(err)
   gex.TraceDir = filepath.Join(predir,"traces",gex.ID)

@@ -66,7 +66,7 @@ func EvaluateSingle(path string, freq, d int, isRace bool){
   // we have to re-discover gex prefixdir to see if we have ready results
   expReport := ws + "/"
   expReport = expReport + "p"+MAXPROCS+"/"
-  expReport = expReport + bugName + "/"
+  expReport = expReport + "single_"+ bugName + "/"
 
   if strings.HasPrefix(exp,"goat_d"){
     d,err := strconv.Atoi(strings.Split(exp,"_d")[1])
@@ -197,6 +197,23 @@ iteration:for i:=0 ; i < freq ; i++{
     check(err)
     rep.Close()
   }
+
+  // generate execViz and gtree
+  outp := ""
+  if gex.LastFailedTrace != ""{
+    outp = fmt.Sprintf("%v/FAIL_%v",gex.PrefixDir+"/visual",strings.Split(filepath.Base(gex.LastFailedTrace),".trace")[0])
+    traceops.ExecVis(gex.LastFailedTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,false)
+    traceops.ExecVis(gex.LastFailedTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,true)
+    traceops.ExecGtree(gex.LastFailedTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp)
+  }
+  if gex.LastSuccessTrace != "" {
+    outp = fmt.Sprintf("%v/SUCC_%v",gex.PrefixDir+"/visual",strings.Split(filepath.Base(gex.LastSuccessTrace),".trace")[0])
+    traceops.ExecVis(gex.LastSuccessTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,false)
+    traceops.ExecVis(gex.LastSuccessTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp,true)
+    traceops.ExecGtree(gex.LastSuccessTrace,filepath.Join(gex.PrefixDir,"bin",gex.BinaryName),outp)
+  }
+
+  
   mainExp.Exps[gex.ID] = gex
   tall.AppendRow(CoverageSummary(gex))
   tall.AppendSeparator()

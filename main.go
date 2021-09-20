@@ -12,28 +12,13 @@ import (
 
 
 var (
-  flagCmd     string
-  flagOut     string
-  flagSrc     string
-  flagX       string
-  flagN       int
-  flagBase    string
-  flagTO      int
-  flagApp     string
-  flagArgs    []string
-  dbName      string
-  validCategories = []string{"CHNL", "GCMM", "GRTN", "MISC", "MUTX", "PROC", "SYSC", "WGRP"}
-)
-
-
-
-var (
 	flagPath            string
-  flagTool            string
-	flagVerbose         bool
-	validPrimeCmds     = []string{"word", "hac", "rr", "diff", "dineData", "cleanDB", "dev", "hb", "gtree", "cgraph", "resg","leakChecker"}
-	validTestSchedCmds = []string{"test","execVis"}
-	validSrc           = []string{"native", "x", "latest", "schedTest"}
+  flagConf            string
+  flagFreq            int
+  flagD               int
+	flagCoverage        bool
+  flagRace            bool
+  flagArgs            []string
 )
 
 func main(){
@@ -72,6 +57,18 @@ func main(){
 		w.Flush()
 	}*/
 
+  if flagPath != "" {
+    evaluate.EvaluateSingle(flagPath,flagFreq,flagD,flagRace)
+  } else{
+    if flagConf != ""{
+      evaluate.EvaluateComparison(flagConf,flagFreq)
+      if flagCoverage {
+        evaluate.EvaluateCoverage(flagConf,flagFreq,flagRace)
+      }
+    }else{
+      panic("GoAT: wrong args")
+    }
+  }
   //evaluate.TAB_counts()
   //evaluate.EvaluateBlocking(flagPath,100)
   evaluate.EvaluateNonBlocking(flagPath,500) // path to config , frequence,
@@ -96,9 +93,12 @@ func main(){
 func parseFlags() {
 	//srcDescription := "native: execute the app and collect from scratch, latest: retrieve data from latest execution, x: retrieve data from specific execution (requires -x option)"
 	// Parse flags
-	flag.StringVar(&flagPath, "path", "", "Target application (*.go)")
-  flag.StringVar(&flagTool, "tool", "goat_m", "tool id")
-	flag.BoolVar(&flagVerbose, "verb", false, "Print verbose info")
+	flag.StringVar(&flagPath, "path", "", "target folder")
+  flag.StringVar(&flagConf, "eval_conf", "", "config file with benchmark paths in it")
+  flag.IntVar(&flagD, "d", 0, "number of delays")
+  flag.IntVar(&flagFreq, "freq", 1, "frequency of executions")
+  flag.BoolVar(&flagCoverage,"cov",false,"include coverage report in evaluation")
+  flag.BoolVar(&flagRace,"race",false,"enable race detection")
 
 	flag.Parse()
 
