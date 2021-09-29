@@ -1,6 +1,18 @@
 # GOAT: A Framework for Analysis and Testing of Concurrent Go Applications
 ​
+\goat is a combined static and dynamic concurrency testing
+and analysis tool that facilitates the process of debugging for real-world Go programs.
+%
+Key ideas in \goat include
+1) automated dynamic tracing to capture the behavior of concurrency primitives,
+2) systematic schedule space exploration to accelerate the bug occurrence
+and 3) deadlock detection with supplementary visualizations and reports.
+\goat also propose a set of coverage requirements that characterize the dynamic behavior of concurrency primitives and provide metrics to measure the quality of tests.
 
+All of above are done through goatlib and tuning parameters such as global deadlock timeout, visualization grain, number of runtime processes, etc.
+
+\goat is available at \texttt{https://github.com/staheri/goat.git} and (ZENODO).
+We are working on a docker version of goat to make it available for schedule testing through test packages.
 ​
 ## Build GoAT Runtime
 
