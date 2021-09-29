@@ -17,9 +17,13 @@ We are working on a docker version of goat to make it available for schedule tes
 ## Build GoAT Runtime
 
 GoAT is working in a custom runtime based on version [1.15.6](https://github.com/golang/go/tree/go1.15.6) of Golang currently only for Linux. It should be extensible to other architectures of the same version but they have not been tested.
+
+### Prerequisite 0: install Go
+Let's say your original Go installation is under `/usr/local/go` and your `$PATH` includes `/usr/local/go/bin` which means that you are able to run Go programs.
+For installing Go, please refer to [install Go](https://golang.org/doc/install) and follow its simple steps to set paths.
 ​
 ### Prerequisite 1: rename original Go
-Lets say your original Go installation is under `/usr/local/go`. First we rename the original go to `go-orig` and create a virutal link under the name `/usr/local/go` to easily switch between builds later.
+Assuming your original Go installation is under `/usr/local/go`. First we rename the original go to `go-orig` and create a virutal link under the name `/usr/local/go` to easily switch between builds later.
 ```
 $> sudo -i
 $> mv /usr/local/go /usr/local/go-orig
