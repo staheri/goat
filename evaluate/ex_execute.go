@@ -15,7 +15,7 @@ import(
   "bytes"
   "path/filepath"
   "time"
-  _"io",
+  _"io"
   "encoding/json"
   "io/ioutil"
 )
