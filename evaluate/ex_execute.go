@@ -15,7 +15,9 @@ import(
   "bytes"
   "path/filepath"
   "time"
-  _"io"
+  _"io",
+  "encoding/json"
+  "io/ioutil"
 )
 
 
@@ -143,6 +145,10 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
 
 
     } // parseRes is either obtained from execution or pre execution
+
+
+    file, _ := json.MarshalIndent(parseRes, "", " ")
+    _ = ioutil.WriteFile(filepath.Join(gex.TraceDir,traceName)+"-json.trace", file, 0644)
 
     fmt.Printf("\t# Events: %d\n",len(parseRes.Events))
     // print events
