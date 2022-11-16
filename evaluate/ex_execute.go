@@ -112,9 +112,11 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
         gex.UpdateCoverageReport()
         result.Coverage1 = gex.PrintCoverageReport(true)
         result.Coverage2 = gex.PrintCoverageReport(false)
-        // Parse trace
-        parseRes, err = trace.ParseTrace(execRes.TraceBuffer, filepath.Join(gex.PrefixDir,"bin",gex.BinaryName))
-        check(err)
+        
+        // Write trace to readable file.
+        file, _ := json.MarshalIndent(parseRes, "", " ")
+        _ = ioutil.WriteFile(filepath.Join(gex.TraceDir,traceName)+"-json.trace", file, 0644)
+        
         // analysis trace
         // measure coverage
         // detect result
