@@ -22,7 +22,7 @@ import(
 
 
 // Execute and analyze Goat-experiment
-func (gex *GoatExperiment) Execute(i int, race bool, json_trace bool) *Result {
+func (gex *GoatExperiment) Execute(i int, race bool) *Result {
   // Deadlock detection
   // placeholder for results
     result := &Result{}
@@ -243,7 +243,7 @@ func (gex *GoatExperiment) Execute(i int, race bool, json_trace bool) *Result {
 }
 
 // Execute and analyze Tool-experiment
-func (tex *ToolExperiment) Execute(i int,race bool, json_trace bool) *Result {
+func (tex *ToolExperiment) Execute(i int,race bool) *Result {
   // Variables
   var out []byte
   var err error
@@ -286,7 +286,7 @@ func (tex *ToolExperiment) Execute(i int,race bool, json_trace bool) *Result {
 }
 
 // Execute and analyze ECT-experiment
-func (ex *ECTExperiment) Execute(i int, race bool, json_trace bool) *Result {
+func (ex *ECTExperiment) Execute(i int, race bool) *Result {
   // set timeout
   old_TO := os.Getenv("GOATTO")
   os.Setenv("GOATTO","120")
@@ -327,7 +327,7 @@ func (ex *ECTExperiment) Execute(i int, race bool, json_trace bool) *Result {
     if json_trace {
       // Write trace to readable file.
       file, _ := json.MarshalIndent(parseRes, "", " ")
-      _ = ioutil.WriteFile(filepath.Join(gex.TraceDir,traceName)+"-json.trace", file, 0644)
+      _ = ioutil.WriteFile(filepath.Join(ex.TraceDir,traceName)+"-json.trace", file, 0644)
     }
 
     // parseRes holds events and stacktraces of trace
