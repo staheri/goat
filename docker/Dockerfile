@@ -57,6 +57,7 @@ RUN export GOPATH=$HOME/gopath;\
 RUN ln -nsf /usr/local/go-goat/go /usr/local/go
 
 WORKDIR /root
+RUN git clone https://github.com/goodmorning-coder/gobench.git
 RUN rm -rf /root/gopath/src/github.com/rivo/uniseg
 RUN wget https://github.com/rivo/uniseg/archive/refs/tags/v0.1.0.tar.gz
 RUN tar -xzvf v0.1.0.tar.gz -C /root/gopath/src/github.com/rivo
