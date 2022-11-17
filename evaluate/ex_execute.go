@@ -286,7 +286,7 @@ func (tex *ToolExperiment) Execute(i int,race bool, json_trace bool) *Result {
 }
 
 // Execute and analyze ECT-experiment
-func (ex *ECTExperiment) Execute(i int, race bool) *Result {
+func (ex *ECTExperiment) Execute(i int, race bool, json_trace bool) *Result {
   // set timeout
   old_TO := os.Getenv("GOATTO")
   os.Setenv("GOATTO","120")
