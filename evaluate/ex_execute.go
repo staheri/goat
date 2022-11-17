@@ -22,7 +22,7 @@ import(
 
 
 // Execute and analyze Goat-experiment
-func (gex *GoatExperiment) Execute(i int, race bool) *Result {
+func (gex *GoatExperiment) Execute(i int, race bool, json_trace bool) *Result {
   // Deadlock detection
   // placeholder for results
     result := &Result{}
@@ -50,6 +50,12 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
     	check(err)
       // read trace time
       result.Time,_ = time.ParseDuration(traceops.ReadTime(filepath.Join(gex.PrefixDir,"traceTimes",traceName)+".time"))
+
+      if json_trace {
+        // Write trace to readable file.
+        file, _ := json.MarshalIndent(parseRes, "", " ")
+        _ = ioutil.WriteFile(filepath.Join(gex.TraceDir,traceName)+"-json.trace", file, 0644)
+      }
 
       if race { // results are already out there
         return result
@@ -113,9 +119,11 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
         result.Coverage1 = gex.PrintCoverageReport(true)
         result.Coverage2 = gex.PrintCoverageReport(false)
         
-        // Write trace to readable file.
-        file, _ := json.MarshalIndent(parseRes, "", " ")
-        _ = ioutil.WriteFile(filepath.Join(gex.TraceDir,traceName)+"-json.trace", file, 0644)
+        if json_trace {
+          // Write trace to readable file.
+          file, _ := json.MarshalIndent(parseRes, "", " ")
+          _ = ioutil.WriteFile(filepath.Join(gex.TraceDir,traceName)+"-json.trace", file, 0644)
+        }
         
         // analysis trace
         // measure coverage
@@ -151,8 +159,10 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
     } // parseRes is either obtained from execution or pre execution
 
 
-    file, _ := json.MarshalIndent(parseRes, "", " ")
-    _ = ioutil.WriteFile(filepath.Join(gex.TraceDir,traceName)+"-json.trace", file, 0644)
+    if json_trace{
+      file, _ := json.MarshalIndent(parseRes, "", " ")
+      _ = ioutil.WriteFile(filepath.Join(gex.TraceDir,traceName)+"-json.trace", file, 0644)
+    }
 
     fmt.Printf("\t# Events: %d\n",len(parseRes.Events))
     // print events
@@ -233,7 +243,7 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
 }
 
 // Execute and analyze Tool-experiment
-func (tex *ToolExperiment) Execute(i int,race bool) *Result {
+func (tex *ToolExperiment) Execute(i int,race bool, json_trace bool) *Result {
   // Variables
   var out []byte
   var err error
@@ -313,6 +323,12 @@ func (ex *ECTExperiment) Execute(i int, race bool) *Result {
 
     parseRes, err := trace.ParseTrace(execRes.TraceBuffer, filepath.Join(ex.PrefixDir,"bin",ex.BinaryName))
     check(err)
+
+    if json_trace {
+      // Write trace to readable file.
+      file, _ := json.MarshalIndent(parseRes, "", " ")
+      _ = ioutil.WriteFile(filepath.Join(gex.TraceDir,traceName)+"-json.trace", file, 0644)
+    }
 
     // parseRes holds events and stacktraces of trace
     fmt.Printf("\t# Events: %d\n",len(parseRes.Events))

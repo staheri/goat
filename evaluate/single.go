@@ -12,7 +12,7 @@ import(
   "github.com/jedib0t/go-pretty/table"
 )
 
-func EvaluateSingle(path string, freq, d int, isRace bool){
+func EvaluateSingle(path string, freq, d int, isRace bool, json_trace bool){
   colorReset := "\033[0m"
   colorRed := "\033[31m"
   colorGreen := "\033[32m"
@@ -158,7 +158,7 @@ func EvaluateSingle(path string, freq, d int, isRace bool){
 
 iteration:for i:=0 ; i < freq ; i++{
       fmt.Printf("Test %v on %v (%d/%d)\n",gex.Target.BugName,gex.ID,i+1,freq)
-      res := gex.Execute(i,isRace)
+      res := gex.Execute(i,isRace, json_trace)
       if res.Detected{
         fmt.Println(string(colorRed),res.Desc,string(colorReset))
         gex.Results = append(gex.Results,res)
