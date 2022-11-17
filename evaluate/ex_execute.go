@@ -22,7 +22,7 @@ import(
 
 
 // Execute and analyze Goat-experiment
-func (gex *GoatExperiment) Execute(i int, race bool) *Result {
+func (gex *GoatExperiment) Execute(i int, race bool, json_trace bool) *Result {
   // Deadlock detection
   // placeholder for results
     result := &Result{}
@@ -243,7 +243,7 @@ func (gex *GoatExperiment) Execute(i int, race bool) *Result {
 }
 
 // Execute and analyze Tool-experiment
-func (tex *ToolExperiment) Execute(i int,race bool) *Result {
+func (tex *ToolExperiment) Execute(i int,race bool, json_trace bool) *Result {
   // Variables
   var out []byte
   var err error
@@ -286,7 +286,7 @@ func (tex *ToolExperiment) Execute(i int,race bool) *Result {
 }
 
 // Execute and analyze ECT-experiment
-func (ex *ECTExperiment) Execute(i int, race bool) *Result {
+func (ex *ECTExperiment) Execute(i int, race bool, json_trace bool) *Result {
   // set timeout
   old_TO := os.Getenv("GOATTO")
   os.Setenv("GOATTO","120")
