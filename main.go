@@ -18,6 +18,7 @@ var (
   flagD               int
 	flagCoverage        bool
   flagRace            bool
+  flagJsonTrace       bool
   flagArgs            []string
 )
 
@@ -58,12 +59,12 @@ func main(){
 	}*/
 
   if flagPath != "" {
-    evaluate.EvaluateSingle(flagPath,flagFreq,flagD,flagRace)
+    evaluate.EvaluateSingle(flagPath,flagFreq,flagD,flagRace, flagJsonTrace)
   } else{
     if flagConf != ""{
-      evaluate.EvaluateComparison(flagConf,flagFreq)
+      evaluate.EvaluateComparison(flagConf,flagFreq, flagJsonTrace)
       if flagCoverage {
-        evaluate.EvaluateCoverage(flagConf,flagFreq,flagRace)
+        evaluate.EvaluateCoverage(flagConf,flagFreq,flagRace, flagJsonTrace)
       }
     }else{
       panic("GoAT: wrong args")
@@ -71,7 +72,7 @@ func main(){
   }
   //evaluate.TAB_counts()
   //evaluate.EvaluateBlocking(flagPath,100)
-  evaluate.EvaluateNonBlocking(flagPath,500) // path to config , frequence,
+  evaluate.EvaluateNonBlocking(flagPath,500, flagJsonTrace) // path to config , frequence,
 
   //evaluate.EvaluateOverhead(flagPath,100,[]int{1,2,4,16,64,256,512,1024,2048})
   //
@@ -82,7 +83,7 @@ func main(){
 
   //customVis(flagPath,flagTool,true)
   //evaluate.EvaluateCoverage(flagPath,1000,false)
-  evaluate.EvaluateComparison(flagPath,1) // race = false
+  evaluate.EvaluateComparison(flagPath,1, flagJsonTrace) // race = false
   //evaluate.EvaluateComparison(flagPath,2,true) // race = true
   //evaluate.TraceSnippet(flagPath)
 
@@ -99,6 +100,7 @@ func parseFlags() {
   flag.IntVar(&flagFreq, "freq", 1, "frequency of executions")
   flag.BoolVar(&flagCoverage,"cov",false,"include coverage report in evaluation")
   flag.BoolVar(&flagRace,"race",false,"enable race detection")
+  flag.BoolVar(&flagJsonTrace,"json_trace",false,"enable collection of execution traces in readable JSON format.")
 
 	flag.Parse()
 

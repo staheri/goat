@@ -14,6 +14,20 @@ All of above are done through goatlib and tuning parameters such as global deadl
 \goat is available at \texttt{https://github.com/staheri/goat.git} and (ZENODO).
 We are working on a docker version of goat to make it available for schedule testing through test packages.
 ​
+## Download Pre-compiled GoAT Docker Container
+
+For quicker installation of GoAT, you can use a Docker container that comes pre-installed with the environment.
+- You can pull directly a container from `DockerHub`:
+```
+sudo docker pull fivosts/goat:latest
+```
+- Or you can build the container by yourself using our Dockerfile:
+```
+cd ./docker
+bash ./docker_build.sh
+```
+
+​
 ## Build GoAT Runtime
 
 GoAT is working in a custom runtime based on version [1.15.6](https://github.com/golang/go/tree/go1.15.6) of Golang currently only for Linux. It should be extensible to other architectures of the same version but they have not been tested.
