@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo docker build --no-cache --tag goat:latest .
+sudo docker build --no-cache --tag fivosts/goat:latest .
