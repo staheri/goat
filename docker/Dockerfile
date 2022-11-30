@@ -90,4 +90,4 @@ RUN export GOPATH=$HOME/gopath;\
   export GOATMAXPROCS=4;\
   go build -o /root/gopath/bin/goat 
 
-CMD ["source", "/root/.bashrc", ";", "/usr/sbin/sshd","-D"]
+CMD ["/bin/bash", "-c", "bash", ";", "source", "/root/.bashrc", ";", "/usr/sbin/sshd","-D"]
