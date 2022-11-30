@@ -91,4 +91,42 @@ RUN export GOPATH=$HOME/gopath;\
   export GOATMAXPROCS=4;\
   go build -o /root/gopath/bin/goat
 
+# Setup python
+RUN apt install -y software-properties-common
+RUN add-apt-repository ppa:deadsnakes/ppa
+RUN apt update
+RUN apt-get install -y \
+    build-essential \
+    ca-certificates \
+    curl \
+    cmake \
+    wget \
+    gcc \
+    g++ \
+    flex \
+    nasm \
+    tar \
+    m4 \
+    ocl-icd-opencl-dev \
+    opencl-c-headers  \
+    protobuf-compiler \
+    pkg-config \
+    $python_version \
+    $python_version-dev \
+    $python_version-venv \
+    python3-distutils \
+    python3-numpy \
+    pv \
+    zlib1g-dev \
+    lib32ncurses5-dev \
+    libexempi-dev \
+    libmpc-dev \
+    libboost-all-dev \
+    mysql-server \
+    libmysqlclient-dev \
+    libsqlite3-dev
+RUN curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
+RUN python3 /tmp/get-pip.py
+RUN ln -sf /usr/bin/python3 /usr/bin/python
+
 CMD ["/bin/bash", "-c", "bash", ";", "source", "/root/.bashrc", ";", "/usr/sbin/sshd","-D"]
