@@ -81,13 +81,14 @@ RUN export GOPATH=$HOME/gopath;\
   go get github.com/staheri/goat; exit 0
 
 WORKDIR /root/gopath/src/github.com/staheri/goat
-RUN grep -rl "/home/saeed" . | xargs sed -i 's/\/home\/saeed/\/root/g'
+RUN git remote set-url origin https://github.com/fivosts/goat.git
+RUN git pull
 RUN export GOPATH=$HOME/gopath;\
   export GOROOT=/usr/local/go;\
   export PATH=$PATH:/usr/local/go/bin:$HOME/gopath/bin;\
   export GOATWS=$HOME/goatws;\
   export GOATTO=30;\
   export GOATMAXPROCS=4;\
-  go build -o /root/gopath/bin/goat 
+  go build -o /root/gopath/bin/goat
 
 CMD ["/bin/bash", "-c", "bash", ";", "source", "/root/.bashrc", ";", "/usr/sbin/sshd","-D"]
