@@ -8,9 +8,19 @@ RUN apt install -y\
   graphviz\
   vim\
   git\
-  bash
+  bash\
+  sudo\
+  openssh-server
 
 SHELL ["/bin/bash", "-c"] 
+
+
+## Setup SSH connections.
+RUN useradd -rm -d /home/user -s /bin/bash -g root -G sudo -u 1000 user
+RUN echo 'user:user' | chpasswd
+RUN service ssh start
+
+EXPOSE 22
 
 ## Install everything to /root.
 WORKDIR /root/
@@ -80,4 +90,4 @@ RUN export GOPATH=$HOME/gopath;\
   export GOATMAXPROCS=4;\
   go build -o /root/gopath/bin/goat 
 
-CMD ["/bin/bash", "-c", "bash", ";", "source", "/root/.bashrc"]
+CMD ["source", "/root/.bashrc", ";", "/usr/sbin/sshd","-D"]
