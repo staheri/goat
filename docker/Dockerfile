@@ -1,6 +1,9 @@
 FROM ubuntu:latest
+ENV TZ=Europe/Athens
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt update
+RUN apt install -y software-properties-common
 RUN apt install -y\
   wget\
   build-essential\
@@ -92,39 +95,15 @@ RUN export GOPATH=$HOME/gopath;\
   go build -o /root/gopath/bin/goat
 
 # Setup python
-RUN apt install -y software-properties-common
 RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt update
-RUN apt-get install -y \
-    build-essential \
+RUN apt install -y \
     ca-certificates \
     curl \
-    cmake \
-    wget \
-    gcc \
-    g++ \
-    flex \
-    nasm \
-    tar \
-    m4 \
-    ocl-icd-opencl-dev \
-    opencl-c-headers  \
-    protobuf-compiler \
-    pkg-config \
-    $python_version \
-    $python_version-dev \
-    $python_version-venv \
+    python3.8 \
+    python3.8-dev \
     python3-distutils \
-    python3-numpy \
-    pv \
-    zlib1g-dev \
-    lib32ncurses5-dev \
-    libexempi-dev \
-    libmpc-dev \
-    libboost-all-dev \
-    mysql-server \
-    libmysqlclient-dev \
-    libsqlite3-dev
+    python3-numpy
 RUN curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
 RUN python3 /tmp/get-pip.py
 RUN ln -sf /usr/bin/python3 /usr/bin/python
