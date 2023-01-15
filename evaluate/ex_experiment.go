@@ -32,7 +32,7 @@ type Ex interface{
   Init(bool)                 // init the experiments (bool: race)
   Instrument()               // instrument the program
   Build(bool)                // build the program (bool: race)
-  Execute(int,bool)    *Result    // execute the instrumented program (int: #iteration)
+  Execute(int,bool, bool)  *Result    // execute the instrumented program (int: #iteration)
 }
 
 // Struct for Bugs

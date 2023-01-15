@@ -37,7 +37,7 @@ var(
   comparison = []string{"goat_d0","goat_d1","goat_d2","goat_d3","goat_d4","builtinDL","goleak","lockDL"}
 )
 
-func EvaluateCoverage(configFile string, thresh int, isRace bool) {
+func EvaluateCoverage(configFile string, thresh int, isRace bool, json_trace bool) {
   colorReset := "\033[0m"
   colorRed := "\033[31m"
   colorGreen := "\033[32m"
@@ -199,7 +199,7 @@ func EvaluateCoverage(configFile string, thresh int, isRace bool) {
 
 iteration:for i:=0 ; i < thresh ; i++{
             fmt.Printf("Test %v on %v (%d/%d)\n",gex.Target.BugName,gex.ID,i+1,thresh)
-            res := gex.Execute(i,isRace)
+            res := gex.Execute(i,isRace, json_trace)
             if res.Detected{
             	fmt.Println(string(colorRed),res.Desc,string(colorReset))
               gex.Results = append(gex.Results,res)
@@ -264,7 +264,7 @@ iteration:for i:=0 ; i < thresh ; i++{
 
 }
 
-func EvaluateComparison(configFile string, thresh int){
+func EvaluateComparison(configFile string, thresh int, json_trace bool){
   var ex Ex
   colorReset := "\033[0m"
   colorRed := "\033[31m"
@@ -440,7 +440,7 @@ func EvaluateComparison(configFile string, thresh int){
             gex := ex.(*GoatExperiment)
             iteration:for i:=0 ; i < thresh ; i++{
               fmt.Printf("Test %v on %v (%d/%d)\n",gex.Target.BugName,gex.ID,i+1,thresh)
-              res := gex.Execute(i,false)
+              res := gex.Execute(i,false, json_trace)
               gex.Results = append(gex.Results,res)
               if res.Detected{
               	fmt.Println(string(colorRed),res.Desc,string(colorReset))
@@ -495,7 +495,7 @@ func EvaluateComparison(configFile string, thresh int){
                 break iteration2
               }
               fmt.Printf("Test %v on %v (%d/%d)\n",tex.Target.BugName,tex.ToolID,i+1,thresh)
-              res := tex.Execute(i,false)
+              res := tex.Execute(i,false, json_trace)
               tex.Results = append(tex.Results,res)
               if res.Detected{
               	fmt.Println(string(colorRed),res.Desc,string(colorReset))
@@ -543,7 +543,7 @@ func EvaluateComparison(configFile string, thresh int){
 
 }
 
-func EvaluateNonBlocking(configFile string,thresh int) {
+func EvaluateNonBlocking(configFile string,thresh int, json_trace bool) {
   identifier := "nonblocking"
   causes := ReadGoKerConfig(identifier)
 
@@ -606,7 +606,7 @@ func EvaluateNonBlocking(configFile string,thresh int) {
               gex := ex.(*GoatExperiment)
               IDD = gex.ID
               fmt.Printf("Test %v on %v (%d/%d)\n",gex.Target.BugName,gex.ID,i+1,thresh)
-              res := gex.Execute(i,true)
+              res := gex.Execute(i,true, json_trace)
               gex.Results = append(gex.Results,res)
               if res.Detected{
               	fmt.Println(string(colorRed),res.Desc,string(colorReset))
@@ -621,7 +621,7 @@ func EvaluateNonBlocking(configFile string,thresh int) {
               tex := ex.(*ToolExperiment)
               IDD = tex.ToolID
               fmt.Printf("Test %v on %v (%d/%d)\n",tex.Target.BugName,tex.ToolID,i+1,thresh)
-              res := tex.Execute(i,true)
+              res := tex.Execute(i,true, json_trace)
               tex.Results = append(tex.Results,res)
               if res.Detected{
               	fmt.Println(string(colorRed),res.Desc,string(colorReset))

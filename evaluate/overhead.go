@@ -15,7 +15,7 @@ import(
 
 
 
-func EvaluateOverhead(configFile string, thresh int, ns []int) {
+func EvaluateOverhead(configFile string, thresh int, ns []int, json_trace bool) {
   identifier := "overhead"
 
   // obtain configName
@@ -72,7 +72,7 @@ func EvaluateOverhead(configFile string, thresh int, ns []int) {
           for i:=0 ; i < thresh ; i++{
             fmt.Printf("Test %v on %v (input:%s) (%d/%d)\nIDD:%v\n",ex.ID,ex.Target.BugName,strings.Join(ex.Args,"_"),i+1,thresh,IDD)
             //IDD = fmt.Sprintf("%v_%v_input:%s) (%d/%d)\n",ex.Target.BugName,ex.ID,strings.Join(ex.Args,"_"),i+1,thresh)
-            res := ex.Execute(i,false)
+            res := ex.Execute(i,false,json_trace)
             fmt.Printf("\tTime: %v\n",res.Time)
             ex.Results = append(ex.Results,res)
           }
